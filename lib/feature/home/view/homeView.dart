@@ -1,5 +1,8 @@
+import 'package:aressa_commerce/feature/category/view/allCategoryView.dart';
+import 'package:aressa_commerce/feature/detailProduct/view/detailProductView.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:aressa_commerce/util/view/indicatorView.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
@@ -11,9 +14,21 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
+  gotoAllCategory() {
+    Future.delayed(Duration(milliseconds: 500), () {
+      Navigator.of(context)
+          .push(MaterialPageRoute(builder: (ctx) => AllCategoryView()));
+    });
+  }
+
+  gotoDetailProduct() {
+    Future.delayed(Duration(milliseconds: 500), () {
+      Navigator.of(context)
+          .push(MaterialPageRoute(builder: (ctx) => DetailProductView()));
+    });
+  }
 
   Widget header() {
-
     return Container(
       height: 50,
       margin: EdgeInsets.only(left: 16, right: 16),
@@ -22,75 +37,62 @@ class _HomeViewState extends State<HomeView> {
           Expanded(
             child: Container(
               decoration: BoxDecoration(
-                border: Border.all(color: ColorConfig.borderColor, width: 1),
-                borderRadius: BorderRadius.circular(8)
-              ),
+                  border: Border.all(color: ColorConfig.borderColor, width: 1),
+                  borderRadius: BorderRadius.circular(8)),
               child: TextFormField(
                 decoration: InputDecoration(
-                  labelText: "Search Product",
-                  labelStyle: TextStyle(
-                    color: ColorConfig.textColor1,
-                    fontSize: 12
-                  ),
-                  prefixIcon: Icon(Icons.search, color: ColorConfig.bluePrimary,),
-                  border: InputBorder.none
-                ),
+                    labelText: "Search Product",
+                    labelStyle:
+                        TextStyle(color: ColorConfig.textColor1, fontSize: 12),
+                    prefixIcon: Icon(
+                      Icons.search,
+                      color: ColorConfig.bluePrimary,
+                    ),
+                    border: InputBorder.none),
               ),
             ),
           ),
           Container(
             height: 40,
             width: 40,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20)
-            ),
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
             child: InkWell(
                 borderRadius: BorderRadius.circular(20),
-                onTap: () => { print("whishlist") },
+                onTap: () => {print("whishlist")},
                 child: Padding(
                   padding: EdgeInsets.all(8),
                   child: Image(
                     image: AssetImage("lib/asset/image/home/love.png"),
                   ),
-                )
-            ),
-
+                )),
           ),
           Container(
             height: 40,
             width: 40,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20)
-            ),
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
             child: InkWell(
                 borderRadius: BorderRadius.circular(20),
-                onTap: () => { print("whishlist") },
+                onTap: () => {print("whishlist")},
                 child: Padding(
                   padding: EdgeInsets.all(8),
                   child: Image(
                     image: AssetImage("lib/asset/image/home/notification.png"),
                   ),
-                )
-            ),
-
+                )),
           ),
           Container(
             height: 40,
             width: 40,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20)
-            ),
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
             child: InkWell(
                 borderRadius: BorderRadius.circular(20),
-                onTap: () => { print("whishlist") },
+                onTap: () => {print("whishlist")},
                 child: Padding(
                   padding: EdgeInsets.all(8),
                   child: Image(
                     image: AssetImage("lib/asset/image/home/love.png"),
                   ),
-                )
-            ),
-
+                )),
           ),
         ],
       ),
@@ -98,7 +100,6 @@ class _HomeViewState extends State<HomeView> {
   }
 
   Widget promoBanner() {
-
     return Container(
       height: 250,
       margin: EdgeInsets.only(top: 16),
@@ -111,9 +112,123 @@ class _HomeViewState extends State<HomeView> {
               itemCount: 3,
               itemBuilder: (ctx, idx) {
                 return Container(
-                  padding: EdgeInsets.only(left: 16, right: 16),
-                  child: Image(
-                    image: AssetImage("lib/asset/image/home/promotionDummy.png"),
+                  margin: EdgeInsets.only(left: 16, right: 16),
+                  child: Stack(
+                    fit: StackFit.expand,
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(5),
+                        child: Image(
+                          image: AssetImage(
+                              "lib/asset/image/home/promotionDummy.png"),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      Positioned(
+                          bottom: 32,
+                          left: 24,
+                          child: Container(
+                            width: 209,
+                            child: Column(
+                              children: [
+                                Text("Super Flash Sale 50% Off",
+                                  maxLines: 2,
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 24,
+                                      fontWeight: FontWeight.bold
+                                  ),
+                                ),
+                                Container(
+                                  margin: EdgeInsets.only(top: 30),
+                                  child: Row(
+                                    children: [
+                                      Container(
+                                        height: 41,
+                                        width: 42,
+                                        decoration: BoxDecoration(
+                                            color: Colors.white,
+                                            borderRadius: BorderRadius.circular(8)
+                                        ),
+                                        child: Center(
+                                          child: Text("08",
+                                            style: TextStyle(
+                                                color: Colors.black,
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.bold
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        margin: EdgeInsets.only(left: 8, right: 8),
+                                        child: Text(":",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 14,
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        height: 41,
+                                        width: 42,
+                                        decoration: BoxDecoration(
+                                            color: Colors.white,
+                                            borderRadius: BorderRadius.circular(8)
+                                        ),
+                                        child: Center(
+                                          child: Text("34",
+                                            style: TextStyle(
+                                                color: Colors.black,
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.bold
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        margin: EdgeInsets.only(left: 8, right: 8),
+                                        child: Text(":",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 14,
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        height: 41,
+                                        width: 42,
+                                        decoration: BoxDecoration(
+                                            color: Colors.white,
+                                            borderRadius: BorderRadius.circular(8)
+                                        ),
+                                        child: Center(
+                                          child: Text("52",
+                                            style: TextStyle(
+                                                color: Colors.black,
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.bold
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          )),
+                      Positioned.fill(
+                        child: Material(
+                          color: Colors.transparent,
+                          child: InkWell(
+                            onTap: () => {gotoDetailProduct()},
+                          ),
+                        ),
+                      )
+                    ],
                   ),
                 );
               },
@@ -123,19 +238,19 @@ class _HomeViewState extends State<HomeView> {
             height: 40,
             margin: EdgeInsets.only(left: 32, right: 32),
             child: ListView.builder(
-                  itemCount: 6,
-                  scrollDirection: Axis.horizontal,
-                  shrinkWrap: true,
-                  itemBuilder: (ctx, idx){
-                    return IndicatorView(
-                      currentIndex: 1,
-                      positionIndex: 1,
-                      color: ColorConfig.bluePrimary,
-                      width: 5,
-                      height: 5,
-                    );
-                  },
-                ),
+              itemCount: 6,
+              scrollDirection: Axis.horizontal,
+              shrinkWrap: true,
+              itemBuilder: (ctx, idx) {
+                return IndicatorView(
+                  currentIndex: 1,
+                  positionIndex: 1,
+                  color: ColorConfig.bluePrimary,
+                  width: 5,
+                  height: 5,
+                );
+              },
+            ),
           )
         ],
       ),
@@ -143,80 +258,79 @@ class _HomeViewState extends State<HomeView> {
   }
 
   Widget categoryWidget() {
-
     return Container(
       height: 140,
       child: Column(
         children: [
           Expanded(
             child: Container(
-              margin: EdgeInsets.only(left: 20,right: 4),
+              margin: EdgeInsets.only(left: 20, right: 4),
               child: Row(
                 children: [
-                  Expanded(child: Text("Category", style: TextStyle(
-                    color: ColorConfig.textColorBold1,
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold
-                  ))),
+                  Expanded(
+                      child: Text("Category",
+                          style: TextStyle(
+                              color: ColorConfig.textColorBold1,
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold))),
                   FlatButton(
-                      onPressed: () => {print("see all")},
-                      child: Text("More Category", style: TextStyle(
-                       fontSize: 14,
-                       fontWeight: FontWeight.bold,
-                       color: ColorConfig.bluePrimary
-                      )))
+                      onPressed: () => {gotoAllCategory()},
+                      child: Text("More Category",
+                          style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              color: ColorConfig.bluePrimary)))
                 ],
               ),
             ),
           ),
-        Container(
-              height: 110,
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: 10,
-                padding: EdgeInsets.only(left: 8, right: 8),
-                itemBuilder: (ctx, idx){
-                  return Container(
-                    width: 70,
-                    margin: EdgeInsets.all(8),
-                    child: Column(
-                      children: [
-                        Container(
-                            decoration: BoxDecoration(
-                                border: Border.all(color: ColorConfig.borderColor, width: 1),
-                              shape: BoxShape.circle
-                            ),
-                            height: 70,
-                            width: 70,
-                          child: Padding(
-                            child: Image(
-                              image: AssetImage("lib/asset/image/home/shirt.png")
-                            ),
-                            padding: EdgeInsets.all(20),
-                          ),
-
+          Container(
+            height: 110,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: 10,
+              padding: EdgeInsets.only(left: 8, right: 8),
+              itemBuilder: (ctx, idx) {
+                return Container(
+                  width: 70,
+                  margin: EdgeInsets.all(8),
+                  child: Column(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(
+                                color: ColorConfig.borderColor, width: 1),
+                            shape: BoxShape.circle),
+                        height: 70,
+                        width: 70,
+                        child: Padding(
+                          child: Image(
+                              image:
+                                  AssetImage("lib/asset/image/home/shirt.png")),
+                          padding: EdgeInsets.all(20),
                         ),
-                        Expanded(
-                          child: Container(
-                            child: Text("Man Shirt", style: TextStyle(
-                              fontSize: 10,
-                            )),
-                            padding: EdgeInsets.only(top: 10),
-                          ),
-                        )
-                      ],
-                    ),
-                  );
-                },
-              ),
+                      ),
+                      Expanded(
+                        child: Container(
+                          child: Text("Man Shirt",
+                              style: TextStyle(
+                                fontSize: 10,
+                              )),
+                          padding: EdgeInsets.only(top: 10),
+                        ),
+                      )
+                    ],
+                  ),
+                );
+              },
             ),
+          ),
         ],
       ),
     );
   }
 
   Widget flashSaleWidget() {
-
     return Container(
       height: 260,
       margin: EdgeInsets.only(top: 16),
@@ -224,102 +338,112 @@ class _HomeViewState extends State<HomeView> {
         children: [
           Expanded(
             child: Container(
-              margin: EdgeInsets.only(left: 20,right: 4),
+              margin: EdgeInsets.only(left: 20, right: 4),
               child: Row(
                 children: [
-                  Expanded(child: Text("Flash Sale", style: TextStyle(
-                      color: ColorConfig.textColorBold1,
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold
-                  ))),
+                  Expanded(
+                      child: Text("Flash Sale",
+                          style: TextStyle(
+                              color: ColorConfig.textColorBold1,
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold))),
                   FlatButton(
                       onPressed: () => {print("see all")},
-                      child: Text("See More", style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                          color: ColorConfig.bluePrimary
-                      )))
+                      child: Text("See More",
+                          style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              color: ColorConfig.bluePrimary)))
                 ],
               ),
             ),
           ),
-    Container(
-              height: 240,
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: 10,
-                padding: EdgeInsets.only(left: 8, right: 8),
-                itemBuilder: (ctx, idx){
-                  return Container(
-                    width: 140,
-                    margin: EdgeInsets.all(8),
-                    padding: EdgeInsets.all(8),
-                    decoration: BoxDecoration(
-                        border: Border.all(color: ColorConfig.borderColor, width: 1),
-                        borderRadius: BorderRadius.circular(8)
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          height: 110,
-                          child: ClipRRect(
-                          borderRadius: BorderRadius.circular(5),
-                            child: Image(
-                              image: AssetImage("lib/asset/image/home/promotionDummy.png"),
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-                        ),
-                         Container(
-                            child: Text("FS - Nike Air Max 270 React", maxLines: 2, style: TextStyle(
-                              fontSize: 12,
-                              color: ColorConfig.textColorBold1,
-                              fontWeight: FontWeight.bold
-                            )),
-                            padding: EdgeInsets.only(top: 10),
-                          ),
-                        Container(
-                          child: Text("288,43", style: TextStyle(
-                              fontSize: 12,
-                              color: ColorConfig.bluePrimary,
-                              fontWeight: FontWeight.bold
-                          )),
-                          padding: EdgeInsets.only(top: 10),
-                        ),
-                        Container(
-                          child: Row(
-                            children: [
-                              Text("534,33", style: TextStyle(
-                                fontSize: 10,
-                                decoration: TextDecoration.lineThrough
-                              )),
-                              Padding(
-                                padding: EdgeInsets.only(left: 8),
-                                child: Text("24% off", style: TextStyle(
-                                  fontSize: 10,
-                                  fontWeight: FontWeight.bold,
-                                  color: Color(0XFFFB7181)
-                                )),
+          Container(
+            height: 240,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: 10,
+              padding: EdgeInsets.only(left: 8, right: 8),
+              itemBuilder: (ctx, idx) {
+                return Container(
+                  width: 140,
+                  margin: EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                      border:
+                          Border.all(color: ColorConfig.borderColor, width: 1),
+                      borderRadius: BorderRadius.circular(8)),
+                  child: Material(
+                    color: Colors.transparent,
+                    child: InkWell(
+                      onTap: () => {gotoDetailProduct()},
+                      child: Container(
+                        padding: EdgeInsets.all(8),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              height: 110,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(5),
+                                child: Image(
+                                  image: AssetImage(
+                                      "lib/asset/image/home/promotionDummy.png"),
+                                  fit: BoxFit.fill,
+                                ),
                               ),
-                            ],
-                          ),
-                          padding: EdgeInsets.only(top: 10),
+                            ),
+                            Container(
+                              child: Text("FS - Nike Air Max 270 React",
+                                  maxLines: 2,
+                                  style: TextStyle(
+                                      fontSize: 12,
+                                      color: ColorConfig.textColorBold1,
+                                      fontWeight: FontWeight.bold)),
+                              padding: EdgeInsets.only(top: 10),
+                            ),
+                            Container(
+                              child: Text("288,43",
+                                  style: TextStyle(
+                                      fontSize: 12,
+                                      color: ColorConfig.bluePrimary,
+                                      fontWeight: FontWeight.bold)),
+                              padding: EdgeInsets.only(top: 10),
+                            ),
+                            Container(
+                              child: Row(
+                                children: [
+                                  Text("534,33",
+                                      style: TextStyle(
+                                          fontSize: 10,
+                                          decoration: TextDecoration.lineThrough)),
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 8),
+                                    child: Text("24% off",
+                                        style: TextStyle(
+                                            fontSize: 10,
+                                            fontWeight: FontWeight.bold,
+                                            color: Color(0XFFFB7181))),
+                                  ),
+                                ],
+                              ),
+                              padding: EdgeInsets.only(top: 10),
+                            ),
+                          ],
                         ),
-                      ],
+                      ),
                     ),
-                  );
-                },
-              ),
-            )
+                  ),
+                );
+              },
+            ),
+          )
         ],
       ),
     );
   }
 
   Widget megaSaleWidget() {
-
     return Container(
       margin: EdgeInsets.only(top: 16),
       height: 260,
@@ -327,84 +451,258 @@ class _HomeViewState extends State<HomeView> {
         children: [
           Expanded(
             child: Container(
-              margin: EdgeInsets.only(left: 20,right: 4),
+              margin: EdgeInsets.only(left: 20, right: 4),
               child: Row(
                 children: [
-                  Expanded(child: Text("Mega Sale", style: TextStyle(
-                      color: ColorConfig.textColorBold1,
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold
-                  ))),
+                  Expanded(
+                      child: Text("Mega Sale",
+                          style: TextStyle(
+                              color: ColorConfig.textColorBold1,
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold))),
                   FlatButton(
                       onPressed: () => {print("see all")},
-                      child: Text("See More", style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                          color: ColorConfig.bluePrimary
-                      )))
+                      child: Text("See More",
+                          style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              color: ColorConfig.bluePrimary)))
                 ],
               ),
             ),
           ),
-         Container(
-           height: 240,
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: 10,
-                padding: EdgeInsets.only(left: 8, right: 8),
-                itemBuilder: (ctx, idx){
-                  return Container(
-                    width: 140,
-                    margin: EdgeInsets.all(8),
-                    padding: EdgeInsets.all(8),
-                    decoration: BoxDecoration(
-                        border: Border.all(color: ColorConfig.borderColor, width: 1),
-                        borderRadius: BorderRadius.circular(8)
+          Container(
+            height: 240,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: 10,
+              padding: EdgeInsets.only(left: 8, right: 8),
+              itemBuilder: (ctx, idx) {
+                return Container(
+                  width: 140,
+                  margin: EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                      border:
+                      Border.all(color: ColorConfig.borderColor, width: 1),
+                      borderRadius: BorderRadius.circular(8)),
+                  child: Material(
+                    color: Colors.transparent,
+                    child: InkWell(
+                      onTap: () => {gotoDetailProduct()},
+                      child: Container(
+                        padding: EdgeInsets.all(8),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              height: 110,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(5),
+                                child: Image(
+                                  image: AssetImage(
+                                      "lib/asset/image/home/promotionDummy.png"),
+                                  fit: BoxFit.fill,
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: Text("FS - Nike Air Max 270 React",
+                                  maxLines: 2,
+                                  style: TextStyle(
+                                      fontSize: 12,
+                                      color: ColorConfig.textColorBold1,
+                                      fontWeight: FontWeight.bold)),
+                              padding: EdgeInsets.only(top: 10),
+                            ),
+                            Container(
+                              child: Text("288,43",
+                                  style: TextStyle(
+                                      fontSize: 12,
+                                      color: ColorConfig.bluePrimary,
+                                      fontWeight: FontWeight.bold)),
+                              padding: EdgeInsets.only(top: 10),
+                            ),
+                            Container(
+                              child: Row(
+                                children: [
+                                  Text("534,33",
+                                      style: TextStyle(
+                                          fontSize: 10,
+                                          decoration: TextDecoration.lineThrough)),
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 8),
+                                    child: Text("24% off",
+                                        style: TextStyle(
+                                            fontSize: 10,
+                                            fontWeight: FontWeight.bold,
+                                            color: Color(0XFFFB7181))),
+                                  ),
+                                ],
+                              ),
+                              padding: EdgeInsets.only(top: 10),
+                            ),
+                          ],
+                        ),
+                      ),
                     ),
+                  ),
+                );
+              },
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget recommendedProductWidget() {
+    return Container(
+      height: 206,
+      width: MediaQuery.of(context).size.width,
+      margin: EdgeInsets.only(left: 16, right: 16, top: 8, bottom: 8),
+      child: Stack(
+        fit: StackFit.expand,
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(5),
+            child: Image(
+              image: AssetImage("lib/asset/image/home/promotionDummy.png"),
+              fit: BoxFit.cover,
+            ),
+          ),
+          Positioned(
+              bottom: 60,
+              left: 24,
+              child: Container(
+                width: 209,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("Recommended",
+                      maxLines: 2,
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold
+                      ),
+                    ),
+                    Text("Product",
+                      maxLines: 2,
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(top: 32),
+                      child: Text("We recommend the best for you",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 12
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              )),
+          Positioned.fill(
+            child: Material(
+              color: Colors.transparent,
+              child: InkWell(
+                onTap: () => {gotoDetailProduct()},
+              ),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+
+  Widget productGridWidget() {
+    return Container(
+      child: GridView.builder(
+          shrinkWrap: true,
+          primary: false,
+          physics: new NeverScrollableScrollPhysics(),
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2, childAspectRatio: 0.65),
+          itemCount: 4,
+          itemBuilder: (item, index) {
+            return Container(
+              height: 400,
+              margin: EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                  border: Border.all(color: ColorConfig.borderColor, width: 1),
+                  borderRadius: BorderRadius.circular(8)),
+              child: Material(
+                color: Colors.transparent,
+                child: InkWell(
+                  onTap: () => {gotoAllCategory()},
+                  child: Container(
+                    padding: EdgeInsets.all(8),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Container(
-                          height: 110,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(5),
-                            child: Image(
-                              image: AssetImage("lib/asset/image/home/promotionDummy.png"),
-                              fit: BoxFit.fill,
+                        Expanded(
+                          child: Container(
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(5),
+                              child: Image(
+                                image: AssetImage(
+                                    "lib/asset/image/home/promotionDummy.png"),
+                                fit: BoxFit.fill,
+                              ),
                             ),
                           ),
                         ),
                         Container(
-                          child: Text("FS - Nike Air Max 270 React", maxLines: 2, style: TextStyle(
-                              fontSize: 12,
-                              color: ColorConfig.textColorBold1,
-                              fontWeight: FontWeight.bold
-                          )),
+                          child: Text("FS - Nike Air Max 270 React",
+                              maxLines: 2,
+                              style: TextStyle(
+                                  fontSize: 12,
+                                  color: ColorConfig.textColorBold1,
+                                  fontWeight: FontWeight.bold)),
                           padding: EdgeInsets.only(top: 10),
                         ),
                         Container(
-                          child: Text("288,43", style: TextStyle(
-                              fontSize: 12,
-                              color: ColorConfig.bluePrimary,
-                              fontWeight: FontWeight.bold
-                          )),
+                          child: RatingBarIndicator(
+                            rating: 3,
+                            itemBuilder: (context, index) => Icon(
+                              Icons.star,
+                              color: Colors.amber,
+                            ),
+                            itemCount: 5,
+                            itemSize: 24.0,
+                            unratedColor: ColorConfig.borderColor,
+                          ),
+                          padding: EdgeInsets.only(top: 10),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(top: 8),
+                          child: Text("288,43",
+                              style: TextStyle(
+                                  fontSize: 12,
+                                  color: ColorConfig.bluePrimary,
+                                  fontWeight: FontWeight.bold)),
                           padding: EdgeInsets.only(top: 10),
                         ),
                         Container(
                           child: Row(
                             children: [
-                              Text("534,33", style: TextStyle(
-                                  fontSize: 10,
-                                  decoration: TextDecoration.lineThrough
-                              )),
+                              Text("534,33",
+                                  style: TextStyle(
+                                      fontSize: 10,
+                                      decoration: TextDecoration.lineThrough)),
                               Padding(
                                 padding: EdgeInsets.only(left: 8),
-                                child: Text("24% off", style: TextStyle(
-                                    fontSize: 10,
-                                    fontWeight: FontWeight.bold,
-                                    color: Color(0XFFFB7181)
-                                )),
+                                child: Text("24% off",
+                                    style: TextStyle(
+                                        fontSize: 10,
+                                        fontWeight: FontWeight.bold,
+                                        color: Color(0XFFFB7181))),
                               ),
                             ],
                           ),
@@ -412,117 +710,8 @@ class _HomeViewState extends State<HomeView> {
                         ),
                       ],
                     ),
-                  );
-                },
-              ),
-            ),
-        ],
-      ),
-    );
-  }
-
-  Widget recommendedProductWidget() {
-
-    return Container(
-      height: 206,
-      width: MediaQuery.of(context).size.width,
-      margin: EdgeInsets.only(left: 16, right: 16, top: 8, bottom: 8),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(5),
-        child: Image(
-          image: AssetImage("lib/asset/image/home/promotionDummy.png"),
-          fit: BoxFit.cover,
-        ),
-      ),
-    );
-  }
-
-  Widget productGridWidget() {
-
-    return Container(
-      child: GridView.builder(
-          shrinkWrap: true,
-          primary: false,
-          physics: new NeverScrollableScrollPhysics(),
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            childAspectRatio: 0.65
-          ),
-          itemCount: 4,
-          itemBuilder: (item, index) {
-            return Container(
-              height: 400,
-              margin: EdgeInsets.all(8),
-              padding: EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                  border: Border.all(color: ColorConfig.borderColor, width: 1),
-                  borderRadius: BorderRadius.circular(8)
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Expanded(
-                    child: Container(
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(5),
-                        child: Image(
-                          image: AssetImage("lib/asset/image/home/promotionDummy.png"),
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                    ),
                   ),
-                  Container(
-                    child: Text("FS - Nike Air Max 270 React", maxLines: 2, style: TextStyle(
-                        fontSize: 12,
-                        color: ColorConfig.textColorBold1,
-                        fontWeight: FontWeight.bold
-                    )),
-                    padding: EdgeInsets.only(top: 10),
-                  ),
-                  Container(
-                    child: RatingBarIndicator(
-                      rating: 3,
-                      itemBuilder: (context, index) => Icon(
-                        Icons.star,
-                        color: Colors.amber,
-                      ),
-                      itemCount: 5,
-                      itemSize: 24.0,
-                      unratedColor: ColorConfig.borderColor,
-                    ),
-                    padding: EdgeInsets.only(top: 10),
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(top: 8),
-                    child: Text("288,43", style: TextStyle(
-                        fontSize: 12,
-                        color: ColorConfig.bluePrimary,
-                        fontWeight: FontWeight.bold
-                    )),
-                    padding: EdgeInsets.only(top: 10),
-                  ),
-                  Container(
-                    child: Row(
-                      children: [
-                        Text("534,33", style: TextStyle(
-                            fontSize: 10,
-                            decoration: TextDecoration.lineThrough
-                        )),
-                        Padding(
-                          padding: EdgeInsets.only(left: 8),
-                          child: Text("24% off", style: TextStyle(
-                              fontSize: 10,
-                              fontWeight: FontWeight.bold,
-                              color: Color(0XFFFB7181)
-                          )),
-                        ),
-                      ],
-                    ),
-                    padding: EdgeInsets.only(top: 10),
-                  ),
-                ],
+                ),
               ),
             );
           }),
