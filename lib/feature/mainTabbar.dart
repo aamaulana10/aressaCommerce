@@ -1,6 +1,7 @@
 import 'package:aressa_commerce/feature/cart/view/cartView.dart';
 import 'package:aressa_commerce/feature/home/view/homeView.dart';
 import 'package:aressa_commerce/feature/search/view/searchView.dart';
+import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/material.dart';
 
 class MainTabbar extends StatefulWidget {
@@ -34,7 +35,7 @@ class _MainTabbarState extends State<MainTabbar> {
       bottomNavigationBar: BottomNavigationBar(
         onTap: (e) => { onChangeTab(e) },
         currentIndex: currentIndex,
-        selectedItemColor: Colors.blue,
+        selectedItemColor: ColorConfig.bluePrimary,
         unselectedItemColor: Colors.grey,
         items: [
           BottomNavigationBarItem(
