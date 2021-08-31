@@ -67,7 +67,7 @@ class _OfferViewState extends State<OfferView> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(8),
                       child: Image(
-                        image: AssetImage("asset/image/PromotionImage1.png"),
+                        image: AssetImage("lib/asset/image/home/promotionDummy.png"),
                         height: 206,
                         width: MediaQuery.of(context).size.width,
                         fit: BoxFit.cover,
@@ -180,7 +180,7 @@ class _OfferViewState extends State<OfferView> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(8),
                       child: Image(
-                        image: AssetImage("asset/image/PromotionImage2.png"),
+                        image: AssetImage("lib/asset/image/home/PromotionImage2.png"),
                         height: 206,
                         width: MediaQuery.of(context).size.width,
                         fit: BoxFit.cover,
