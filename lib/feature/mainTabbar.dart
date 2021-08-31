@@ -48,7 +48,7 @@ class _MainTabbarState extends State<MainTabbar> {
           ),
           BottomNavigationBarItem(
               icon: Icon(Icons.search),
-              label: "Search"
+              label: "Explore"
           ),
           BottomNavigationBarItem(
               icon: Icon(Icons.shopping_cart),
