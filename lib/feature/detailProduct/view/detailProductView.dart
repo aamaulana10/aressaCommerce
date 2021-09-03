@@ -1,3 +1,4 @@
+import 'package:aressa_commerce/feature/review/view/reviewPage.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:aressa_commerce/util/view/indicatorView.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +17,13 @@ class _DetailProductViewState extends State<DetailProductView> {
     Future.delayed(Duration(milliseconds: 500), () {
       Navigator.of(context)
           .push(MaterialPageRoute(builder: (ctx) => DetailProductView()));
+    });
+  }
+
+  gotoProductReview() {
+    Future.delayed(Duration(milliseconds: 500), () {
+      Navigator.of(context)
+          .push(MaterialPageRoute(builder: (ctx) => ReviewPage()));
     });
   }
 
@@ -257,7 +265,7 @@ class _DetailProductViewState extends State<DetailProductView> {
                         fontSize: 14,
                         color: ColorConfig.textColorBold1,
                         fontWeight: FontWeight.bold))),
-                    TextButton(onPressed: () => {print("see all")}, child: Text("Lihat semua"))
+                    TextButton(onPressed: () => {gotoProductReview()}, child: Text("See All"))
                 ],
               ),
             ),
