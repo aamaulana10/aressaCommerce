@@ -12,6 +12,7 @@ class _InputChangePasswordViewState extends State<InputChangePasswordView> {
   Widget appBar() {
     return Container(
         height: 60,
+        margin: EdgeInsets.only(top: 16),
         child: Column(
           children: [
             Expanded(

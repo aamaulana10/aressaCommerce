@@ -1,3 +1,5 @@
+import 'package:aressa_commerce/feature/account/model/userAccountModel.dart';
+import 'package:aressa_commerce/feature/account/view/profileView/profileView.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -9,9 +11,52 @@ class InputNameView extends StatefulWidget {
 
 class _InputNameViewState extends State<InputNameView> {
 
+  String FirstName = "";
+  String LastName = "";
+
+  var user = UserAccountModel();
+
+  void save() {
+    print("First Name: " + FirstName);
+    print("Last Name: " + LastName);
+
+    if (FirstName.length == 0){
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        content: Text("Nama tidak boleh kosong"),
+      ));
+    }
+
+    else if(LastName.length == 0){
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        content: Text("Nama tidak boleh kosong"),
+      ));
+    }
+
+    else{
+
+      user.userFirstName = FirstName;
+      user.userLastName = LastName;
+
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        content: Text("Nama Berhasil Dirubah"),
+      ));
+
+      Future.delayed(Duration(milliseconds: 500)).then((value) {
+
+        lemparData(context);
+      });
+    }
+  }
+
+  void lemparData(user) {
+    Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => ProfileView(userAccountModel: user)));
+  }
+
   Widget appBar() {
     return Container(
         height: 60,
+        margin: EdgeInsets.only(top: 16),
         child: Column(
           children: [
             Expanded(
@@ -63,6 +108,11 @@ class _InputNameViewState extends State<InputNameView> {
                   color: Colors.grey,
               )),
             child: TextFormField(
+              onChanged: (e) {
+                setState(() {
+                  FirstName = e;
+                });
+              },
               decoration: InputDecoration(
                   labelText: "First Name",
                   labelStyle: TextStyle(
@@ -92,6 +142,11 @@ class _InputNameViewState extends State<InputNameView> {
                   color: Colors.grey,
                 )),
             child: TextFormField(
+              onChanged: (e) {
+                setState(() {
+                  LastName = e;
+                });
+              },
               decoration: InputDecoration(
                   labelText: "Last Name",
                   labelStyle: TextStyle(
@@ -117,7 +172,7 @@ class _InputNameViewState extends State<InputNameView> {
                 left: 16,
                 right: 16,
                 child: InkWell(
-                  onTap: () => {},
+                  onTap: () => {Navigator.pop(context)},
                   child: Container(
                     height: 57,
                     decoration: BoxDecoration(

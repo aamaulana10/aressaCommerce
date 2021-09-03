@@ -1,11 +1,18 @@
-import 'package:aressa_commerce/feature/account/view/inputChangePasswordView.dart';
-import 'package:aressa_commerce/feature/account/view/inputEmailView.dart';
-import 'package:aressa_commerce/feature/account/view/inputNameView.dart';
-import 'package:aressa_commerce/feature/account/view/inputPhoneNumber.dart';
+import 'package:aressa_commerce/feature/account/model/userAccountModel.dart';
+import 'package:aressa_commerce/feature/account/view/profileView/inputBirthdayView.dart';
+import 'package:aressa_commerce/feature/account/view/profileView/inputChangePasswordView.dart';
+import 'package:aressa_commerce/feature/account/view/profileView/inputEmailView.dart';
+import 'package:aressa_commerce/feature/account/view/profileView/inputGenderView.dart';
+import 'package:aressa_commerce/feature/account/view/profileView/inputNameView.dart';
+import 'package:aressa_commerce/feature/account/view/profileView/inputPhoneNumberView.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ProfileView extends StatefulWidget {
+
+  final UserAccountModel userAccountModel;
+
+  const ProfileView({this.userAccountModel});
 
   @override
   _ProfileViewState createState() => _ProfileViewState();
@@ -22,16 +29,24 @@ class _ProfileViewState extends State<ProfileView> {
   }
 
   void gotoInputPhoneNumber() {
-    Navigator.of(context).push(MaterialPageRoute(builder: (context) => InputPhoneNumber()));
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => InputPhoneNumberView()));
   }
 
-  void gotoChangePasswordNumber() {
+  void gotoChangePasswordView() {
     Navigator.of(context).push(MaterialPageRoute(builder: (context) => InputChangePasswordView()));
+  }
+  void gotoInputBirthdayView() {
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => InputBirthdayView()));
+  }
+
+  void gotoInputgender() {
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => InputGenderView()));
   }
 
   Widget appBar() {
     return Container(
         height: 60,
+        margin: EdgeInsets.only(top: 16),
         child: Column(
           children: [
             Expanded(
@@ -86,13 +101,32 @@ class _ProfileViewState extends State<ProfileView> {
                   margin: EdgeInsets.only(left: 16),
                   child: Column(
                     children: [
-                      TextButton(onPressed: () => {this.gotoInputNameView()},
-                          child: Text("Aressa Labs",
-                          style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold
-                ))),
+                      InkWell(
+                        onTap: () => {this.gotoInputNameView()},
+                        child: Container(
+                          child: Row(
+                            children: [
+                              Text("Aressa",
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold
+                              ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(left: 8),
+                                child: Text("Labs",
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.bold
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
                       Container(
                         child: Text("@aressaLabs",
                           style: TextStyle(
@@ -107,82 +141,88 @@ class _ProfileViewState extends State<ProfileView> {
               ],
             ),
           ),
-          Container(
-            margin: EdgeInsets.only(top: 35),
-            child: Row(
-              children: [
-                Icon(Icons.male,
-                  color: Colors.lightBlue,
-                  size: 24,
-                ),
-                Container(
-                  margin: EdgeInsets.only(left: 16),
-                  child: Text("Gender",
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 12,
-                        fontWeight: FontWeight.bold
+          InkWell(
+            onTap: () => {this.gotoInputgender()},
+            child: Container(
+              margin: EdgeInsets.only(top: 35),
+              child: Row(
+                children: [
+                  Icon(Icons.male,
+                    color: Colors.lightBlue,
+                    size: 24,
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 16),
+                    child: Text("Gender",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold
+                      ),
                     ),
                   ),
-                ),
-                Expanded(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Text("Male",
-                      style: TextStyle(
-                        color: Colors.grey,
-                        fontSize: 12
-                      )),
-                      IconButton(
-                          onPressed: () => {},
-                          icon: Icon(Icons.navigate_next,
+                  Expanded(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Text("Male",
+                        style: TextStyle(
                           color: Colors.grey,
-                            size: 24,
-                          ))
-                    ],
-                  ),
-                )
-              ],
+                          fontSize: 12
+                        )),
+                        IconButton(
+                            onPressed: () => {this.gotoInputgender()},
+                            icon: Icon(Icons.navigate_next,
+                            color: Colors.grey,
+                              size: 24,
+                            ))
+                      ],
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
-          Container(
-            margin: EdgeInsets.only(top: 10),
-            child: Row(
-              children: [
-                Icon(Icons.calendar_today_rounded,
-                  color: Colors.lightBlue,
-                  size: 24,
-                ),
-                Container(
-                  margin: EdgeInsets.only(left: 16),
-                  child: Text("Birthday",
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 12,
-                        fontWeight: FontWeight.bold
+          InkWell(
+            onTap: () => {gotoInputBirthdayView()},
+            child: Container(
+              margin: EdgeInsets.only(top: 10),
+              child: Row(
+                children: [
+                  Icon(Icons.calendar_today_rounded,
+                    color: Colors.lightBlue,
+                    size: 24,
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 16),
+                    child: Text("Birthday",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold
+                      ),
                     ),
                   ),
-                ),
-                Expanded(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Text("12-12-2000",
-                          style: TextStyle(
+                  Expanded(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Text("12-12-2000",
+                            style: TextStyle(
+                                color: Colors.grey,
+                                fontSize: 12
+                            )),
+                        IconButton(
+                            onPressed: () => {gotoInputBirthdayView()},
+                            icon: Icon(Icons.navigate_next,
                               color: Colors.grey,
-                              fontSize: 12
-                          )),
-                      IconButton(
-                          onPressed: () => {},
-                          icon: Icon(Icons.navigate_next,
-                            color: Colors.grey,
-                            size: 24,
-                          ))
-                    ],
-                  ),
-                )
-              ],
+                              size: 24,
+                            ))
+                      ],
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
           InkWell(
@@ -270,7 +310,7 @@ class _ProfileViewState extends State<ProfileView> {
             ),
           ),
           InkWell(
-            onTap: () => {this.gotoChangePasswordNumber()},
+            onTap: () => {this.gotoChangePasswordView()},
             child: Container(
               margin: EdgeInsets.only(top: 10),
               child: Row(
@@ -299,7 +339,7 @@ class _ProfileViewState extends State<ProfileView> {
                                 fontSize: 12
                             )),
                         IconButton(
-                            onPressed: () => {this.gotoChangePasswordNumber()},
+                            onPressed: () => {this.gotoChangePasswordView()},
                             icon: Icon(Icons.navigate_next,
                               color: Colors.grey,
                               size: 24,

@@ -1,17 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class InputPhoneNumber extends StatefulWidget {
+class InputPhoneNumberView extends StatefulWidget {
 
   @override
-  _InputPhoneNumberState createState() => _InputPhoneNumberState();
+  _InputPhoneNumberViewState createState() => _InputPhoneNumberViewState();
 }
 
-class _InputPhoneNumberState extends State<InputPhoneNumber> {
+class _InputPhoneNumberViewState extends State<InputPhoneNumberView> {
 
   Widget appBar() {
     return Container(
         height: 60,
+        margin: EdgeInsets.only(top: 16),
         child: Column(
           children: [
             Expanded(

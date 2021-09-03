@@ -12,6 +12,7 @@ class _InputEmailViewState extends State<InputEmailView> {
   Widget appBar() {
     return Container(
         height: 60,
+        margin: EdgeInsets.only(top: 16),
         child: Column(
           children: [
             Expanded(
@@ -84,7 +85,7 @@ class _InputEmailViewState extends State<InputEmailView> {
                   fontSize: 12
                 ),
                 )),
-          )
+          ),
         ],
       ),
     );
