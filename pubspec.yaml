@@ -39,3 +39,5 @@ flutter:
     - lib/asset/image/home/womanShoes.png
     - lib/asset/image/home/womanTshirt.png
     - lib/asset/image/home/PromotionImage2.png
+    - lib/asset/image/home/more.png
+    - lib/asset/image/home/Search.png

@@ -30,70 +30,82 @@ class _HomeViewState extends State<HomeView> {
 
   Widget header() {
     return Container(
-      height: 50,
-      margin: EdgeInsets.only(left: 16, right: 16),
-      child: Row(
+      height: 80,
+      child: Column(
         children: [
           Expanded(
             child: Container(
-              decoration: BoxDecoration(
-                  border: Border.all(color: ColorConfig.borderColor, width: 1),
-                  borderRadius: BorderRadius.circular(8)),
-              child: TextFormField(
-                decoration: InputDecoration(
-                    labelText: "Search Product",
-                    labelStyle:
-                        TextStyle(color: ColorConfig.textColor1, fontSize: 12),
-                    prefixIcon: Icon(
-                      Icons.search,
-                      color: ColorConfig.bluePrimary,
+              margin: EdgeInsets.only(left: 16, right: 16),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(color: ColorConfig.borderColor, width: 1),
+                          borderRadius: BorderRadius.circular(8)),
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                            labelText: "Search Product",
+                            labelStyle:
+                                TextStyle(color: ColorConfig.textColor1, fontSize: 12),
+                            prefixIcon: Icon(
+                              Icons.search,
+                              color: ColorConfig.bluePrimary,
+                            ),
+                            border: InputBorder.none),
+                      ),
                     ),
-                    border: InputBorder.none),
+                  ),
+                  Container(
+                    height: 40,
+                    width: 40,
+                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
+                    child: InkWell(
+                        borderRadius: BorderRadius.circular(20),
+                        onTap: () => {print("whishlist")},
+                        child: Padding(
+                          padding: EdgeInsets.all(8),
+                          child: Image(
+                            image: AssetImage("lib/asset/image/home/love.png"),
+                          ),
+                        )),
+                  ),
+                  Container(
+                    height: 40,
+                    width: 40,
+                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
+                    child: InkWell(
+                        borderRadius: BorderRadius.circular(20),
+                        onTap: () => {print("whishlist")},
+                        child: Padding(
+                          padding: EdgeInsets.all(8),
+                          child: Image(
+                            image: AssetImage("lib/asset/image/home/notification.png"),
+                          ),
+                        )),
+                  ),
+                  Container(
+                    height: 40,
+                    width: 40,
+                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
+                    child: InkWell(
+                        borderRadius: BorderRadius.circular(20),
+                        onTap: () => {print("more")},
+                        child: Padding(
+                          padding: EdgeInsets.all(8),
+                          child: Image(
+                            image: AssetImage("lib/asset/image/home/more.png"),
+                          ),
+                        )),
+                  ),
+                ],
               ),
             ),
           ),
           Container(
-            height: 40,
-            width: 40,
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
-            child: InkWell(
-                borderRadius: BorderRadius.circular(20),
-                onTap: () => {print("whishlist")},
-                child: Padding(
-                  padding: EdgeInsets.all(8),
-                  child: Image(
-                    image: AssetImage("lib/asset/image/home/love.png"),
-                  ),
-                )),
-          ),
-          Container(
-            height: 40,
-            width: 40,
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
-            child: InkWell(
-                borderRadius: BorderRadius.circular(20),
-                onTap: () => {print("whishlist")},
-                child: Padding(
-                  padding: EdgeInsets.all(8),
-                  child: Image(
-                    image: AssetImage("lib/asset/image/home/notification.png"),
-                  ),
-                )),
-          ),
-          Container(
-            height: 40,
-            width: 40,
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
-            child: InkWell(
-                borderRadius: BorderRadius.circular(20),
-                onTap: () => {print("whishlist")},
-                child: Padding(
-                  padding: EdgeInsets.all(8),
-                  child: Image(
-                    image: AssetImage("lib/asset/image/home/love.png"),
-                  ),
-                )),
-          ),
+            height: 1,
+            color: ColorConfig.borderColor,
+          )
         ],
       ),
     );
@@ -723,18 +735,24 @@ class _HomeViewState extends State<HomeView> {
     return Scaffold(
       body: Container(
         padding: EdgeInsets.only(top: 32),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              header(),
-              promoBanner(),
-              categoryWidget(),
-              flashSaleWidget(),
-              megaSaleWidget(),
-              recommendedProductWidget(),
-              productGridWidget()
-            ],
-          ),
+        child: Column(
+          children: [
+            header(),
+            Expanded(
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    promoBanner(),
+                    categoryWidget(),
+                    flashSaleWidget(),
+                    megaSaleWidget(),
+                    recommendedProductWidget(),
+                    productGridWidget()
+                  ],
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
