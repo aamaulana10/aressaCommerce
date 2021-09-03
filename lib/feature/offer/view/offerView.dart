@@ -11,23 +11,33 @@ class _OfferViewState extends State<OfferView> {
 
   Widget appBar() {
     return Container(
-      height: 35,
-        width: MediaQuery.of(context).size.width,
-        margin: EdgeInsets.only(top: 32, left: 16, right: 16),
-      child: Container(
-        decoration: BoxDecoration(
-            border: Border(
-              bottom: BorderSide(width: 1, color: Colors.grey),
+        height: 60,
+        child: Column(
+          children: [
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.only(right: 16),
+                child: Row(
+                  children: [
+                    IconButton(
+                      onPressed: () => {Navigator.of(context).pop()},
+                      icon: Icon(Icons.chevron_left),
+                      iconSize: 32,
+                    ),
+                    Text("Offer", style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold
+                    )),
+                  ],
+                ),
+              ),
+            ),
+            Container(
+              height: 1,
+              color: Colors.grey,
             )
-        ),
-        child: Text("Offer",
-          style: TextStyle(
-              color: Colors.black,
-              fontSize: 16,
-              fontWeight: FontWeight.bold
-          ),
-        ),
-      ),
+          ],
+        )
     );
   }
 
