@@ -1,5 +1,8 @@
 import 'package:aressa_commerce/feature/category/view/allCategoryView.dart';
 import 'package:aressa_commerce/feature/detailProduct/view/detailProductView.dart';
+import 'package:aressa_commerce/feature/favoritProduct/view/favoritProductView.dart';
+import 'package:aressa_commerce/feature/flashSale/view/flashSaleView.dart';
+import 'package:aressa_commerce/feature/megaSale/view/megaSaleView.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:aressa_commerce/util/view/indicatorView.dart';
 import 'package:flutter/cupertino.dart';
@@ -14,6 +17,7 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
+
   gotoAllCategory() {
     Future.delayed(Duration(milliseconds: 500), () {
       Navigator.of(context)
@@ -25,6 +29,27 @@ class _HomeViewState extends State<HomeView> {
     Future.delayed(Duration(milliseconds: 500), () {
       Navigator.of(context)
           .push(MaterialPageRoute(builder: (ctx) => DetailProductView()));
+    });
+  }
+
+  gotoFlashSale() {
+    Future.delayed(Duration(milliseconds: 500), () {
+      Navigator.of(context)
+          .push(MaterialPageRoute(builder: (ctx) => FlashSaleView()));
+    });
+  }
+
+  gotoMegaSale() {
+    Future.delayed(Duration(milliseconds: 500), () {
+      Navigator.of(context)
+          .push(MaterialPageRoute(builder: (ctx) => MegaSaleView()));
+    });
+  }
+
+  gotoFavoriteProduct() {
+    Future.delayed(Duration(milliseconds: 500), () {
+      Navigator.of(context)
+          .push(MaterialPageRoute(builder: (ctx) => FavoritProductView()));
     });
   }
 
@@ -62,7 +87,7 @@ class _HomeViewState extends State<HomeView> {
                     decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
                     child: InkWell(
                         borderRadius: BorderRadius.circular(20),
-                        onTap: () => {print("whishlist")},
+                        onTap: () => {gotoFavoriteProduct()},
                         child: Padding(
                           padding: EdgeInsets.all(8),
                           child: Image(
@@ -360,7 +385,7 @@ class _HomeViewState extends State<HomeView> {
                               fontSize: 14,
                               fontWeight: FontWeight.bold))),
                   FlatButton(
-                      onPressed: () => {print("see all")},
+                      onPressed: () => {gotoFlashSale()},
                       child: Text("See More",
                           style: TextStyle(
                               fontSize: 14,
@@ -473,7 +498,7 @@ class _HomeViewState extends State<HomeView> {
                               fontSize: 14,
                               fontWeight: FontWeight.bold))),
                   FlatButton(
-                      onPressed: () => {print("see all")},
+                      onPressed: () => {gotoMegaSale()},
                       child: Text("See More",
                           style: TextStyle(
                               fontSize: 14,

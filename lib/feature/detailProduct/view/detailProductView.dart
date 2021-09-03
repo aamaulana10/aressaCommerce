@@ -472,7 +472,26 @@ class _DetailProductViewState extends State<DetailProductView> {
   Widget addToCartButton() {
 
     return Container(
-
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: () => {print("add to cart")},
+          child: Container(
+            margin: EdgeInsets.all(16),
+            alignment: Alignment.center,
+            height: 57,
+            decoration: BoxDecoration(
+                color: ColorConfig.bluePrimary,
+                borderRadius: BorderRadius.circular(5)
+            ),
+            child: Text("Add To Cart", style: TextStyle(
+              fontSize: 14,
+              color: Colors.white,
+              fontWeight: FontWeight.bold
+            ),),
+          ),
+        ),
+      ),
     );
   }
 
@@ -491,11 +510,11 @@ class _DetailProductViewState extends State<DetailProductView> {
                     bannerProduct(),
                     detailProductWidget(),
                     recommendedProduct(),
-
                   ],
                 ),
               ),
             ),
+            addToCartButton()
           ],
         ),
       ),
