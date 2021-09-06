@@ -1,4 +1,5 @@
 import 'package:aressa_commerce/feature/review/view/reviewPage.dart';
+import 'package:aressa_commerce/generated/l10n.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:aressa_commerce/util/view/indicatorView.dart';
 import 'package:flutter/material.dart';
@@ -492,7 +493,7 @@ class _DetailProductViewState extends State<DetailProductView> {
                 color: ColorConfig.bluePrimary,
                 borderRadius: BorderRadius.circular(5)
             ),
-            child: Text("Add To Cart", style: TextStyle(
+            child: Text(S.of(context).addToCart, style: TextStyle(
               fontSize: 14,
               color: Colors.white,
               fontWeight: FontWeight.bold
