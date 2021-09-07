@@ -27,7 +27,8 @@ class _InputPhoneNumberViewState extends State<InputPhoneNumberView> {
                     ),
                     Text("Phone Nummber", style: TextStyle(
                         fontSize: 16,
-                        fontWeight: FontWeight.bold
+                      color: Colors.black,
+                      fontFamily: 'PoppinsBold',
                     )),
                   ],
                 ),
@@ -52,7 +53,7 @@ class _InputPhoneNumberViewState extends State<InputPhoneNumberView> {
               style: TextStyle(
                   color: Colors.black,
                   fontSize: 14,
-                  fontWeight: FontWeight.bold
+                fontFamily: 'PoppinsBold',
               )),
           Container(
             height: 50,
@@ -70,6 +71,7 @@ class _InputPhoneNumberViewState extends State<InputPhoneNumberView> {
                   labelText: "+63",
                   labelStyle: TextStyle(
                     fontSize: 14,
+                    fontFamily: 'PoppinsRegular',
                     color: Colors.grey,
                   ),
                   border: InputBorder.none),
@@ -90,7 +92,7 @@ class _InputPhoneNumberViewState extends State<InputPhoneNumberView> {
                 left: 16,
                 right: 16,
                 child: InkWell(
-                  onTap: () => {},
+                  onTap: () => {Navigator.pop(context)},
                   child: Container(
                     height: 57,
                     decoration: BoxDecoration(
@@ -102,7 +104,7 @@ class _InputPhoneNumberViewState extends State<InputPhoneNumberView> {
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 14,
-                            fontWeight: FontWeight.bold
+                          fontFamily: 'PoppinsBold',
                         ),
                       ),
                     ),

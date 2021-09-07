@@ -1,4 +1,5 @@
 import 'package:aressa_commerce/feature/account/view/adddressView/addressView.dart';
+import 'package:aressa_commerce/feature/account/view/paymentView/paymentView.dart';
 import 'package:aressa_commerce/feature/account/view/profileView/profileView.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -19,6 +20,10 @@ class _AccountViewState extends State<AccountView> {
     Navigator.of(context).push(MaterialPageRoute(builder: (context) => AddressView()));
   }
 
+  void gotoPaymentView() {
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => PaymentView()));
+  }
+
   Widget appBar() {
     return Container(
         height: 60,
@@ -32,7 +37,8 @@ class _AccountViewState extends State<AccountView> {
                 margin: EdgeInsets.only(left: 16, right: 16, top: 18),
                 child: Text("Account", style: TextStyle(
                     fontSize: 16,
-                    fontWeight: FontWeight.bold
+                    color: Colors.black,
+                    fontFamily: 'PoppinsBold',
                 )),
               ),
             ),
@@ -67,7 +73,7 @@ class _AccountViewState extends State<AccountView> {
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 12,
-                      fontWeight: FontWeight.bold
+                      fontFamily: 'PoppinsBold',
                     ),
                     ),
                   )
@@ -89,7 +95,7 @@ class _AccountViewState extends State<AccountView> {
                     style: TextStyle(
                         color: Colors.black,
                         fontSize: 12,
-                        fontWeight: FontWeight.bold
+                      fontFamily: 'PoppinsBold',
                     ),
                   ),
                 )
@@ -112,7 +118,7 @@ class _AccountViewState extends State<AccountView> {
                       style: TextStyle(
                           color: Colors.black,
                           fontSize: 12,
-                          fontWeight: FontWeight.bold
+                        fontFamily: 'PoppinsBold',
                       ),
                     ),
                   )
@@ -120,25 +126,28 @@ class _AccountViewState extends State<AccountView> {
               ),
             ),
           ),
-          Container(
-            margin: EdgeInsets.only(top: 16),
-            child: Row(
-              children: [
-                Icon(Icons.payment,
-                  color: Colors.lightBlue,
-                  size: 24,
-                ),
-                Container(
-                  margin: EdgeInsets.only(left: 8),
-                  child: Text("Payment",
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 12,
-                        fontWeight: FontWeight.bold
-                    ),
+          InkWell(
+            onTap: () => {this.gotoPaymentView()},
+            child: Container(
+              margin: EdgeInsets.only(top: 16),
+              child: Row(
+                children: [
+                  Icon(Icons.payment,
+                    color: Colors.lightBlue,
+                    size: 24,
                   ),
-                )
-              ],
+                  Container(
+                    margin: EdgeInsets.only(left: 8),
+                    child: Text("Payment",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 12,
+                        fontFamily: 'PoppinsBold',
+                      ),
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
         ],

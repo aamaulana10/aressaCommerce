@@ -38,7 +38,7 @@ class _DetailProductViewState extends State<DetailProductView> {
                     Expanded(
                       child: Text("Nike air Max 270", style: TextStyle(
                           fontSize: 16,
-                          fontWeight: FontWeight.bold
+                        fontFamily: 'PoppinsBold',
                       )),
                     ),
                     Row(
@@ -158,7 +158,9 @@ class _DetailProductViewState extends State<DetailProductView> {
             children: [
               Expanded(
                 child: Text("Nike Air Zoom Pegasus 36 Miami", style: TextStyle(
-                 fontSize: 20, fontWeight: FontWeight.bold, color: ColorConfig.textColorBold1
+                 fontSize: 20,
+                    fontFamily: 'PoppinsBold',
+                    color: ColorConfig.textColorBold1
                 )),
               ),
               Container(
@@ -197,7 +199,7 @@ class _DetailProductViewState extends State<DetailProductView> {
                 style: TextStyle(
                     fontSize: 20,
                     color: ColorConfig.bluePrimary,
-                    fontWeight: FontWeight.bold)),
+                  fontFamily: 'PoppinsBold',)),
             padding: EdgeInsets.only(top: 10),
           ),
           Container(
@@ -206,7 +208,7 @@ class _DetailProductViewState extends State<DetailProductView> {
                 style: TextStyle(
                     fontSize: 14,
                     color: ColorConfig.textColorBold1,
-                    fontWeight: FontWeight.bold)),
+                  fontFamily: 'PoppinsBold',)),
             padding: EdgeInsets.only(top: 10),
           ),
           Container(
@@ -216,12 +218,14 @@ class _DetailProductViewState extends State<DetailProductView> {
                 Text("Category",
                     style: TextStyle(
                         fontSize: 12,
+                        fontFamily: 'PoppinsRegular',
                         color: ColorConfig.textColorBold1,)),
                 Expanded(
                   child: Text("Man Shoes",
                       textAlign: TextAlign.right,
                       style: TextStyle(
                           fontSize: 12,
+                          fontFamily: 'PoppinsRegular',
                           color: ColorConfig.textColor1),
                 ),
                 )
@@ -234,6 +238,7 @@ class _DetailProductViewState extends State<DetailProductView> {
             child: Text("The Nike Air Max 270 React ENG combines a full-length React foam midsole with a 270 Max Air unit for unrivaled comfort and a striking visual experience.",
                 style: TextStyle(
                     fontSize: 12,
+                    fontFamily: 'PoppinsRegular',
                     color: ColorConfig.textColor1)),
             padding: EdgeInsets.only(top: 10),
           ),
@@ -256,7 +261,7 @@ class _DetailProductViewState extends State<DetailProductView> {
                     Expanded(child: Text("Review Product", style: TextStyle(
                         fontSize: 14,
                         color: ColorConfig.textColorBold1,
-                        fontWeight: FontWeight.bold))),
+                      fontFamily: 'PoppinsBold',))),
                     TextButton(onPressed: () => {print("see all")}, child: Text("Lihat semua"))
                 ],
               ),
@@ -280,10 +285,11 @@ class _DetailProductViewState extends State<DetailProductView> {
                       child: Text("4.5", style: TextStyle(
                        fontSize: 10,
                        color: ColorConfig.textColor1,
-                       fontWeight: FontWeight.bold
+                        fontFamily: 'PoppinsBold',
                       ))),
                   Text("(5 Reviews)", style: TextStyle(
                       fontSize: 10,
+                      fontFamily: 'PoppinsRegular',
                       color: ColorConfig.textColor1,
                   ),)
                 ],
@@ -311,7 +317,7 @@ class _DetailProductViewState extends State<DetailProductView> {
                           child: Text("James Lawsoon", style: TextStyle(
                           fontSize: 14,
                           color: ColorConfig.textColorBold1,
-                          fontWeight: FontWeight.bold)),
+                            fontFamily: 'PoppinsBold',)),
                           padding: EdgeInsets.only(left: 6, bottom: 4),
                         ),
                         RatingBarIndicator(
@@ -335,6 +341,7 @@ class _DetailProductViewState extends State<DetailProductView> {
                 child: Text("air max are always very comfortable fit, clean and just perfect in every way. just the box was too small and scrunched the sneakers up a little bit, not sure if the box was always this small but the 90s are and will always be one of my favorites.",
                 style: TextStyle(
                   fontSize: 12,
+                  fontFamily: 'PoppinsRegular',
                   color: ColorConfig.textColor1
                 ),)),
             Container(
@@ -362,6 +369,7 @@ class _DetailProductViewState extends State<DetailProductView> {
               margin: EdgeInsets.only(bottom: 8, top: 8),
               child: Text("December 10, 2016", style: TextStyle(
                   fontSize: 12,
+                  fontFamily: 'PoppinsRegular',
                   color: ColorConfig.textColor1
               )),
             )
@@ -373,7 +381,7 @@ class _DetailProductViewState extends State<DetailProductView> {
   Widget recommendedProduct() {
 
     return Container(
-      height: 260,
+      height: 275,
       margin: EdgeInsets.only(top: 16, bottom: 16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -383,7 +391,7 @@ class _DetailProductViewState extends State<DetailProductView> {
               child: Text("You Might Also Like", style: TextStyle(
                   fontSize: 14,
                   color: ColorConfig.textColorBold1,
-                  fontWeight: FontWeight.bold)),
+                fontFamily: 'PoppinsBold',)),
             ),
             Expanded(
               child: ListView.builder(
@@ -425,7 +433,7 @@ class _DetailProductViewState extends State<DetailProductView> {
                                     style: TextStyle(
                                         fontSize: 12,
                                         color: ColorConfig.textColorBold1,
-                                        fontWeight: FontWeight.bold)),
+                                      fontFamily: 'PoppinsBold',)),
                                 padding: EdgeInsets.only(top: 10),
                               ),
                               Container(
@@ -433,7 +441,7 @@ class _DetailProductViewState extends State<DetailProductView> {
                                     style: TextStyle(
                                         fontSize: 12,
                                         color: ColorConfig.bluePrimary,
-                                        fontWeight: FontWeight.bold)),
+                                      fontFamily: 'PoppinsBold',)),
                                 padding: EdgeInsets.only(top: 10),
                               ),
                               Container(
@@ -442,13 +450,14 @@ class _DetailProductViewState extends State<DetailProductView> {
                                     Text("534,33",
                                         style: TextStyle(
                                             fontSize: 10,
+                                            fontFamily: 'PoppinsRegular',
                                             decoration: TextDecoration.lineThrough)),
                                     Padding(
                                       padding: EdgeInsets.only(left: 8),
                                       child: Text("24% off",
                                           style: TextStyle(
                                               fontSize: 10,
-                                              fontWeight: FontWeight.bold,
+                                              fontFamily: 'PoppinsBold',
                                               color: Color(0XFFFB7181))),
                                     ),
                                   ],
@@ -472,7 +481,26 @@ class _DetailProductViewState extends State<DetailProductView> {
   Widget addToCartButton() {
 
     return Container(
-
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: () => {print("add to cart")},
+          child: Container(
+            margin: EdgeInsets.all(16),
+            alignment: Alignment.center,
+            height: 57,
+            decoration: BoxDecoration(
+                color: ColorConfig.bluePrimary,
+                borderRadius: BorderRadius.circular(5)
+            ),
+            child: Text("Add To Cart", style: TextStyle(
+              fontSize: 14,
+              color: Colors.white,
+              fontFamily: 'PoppinsBold',
+            ),),
+          ),
+        ),
+      ),
     );
   }
 
@@ -491,11 +519,11 @@ class _DetailProductViewState extends State<DetailProductView> {
                     bannerProduct(),
                     detailProductWidget(),
                     recommendedProduct(),
-
                   ],
                 ),
               ),
             ),
+            addToCartButton()
           ],
         ),
       ),

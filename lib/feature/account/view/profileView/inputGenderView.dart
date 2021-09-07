@@ -27,9 +27,9 @@ class _InputGenderViewState extends State<InputGenderView> {
                       icon: Icon(Icons.chevron_left),
                       iconSize: 32,
                     ),
-                    Text("Change Password", style: TextStyle(
+                    Text("Gender", style: TextStyle(
                         fontSize: 16,
-                        fontWeight: FontWeight.bold
+                      fontFamily: 'PoppinsBold',
                     )),
                   ],
                 ),
@@ -53,7 +53,7 @@ class _InputGenderViewState extends State<InputGenderView> {
         Text("Choose gender",
         style: TextStyle(
           color: Colors.black,
-          fontWeight: FontWeight.bold,
+            fontFamily: 'PoppinsBold',
           fontSize: 14
         )),
       Container(

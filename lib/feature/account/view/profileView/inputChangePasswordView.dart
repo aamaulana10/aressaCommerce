@@ -25,9 +25,11 @@ class _InputChangePasswordViewState extends State<InputChangePasswordView> {
                       icon: Icon(Icons.chevron_left),
                       iconSize: 32,
                     ),
-                    Text("Change Password", style: TextStyle(
+                    Text("Change Password",
+                        style: TextStyle(
                         fontSize: 16,
-                        fontWeight: FontWeight.bold
+                      color: Colors.black,
+                      fontFamily: 'PoppinsBold',
                     )),
                   ],
                 ),
@@ -52,7 +54,7 @@ class _InputChangePasswordViewState extends State<InputChangePasswordView> {
               style: TextStyle(
                   color: Colors.black,
                   fontSize: 14,
-                  fontWeight: FontWeight.bold
+                fontFamily: 'PoppinsBold',
               )),
           Container(
             height: 50,
@@ -71,6 +73,7 @@ class _InputChangePasswordViewState extends State<InputChangePasswordView> {
                   labelStyle: TextStyle(
                     fontSize: 14,
                     color: Colors.grey,
+                    fontFamily: 'PoppinsRegular'
                   ),
                   border: InputBorder.none),
             ),
@@ -81,7 +84,7 @@ class _InputChangePasswordViewState extends State<InputChangePasswordView> {
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 14,
-                    fontWeight: FontWeight.bold
+                  fontFamily: 'PoppinsBold',
                 )),
           ),
           Container(
@@ -101,6 +104,7 @@ class _InputChangePasswordViewState extends State<InputChangePasswordView> {
                   labelStyle: TextStyle(
                     fontSize: 14,
                     color: Colors.grey,
+                    fontFamily: 'PoppinsRegular'
                   ),
                   border: InputBorder.none),
             ),
@@ -111,7 +115,7 @@ class _InputChangePasswordViewState extends State<InputChangePasswordView> {
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 14,
-                    fontWeight: FontWeight.bold
+                  fontFamily: 'PoppinsBold',
                 )),
           ),
           Container(
@@ -131,6 +135,7 @@ class _InputChangePasswordViewState extends State<InputChangePasswordView> {
                   labelStyle: TextStyle(
                     fontSize: 14,
                     color: Colors.grey,
+                    fontFamily: 'PoppinsRegular'
                   ),
                   border: InputBorder.none),
             ),
@@ -162,7 +167,7 @@ class _InputChangePasswordViewState extends State<InputChangePasswordView> {
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 14,
-                            fontWeight: FontWeight.bold
+                          fontFamily: 'PoppinsBold',
                         ),
                       ),
                     ),

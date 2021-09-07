@@ -43,6 +43,7 @@ flutter:
     - lib/asset/image/home/PromotionImage2.png
     - lib/asset/image/home/more.png
     - lib/asset/image/home/Search.png
+    - lib/asset/image/home/logo.png
 
   fonts:
     - family: PoppinsBlack

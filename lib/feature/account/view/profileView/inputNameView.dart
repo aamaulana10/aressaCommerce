@@ -71,7 +71,8 @@ class _InputNameViewState extends State<InputNameView> {
                     ),
                     Text("Name", style: TextStyle(
                         fontSize: 16,
-                        fontWeight: FontWeight.bold
+                      color: Colors.black,
+                      fontFamily: 'PoppinsBold',
                     )),
                   ],
                 ),
@@ -96,7 +97,7 @@ class _InputNameViewState extends State<InputNameView> {
           style: TextStyle(
             color: Colors.black,
             fontSize: 14,
-            fontWeight: FontWeight.bold
+            fontFamily: 'PoppinsBold',
           )),
           Container(
             height: 48,
@@ -117,7 +118,7 @@ class _InputNameViewState extends State<InputNameView> {
                   labelText: "First Name",
                   labelStyle: TextStyle(
                       fontSize: 14,
-
+                      fontFamily: 'PoppinsRegular',
                       color: Colors.grey,
                   ),
                   border: InputBorder.none),
@@ -129,7 +130,7 @@ class _InputNameViewState extends State<InputNameView> {
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 14,
-                    fontWeight: FontWeight.bold
+                    fontFamily: 'PoppinsBold',
                 )),
           ),
           Container(
@@ -151,7 +152,7 @@ class _InputNameViewState extends State<InputNameView> {
                   labelText: "Last Name",
                   labelStyle: TextStyle(
                     fontSize: 14,
-
+                    fontFamily: 'PoppinsRegular',
                     color: Colors.grey,
                   ),
                   border: InputBorder.none),
@@ -184,7 +185,7 @@ class _InputNameViewState extends State<InputNameView> {
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 14,
-                            fontWeight: FontWeight.bold
+                          fontFamily: 'PoppinsBold',
                         ),
                       ),
                     ),

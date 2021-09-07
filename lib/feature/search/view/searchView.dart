@@ -66,7 +66,8 @@ class _SearchViewState extends State<SearchView> {
                     labelText: "Search Product",
                     labelStyle: TextStyle(
                         color: ColorConfig.textColor1,
-                        fontSize: 12
+                        fontSize: 12,
+                      fontFamily: 'Poppinsregular'
                     ),
                     prefixIcon: Icon(Icons.search, color: ColorConfig.bluePrimary,),
                     border: InputBorder.none
@@ -190,7 +191,7 @@ class _SearchViewState extends State<SearchView> {
             child: Text("Man Fashion", textAlign: TextAlign.left, style: TextStyle(
                 color: ColorConfig.textColorBold1,
                 fontSize: 14,
-                fontWeight: FontWeight.bold),),
+                fontFamily: 'PoppinsBold',),),
           ),
           GridView.builder(
                 shrinkWrap: true,
@@ -227,6 +228,7 @@ class _SearchViewState extends State<SearchView> {
                           child: Container(
                             child: Text("Man Shirt", style: TextStyle(
                               fontSize: 10,
+                              fontFamily: 'PoppinsRegular'
                             )),
                             padding: EdgeInsets.only(top: 10),
                           ),
@@ -253,7 +255,7 @@ class _SearchViewState extends State<SearchView> {
             child: Text("Woman Fashion", textAlign: TextAlign.left, style: TextStyle(
                 color: ColorConfig.textColorBold1,
                 fontSize: 14,
-                fontWeight: FontWeight.bold)),
+              fontFamily: 'PoppinsBold',)),
           ),
           GridView.builder(
               shrinkWrap: true,
@@ -290,6 +292,7 @@ class _SearchViewState extends State<SearchView> {
                         child: Container(
                           child: Text("Man Shirt", style: TextStyle(
                             fontSize: 10,
+                            fontFamily: 'PoppinsRegular'
                           )),
                           padding: EdgeInsets.only(top: 10),
                         ),
@@ -315,12 +318,24 @@ class _SearchViewState extends State<SearchView> {
             padding: const EdgeInsets.only(left: 16, right: 16),
             child: Row(
               children: [
-                Expanded(child: Text("141 Result", textAlign: TextAlign.left)),
+                Expanded(child: Text("141 Result",
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                  color: Colors.grey,
+                    fontSize: 12,
+                    fontFamily: 'PoppinsRegular'
+                ),)),
                 FlatButton(
                     onPressed: () => {gotoAllCategory()},
                     child: Row(
                       children: [
-                        Text("Man Shoes"),
+                        Text("Man Shoes",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 12,
+                          fontFamily: 'PoppinsBold'
+                        ),
+                        ),
                         Icon(Icons.arrow_drop_down)
                       ],
                     )
@@ -365,7 +380,7 @@ class _SearchViewState extends State<SearchView> {
                           child: Text("FS - Nike Air Max 270 React", maxLines: 2, style: TextStyle(
                               fontSize: 12,
                               color: ColorConfig.textColorBold1,
-                              fontWeight: FontWeight.bold
+                            fontFamily: 'PoppinsBold',
                           )),
                           padding: EdgeInsets.only(top: 10),
                         ),
@@ -387,7 +402,7 @@ class _SearchViewState extends State<SearchView> {
                           child: Text("288,43", style: TextStyle(
                               fontSize: 12,
                               color: ColorConfig.bluePrimary,
-                              fontWeight: FontWeight.bold
+                            fontFamily: 'PoppinsBold',
                           )),
                           padding: EdgeInsets.only(top: 10),
                         ),
@@ -396,13 +411,14 @@ class _SearchViewState extends State<SearchView> {
                             children: [
                               Text("534,33", style: TextStyle(
                                   fontSize: 10,
+                                  fontFamily: 'PoppinsRegular',
                                   decoration: TextDecoration.lineThrough
                               )),
                               Padding(
                                 padding: EdgeInsets.only(left: 8),
                                 child: Text("24% off", style: TextStyle(
                                     fontSize: 10,
-                                    fontWeight: FontWeight.bold,
+                                    fontFamily: 'PoppinsBold',
                                     color: Color(0XFFFB7181)
                                 )),
                               ),

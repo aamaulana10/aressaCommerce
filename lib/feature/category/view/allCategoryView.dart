@@ -29,7 +29,7 @@ class _AllCategoryViewState extends State<AllCategoryView> {
               Image(image: AssetImage("lib/asset/image/home/shirt.png"), height: 24, width: 24),
               Padding(
                   child: Text("Man Shirt", style: TextStyle(
-                    fontWeight: FontWeight.bold,
+                      fontFamily: 'PoppinsBold',
                     color: ColorConfig.textColorBold1
                   )),
                 padding: EdgeInsets.only(left: 16, right: 16),
@@ -65,7 +65,7 @@ class _AllCategoryViewState extends State<AllCategoryView> {
                           ),
                           Text("Category", style: TextStyle(
                             fontSize: 16,
-                            fontWeight: FontWeight.bold
+                            fontFamily: 'PoppinsBold',
                           )),
                         ],
                       ),

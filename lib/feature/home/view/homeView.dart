@@ -1,5 +1,8 @@
 import 'package:aressa_commerce/feature/category/view/allCategoryView.dart';
 import 'package:aressa_commerce/feature/detailProduct/view/detailProductView.dart';
+import 'package:aressa_commerce/feature/favoritProduct/view/favoritProductView.dart';
+import 'package:aressa_commerce/feature/flashSale/view/flashSaleView.dart';
+import 'package:aressa_commerce/feature/megaSale/view/megaSaleView.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:aressa_commerce/util/view/indicatorView.dart';
 import 'package:flutter/cupertino.dart';
@@ -14,6 +17,7 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
+
   gotoAllCategory() {
     Future.delayed(Duration(milliseconds: 500), () {
       Navigator.of(context)
@@ -25,6 +29,27 @@ class _HomeViewState extends State<HomeView> {
     Future.delayed(Duration(milliseconds: 500), () {
       Navigator.of(context)
           .push(MaterialPageRoute(builder: (ctx) => DetailProductView()));
+    });
+  }
+
+  gotoFlashSale() {
+    Future.delayed(Duration(milliseconds: 500), () {
+      Navigator.of(context)
+          .push(MaterialPageRoute(builder: (ctx) => FlashSaleView()));
+    });
+  }
+
+  gotoMegaSale() {
+    Future.delayed(Duration(milliseconds: 500), () {
+      Navigator.of(context)
+          .push(MaterialPageRoute(builder: (ctx) => MegaSaleView()));
+    });
+  }
+
+  gotoFavoriteProduct() {
+    Future.delayed(Duration(milliseconds: 500), () {
+      Navigator.of(context)
+          .push(MaterialPageRoute(builder: (ctx) => FavoritProductView()));
     });
   }
 
@@ -47,7 +72,11 @@ class _HomeViewState extends State<HomeView> {
                         decoration: InputDecoration(
                             labelText: "Search Product",
                             labelStyle:
-                                TextStyle(color: ColorConfig.textColor1, fontSize: 12),
+                                TextStyle(
+                                    color: ColorConfig.textColor1,
+                                    fontSize: 12,
+                                  fontFamily: 'PoppinsRegular'
+                                ),
                             prefixIcon: Icon(
                               Icons.search,
                               color: ColorConfig.bluePrimary,
@@ -62,7 +91,7 @@ class _HomeViewState extends State<HomeView> {
                     decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
                     child: InkWell(
                         borderRadius: BorderRadius.circular(20),
-                        onTap: () => {print("whishlist")},
+                        onTap: () => {gotoFavoriteProduct()},
                         child: Padding(
                           padding: EdgeInsets.all(8),
                           child: Image(
@@ -148,7 +177,7 @@ class _HomeViewState extends State<HomeView> {
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 24,
-                                      fontWeight: FontWeight.bold
+                                    fontFamily: 'PoppinsBold'
                                   ),
                                 ),
                                 Container(
@@ -167,7 +196,7 @@ class _HomeViewState extends State<HomeView> {
                                             style: TextStyle(
                                                 color: Colors.black,
                                                 fontSize: 16,
-                                                fontWeight: FontWeight.bold
+                                                fontFamily: 'PoppinsBold'
                                             ),
                                           ),
                                         ),
@@ -177,7 +206,7 @@ class _HomeViewState extends State<HomeView> {
                                         child: Text(":",
                                           style: TextStyle(
                                             color: Colors.white,
-                                            fontWeight: FontWeight.bold,
+                                            fontFamily: 'PoppinsBold',
                                             fontSize: 14,
                                           ),
                                         ),
@@ -194,7 +223,7 @@ class _HomeViewState extends State<HomeView> {
                                             style: TextStyle(
                                                 color: Colors.black,
                                                 fontSize: 16,
-                                                fontWeight: FontWeight.bold
+                                              fontFamily: 'PoppinsBold',
                                             ),
                                           ),
                                         ),
@@ -204,7 +233,7 @@ class _HomeViewState extends State<HomeView> {
                                         child: Text(":",
                                           style: TextStyle(
                                             color: Colors.white,
-                                            fontWeight: FontWeight.bold,
+                                            fontFamily: 'PoppinsBold',
                                             fontSize: 14,
                                           ),
                                         ),
@@ -221,7 +250,7 @@ class _HomeViewState extends State<HomeView> {
                                             style: TextStyle(
                                                 color: Colors.black,
                                                 fontSize: 16,
-                                                fontWeight: FontWeight.bold
+                                              fontFamily: 'PoppinsBold',
                                             ),
                                           ),
                                         ),
@@ -284,13 +313,13 @@ class _HomeViewState extends State<HomeView> {
                           style: TextStyle(
                               color: ColorConfig.textColorBold1,
                               fontSize: 14,
-                              fontWeight: FontWeight.bold))),
+                              fontFamily: 'PoppinsBold',))),
                   FlatButton(
                       onPressed: () => {gotoAllCategory()},
                       child: Text("More Category",
                           style: TextStyle(
                               fontSize: 14,
-                              fontWeight: FontWeight.bold,
+                              fontFamily: 'PoppinsBold',
                               color: ColorConfig.bluePrimary)))
                 ],
               ),
@@ -327,6 +356,7 @@ class _HomeViewState extends State<HomeView> {
                           child: Text("Man Shirt",
                               style: TextStyle(
                                 fontSize: 10,
+                                fontFamily: 'PoppinsRegular'
                               )),
                           padding: EdgeInsets.only(top: 10),
                         ),
@@ -358,20 +388,20 @@ class _HomeViewState extends State<HomeView> {
                           style: TextStyle(
                               color: ColorConfig.textColorBold1,
                               fontSize: 14,
-                              fontWeight: FontWeight.bold))),
+                            fontFamily: 'PoppinsBold',))),
                   FlatButton(
-                      onPressed: () => {print("see all")},
+                      onPressed: () => {gotoFlashSale()},
                       child: Text("See More",
                           style: TextStyle(
                               fontSize: 14,
-                              fontWeight: FontWeight.bold,
+                              fontFamily: 'PoppinsBold',
                               color: ColorConfig.bluePrimary)))
                 ],
               ),
             ),
           ),
           Container(
-            height: 240,
+            height: 245,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: 10,
@@ -411,7 +441,7 @@ class _HomeViewState extends State<HomeView> {
                                   style: TextStyle(
                                       fontSize: 12,
                                       color: ColorConfig.textColorBold1,
-                                      fontWeight: FontWeight.bold)),
+                                    fontFamily: 'PoppinsBold',)),
                               padding: EdgeInsets.only(top: 10),
                             ),
                             Container(
@@ -419,7 +449,7 @@ class _HomeViewState extends State<HomeView> {
                                   style: TextStyle(
                                       fontSize: 12,
                                       color: ColorConfig.bluePrimary,
-                                      fontWeight: FontWeight.bold)),
+                                    fontFamily: 'PoppinsBold',)),
                               padding: EdgeInsets.only(top: 10),
                             ),
                             Container(
@@ -428,13 +458,14 @@ class _HomeViewState extends State<HomeView> {
                                   Text("534,33",
                                       style: TextStyle(
                                           fontSize: 10,
+                                          fontFamily: 'PoppinsRegular',
                                           decoration: TextDecoration.lineThrough)),
                                   Padding(
                                     padding: EdgeInsets.only(left: 8),
                                     child: Text("24% off",
                                         style: TextStyle(
                                             fontSize: 10,
-                                            fontWeight: FontWeight.bold,
+                                            fontFamily: 'PoppinsBold',
                                             color: Color(0XFFFB7181))),
                                   ),
                                 ],
@@ -471,20 +502,20 @@ class _HomeViewState extends State<HomeView> {
                           style: TextStyle(
                               color: ColorConfig.textColorBold1,
                               fontSize: 14,
-                              fontWeight: FontWeight.bold))),
+                            fontFamily: 'PoppinsBold',))),
                   FlatButton(
-                      onPressed: () => {print("see all")},
+                      onPressed: () => {gotoMegaSale()},
                       child: Text("See More",
                           style: TextStyle(
                               fontSize: 14,
-                              fontWeight: FontWeight.bold,
+                              fontFamily: 'PoppinsBold',
                               color: ColorConfig.bluePrimary)))
                 ],
               ),
             ),
           ),
           Container(
-            height: 240,
+            height: 245,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: 10,
@@ -524,7 +555,7 @@ class _HomeViewState extends State<HomeView> {
                                   style: TextStyle(
                                       fontSize: 12,
                                       color: ColorConfig.textColorBold1,
-                                      fontWeight: FontWeight.bold)),
+                                    fontFamily: 'PoppinsBold',)),
                               padding: EdgeInsets.only(top: 10),
                             ),
                             Container(
@@ -532,7 +563,7 @@ class _HomeViewState extends State<HomeView> {
                                   style: TextStyle(
                                       fontSize: 12,
                                       color: ColorConfig.bluePrimary,
-                                      fontWeight: FontWeight.bold)),
+                                    fontFamily: 'PoppinsBold',)),
                               padding: EdgeInsets.only(top: 10),
                             ),
                             Container(
@@ -541,13 +572,14 @@ class _HomeViewState extends State<HomeView> {
                                   Text("534,33",
                                       style: TextStyle(
                                           fontSize: 10,
+                                          fontFamily: 'PoppinsRegular',
                                           decoration: TextDecoration.lineThrough)),
                                   Padding(
                                     padding: EdgeInsets.only(left: 8),
                                     child: Text("24% off",
                                         style: TextStyle(
                                             fontSize: 10,
-                                            fontWeight: FontWeight.bold,
+                                            fontFamily: 'PoppinsBold',
                                             color: Color(0XFFFB7181))),
                                   ),
                                 ],
@@ -596,7 +628,7 @@ class _HomeViewState extends State<HomeView> {
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 24,
-                          fontWeight: FontWeight.bold
+                        fontFamily: 'PoppinsBold',
                       ),
                     ),
                     Text("Product",
@@ -604,7 +636,7 @@ class _HomeViewState extends State<HomeView> {
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 24,
-                          fontWeight: FontWeight.bold
+                        fontFamily: 'PoppinsBold',
                       ),
                     ),
                     Container(
@@ -612,7 +644,8 @@ class _HomeViewState extends State<HomeView> {
                       child: Text("We recommend the best for you",
                         style: TextStyle(
                             color: Colors.white,
-                            fontSize: 12
+                            fontSize: 12,
+                          fontFamily: 'PoppinsRegular'
                         ),
                       ),
                     )
@@ -643,7 +676,7 @@ class _HomeViewState extends State<HomeView> {
           itemCount: 4,
           itemBuilder: (item, index) {
             return Container(
-              height: 400,
+              height: 405,
               margin: EdgeInsets.all(8),
               decoration: BoxDecoration(
                   border: Border.all(color: ColorConfig.borderColor, width: 1),
@@ -676,7 +709,7 @@ class _HomeViewState extends State<HomeView> {
                               style: TextStyle(
                                   fontSize: 12,
                                   color: ColorConfig.textColorBold1,
-                                  fontWeight: FontWeight.bold)),
+                                fontFamily: 'PoppinsBold',)),
                           padding: EdgeInsets.only(top: 10),
                         ),
                         Container(
@@ -698,7 +731,7 @@ class _HomeViewState extends State<HomeView> {
                               style: TextStyle(
                                   fontSize: 12,
                                   color: ColorConfig.bluePrimary,
-                                  fontWeight: FontWeight.bold)),
+                                fontFamily: 'PoppinsBold',)),
                           padding: EdgeInsets.only(top: 10),
                         ),
                         Container(
@@ -707,13 +740,14 @@ class _HomeViewState extends State<HomeView> {
                               Text("534,33",
                                   style: TextStyle(
                                       fontSize: 10,
+                                      fontFamily: 'Poppinsregular',
                                       decoration: TextDecoration.lineThrough)),
                               Padding(
                                 padding: EdgeInsets.only(left: 8),
                                 child: Text("24% off",
                                     style: TextStyle(
                                         fontSize: 10,
-                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'PoppinsBold',
                                         color: Color(0XFFFB7181))),
                               ),
                             ],

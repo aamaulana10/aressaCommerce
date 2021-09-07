@@ -27,7 +27,8 @@ class _AddressViewState extends State<AddressView> {
                     ),
                     Text("Address", style: TextStyle(
                         fontSize: 16,
-                        fontWeight: FontWeight.bold
+                      color: Colors.black,
+                      fontFamily: 'PoppinsBold',
                     )),
                   ],
                 ),
@@ -49,7 +50,7 @@ class _AddressViewState extends State<AddressView> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-
+                appBar()
               ],
             ),
           ),

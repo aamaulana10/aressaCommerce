@@ -54,7 +54,8 @@ class _InputBirthdayViewState extends State<InputBirthdayView> {
                     ),
                     Text("Birthday", style: TextStyle(
                         fontSize: 16,
-                        fontWeight: FontWeight.bold
+                      color: Colors.black,
+                      fontFamily: 'PoppinsBold',
                     )),
                   ],
                 ),
@@ -78,7 +79,7 @@ class _InputBirthdayViewState extends State<InputBirthdayView> {
           Text("Your Birthday",
           style: TextStyle(
             color: Colors.black,
-            fontWeight: FontWeight.bold,
+            fontFamily: 'PoppinsBold',
             fontSize: 14,
           )),
           TextFormField(
@@ -90,6 +91,7 @@ class _InputBirthdayViewState extends State<InputBirthdayView> {
                 labelStyle: TextStyle(
                   fontSize: 14,
                   color: Colors.grey,
+                  fontFamily: 'PoppinsRegular'
                 ),
                 border: InputBorder.none),
           ),

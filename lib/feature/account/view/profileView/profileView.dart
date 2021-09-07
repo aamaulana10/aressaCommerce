@@ -61,7 +61,8 @@ class _ProfileViewState extends State<ProfileView> {
                     ),
                     Text("Category", style: TextStyle(
                         fontSize: 16,
-                        fontWeight: FontWeight.bold
+                      color: Colors.black,
+                      fontFamily: 'PoppinsBold',
                     )),
                   ],
                 ),
@@ -110,7 +111,7 @@ class _ProfileViewState extends State<ProfileView> {
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 14,
-                                fontWeight: FontWeight.bold
+                                fontFamily: 'PoppinsBold',
                               ),
                               ),
                               Container(
@@ -119,7 +120,7 @@ class _ProfileViewState extends State<ProfileView> {
                                   style: TextStyle(
                                       color: Colors.black,
                                       fontSize: 14,
-                                      fontWeight: FontWeight.bold
+                                    fontFamily: 'PoppinsBold',
                                   ),
                                 ),
                               ),
@@ -131,7 +132,8 @@ class _ProfileViewState extends State<ProfileView> {
                         child: Text("@aressaLabs",
                           style: TextStyle(
                             color: Colors.grey,
-                            fontSize: 12
+                            fontSize: 12,
+                            fontFamily: 'PoppinsRegular'
                           ),
                         ),
                       )
@@ -157,7 +159,7 @@ class _ProfileViewState extends State<ProfileView> {
                       style: TextStyle(
                           color: Colors.black,
                           fontSize: 12,
-                          fontWeight: FontWeight.bold
+                        fontFamily: 'PoppinsBold',
                       ),
                     ),
                   ),
@@ -168,7 +170,8 @@ class _ProfileViewState extends State<ProfileView> {
                         Text("Male",
                         style: TextStyle(
                           color: Colors.grey,
-                          fontSize: 12
+                          fontSize: 12,
+                          fontFamily: 'PoppinsRegular'
                         )),
                         IconButton(
                             onPressed: () => {this.gotoInputgender()},
@@ -199,7 +202,7 @@ class _ProfileViewState extends State<ProfileView> {
                       style: TextStyle(
                           color: Colors.black,
                           fontSize: 12,
-                          fontWeight: FontWeight.bold
+                        fontFamily: 'PoppinsBold',
                       ),
                     ),
                   ),
@@ -210,7 +213,8 @@ class _ProfileViewState extends State<ProfileView> {
                         Text("12-12-2000",
                             style: TextStyle(
                                 color: Colors.grey,
-                                fontSize: 12
+                                fontSize: 12,
+                              fontFamily: 'PoppinsRegular'
                             )),
                         IconButton(
                             onPressed: () => {gotoInputBirthdayView()},
@@ -241,7 +245,7 @@ class _ProfileViewState extends State<ProfileView> {
                       style: TextStyle(
                           color: Colors.black,
                           fontSize: 12,
-                          fontWeight: FontWeight.bold
+                        fontFamily: 'PoppinsBold',
                       ),
                     ),
                   ),
@@ -252,7 +256,8 @@ class _ProfileViewState extends State<ProfileView> {
                         Text("aressaLabs@gmail.com",
                             style: TextStyle(
                                 color: Colors.grey,
-                                fontSize: 12
+                                fontSize: 12,
+                              fontFamily: 'PoppinsRegular'
                             )),
                         IconButton(
                             onPressed: () => {this.gotoInputEmailView()},
@@ -283,7 +288,7 @@ class _ProfileViewState extends State<ProfileView> {
                       style: TextStyle(
                           color: Colors.black,
                           fontSize: 12,
-                          fontWeight: FontWeight.bold
+                        fontFamily: 'PoppinsBold',
                       ),
                     ),
                   ),
@@ -294,7 +299,8 @@ class _ProfileViewState extends State<ProfileView> {
                         Text("(307) 555-0133",
                             style: TextStyle(
                                 color: Colors.grey,
-                                fontSize: 12
+                                fontSize: 12,
+                              fontFamily: 'PoppinsRegular'
                             )),
                         IconButton(
                             onPressed: () => {this.gotoInputPhoneNumber()},
@@ -325,7 +331,7 @@ class _ProfileViewState extends State<ProfileView> {
                       style: TextStyle(
                           color: Colors.black,
                           fontSize: 12,
-                          fontWeight: FontWeight.bold
+                        fontFamily: 'PoppinsBold',
                       ),
                     ),
                   ),
@@ -336,7 +342,8 @@ class _ProfileViewState extends State<ProfileView> {
                         Text("**********",
                             style: TextStyle(
                                 color: Colors.grey,
-                                fontSize: 12
+                                fontSize: 12,
+                              fontFamily: 'PoppinsRegular'
                             )),
                         IconButton(
                             onPressed: () => {this.gotoChangePasswordView()},
