@@ -21,6 +21,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
+    "Fashion" : MessageLookupByLibrary.simpleMessage("Man Fashion"),
     "Shipping" : MessageLookupByLibrary.simpleMessage("Shipping"),
     "activity" : MessageLookupByLibrary.simpleMessage("Activity"),
     "addPhoto" : MessageLookupByLibrary.simpleMessage("Add Photo"),
@@ -28,6 +29,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "apply" : MessageLookupByLibrary.simpleMessage("Apply"),
     "backToHome" : MessageLookupByLibrary.simpleMessage("Back To Home"),
     "category" : MessageLookupByLibrary.simpleMessage("Category"),
+    "changePassword" : MessageLookupByLibrary.simpleMessage("Change password"),
     "checkout" : MessageLookupByLibrary.simpleMessage("Checkout"),
     "confirmPasswaord" : MessageLookupByLibrary.simpleMessage("Confirm Password"),
     "couponIsNotCorrect" : MessageLookupByLibrary.simpleMessage("Coupon Is Not Correct"),
@@ -44,10 +46,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "letsGetStarted" : MessageLookupByLibrary.simpleMessage("Lets Get Started"),
     "loginWithFacebook" : MessageLookupByLibrary.simpleMessage("Login with Facebook"),
     "loginWithGoogle" : MessageLookupByLibrary.simpleMessage("Login with Google"),
-    "manFashion" : MessageLookupByLibrary.simpleMessage("Man Fashion"),
     "notification" : MessageLookupByLibrary.simpleMessage("Notification"),
     "offer" : MessageLookupByLibrary.simpleMessage("Offer"),
-    "or" : MessageLookupByLibrary.simpleMessage("or"),
+    "or" : MessageLookupByLibrary.simpleMessage("OR"),
     "password" : MessageLookupByLibrary.simpleMessage("Password"),
     "productDetail" : MessageLookupByLibrary.simpleMessage("Product Detail"),
     "productNotFound" : MessageLookupByLibrary.simpleMessage("Product Not Found"),

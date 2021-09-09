@@ -1,4 +1,5 @@
 import 'package:aressa_commerce/feature/detailProduct/view/detailProductView.dart';
+import 'package:aressa_commerce/generated/l10n.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -36,9 +37,9 @@ class _FavoritProductViewState extends State<FavoritProductView> {
                       iconSize: 32,
                     ),
                     Expanded(
-                      child: Text("Favorite Product", style: TextStyle(
+                      child: Text(S.of(context).favoriteProduct, style: TextStyle(
                           fontSize: 16,
-                          fontWeight: FontWeight.bold
+                        fontFamily: 'PoppinsBold',
                       )),
                     ),
                     Row(
@@ -115,7 +116,7 @@ class _FavoritProductViewState extends State<FavoritProductView> {
                               style: TextStyle(
                                   fontSize: 12,
                                   color: ColorConfig.textColorBold1,
-                                  fontWeight: FontWeight.bold)),
+                                fontFamily: 'PoppinsBold',)),
                           padding: EdgeInsets.only(top: 10),
                         ),
                         Container(
@@ -137,7 +138,7 @@ class _FavoritProductViewState extends State<FavoritProductView> {
                               style: TextStyle(
                                   fontSize: 12,
                                   color: ColorConfig.bluePrimary,
-                                  fontWeight: FontWeight.bold)),
+                                fontFamily: 'PoppinsBold',)),
                           padding: EdgeInsets.only(top: 10),
                         ),
                         Container(
@@ -146,13 +147,14 @@ class _FavoritProductViewState extends State<FavoritProductView> {
                               Text("534,33",
                                   style: TextStyle(
                                       fontSize: 10,
+                                      fontFamily: 'PoppinsRegular',
                                       decoration: TextDecoration.lineThrough)),
                               Padding(
                                 padding: EdgeInsets.only(left: 8),
                                 child: Text("24% off",
                                     style: TextStyle(
                                         fontSize: 10,
-                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'PoppinsBold',
                                         color: Color(0XFFFB7181))),
                               ),
                               IconButton(

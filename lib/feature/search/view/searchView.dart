@@ -1,4 +1,5 @@
 import 'package:aressa_commerce/feature/category/view/allCategoryView.dart';
+import 'package:aressa_commerce/generated/l10n.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -63,10 +64,11 @@ class _SearchViewState extends State<SearchView> {
                 textInputAction: TextInputAction.search,
                 onFieldSubmitted: (e) => {showSearchResult(e)},
                 decoration: InputDecoration(
-                    labelText: "Search Product",
+                    labelText: S.of(context).searchProduct,
                     labelStyle: TextStyle(
                         color: ColorConfig.textColor1,
-                        fontSize: 12
+                        fontSize: 12,
+                      fontFamily: 'Poppinsregular'
                     ),
                     prefixIcon: Icon(Icons.search, color: ColorConfig.bluePrimary,),
                     border: InputBorder.none
@@ -187,10 +189,10 @@ class _SearchViewState extends State<SearchView> {
         children: [
           Padding(
             padding: const EdgeInsets.only(left: 16, right: 16),
-            child: Text("Man Fashion", textAlign: TextAlign.left, style: TextStyle(
+            child: Text(S.of(context).Fashion, textAlign: TextAlign.left, style: TextStyle(
                 color: ColorConfig.textColorBold1,
                 fontSize: 14,
-                fontWeight: FontWeight.bold),),
+                fontFamily: 'PoppinsBold',),),
           ),
           GridView.builder(
                 shrinkWrap: true,
@@ -225,8 +227,9 @@ class _SearchViewState extends State<SearchView> {
                         ),
                         Expanded(
                           child: Container(
-                            child: Text("Man Shirt", style: TextStyle(
+                            child: Text(S.of(context).Fashion, style: TextStyle(
                               fontSize: 10,
+                              fontFamily: 'PoppinsRegular'
                             )),
                             padding: EdgeInsets.only(top: 10),
                           ),
@@ -250,10 +253,10 @@ class _SearchViewState extends State<SearchView> {
         children: [
           Padding(
             padding: const EdgeInsets.only(left: 16, right: 16),
-            child: Text("Woman Fashion", textAlign: TextAlign.left, style: TextStyle(
+            child: Text(S.of(context).womenFahsion, textAlign: TextAlign.left, style: TextStyle(
                 color: ColorConfig.textColorBold1,
                 fontSize: 14,
-                fontWeight: FontWeight.bold)),
+              fontFamily: 'PoppinsBold',)),
           ),
           GridView.builder(
               shrinkWrap: true,
@@ -288,8 +291,9 @@ class _SearchViewState extends State<SearchView> {
                       ),
                       Expanded(
                         child: Container(
-                          child: Text("Man Shirt", style: TextStyle(
+                          child: Text(S.of(context).Fashion, style: TextStyle(
                             fontSize: 10,
+                            fontFamily: 'PoppinsRegular'
                           )),
                           padding: EdgeInsets.only(top: 10),
                         ),
@@ -315,12 +319,24 @@ class _SearchViewState extends State<SearchView> {
             padding: const EdgeInsets.only(left: 16, right: 16),
             child: Row(
               children: [
-                Expanded(child: Text("141 Result", textAlign: TextAlign.left)),
+                Expanded(child: Text("141 Result",
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                  color: Colors.grey,
+                    fontSize: 12,
+                    fontFamily: 'PoppinsRegular'
+                ),)),
                 FlatButton(
                     onPressed: () => {gotoAllCategory()},
                     child: Row(
                       children: [
-                        Text("Man Shoes"),
+                        Text("Man Shoes",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 12,
+                          fontFamily: 'PoppinsBold'
+                        ),
+                        ),
                         Icon(Icons.arrow_drop_down)
                       ],
                     )
@@ -365,7 +381,7 @@ class _SearchViewState extends State<SearchView> {
                           child: Text("FS - Nike Air Max 270 React", maxLines: 2, style: TextStyle(
                               fontSize: 12,
                               color: ColorConfig.textColorBold1,
-                              fontWeight: FontWeight.bold
+                            fontFamily: 'PoppinsBold',
                           )),
                           padding: EdgeInsets.only(top: 10),
                         ),
@@ -387,7 +403,7 @@ class _SearchViewState extends State<SearchView> {
                           child: Text("288,43", style: TextStyle(
                               fontSize: 12,
                               color: ColorConfig.bluePrimary,
-                              fontWeight: FontWeight.bold
+                            fontFamily: 'PoppinsBold',
                           )),
                           padding: EdgeInsets.only(top: 10),
                         ),
@@ -396,13 +412,14 @@ class _SearchViewState extends State<SearchView> {
                             children: [
                               Text("534,33", style: TextStyle(
                                   fontSize: 10,
+                                  fontFamily: 'PoppinsRegular',
                                   decoration: TextDecoration.lineThrough
                               )),
                               Padding(
                                 padding: EdgeInsets.only(left: 8),
                                 child: Text("24% off", style: TextStyle(
                                     fontSize: 10,
-                                    fontWeight: FontWeight.bold,
+                                    fontFamily: 'PoppinsBold',
                                     color: Color(0XFFFB7181)
                                 )),
                               ),

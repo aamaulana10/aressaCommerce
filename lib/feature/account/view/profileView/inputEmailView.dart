@@ -1,3 +1,4 @@
+import 'package:aressa_commerce/generated/l10n.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -12,6 +13,7 @@ class _InputEmailViewState extends State<InputEmailView> {
   Widget appBar() {
     return Container(
         height: 60,
+        margin: EdgeInsets.only(top: 16),
         child: Column(
           children: [
             Expanded(
@@ -26,7 +28,8 @@ class _InputEmailViewState extends State<InputEmailView> {
                     ),
                     Text("Email", style: TextStyle(
                         fontSize: 16,
-                        fontWeight: FontWeight.bold
+                      fontFamily: 'PoppinsBold',
+                      color: Colors.black
                     )),
                   ],
                 ),
@@ -51,7 +54,7 @@ class _InputEmailViewState extends State<InputEmailView> {
           style: TextStyle(
             color: Colors.black,
             fontSize: 14,
-            fontWeight: FontWeight.bold
+            fontFamily: 'PoppinsBold',
           )),
           Container(
             height: 50,
@@ -70,6 +73,7 @@ class _InputEmailViewState extends State<InputEmailView> {
                   labelStyle: TextStyle(
                       fontSize: 14,
                       color: Colors.grey,
+                    fontFamily: 'Poppinsregular'
                   ),
                   border: InputBorder.none),
             ),
@@ -81,10 +85,11 @@ class _InputEmailViewState extends State<InputEmailView> {
                 child: Text("We Will Send verification to your New Email",
                 style: TextStyle(
                   color: Colors.lightBlue,
-                  fontSize: 12
+                  fontSize: 12,
+                  fontFamily: 'PoppinsRegular'
                 ),
                 )),
-          )
+          ),
         ],
       ),
     );
@@ -112,7 +117,7 @@ class _InputEmailViewState extends State<InputEmailView> {
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 14,
-                      fontWeight: FontWeight.bold
+                      fontFamily: 'PoppinsBold',
                     ),
                     ),
                   ),

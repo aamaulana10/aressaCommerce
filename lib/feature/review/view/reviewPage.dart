@@ -1,3 +1,4 @@
+import 'package:aressa_commerce/feature/review/view/writeReview.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -10,6 +11,10 @@ class ReviewPage extends StatefulWidget {
 }
 
 class _ReviewPageState extends State<ReviewPage> {
+
+  void gotoWriteReview() {
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => WriteReview()));
+  }
 
   Widget header() {
 
@@ -145,6 +150,7 @@ class _ReviewPageState extends State<ReviewPage> {
   Widget reviewList() {
 
     return Container(
+      height: 700,
       margin: EdgeInsets.only(left: 16, right: 16, top: 16, bottom: 16),
       child: ListView.builder(
         itemCount: 10,
@@ -239,6 +245,31 @@ class _ReviewPageState extends State<ReviewPage> {
     );
   }
 
+  Widget saveButton() {
+    return Container(
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: () => {this.gotoWriteReview()},
+          child: Container(
+            margin: EdgeInsets.all(16),
+            alignment: Alignment.center,
+            height: 57,
+            decoration: BoxDecoration(
+                color: Color(0xFF41BFFF),
+                borderRadius: BorderRadius.circular(5)
+            ),
+            child: Text("Write Review", style: TextStyle(
+              fontSize: 14,
+              color: Colors.white,
+              fontFamily: 'PoppinsBold',
+            ),),
+          ),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -246,9 +277,18 @@ class _ReviewPageState extends State<ReviewPage> {
         padding: EdgeInsets.only(top: 32),
         child: Column(
           children: [
-            header(),
-            filterList(),
-            Expanded(child: reviewList())
+            Expanded(
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    header(),
+                    filterList(),
+                    reviewList()
+                  ],
+                ),
+              ),
+            ),
+            saveButton()
           ],
         ),
       ),

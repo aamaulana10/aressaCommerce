@@ -38,7 +38,7 @@ class _FlashSaleViewState extends State<FlashSaleView> {
                     Expanded(
                       child: Text("Super Flash Sale", style: TextStyle(
                           fontSize: 16,
-                          fontWeight: FontWeight.bold
+                        fontFamily: 'PoppinsBold',
                       )),
                     ),
                     Row(
@@ -100,7 +100,7 @@ class _FlashSaleViewState extends State<FlashSaleView> {
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 24,
-                          fontWeight: FontWeight.bold
+                        fontFamily: 'PoppinsBold',
                       ),
                     ),
                     Container(
@@ -119,7 +119,7 @@ class _FlashSaleViewState extends State<FlashSaleView> {
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 16,
-                                    fontWeight: FontWeight.bold
+                                  fontFamily: 'PoppinsBold',
                                 ),
                               ),
                             ),
@@ -129,7 +129,7 @@ class _FlashSaleViewState extends State<FlashSaleView> {
                             child: Text(":",
                               style: TextStyle(
                                 color: Colors.white,
-                                fontWeight: FontWeight.bold,
+                                fontFamily: 'PoppinsBold',
                                 fontSize: 14,
                               ),
                             ),
@@ -146,7 +146,7 @@ class _FlashSaleViewState extends State<FlashSaleView> {
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 16,
-                                    fontWeight: FontWeight.bold
+                                  fontFamily: 'PoppinsBold',
                                 ),
                               ),
                             ),
@@ -156,7 +156,7 @@ class _FlashSaleViewState extends State<FlashSaleView> {
                             child: Text(":",
                               style: TextStyle(
                                 color: Colors.white,
-                                fontWeight: FontWeight.bold,
+                                fontFamily: 'PoppinsBold',
                                 fontSize: 14,
                               ),
                             ),
@@ -173,7 +173,7 @@ class _FlashSaleViewState extends State<FlashSaleView> {
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 16,
-                                    fontWeight: FontWeight.bold
+                                  fontFamily: 'PoppinsBold',
                                 ),
                               ),
                             ),
@@ -240,7 +240,7 @@ class _FlashSaleViewState extends State<FlashSaleView> {
                               style: TextStyle(
                                   fontSize: 12,
                                   color: ColorConfig.textColorBold1,
-                                  fontWeight: FontWeight.bold)),
+                                fontFamily: 'PoppinsBold',)),
                           padding: EdgeInsets.only(top: 10),
                         ),
                         Container(
@@ -262,7 +262,7 @@ class _FlashSaleViewState extends State<FlashSaleView> {
                               style: TextStyle(
                                   fontSize: 12,
                                   color: ColorConfig.bluePrimary,
-                                  fontWeight: FontWeight.bold)),
+                                fontFamily: 'PoppinsBold',)),
                           padding: EdgeInsets.only(top: 10),
                         ),
                         Container(
@@ -271,13 +271,14 @@ class _FlashSaleViewState extends State<FlashSaleView> {
                               Text("534,33",
                                   style: TextStyle(
                                       fontSize: 10,
+                                      fontFamily: 'PoppinsRegular',
                                       decoration: TextDecoration.lineThrough)),
                               Padding(
                                 padding: EdgeInsets.only(left: 8),
                                 child: Text("24% off",
                                     style: TextStyle(
                                         fontSize: 10,
-                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'PoppinsBold',
                                         color: Color(0XFFFB7181))),
                               ),
                             ],

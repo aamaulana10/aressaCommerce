@@ -1,3 +1,4 @@
+import 'package:aressa_commerce/generated/l10n.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -12,26 +13,22 @@ class _OfferViewState extends State<OfferView> {
   Widget appBar() {
     return Container(
         height: 60,
+        margin: EdgeInsets.only(top: 16),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Expanded(
               child: Container(
-                padding: EdgeInsets.only(right: 16),
-                child: Row(
-                  children: [
-                    IconButton(
-                      onPressed: () => {Navigator.of(context).pop()},
-                      icon: Icon(Icons.chevron_left),
-                      iconSize: 32,
-                    ),
-                    Text("Offer", style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold
-                    )),
-                  ],
-                ),
+                margin: EdgeInsets.only(left: 16, right: 16, top: 18),
+                child: Text(S.of(context).offer, style: TextStyle(
+                          fontSize: 16,
+                  color: Colors.black,
+                  fontFamily: 'PoppinsBold',
+                      )),
               ),
-            ),
+              ),
+
             Container(
               height: 1,
               color: Colors.grey,
@@ -63,7 +60,7 @@ class _OfferViewState extends State<OfferView> {
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 16,
-                        fontWeight: FontWeight.bold
+                        fontFamily: 'PoppinsBold',
                       ),
                     ),
               ],
@@ -95,7 +92,7 @@ class _OfferViewState extends State<OfferView> {
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 24,
-                            fontWeight: FontWeight.bold
+                            fontFamily: 'PoppinsBold',
                           ),
                           ),
                           Container(
@@ -114,7 +111,7 @@ class _OfferViewState extends State<OfferView> {
                                     style: TextStyle(
                                       color: Colors.black,
                                       fontSize: 16,
-                                      fontWeight: FontWeight.bold
+                                      fontFamily: 'PoppinsBold',
                                     ),
                                     ),
                                   ),
@@ -124,7 +121,7 @@ class _OfferViewState extends State<OfferView> {
                                   child: Text(":",
                                   style: TextStyle(
                                     color: Colors.white,
-                                    fontWeight: FontWeight.bold,
+                                    fontFamily: 'PoppinsBold',
                                     fontSize: 14,
                                   ),
                                   ),
@@ -141,7 +138,7 @@ class _OfferViewState extends State<OfferView> {
                                       style: TextStyle(
                                           color: Colors.black,
                                           fontSize: 16,
-                                          fontWeight: FontWeight.bold
+                                        fontFamily: 'PoppinsBold',
                                       ),
                                     ),
                                   ),
@@ -151,7 +148,7 @@ class _OfferViewState extends State<OfferView> {
                                   child: Text(":",
                                     style: TextStyle(
                                       color: Colors.white,
-                                      fontWeight: FontWeight.bold,
+                                      fontFamily: 'PoppinsBold',
                                       fontSize: 14,
                                     ),
                                   ),
@@ -168,7 +165,7 @@ class _OfferViewState extends State<OfferView> {
                                       style: TextStyle(
                                           color: Colors.black,
                                           fontSize: 16,
-                                          fontWeight: FontWeight.bold
+                                        fontFamily: 'PoppinsBold',
                                       ),
                                     ),
                                   ),
@@ -209,7 +206,7 @@ class _OfferViewState extends State<OfferView> {
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 24,
-                                fontWeight: FontWeight.bold
+                              fontFamily: 'PoppinsBold',
                             ),
                           ),
                           Container(
@@ -217,7 +214,8 @@ class _OfferViewState extends State<OfferView> {
                             child: Text("Special birthday Lafyuu",
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 12
+                              fontSize: 12,
+                              fontFamily: 'PoppinsRegular'
                             ),
                             ),
                           )

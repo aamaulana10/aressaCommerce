@@ -1,17 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class InputPhoneNumber extends StatefulWidget {
+class InputPhoneNumberView extends StatefulWidget {
 
   @override
-  _InputPhoneNumberState createState() => _InputPhoneNumberState();
+  _InputPhoneNumberViewState createState() => _InputPhoneNumberViewState();
 }
 
-class _InputPhoneNumberState extends State<InputPhoneNumber> {
+class _InputPhoneNumberViewState extends State<InputPhoneNumberView> {
 
   Widget appBar() {
     return Container(
         height: 60,
+        margin: EdgeInsets.only(top: 16),
         child: Column(
           children: [
             Expanded(
@@ -26,7 +27,8 @@ class _InputPhoneNumberState extends State<InputPhoneNumber> {
                     ),
                     Text("Phone Nummber", style: TextStyle(
                         fontSize: 16,
-                        fontWeight: FontWeight.bold
+                      color: Colors.black,
+                      fontFamily: 'PoppinsBold',
                     )),
                   ],
                 ),
@@ -51,7 +53,7 @@ class _InputPhoneNumberState extends State<InputPhoneNumber> {
               style: TextStyle(
                   color: Colors.black,
                   fontSize: 14,
-                  fontWeight: FontWeight.bold
+                fontFamily: 'PoppinsBold',
               )),
           Container(
             height: 50,
@@ -69,6 +71,7 @@ class _InputPhoneNumberState extends State<InputPhoneNumber> {
                   labelText: "+63",
                   labelStyle: TextStyle(
                     fontSize: 14,
+                    fontFamily: 'PoppinsRegular',
                     color: Colors.grey,
                   ),
                   border: InputBorder.none),
@@ -89,7 +92,7 @@ class _InputPhoneNumberState extends State<InputPhoneNumber> {
                 left: 16,
                 right: 16,
                 child: InkWell(
-                  onTap: () => {},
+                  onTap: () => {Navigator.pop(context)},
                   child: Container(
                     height: 57,
                     decoration: BoxDecoration(
@@ -101,7 +104,7 @@ class _InputPhoneNumberState extends State<InputPhoneNumber> {
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 14,
-                            fontWeight: FontWeight.bold
+                          fontFamily: 'PoppinsBold',
                         ),
                       ),
                     ),

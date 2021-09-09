@@ -1,17 +1,19 @@
+import 'package:aressa_commerce/generated/l10n.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class InputNameView extends StatefulWidget {
+class InputChangePasswordView extends StatefulWidget {
 
   @override
-  _InputNameViewState createState() => _InputNameViewState();
+  _InputChangePasswordViewState createState() => _InputChangePasswordViewState();
 }
 
-class _InputNameViewState extends State<InputNameView> {
+class _InputChangePasswordViewState extends State<InputChangePasswordView> {
 
   Widget appBar() {
     return Container(
         height: 60,
+        margin: EdgeInsets.only(top: 16),
         child: Column(
           children: [
             Expanded(
@@ -24,9 +26,11 @@ class _InputNameViewState extends State<InputNameView> {
                       icon: Icon(Icons.chevron_left),
                       iconSize: 32,
                     ),
-                    Text("Name", style: TextStyle(
+                    Text(S.of(context).changePassword,
+                        style: TextStyle(
                         fontSize: 16,
-                        fontWeight: FontWeight.bold
+                      color: Colors.black,
+                      fontFamily: 'PoppinsBold',
                     )),
                   ],
                 ),
@@ -43,61 +47,96 @@ class _InputNameViewState extends State<InputNameView> {
 
   Widget content() {
     return Container(
-      margin: EdgeInsets.only(top: 16, left: 16, right: 16),
+      margin: EdgeInsets.only(left: 16, right: 16, top: 16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("First Name",
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 14,
-            fontWeight: FontWeight.bold
-          )),
-          Container(
-            height: 48,
-            margin: EdgeInsets.only(top: 16),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(5),
-              color: Colors.transparent,
-              border: Border.all(
-                  color: Colors.grey,
+          Text("Old Password",
+              style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 14,
+                fontFamily: 'PoppinsBold',
               )),
-            child: TextFormField(
-              decoration: InputDecoration(
-                  labelText: "First Name",
-                  labelStyle: TextStyle(
-                      fontSize: 14,
-
-                      color: Colors.grey,
-                  ),
-                  border: InputBorder.none),
-            ),
-          ),
           Container(
-            margin: EdgeInsets.only(top: 16),
-            child: Text("Last Name",
-                style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold
-                )),
-          ),
-          Container(
-            height: 48,
+            height: 50,
             margin: EdgeInsets.only(top: 16),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
                 color: Colors.transparent,
                 border: Border.all(
                   color: Colors.grey,
-                )),
+                )
+            ),
             child: TextFormField(
               decoration: InputDecoration(
-                  labelText: "Last Name",
+                  prefixIcon: Icon(Icons.lock),
+                  labelText: "Old Password",
                   labelStyle: TextStyle(
                     fontSize: 14,
-
                     color: Colors.grey,
+                    fontFamily: 'PoppinsRegular'
+                  ),
+                  border: InputBorder.none),
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.only(top: 16),
+            child: Text("New Password",
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 14,
+                  fontFamily: 'PoppinsBold',
+                )),
+          ),
+          Container(
+            height: 50,
+            margin: EdgeInsets.only(top: 16),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(5),
+                color: Colors.transparent,
+                border: Border.all(
+                  color: Colors.grey,
+                )
+            ),
+            child: TextFormField(
+              decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.lock),
+                  labelText: "New Password",
+                  labelStyle: TextStyle(
+                    fontSize: 14,
+                    color: Colors.grey,
+                    fontFamily: 'PoppinsRegular'
+                  ),
+                  border: InputBorder.none),
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.only(top: 16),
+            child: Text("New Password Again",
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 14,
+                  fontFamily: 'PoppinsBold',
+                )),
+          ),
+          Container(
+            height: 50,
+            margin: EdgeInsets.only(top: 16),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(5),
+                color: Colors.transparent,
+                border: Border.all(
+                  color: Colors.grey,
+                )
+            ),
+            child: TextFormField(
+              decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.lock),
+                  labelText: "New Password Again",
+                  labelStyle: TextStyle(
+                    fontSize: 14,
+                    color: Colors.grey,
+                    fontFamily: 'PoppinsRegular'
                   ),
                   border: InputBorder.none),
             ),
@@ -129,7 +168,7 @@ class _InputNameViewState extends State<InputNameView> {
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 14,
-                            fontWeight: FontWeight.bold
+                          fontFamily: 'PoppinsBold',
                         ),
                       ),
                     ),

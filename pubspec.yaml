@@ -13,8 +13,10 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_rating_bar: ^4.0.0
   intl: ^0.17.0
+  shared_preferences: ^2.0.7
   flutter_localizations:
     sdk: flutter
+
 
 dev_dependencies:
   flutter_test:
@@ -44,10 +46,72 @@ flutter:
     - lib/asset/image/home/PromotionImage2.png
     - lib/asset/image/home/more.png
     - lib/asset/image/home/Search.png
+    - lib/asset/image/home/logo.png
+    - lib/asset/image/home/Google.png
+    - lib/asset/image/home/Facebook.png
+    - lib/asset/image/home/sepatuBiru.png
+    - lib/asset/image/home/sepatuMerah.png
     - lib/asset/json/flashSale.json
     - lib/asset/json/megaSale.json
     - lib/asset/json/recommended.json
     - lib/asset/json/category.json
+
+  fonts:
+    - family: PoppinsBlack
+      fonts:
+         - asset: lib/asset/fonts/Poppins/Poppins-Black.ttf
+    - family: PoppinsBlackItalic
+      fonts:
+          - asset: lib/asset/fonts/Poppins/Poppins-BlackItalic.ttf
+    - family: PoppinsBold
+      fonts:
+          - asset: lib/asset/fonts/Poppins/Poppins-Bold.ttf
+    - family: PoppinsBoldItalic
+      fonts:
+          - asset: lib/asset/fonts/Poppins/Poppins-BoldItalic.ttf
+    - family: PoppinsExtraBold
+      fonts:
+          - asset: lib/asset/fonts/Poppins/Poppins-ExtraBold.ttf
+    - family: PoppinsExtraBoldItalic
+      fonts:
+          - asset: lib/asset/fonts/Poppins/Poppins-ExtraBoldItalic.ttf
+    - family: PoppinsExtraLight
+      fonts:
+          - asset: lib/asset/fonts/Poppins/Poppins-ExtraLight.ttf
+    - family: PoppinsExtraLightItalic
+      fonts:
+          - asset: lib/asset/fonts/Poppins/Poppins-ExtraLightItalic.ttf
+    - family: PoppinsItalic
+      fonts:
+          - asset: lib/asset/fonts/Poppins/Poppins-Italic.ttf
+    - family: PoppinsLight
+      fonts:
+          - asset: lib/asset/fonts/Poppins/Poppins-Light.ttf
+    - family: PoppinsLightItalic
+      fonts:
+          - asset: lib/asset/fonts/Poppins/Poppins-LightItalic.ttf
+    - family: PoppinsMedium
+      fonts:
+          - asset: lib/asset/fonts/Poppins/Poppins-Medium.ttf
+    - family: PoppinsMediumItalic
+      fonts:
+          - asset: lib/asset/fonts/Poppins/Poppins-MediumItalic.ttf
+    - family: PoppinsRegular
+      fonts:
+          - asset: lib/asset/fonts/Poppins/Poppins-Regular.ttf
+    - family: PoppinsSemiBold
+      fonts:
+          - asset: lib/asset/fonts/Poppins/Poppins-SemiBold.ttf
+    - family: PoppinsSemiBoldItalic
+      fonts:
+          - asset: lib/asset/fonts/Poppins/Poppins-SemiBoldItalic.ttf
+    - family: PoppinsThin
+      fonts:
+          - asset: lib/asset/fonts/Poppins/Poppins-Thin.ttf
+    - family: PoppinsThinItalic
+      fonts:
+          - asset: lib/asset/fonts/Poppins/Poppins-ThinItalic.ttf
+
 flutter_intl:
   main_locale: en_US
   enabled: true

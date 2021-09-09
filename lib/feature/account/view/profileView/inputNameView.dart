@@ -1,17 +1,62 @@
+import 'package:aressa_commerce/feature/account/model/userAccountModel.dart';
+import 'package:aressa_commerce/feature/account/view/profileView/profileView.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class InputChangePasswordView extends StatefulWidget {
+class InputNameView extends StatefulWidget {
 
   @override
-  _InputChangePasswordViewState createState() => _InputChangePasswordViewState();
+  _InputNameViewState createState() => _InputNameViewState();
 }
 
-class _InputChangePasswordViewState extends State<InputChangePasswordView> {
+class _InputNameViewState extends State<InputNameView> {
+
+  String FirstName = "";
+  String LastName = "";
+
+  var user = UserAccountModel();
+
+  void save() {
+    print("First Name: " + FirstName);
+    print("Last Name: " + LastName);
+
+    if (FirstName.length == 0){
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        content: Text("Nama tidak boleh kosong"),
+      ));
+    }
+
+    else if(LastName.length == 0){
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        content: Text("Nama tidak boleh kosong"),
+      ));
+    }
+
+    else{
+
+      user.userFirstName = FirstName;
+      user.userLastName = LastName;
+
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        content: Text("Nama Berhasil Dirubah"),
+      ));
+
+      Future.delayed(Duration(milliseconds: 500)).then((value) {
+
+        lemparData(context);
+      });
+    }
+  }
+
+  void lemparData(user) {
+    Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => ProfileView(userAccountModel: user)));
+  }
 
   Widget appBar() {
     return Container(
         height: 60,
+        margin: EdgeInsets.only(top: 16),
         child: Column(
           children: [
             Expanded(
@@ -24,9 +69,10 @@ class _InputChangePasswordViewState extends State<InputChangePasswordView> {
                       icon: Icon(Icons.chevron_left),
                       iconSize: 32,
                     ),
-                    Text("Change Password", style: TextStyle(
+                    Text("Name", style: TextStyle(
                         fontSize: 16,
-                        fontWeight: FontWeight.bold
+                      color: Colors.black,
+                      fontFamily: 'PoppinsBold',
                     )),
                   ],
                 ),
@@ -43,92 +89,70 @@ class _InputChangePasswordViewState extends State<InputChangePasswordView> {
 
   Widget content() {
     return Container(
-      margin: EdgeInsets.only(left: 16, right: 16, top: 16),
+      margin: EdgeInsets.only(top: 16, left: 16, right: 16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Old Password",
-              style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 14,
-                  fontWeight: FontWeight.bold
+          Text("First Name",
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 14,
+            fontFamily: 'PoppinsBold',
+          )),
+          Container(
+            height: 48,
+            margin: EdgeInsets.only(top: 16),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(5),
+              color: Colors.transparent,
+              border: Border.all(
+                  color: Colors.grey,
               )),
-          Container(
-            height: 50,
-            margin: EdgeInsets.only(top: 16),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(5),
-                color: Colors.transparent,
-                border: Border.all(
-                  color: Colors.grey,
-                )
-            ),
             child: TextFormField(
+              onChanged: (e) {
+                setState(() {
+                  FirstName = e;
+                });
+              },
               decoration: InputDecoration(
-                  prefixIcon: Icon(Icons.lock),
-                  labelText: "Old Password",
+                  labelText: "First Name",
                   labelStyle: TextStyle(
-                    fontSize: 14,
-                    color: Colors.grey,
+                      fontSize: 14,
+                      fontFamily: 'PoppinsRegular',
+                      color: Colors.grey,
                   ),
                   border: InputBorder.none),
             ),
           ),
           Container(
             margin: EdgeInsets.only(top: 16),
-            child: Text("New Password",
+            child: Text("Last Name",
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 14,
-                    fontWeight: FontWeight.bold
+                    fontFamily: 'PoppinsBold',
                 )),
           ),
           Container(
-            height: 50,
+            height: 48,
             margin: EdgeInsets.only(top: 16),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
                 color: Colors.transparent,
                 border: Border.all(
                   color: Colors.grey,
-                )
-            ),
-            child: TextFormField(
-              decoration: InputDecoration(
-                  prefixIcon: Icon(Icons.lock),
-                  labelText: "New Password",
-                  labelStyle: TextStyle(
-                    fontSize: 14,
-                    color: Colors.grey,
-                  ),
-                  border: InputBorder.none),
-            ),
-          ),
-          Container(
-            margin: EdgeInsets.only(top: 16),
-            child: Text("New Password Again",
-                style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold
                 )),
-          ),
-          Container(
-            height: 50,
-            margin: EdgeInsets.only(top: 16),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(5),
-                color: Colors.transparent,
-                border: Border.all(
-                  color: Colors.grey,
-                )
-            ),
             child: TextFormField(
+              onChanged: (e) {
+                setState(() {
+                  LastName = e;
+                });
+              },
               decoration: InputDecoration(
-                  prefixIcon: Icon(Icons.lock),
-                  labelText: "New Password Again",
+                  labelText: "Last Name",
                   labelStyle: TextStyle(
                     fontSize: 14,
+                    fontFamily: 'PoppinsRegular',
                     color: Colors.grey,
                   ),
                   border: InputBorder.none),
@@ -149,7 +173,7 @@ class _InputChangePasswordViewState extends State<InputChangePasswordView> {
                 left: 16,
                 right: 16,
                 child: InkWell(
-                  onTap: () => {},
+                  onTap: () => {Navigator.pop(context)},
                   child: Container(
                     height: 57,
                     decoration: BoxDecoration(
@@ -161,7 +185,7 @@ class _InputChangePasswordViewState extends State<InputChangePasswordView> {
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 14,
-                            fontWeight: FontWeight.bold
+                          fontFamily: 'PoppinsBold',
                         ),
                       ),
                     ),

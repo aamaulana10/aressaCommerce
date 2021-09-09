@@ -75,6 +75,16 @@ class S {
     );
   }
 
+  /// `Change password`
+  String get changePassword {
+    return Intl.message(
+      'Change password',
+      name: 'changePassword',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Sign In`
   String get signIn {
     return Intl.message(
@@ -85,10 +95,10 @@ class S {
     );
   }
 
-  /// `or`
+  /// `OR`
   String get or {
     return Intl.message(
-      'or',
+      'OR',
       name: 'or',
       desc: '',
       args: [],
@@ -396,10 +406,10 @@ class S {
   }
 
   /// `Man Fashion`
-  String get manFashion {
+  String get Fashion {
     return Intl.message(
       'Man Fashion',
-      name: 'manFashion',
+      name: 'Fashion',
       desc: '',
       args: [],
     );
