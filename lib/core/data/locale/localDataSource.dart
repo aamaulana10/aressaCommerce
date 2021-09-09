@@ -42,6 +42,18 @@ class LocalDataSource {
 
   }
 
+  Future<List<ProductData>> getAllProduct() async {
+
+    final String assetJson = await rootBundle.loadString('lib/asset/json/product.json');
+
+    var data = jsonDecode(assetJson);
+
+    var model = ProductModel.fromJson(data);
+
+    return model.data;
+
+  }
+
   Future<List<CategoryData>> getCategories() async {
 
     final String assetJson = await rootBundle.loadString('lib/asset/json/category.json');

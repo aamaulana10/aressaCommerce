@@ -55,10 +55,12 @@ flutter:
     - lib/asset/json/megaSale.json
     - lib/asset/json/recommended.json
     - lib/asset/json/category.json
+    - lib/asset/json/product.json
     - lib/asset/image/product/speed3.jpeg
     - lib/asset/image/product/speed3v1.jpeg
     - lib/asset/image/product/speed3v2.jpeg
     - lib/asset/image/product/speed3v3.jpeg
+    - lib/asset/image/home/notFound.png
 
   fonts:
     - family: PoppinsBlack

@@ -1,4 +1,5 @@
 import 'package:aressa_commerce/feature/account/view/paymentView/paymentView.dart';
+import 'package:aressa_commerce/feature/mainTabbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -15,8 +16,8 @@ class _AddCardViewState extends State<AddCardView> {
   String securityCode = "";
   String cardHolder = "";
 
-  void gotoPaymentView() {
-    Navigator.of(context).push(MaterialPageRoute(builder: (context) => PaymentView()));
+  void gotoHome() {
+    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => MainTabbar()));
   }
 
   Widget appBar() {
@@ -322,7 +323,7 @@ class _AddCardViewState extends State<AddCardView> {
       child: Material(
         color: Colors.transparent,
         child: InkWell(
-          onTap: () => {this.gotoPaymentView()},
+          onTap: () => {this.gotoHome()},
           child: Container(
             margin: EdgeInsets.all(16),
             alignment: Alignment.center,

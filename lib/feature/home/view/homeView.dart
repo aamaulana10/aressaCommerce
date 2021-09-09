@@ -29,10 +29,13 @@ class _HomeViewState extends State<HomeView> {
     });
   }
 
-  gotoDetailProduct() {
+  gotoDetailProduct(ProductData productData) {
+
     Future.delayed(Duration(milliseconds: 500), () {
       Navigator.of(context)
-          .push(MaterialPageRoute(builder: (ctx) => DetailProductView()));
+          .push(MaterialPageRoute(builder: (ctx) => DetailProductView(
+        productData: productData,
+      )));
     });
   }
 
@@ -285,7 +288,7 @@ class _HomeViewState extends State<HomeView> {
                         child: Material(
                           color: Colors.transparent,
                           child: InkWell(
-                            onTap: () => {gotoDetailProduct()},
+                            onTap: () => {print("banner")},
                           ),
                         ),
                       )
@@ -324,7 +327,7 @@ class _HomeViewState extends State<HomeView> {
       builder: (context, AsyncSnapshot<List<CategoryData>> snapshoot) {
         if (snapshoot.hasData) {
           return Container(
-            height: 140,
+            height: 170,
             child: Column(
               children: [
                 Expanded(
@@ -351,7 +354,7 @@ class _HomeViewState extends State<HomeView> {
                   ),
                 ),
                 Container(
-                  height: 110,
+                  height: 140,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
                     itemCount: 8,
@@ -382,7 +385,9 @@ class _HomeViewState extends State<HomeView> {
                                 child: Text(data.name,
                                     style: TextStyle(
                                         fontSize: 10,
-                                        fontFamily: 'PoppinsRegular')),
+                                        fontFamily: 'PoppinsRegular'),
+                                textAlign: TextAlign.center
+                                ),
                                 padding: EdgeInsets.only(top: 10),
                               ),
                             )
@@ -456,7 +461,7 @@ class _HomeViewState extends State<HomeView> {
                         child: Material(
                           color: Colors.transparent,
                           child: InkWell(
-                            onTap: () => {gotoDetailProduct()},
+                            onTap: () => {gotoDetailProduct(data)},
                             child: Container(
                               padding: EdgeInsets.all(8),
                               child: Column(
@@ -584,7 +589,7 @@ class _HomeViewState extends State<HomeView> {
                         child: Material(
                           color: Colors.transparent,
                           child: InkWell(
-                            onTap: () => {gotoDetailProduct()},
+                            onTap: () => {gotoDetailProduct(data)},
                             child: Container(
                               padding: EdgeInsets.all(8),
                               child: Column(
@@ -718,7 +723,7 @@ class _HomeViewState extends State<HomeView> {
             child: Material(
               color: Colors.transparent,
               child: InkWell(
-                onTap: () => {gotoDetailProduct()},
+                onTap: () => {print("recommended")},
               ),
             ),
           )
@@ -752,7 +757,7 @@ class _HomeViewState extends State<HomeView> {
                     child: Material(
                       color: Colors.transparent,
                       child: InkWell(
-                        onTap: () => {gotoAllCategory()},
+                        onTap: () => {gotoDetailProduct(data)},
                         child: Container(
                           padding: EdgeInsets.all(8),
                           child: Column(

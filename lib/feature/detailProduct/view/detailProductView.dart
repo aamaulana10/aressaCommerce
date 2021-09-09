@@ -1,3 +1,5 @@
+import 'package:aressa_commerce/core/domain/model/productModel.dart';
+import 'package:aressa_commerce/feature/cart/view/cartView.dart';
 import 'package:aressa_commerce/feature/review/view/reviewPage.dart';
 import 'package:aressa_commerce/generated/l10n.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
@@ -6,7 +8,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class DetailProductView extends StatefulWidget {
-  const DetailProductView({Key key}) : super(key: key);
+
+  final ProductData productData;
+
+  DetailProductView({this.productData});
 
   @override
   _DetailProductViewState createState() => _DetailProductViewState();
@@ -28,6 +33,13 @@ class _DetailProductViewState extends State<DetailProductView> {
     });
   }
 
+  addToCart() {
+    Future.delayed(Duration(milliseconds: 500), () {
+      Navigator.of(context)
+          .push(MaterialPageRoute(builder: (ctx) => CartView()));
+    });
+  }
+
   Widget header() {
 
     return Container(
@@ -45,7 +57,7 @@ class _DetailProductViewState extends State<DetailProductView> {
                       iconSize: 32,
                     ),
                     Expanded(
-                      child: Text("Nike air Max 270", style: TextStyle(
+                      child: Text(widget.productData.name, style: TextStyle(
                           fontSize: 16,
                         fontFamily: 'PoppinsBold',
                       )),
@@ -106,8 +118,11 @@ class _DetailProductViewState extends State<DetailProductView> {
         children: [
           Expanded(
             child: PageView.builder(
-              itemCount: 3,
+              itemCount: widget.productData.image.gallery.length,
               itemBuilder: (ctx, idx) {
+
+                var image = widget.productData.image.gallery[idx];
+
                 return Container(
                   child: Stack(
                     fit: StackFit.expand,
@@ -115,7 +130,7 @@ class _DetailProductViewState extends State<DetailProductView> {
                       ClipRRect(
                         child: Image(
                           image: AssetImage(
-                              "lib/asset/image/home/promotionDummy.png"),
+                              image),
                           fit: BoxFit.fill,
                         ),
                       ),
@@ -166,7 +181,7 @@ class _DetailProductViewState extends State<DetailProductView> {
           Row(
             children: [
               Expanded(
-                child: Text("Nike Air Zoom Pegasus 36 Miami", style: TextStyle(
+                child: Text(widget.productData.name, style: TextStyle(
                  fontSize: 20,
                     fontFamily: 'PoppinsBold',
                     color: ColorConfig.textColorBold1
@@ -191,7 +206,7 @@ class _DetailProductViewState extends State<DetailProductView> {
           Container(
             child: RatingBarIndicator(
               itemPadding: EdgeInsets.only(left: 0),
-              rating: 3,
+              rating: widget.productData.rate,
               itemBuilder: (context, index) => Icon(
                 Icons.star,
                 color: Colors.amber,
@@ -204,7 +219,7 @@ class _DetailProductViewState extends State<DetailProductView> {
           ),
           Container(
             margin: EdgeInsets.only(top: 8),
-            child: Text("288,43",
+            child: Text(widget.productData.price.special,
                 style: TextStyle(
                     fontSize: 20,
                     color: ColorConfig.bluePrimary,
@@ -230,7 +245,7 @@ class _DetailProductViewState extends State<DetailProductView> {
                         fontFamily: 'PoppinsRegular',
                         color: ColorConfig.textColorBold1,)),
                 Expanded(
-                  child: Text(S.of(context).Fashion,
+                  child: Text(widget.productData.category,
                       textAlign: TextAlign.right,
                       style: TextStyle(
                           fontSize: 12,
@@ -244,7 +259,7 @@ class _DetailProductViewState extends State<DetailProductView> {
           ),
           Container(
             margin: EdgeInsets.only(top: 8),
-            child: Text("The Nike Air Max 270 React ENG combines a full-length React foam midsole with a 270 Max Air unit for unrivaled comfort and a striking visual experience.",
+            child: Text(widget.productData.description,
                 style: TextStyle(
                     fontSize: 12,
                     fontFamily: 'PoppinsRegular',
@@ -493,7 +508,7 @@ class _DetailProductViewState extends State<DetailProductView> {
       child: Material(
         color: Colors.transparent,
         child: InkWell(
-          onTap: () => {print("add to cart")},
+          onTap: () => {addToCart()},
           child: Container(
             margin: EdgeInsets.all(16),
             alignment: Alignment.center,

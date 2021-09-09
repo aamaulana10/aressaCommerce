@@ -1,6 +1,7 @@
 import 'package:aressa_commerce/feature/account/view/adddressView/addressView.dart';
 import 'package:aressa_commerce/feature/account/view/paymentView/paymentView.dart';
 import 'package:aressa_commerce/feature/account/view/profileView/profileView.dart';
+import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -58,95 +59,107 @@ class _AccountViewState extends State<AccountView> {
       margin: EdgeInsets.only(left: 16, right: 16),
       child: ListView(
         children: [
-          InkWell(
-            onTap: () => {this.gotoProfileView()},
-            child: Container(
-              child: Row(
-                children: [
-                  Icon(Icons.person_outline,
-                    color: Colors.lightBlue,
-                  size: 24,
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(left: 8),
-                    child: Text("Profile",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 12,
-                      fontFamily: 'PoppinsBold',
+          Container(
+            height: 70,
+            child: InkWell(
+              onTap: () => {this.gotoProfileView()},
+              child: Container(
+                child: Row(
+                  children: [
+                    Icon(Icons.person_outline,
+                      color: Colors.lightBlue,
+                    size: 26,
                     ),
-                    ),
-                  )
-                ],
+                    Container(
+                      margin: EdgeInsets.only(left: 16),
+                      child: Text("Profile",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 14,
+                        fontFamily: 'PoppinsBold',
+                      ),
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
           ),
           Container(
-            margin: EdgeInsets.only(top: 16),
-            child: Row(
-              children: [
-                Icon(Icons.inbox_rounded,
-                  color: Colors.lightBlue,
-                  size: 24,
-                ),
-                Container(
-                  margin: EdgeInsets.only(left: 8),
-                  child: Text("Order",
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 12,
-                      fontFamily: 'PoppinsBold',
+            height: 70,
+            child: InkWell(
+              onTap: ()=> {print("order")},
+              child: Container(
+                child: Row(
+                  children: [
+                    Icon(Icons.inbox_rounded,
+                      color: Colors.lightBlue,
+                      size: 26,
                     ),
-                  ),
-                )
-              ],
-            ),
-          ),
-          InkWell(
-            onTap: () => {this.gotoAddressView()},
-            child: Container(
-              margin: EdgeInsets.only(top: 16),
-              child: Row(
-                children: [
-                  Icon(Icons.location_on,
-                    color: Colors.lightBlue,
-                    size: 24,
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(left: 8),
-                    child: Text("Address",
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 12,
-                        fontFamily: 'PoppinsBold',
+                    Container(
+                      margin: EdgeInsets.only(left: 16),
+                      child: Text("Order",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 14,
+                          fontFamily: 'PoppinsBold',
+                        ),
                       ),
-                    ),
-                  )
-                ],
+                    )
+                  ],
+                ),
               ),
             ),
           ),
-          InkWell(
-            onTap: () => {this.gotoPaymentView()},
-            child: Container(
-              margin: EdgeInsets.only(top: 16),
-              child: Row(
-                children: [
-                  Icon(Icons.payment,
-                    color: Colors.lightBlue,
-                    size: 24,
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(left: 8),
-                    child: Text("Payment",
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 12,
-                        fontFamily: 'PoppinsBold',
-                      ),
+          Container(
+            height: 70,
+            child: InkWell(
+              onTap: () => {this.gotoAddressView()},
+              child: Container(
+                child: Row(
+                  children: [
+                    Icon(Icons.location_on,
+                      color: Colors.lightBlue,
+                      size: 26,
                     ),
-                  )
-                ],
+                    Container(
+                      margin: EdgeInsets.only(left: 16),
+                      child: Text("Address",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 14,
+                          fontFamily: 'PoppinsBold',
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ),
+          Container(
+            height: 70,
+            child: InkWell(
+              onTap: () => {this.gotoPaymentView()},
+              child: Container(
+                child: Row(
+                  children: [
+                    Icon(Icons.payment,
+                      color: Colors.lightBlue,
+                      size: 26,
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(left: 16),
+                      child: Text("Payment",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 14,
+                          fontFamily: 'PoppinsBold',
+                        ),
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
           ),
