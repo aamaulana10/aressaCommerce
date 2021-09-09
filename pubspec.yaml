@@ -59,6 +59,42 @@ flutter:
     - lib/asset/image/product/speed3v1.jpeg
     - lib/asset/image/product/speed3v2.jpeg
     - lib/asset/image/product/speed3v3.jpeg
+    - lib/asset/image/product/nikeBasketballShoes.jpg
+    - lib/asset/image/product/nikeBasketBallShoes2.jpg
+    - lib/asset/image/product/nikeBasketBallShoes3.jpg
+    - lib/asset/image/product/nikeBasketBallShoes4.jpg
+    - lib/asset/image/product/menCasualShoes.jpg
+    - lib/asset/image/product/menCasualShoes2.jpg
+    - lib/asset/image/product/menCasualShoes3.jpg
+    - lib/asset/image/product/menCasualShoes4.jpg
+    - lib/asset/image/product/europeanSportMenShoes.jpg
+    - lib/asset/image/product/europeanSportMenShoes2.jpg
+    - lib/asset/image/product/europeanSportMenShoes3.jpg
+    - lib/asset/image/product/europeanSportMenShoes4.jpg
+    - lib/asset/image/product/walkingSneaker.jpg
+    - lib/asset/image/product/walkingSneaker2.jpg
+    - lib/asset/image/product/walkingSneaker3.jpg
+    - lib/asset/image/product/walkingSneaker4.jpg
+    - lib/asset/image/product/fashionTshirtMensWhite.jpg
+    - lib/asset/image/product/fashionTshirtMensWhite2.jpg
+    - lib/asset/image/product/fashionTshirtMensWhite3.jpg
+    - lib/asset/image/product/fashionTshirtMensWhite4.jpg
+    - lib/asset/image/product/summerMenTshirt.jpg
+    - lib/asset/image/product/summerMenTshirt2.png
+    - lib/asset/image/product/summerMenTshirt3.png
+    - lib/asset/image/product/summerMenTshirt4.jpg
+    - lib/asset/image/product/eagleMenTshirt.jpg
+    - lib/asset/image/product/eagleMenTshirt2.jpg
+    - lib/asset/image/product/eagleMenTshirt3.jpg
+    - lib/asset/image/product/eagleMenTshirt4.jpg
+    - lib/asset/image/product/parisMenTshirt.jpg
+    - lib/asset/image/product/parisMenTshirt2.png
+    - lib/asset/image/product/parisMenTshirt3.png
+    - lib/asset/image/product/parisMenTshirt4.png
+    - lib/asset/image/product/graphicMenTshirt.jpg
+    - lib/asset/image/product/graphicMenTshirt2.jpg
+    - lib/asset/image/product/graphicMenTshirt3.jpg
+    - lib/asset/image/product/graphicMenTshirt4.jpg
 
   fonts:
     - family: PoppinsBlack

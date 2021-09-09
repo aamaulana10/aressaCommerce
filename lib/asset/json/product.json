@@ -1,29 +1,47 @@
 {
   "data": [
     {
-      "id": "8",
+      "id": "1",
       "image": {
-        "thumbnail": "lib/asset/image/home/promotionDummy.png",
+        "thumbnail": "lib/asset/image/product/nikeBasketballShoes.jpg",
         "gallery": [
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png"
+          "lib/asset/image/product/nikeBasketballShoes2.jpg",
+          "lib/asset/image/product/nikeBasketballShoes3.jpg",
+          "lib/asset/image/product/nikeBasketballShoes4.jpg"
         ]
       },
       "category": "Man Shoes",
-      "description": "The Nike Air Max 270 React ENG combines a full-length React foam midsole with a 270 Max Air unit for unrivaled comfort and a striking visual experience.",
-      "rate": 4.3,
+      "description": "Zapatillas Tenis Sepatu Sports Shoes Citrus 25th Anniversary Women Men's Fashion Sneakers 11 Retro Basketball Shoes",
+      "rate": 5.0,
       "isFavorite": false,
-      "name": "Nike Air Max 270 React ENG",
+      "name": "Men's fashion sneakers 11 Retro Basketball Shoes jordan",
       "price": {
-        "normal": "$299",
-        "special": "$534"
+        "normal": "$65",
+        "special": "$60"
       }
     },
     {
-      "id": "9",
+      "id": "2",
+      "image": {
+        "thumbnail": "lib/asset/image/product/menCasualShoes.jpg",
+        "gallery": [
+          "lib/asset/image/product/menCasualShoes2.jpg",
+          "lib/asset/image/product/menCasualShoes3.jpg",
+          "lib/asset/image/product/menCasualShoes4.jpg"
+        ]
+      },
+      "category": "Man Shoes",
+      "description": "Stylish leather loafers mens shoes casual slip on men moccasins",
+      "rate": 4.3,
+      "isFavorite": false,
+      "name": "Stylish leather loafers mens shoes casual slip on men moccasins",
+      "price": {
+        "normal": "$31",
+        "special": "$30"
+      }
+    },
+    {
+      "id": "3",
       "image": {
         "thumbnail": "lib/asset/image/product/speed3.jpeg",
         "gallery": [
@@ -33,57 +51,153 @@
         ]
       },
       "category": "Man Shoes",
-      "description": "Mountain Climbing Camping Men Trekking Trail Water Men Hiking Shoes Trail Runner Outdoor Sports Wide Big Size",
-      "rate": 4.3,
+      "description": "Men Sport Sneaker Manufacturers China,Original Sports Shoes Sneakers Men Running From China,Oem Sneakers For Shoes Sport Mens",
+      "rate": 4.0,
       "isFavorite": false,
-      "name": "Speed 3",
+      "name": "Men Sport Sneaker",
       "price": {
-        "normal": "$10",
-        "special": "$8"
+        "normal": "$24",
+        "special": "$22"
+      }
+    },
+    {
+      "id": "4",
+      "image": {
+        "thumbnail": "lib/asset/image/product/europeanSportMenShoes.jpg",
+        "gallery": [
+          "lib/asset/image/product/europeanSportMenShoes2.jpg",
+          "lib/asset/image/product/europeanSportMenShoes3.jpg",
+          "lib/asset/image/product/europeanSportMenShoes4.jpg"
+        ]
+      },
+      "category": "Man Shoes",
+      "description": "2019 Fashion New Designs Men's Sport Shoes Fancy Mens Shoes,Excellent European knitted Mesh Sneakers",
+      "rate": 5.5,
+      "isFavorite": false,
+      "name": "Fashion Sneakers",
+      "price": {
+        "normal": "$16",
+        "special": "$14"
+      }
+    },
+    {
+      "id": "5",
+      "image": {
+        "thumbnail": "lib/asset/image/product/walkingSneaker.jpg",
+        "gallery": [
+          "lib/asset/image/product/walkingSneaker2.jpg",
+          "lib/asset/image/product/walkingSneaker3.jpg",
+          "lib/asset/image/product/walkingSneaker4.jpg"
+        ]
+      },
+      "category": "Man Shoes",
+      "description": "2020 New Men Casual Shoes Lace up Men Shoes Lightweight Comfortable Walking Sneakers",
+      "rate": 4.1,
+      "isFavorite": false,
+      "name": "2020 New Men Casual Shoes Lace up Men Shoes Lightweight Comfortable Walking Sneakers",
+      "price": {
+        "normal": "$7",
+        "special": "$6"
+      }
+    },
+    {
+      "id": "6",
+      "image": {
+        "thumbnail": "lib/asset/image/product/fashionTshirtMensWhite.jpg",
+        "gallery": [
+          "lib/asset/image/product/fashionTshirtMensWhite2.jpg",
+          "lib/asset/image/product/fashionTshirtMensWhite3.jpg",
+          "lib/asset/image/product/fashionTshirtMensWhite4.jpg"
+        ]
+      },
+      "category": "Man T-Shirt",
+      "description": "3/4 Sleeve Fashion t-Shirt Mens White Blank Tee Shirt Men Long Oversized t Shirt",
+      "rate": 5.0,
+      "isFavorite": false,
+      "name": "Xuanyang T-Shirt",
+      "price": {
+        "normal": "$4.50",
+        "special": "$4.20"
+      }
+    },
+    {
+      "id": "7",
+      "image": {
+        "thumbnail": "lib/asset/image/product/summerMenTshirt.jpg",
+        "gallery": [
+          "lib/asset/image/product/summerMenTshirt2.png",
+          "lib/asset/image/product/summerMenTshirt3.png",
+          "lib/asset/image/product/summerMenTshirt.jpg"
+        ]
+      },
+      "category": "Man T-Shirt",
+      "description": "Wholesale Men's Summer Tee Fashion Crew Neck Cheaper Heat Sensitive Color Changing tshirts",
+      "rate": 5.0,
+      "isFavorite": false,
+      "name": "Summer T-Shirt",
+      "price": {
+        "normal": "$8.65",
+        "special": "$7.80"
+      }
+    },
+    {
+      "id": "8",
+      "image": {
+        "thumbnail": "lib/asset/image/product/eagleMenTshirt.jpg",
+        "gallery": [
+          "lib/asset/image/product/eagleMenTshirt2.jpg",
+          "lib/asset/image/product/eagleMenTshirt3.jpg",
+          "lib/asset/image/product/eagleMenTshirt4.jpg"
+        ]
+      },
+      "category": "Man T-Shirt",
+      "description": "Manufactures t-shirts rhinestone transfer custom clothing for men rhinestone tshirts",
+      "rate": 5.2,
+      "isFavorite": false,
+      "name": "Costum Men T-Shirt",
+      "price": {
+        "normal": "$15.80",
+        "special": "$13.80"
+      }
+    },
+    {
+      "id": "9",
+      "image": {
+        "thumbnail": "lib/asset/image/product/parisMenTshirt.jpg",
+        "gallery": [
+          "lib/asset/image/product/parisMenTshirt2.png",
+          "lib/asset/image/product/parisMenTshirt3.png",
+          "lib/asset/image/product/parisMenTshirt4.png"
+        ]
+      },
+      "category": "Man T-Shirt",
+      "description": "JET FUEL T shert Vetement Homme Custom Foam Printing T-Shirt Men Rhinestone Logo Print On Demand T Shirt",
+      "rate": 5.0,
+      "isFavorite": false,
+      "name": "Custom Foam Printing T-Shirt Men",
+      "price": {
+        "normal": "$5.95",
+        "special": "$5.75"
       }
     },
     {
       "id": "10",
       "image": {
-        "thumbnail": "lib/asset/image/home/promotionDummy.png",
+        "thumbnail": "lib/asset/image/product/graphicMenTshirt.jpg",
         "gallery": [
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png"
+          "lib/asset/image/product/graphicMenTshirt2.jpg",
+          "lib/asset/image/product/graphicMenTshirt3.jpg",
+          "lib/asset/image/product/graphicMenTshirt4.jpg"
         ]
       },
-      "category": "Man Shoes",
-      "description": "The Nike Air Max 270 React ENG combines a full-length React foam midsole with a 270 Max Air unit for unrivaled comfort and a striking visual experience.",
-      "rate": 4.3,
+      "category": "Man T-Shirt",
+      "description": "Custom t-shirt with print men graphic words tshirts printing designed high quality cotton polyester rayon tri blend",
+      "rate": 5.1,
       "isFavorite": false,
-      "name": "Nike Air Max 270 React ENG",
+      "name": "Custom t-shirt with print men graphic",
       "price": {
-        "normal": "$299",
-        "special": "$534"
-      }
-    },
-    {
-      "id": "11",
-      "image": {
-        "thumbnail": "lib/asset/image/home/promotionDummy.png",
-        "gallery": [
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png"
-        ]
-      },
-      "category": "Man Shoes",
-      "description": "The Nike Air Max 270 React ENG combines a full-length React foam midsole with a 270 Max Air unit for unrivaled comfort and a striking visual experience.",
-      "rate": 4.3,
-      "isFavorite": false,
-      "name": "Nike Air Max 270 React ENG",
-      "price": {
-        "normal": "$299",
-        "special": "$534"
+        "normal": "$6.20",
+        "special": "$4.20"
       }
     }
   ]
