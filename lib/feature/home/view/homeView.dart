@@ -1,3 +1,6 @@
+import 'package:aressa_commerce/core/data/repository.dart';
+import 'package:aressa_commerce/core/domain/model/categoryModel.dart';
+import 'package:aressa_commerce/core/domain/model/productModel.dart';
 import 'package:aressa_commerce/feature/category/view/allCategoryView.dart';
 import 'package:aressa_commerce/feature/detailProduct/view/detailProductView.dart';
 import 'package:aressa_commerce/feature/favoritProduct/view/favoritProductView.dart';
@@ -295,301 +298,355 @@ class _HomeViewState extends State<HomeView> {
   }
 
   Widget categoryWidget() {
-    return Container(
-      height: 140,
-      child: Column(
-        children: [
-          Expanded(
-            child: Container(
-              margin: EdgeInsets.only(left: 20, right: 4),
-              child: Row(
-                children: [
-                  Expanded(
-                      child: Text("Category",
-                          style: TextStyle(
-                              color: ColorConfig.textColorBold1,
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold))),
-                  FlatButton(
-                      onPressed: () => {gotoAllCategory()},
-                      child: Text("More Category",
-                          style: TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold,
-                              color: ColorConfig.bluePrimary)))
-                ],
-              ),
-            ),
-          ),
-          Container(
-            height: 110,
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: 10,
-              padding: EdgeInsets.only(left: 8, right: 8),
-              itemBuilder: (ctx, idx) {
-                return Container(
-                  width: 70,
-                  margin: EdgeInsets.all(8),
-                  child: Column(
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(
-                                color: ColorConfig.borderColor, width: 1),
-                            shape: BoxShape.circle),
-                        height: 70,
-                        width: 70,
-                        child: Padding(
-                          child: Image(
-                              image:
-                                  AssetImage("lib/asset/image/home/shirt.png")),
-                          padding: EdgeInsets.all(20),
-                        ),
-                      ),
-                      Expanded(
-                        child: Container(
-                          child: Text("Man Shirt",
-                              style: TextStyle(
-                                fontSize: 10,
-                              )),
-                          padding: EdgeInsets.only(top: 10),
-                        ),
-                      )
-                    ],
+    return StreamBuilder(
+      stream: Repository().getCategories().asStream(),
+      builder: (context, AsyncSnapshot<List<CategoryData>> snapshoot){
+
+        if(snapshoot.hasData) {
+
+          return Container(
+            height: 140,
+            child: Column(
+              children: [
+                Expanded(
+                  child: Container(
+                    margin: EdgeInsets.only(left: 20, right: 4),
+                    child: Row(
+                      children: [
+                        Expanded(
+                            child: Text("Category",
+                                style: TextStyle(
+                                    color: ColorConfig.textColorBold1,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold))),
+                        FlatButton(
+                            onPressed: () => {gotoAllCategory()},
+                            child: Text("More Category",
+                                style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold,
+                                    color: ColorConfig.bluePrimary)))
+                      ],
+                    ),
                   ),
-                );
-              },
+                ),
+                Container(
+                  height: 110,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: 8,
+                    padding: EdgeInsets.only(left: 8, right: 8),
+                    itemBuilder: (ctx, idx) {
+
+                      var data = snapshoot.data[idx];
+
+                      return Container(
+                        width: 70,
+                        margin: EdgeInsets.all(8),
+                        child: Column(
+                          children: [
+                            Container(
+                              decoration: BoxDecoration(
+                                  border: Border.all(
+                                      color: ColorConfig.borderColor, width: 1),
+                                  shape: BoxShape.circle),
+                              height: 70,
+                              width: 70,
+                              child: Padding(
+                                child: Image(
+                                    image:
+                                    AssetImage(data.image)),
+                                padding: EdgeInsets.all(20),
+                              ),
+                            ),
+                            Expanded(
+                              child: Container(
+                                child: Text(data.name,
+                                    style: TextStyle(
+                                      fontSize: 10,
+                                    )),
+                                padding: EdgeInsets.only(top: 10),
+                              ),
+                            )
+                          ],
+                        ),
+                      );
+                    },
+                  ),
+                ),
+              ],
             ),
-          ),
-        ],
-      ),
+          );
+        } else if(snapshoot.hasError) {
+
+          return Text(snapshoot.error.toString());
+        } else {
+
+          return Container();
+        }
+      },
     );
   }
 
   Widget flashSaleWidget() {
-    return Container(
-      height: 260,
-      margin: EdgeInsets.only(top: 16),
-      child: Column(
-        children: [
-          Expanded(
-            child: Container(
-              margin: EdgeInsets.only(left: 20, right: 4),
-              child: Row(
-                children: [
-                  Expanded(
-                      child: Text("Flash Sale",
-                          style: TextStyle(
-                              color: ColorConfig.textColorBold1,
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold))),
-                  FlatButton(
-                      onPressed: () => {gotoFlashSale()},
-                      child: Text("See More",
-                          style: TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold,
-                              color: ColorConfig.bluePrimary)))
-                ],
-              ),
-            ),
-          ),
-          Container(
-            height: 240,
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: 10,
-              padding: EdgeInsets.only(left: 8, right: 8),
-              itemBuilder: (ctx, idx) {
-                return Container(
-                  width: 140,
-                  margin: EdgeInsets.all(8),
-                  decoration: BoxDecoration(
-                      border:
-                          Border.all(color: ColorConfig.borderColor, width: 1),
-                      borderRadius: BorderRadius.circular(8)),
-                  child: Material(
-                    color: Colors.transparent,
-                    child: InkWell(
-                      onTap: () => {gotoDetailProduct()},
-                      child: Container(
-                        padding: EdgeInsets.all(8),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Container(
-                              height: 110,
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(5),
-                                child: Image(
-                                  image: AssetImage(
-                                      "lib/asset/image/home/promotionDummy.png"),
-                                  fit: BoxFit.fill,
-                                ),
-                              ),
-                            ),
-                            Container(
-                              child: Text("FS - Nike Air Max 270 React",
-                                  maxLines: 2,
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      color: ColorConfig.textColorBold1,
-                                      fontWeight: FontWeight.bold)),
-                              padding: EdgeInsets.only(top: 10),
-                            ),
-                            Container(
-                              child: Text("288,43",
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      color: ColorConfig.bluePrimary,
-                                      fontWeight: FontWeight.bold)),
-                              padding: EdgeInsets.only(top: 10),
-                            ),
-                            Container(
-                              child: Row(
+    return StreamBuilder(
+      stream: Repository().getFlashSaleProduct().asStream(),
+      builder: (context, AsyncSnapshot<List<ProductData>> snapshoot){
+
+        if(snapshoot.hasData) {
+
+          return Container(
+            height: 260,
+            margin: EdgeInsets.only(top: 16),
+            child: Column(
+              children: [
+                Expanded(
+                  child: Container(
+                    margin: EdgeInsets.only(left: 20, right: 4),
+                    child: Row(
+                      children: [
+                        Expanded(
+                            child: Text("Flash Sale",
+                                style: TextStyle(
+                                    color: ColorConfig.textColorBold1,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold))),
+                        FlatButton(
+                            onPressed: () => {gotoFlashSale()},
+                            child: Text("See More",
+                                style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold,
+                                    color: ColorConfig.bluePrimary)))
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  height: 240,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: 5,
+                    padding: EdgeInsets.only(left: 8, right: 8),
+                    itemBuilder: (ctx, idx) {
+
+                      var data = snapshoot.data[idx];
+
+                      return Container(
+                        width: 140,
+                        margin: EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                            border:
+                            Border.all(color: ColorConfig.borderColor, width: 1),
+                            borderRadius: BorderRadius.circular(8)),
+                        child: Material(
+                          color: Colors.transparent,
+                          child: InkWell(
+                            onTap: () => {gotoDetailProduct()},
+                            child: Container(
+                              padding: EdgeInsets.all(8),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text("534,33",
-                                      style: TextStyle(
-                                          fontSize: 10,
-                                          decoration: TextDecoration.lineThrough)),
-                                  Padding(
-                                    padding: EdgeInsets.only(left: 8),
-                                    child: Text("24% off",
+                                  Container(
+                                    height: 110,
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(5),
+                                      child: Image(
+                                        image: AssetImage(
+                                            data.image.thumbnail),
+                                        fit: BoxFit.fill,
+                                      ),
+                                    ),
+                                  ),
+                                  Container(
+                                    child: Text(data.name,
+                                        maxLines: 2,
                                         style: TextStyle(
-                                            fontSize: 10,
-                                            fontWeight: FontWeight.bold,
-                                            color: Color(0XFFFB7181))),
+                                            fontSize: 12,
+                                            color: ColorConfig.textColorBold1,
+                                            fontWeight: FontWeight.bold)),
+                                    padding: EdgeInsets.only(top: 10),
+                                  ),
+                                  Container(
+                                    child: Text(data.price.special,
+                                        style: TextStyle(
+                                            fontSize: 12,
+                                            color: ColorConfig.bluePrimary,
+                                            fontWeight: FontWeight.bold)),
+                                    padding: EdgeInsets.only(top: 10),
+                                  ),
+                                  Container(
+                                    child: Row(
+                                      children: [
+                                        Text(data.price.normal,
+                                            style: TextStyle(
+                                                fontSize: 10,
+                                                decoration: TextDecoration.lineThrough)),
+                                        Padding(
+                                          padding: EdgeInsets.only(left: 8),
+                                          child: Text("24% off",
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Color(0XFFFB7181))),
+                                        ),
+                                      ],
+                                    ),
+                                    padding: EdgeInsets.only(top: 10),
                                   ),
                                 ],
                               ),
-                              padding: EdgeInsets.only(top: 10),
                             ),
-                          ],
+                          ),
                         ),
-                      ),
-                    ),
+                      );
+                    },
                   ),
-                );
-              },
+                )
+              ],
             ),
-          )
-        ],
-      ),
+          );
+        } else if(snapshoot.hasError) {
+
+          return Text(snapshoot.error.toString());
+        } else {
+
+          return Container();
+        }
+      },
     );
   }
 
   Widget megaSaleWidget() {
-    return Container(
-      margin: EdgeInsets.only(top: 16),
-      height: 260,
-      child: Column(
-        children: [
-          Expanded(
-            child: Container(
-              margin: EdgeInsets.only(left: 20, right: 4),
-              child: Row(
-                children: [
-                  Expanded(
-                      child: Text("Mega Sale",
-                          style: TextStyle(
-                              color: ColorConfig.textColorBold1,
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold))),
-                  FlatButton(
-                      onPressed: () => {gotoMegaSale()},
-                      child: Text("See More",
-                          style: TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold,
-                              color: ColorConfig.bluePrimary)))
-                ],
-              ),
-            ),
-          ),
-          Container(
-            height: 240,
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: 10,
-              padding: EdgeInsets.only(left: 8, right: 8),
-              itemBuilder: (ctx, idx) {
-                return Container(
-                  width: 140,
-                  margin: EdgeInsets.all(8),
-                  decoration: BoxDecoration(
-                      border:
-                      Border.all(color: ColorConfig.borderColor, width: 1),
-                      borderRadius: BorderRadius.circular(8)),
-                  child: Material(
-                    color: Colors.transparent,
-                    child: InkWell(
-                      onTap: () => {gotoDetailProduct()},
-                      child: Container(
-                        padding: EdgeInsets.all(8),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Container(
-                              height: 110,
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(5),
-                                child: Image(
-                                  image: AssetImage(
-                                      "lib/asset/image/home/promotionDummy.png"),
-                                  fit: BoxFit.fill,
-                                ),
-                              ),
-                            ),
-                            Container(
-                              child: Text("FS - Nike Air Max 270 React",
-                                  maxLines: 2,
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      color: ColorConfig.textColorBold1,
-                                      fontWeight: FontWeight.bold)),
-                              padding: EdgeInsets.only(top: 10),
-                            ),
-                            Container(
-                              child: Text("288,43",
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      color: ColorConfig.bluePrimary,
-                                      fontWeight: FontWeight.bold)),
-                              padding: EdgeInsets.only(top: 10),
-                            ),
-                            Container(
-                              child: Row(
+    return StreamBuilder(
+      stream: Repository().getMegaSaleProduct().asStream(),
+      builder: (context, AsyncSnapshot<List<ProductData>> snapshoot){
+
+        if(snapshoot.hasData) {
+
+          return Container(
+            height: 260,
+            margin: EdgeInsets.only(top: 16),
+            child: Column(
+              children: [
+                Expanded(
+                  child: Container(
+                    margin: EdgeInsets.only(left: 20, right: 4),
+                    child: Row(
+                      children: [
+                        Expanded(
+                            child: Text("Mega Sale",
+                                style: TextStyle(
+                                    color: ColorConfig.textColorBold1,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold))),
+                        FlatButton(
+                            onPressed: () => {gotoFlashSale()},
+                            child: Text("See More",
+                                style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold,
+                                    color: ColorConfig.bluePrimary)))
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  height: 240,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: 5,
+                    padding: EdgeInsets.only(left: 8, right: 8),
+                    itemBuilder: (ctx, idx) {
+
+                      var data = snapshoot.data[idx];
+
+                      return Container(
+                        width: 140,
+                        margin: EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                            border:
+                            Border.all(color: ColorConfig.borderColor, width: 1),
+                            borderRadius: BorderRadius.circular(8)),
+                        child: Material(
+                          color: Colors.transparent,
+                          child: InkWell(
+                            onTap: () => {gotoDetailProduct()},
+                            child: Container(
+                              padding: EdgeInsets.all(8),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text("534,33",
-                                      style: TextStyle(
-                                          fontSize: 10,
-                                          decoration: TextDecoration.lineThrough)),
-                                  Padding(
-                                    padding: EdgeInsets.only(left: 8),
-                                    child: Text("24% off",
+                                  Container(
+                                    height: 110,
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(5),
+                                      child: Image(
+                                        image: AssetImage(
+                                            data.image.thumbnail),
+                                        fit: BoxFit.fill,
+                                      ),
+                                    ),
+                                  ),
+                                  Container(
+                                    child: Text(data.name,
+                                        maxLines: 2,
                                         style: TextStyle(
-                                            fontSize: 10,
-                                            fontWeight: FontWeight.bold,
-                                            color: Color(0XFFFB7181))),
+                                            fontSize: 12,
+                                            color: ColorConfig.textColorBold1,
+                                            fontWeight: FontWeight.bold)),
+                                    padding: EdgeInsets.only(top: 10),
+                                  ),
+                                  Container(
+                                    child: Text(data.price.special,
+                                        style: TextStyle(
+                                            fontSize: 12,
+                                            color: ColorConfig.bluePrimary,
+                                            fontWeight: FontWeight.bold)),
+                                    padding: EdgeInsets.only(top: 10),
+                                  ),
+                                  Container(
+                                    child: Row(
+                                      children: [
+                                        Text(data.price.normal,
+                                            style: TextStyle(
+                                                fontSize: 10,
+                                                decoration: TextDecoration.lineThrough)),
+                                        Padding(
+                                          padding: EdgeInsets.only(left: 8),
+                                          child: Text("24% off",
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Color(0XFFFB7181))),
+                                        ),
+                                      ],
+                                    ),
+                                    padding: EdgeInsets.only(top: 10),
                                   ),
                                 ],
                               ),
-                              padding: EdgeInsets.only(top: 10),
                             ),
-                          ],
+                          ),
                         ),
-                      ),
-                    ),
+                      );
+                    },
                   ),
-                );
-              },
+                )
+              ],
             ),
-          ),
-        ],
-      ),
+          );
+        } else if(snapshoot.hasError) {
+
+          return Text(snapshoot.error.toString());
+        } else {
+
+          return Container();
+        }
+      },
     );
   }
 
@@ -658,100 +715,115 @@ class _HomeViewState extends State<HomeView> {
   }
 
   Widget productGridWidget() {
-    return Container(
-      child: GridView.builder(
-          shrinkWrap: true,
-          primary: false,
-          physics: new NeverScrollableScrollPhysics(),
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2, childAspectRatio: 0.65),
-          itemCount: 4,
-          itemBuilder: (item, index) {
-            return Container(
-              height: 400,
-              margin: EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                  border: Border.all(color: ColorConfig.borderColor, width: 1),
-                  borderRadius: BorderRadius.circular(8)),
-              child: Material(
-                color: Colors.transparent,
-                child: InkWell(
-                  onTap: () => {gotoAllCategory()},
-                  child: Container(
-                    padding: EdgeInsets.all(8),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Expanded(
-                          child: Container(
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(5),
-                              child: Image(
-                                image: AssetImage(
-                                    "lib/asset/image/home/promotionDummy.png"),
-                                fit: BoxFit.fill,
-                              ),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          child: Text("FS - Nike Air Max 270 React",
-                              maxLines: 2,
-                              style: TextStyle(
-                                  fontSize: 12,
-                                  color: ColorConfig.textColorBold1,
-                                  fontWeight: FontWeight.bold)),
-                          padding: EdgeInsets.only(top: 10),
-                        ),
-                        Container(
-                          child: RatingBarIndicator(
-                            rating: 3,
-                            itemBuilder: (context, index) => Icon(
-                              Icons.star,
-                              color: Colors.amber,
-                            ),
-                            itemCount: 5,
-                            itemSize: 24.0,
-                            unratedColor: ColorConfig.borderColor,
-                          ),
-                          padding: EdgeInsets.only(top: 10),
-                        ),
-                        Container(
-                          margin: EdgeInsets.only(top: 8),
-                          child: Text("288,43",
-                              style: TextStyle(
-                                  fontSize: 12,
-                                  color: ColorConfig.bluePrimary,
-                                  fontWeight: FontWeight.bold)),
-                          padding: EdgeInsets.only(top: 10),
-                        ),
-                        Container(
-                          child: Row(
+    return StreamBuilder(
+      stream: Repository().getRecommendedProduct().asStream(),
+      builder: (context, AsyncSnapshot<List<ProductData>> snapshoot){
+        if(snapshoot.hasData) {
+          return Container(
+            child: GridView.builder(
+                shrinkWrap: true,
+                primary: false,
+                physics: new NeverScrollableScrollPhysics(),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2, childAspectRatio: 0.65),
+                itemCount: snapshoot.data.length,
+                itemBuilder: (item, index) {
+
+                  var data = snapshoot.data[index];
+
+                  return Container(
+                    height: 400,
+                    margin: EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                        border: Border.all(color: ColorConfig.borderColor, width: 1),
+                        borderRadius: BorderRadius.circular(8)),
+                    child: Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        onTap: () => {gotoAllCategory()},
+                        child: Container(
+                          padding: EdgeInsets.all(8),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("534,33",
-                                  style: TextStyle(
-                                      fontSize: 10,
-                                      decoration: TextDecoration.lineThrough)),
-                              Padding(
-                                padding: EdgeInsets.only(left: 8),
-                                child: Text("24% off",
+                              Expanded(
+                                child: Container(
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(5),
+                                    child: Image(
+                                      image: AssetImage(data.image.thumbnail),
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                child: Text(data.name,
+                                    maxLines: 2,
                                     style: TextStyle(
-                                        fontSize: 10,
-                                        fontWeight: FontWeight.bold,
-                                        color: Color(0XFFFB7181))),
+                                        fontSize: 12,
+                                        color: ColorConfig.textColorBold1,
+                                        fontWeight: FontWeight.bold)),
+                                padding: EdgeInsets.only(top: 10),
+                              ),
+                              Container(
+                                child: RatingBarIndicator(
+                                  rating: data.rate,
+                                  itemBuilder: (context, index) => Icon(
+                                    Icons.star,
+                                    color: Colors.amber,
+                                  ),
+                                  itemCount: 5,
+                                  itemSize: 24.0,
+                                  unratedColor: ColorConfig.borderColor,
+                                ),
+                                padding: EdgeInsets.only(top: 10),
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(top: 8),
+                                child: Text(data.price.special,
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        color: ColorConfig.bluePrimary,
+                                        fontWeight: FontWeight.bold)),
+                                padding: EdgeInsets.only(top: 10),
+                              ),
+                              Container(
+                                child: Row(
+                                  children: [
+                                    Text(data.price.normal,
+                                        style: TextStyle(
+                                            fontSize: 10,
+                                            decoration: TextDecoration.lineThrough)),
+                                    Padding(
+                                      padding: EdgeInsets.only(left: 8),
+                                      child: Text("24% off",
+                                          style: TextStyle(
+                                              fontSize: 10,
+                                              fontWeight: FontWeight.bold,
+                                              color: Color(0XFFFB7181))),
+                                    ),
+                                  ],
+                                ),
+                                padding: EdgeInsets.only(top: 10),
                               ),
                             ],
                           ),
-                          padding: EdgeInsets.only(top: 10),
                         ),
-                      ],
+                      ),
                     ),
-                  ),
-                ),
-              ),
-            );
-          }),
+                  );
+                }),
+          );
+        } else if(snapshoot.hasError) {
+
+          return Text(snapshoot.error.toString());
+        } else {
+
+          return Container();
+        }
+      },
     );
   }
 

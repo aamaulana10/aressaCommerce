@@ -1,0 +1,246 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "image": {
+        "thumbnail": "lib/asset/image/home/promotionDummy.png",
+        "gallery": [
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png"
+        ]
+      },
+      "category": "Man Shoes",
+      "description": "The Nike Air Max 270 React ENG combines a full-length React foam midsole with a 270 Max Air unit for unrivaled comfort and a striking visual experience.",
+      "rate": 4.3,
+      "isFavorite": false,
+      "name": "Nike Air Max 270 React ENG",
+      "price": {
+        "normal": "$299",
+        "special": "$534"
+      }
+    },
+    {
+      "id": "2",
+      "image": {
+        "thumbnail": "lib/asset/image/home/promotionDummy.png",
+        "gallery": [
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png"
+        ]
+      },
+      "category": "Man Shoes",
+      "description": "The Nike Air Max 270 React ENG combines a full-length React foam midsole with a 270 Max Air unit for unrivaled comfort and a striking visual experience.",
+      "rate": 4.3,
+      "isFavorite": false,
+      "name": "Nike Air Max 270 React ENG",
+      "price": {
+        "normal": "$299",
+        "special": "$534"
+      }
+    },
+    {
+      "id": "3",
+      "image": {
+        "thumbnail": "lib/asset/image/home/promotionDummy.png",
+        "gallery": [
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png"
+        ]
+      },
+      "category": "Man Shoes",
+      "description": "The Nike Air Max 270 React ENG combines a full-length React foam midsole with a 270 Max Air unit for unrivaled comfort and a striking visual experience.",
+      "rate": 4.3,
+      "isFavorite": false,
+      "name": "Nike Air Max 270 React ENG",
+      "price": {
+        "normal": "$299",
+        "special": "$534"
+      }
+    },
+    {
+      "id": "4",
+      "image": {
+        "thumbnail": "lib/asset/image/home/promotionDummy.png",
+        "gallery": [
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png"
+        ]
+      },
+      "category": "Man Shoes",
+      "description": "The Nike Air Max 270 React ENG combines a full-length React foam midsole with a 270 Max Air unit for unrivaled comfort and a striking visual experience.",
+      "rate": 4.3,
+      "isFavorite": false,
+      "name": "Nike Air Max 270 React ENG",
+      "price": {
+        "normal": "$299",
+        "special": "$534"
+      }
+    },
+    {
+      "id": "5",
+      "image": {
+        "thumbnail": "lib/asset/image/home/promotionDummy.png",
+        "gallery": [
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png"
+        ]
+      },
+      "category": "Man Shoes",
+      "description": "The Nike Air Max 270 React ENG combines a full-length React foam midsole with a 270 Max Air unit for unrivaled comfort and a striking visual experience.",
+      "rate": 4.3,
+      "isFavorite": false,
+      "name": "Nike Air Max 270 React ENG",
+      "price": {
+        "normal": "$299",
+        "special": "$534"
+      }
+    },
+    {
+      "id": "6",
+      "image": {
+        "thumbnail": "lib/asset/image/home/promotionDummy.png",
+        "gallery": [
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png"
+        ]
+      },
+      "category": "Man Shoes",
+      "description": "The Nike Air Max 270 React ENG combines a full-length React foam midsole with a 270 Max Air unit for unrivaled comfort and a striking visual experience.",
+      "rate": 4.3,
+      "isFavorite": false,
+      "name": "Nike Air Max 270 React ENG",
+      "price": {
+        "normal": "$299",
+        "special": "$534"
+      }
+    },
+    {
+      "id": "7",
+      "image": {
+        "thumbnail": "lib/asset/image/home/promotionDummy.png",
+        "gallery": [
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png"
+        ]
+      },
+      "category": "Man Shoes",
+      "description": "The Nike Air Max 270 React ENG combines a full-length React foam midsole with a 270 Max Air unit for unrivaled comfort and a striking visual experience.",
+      "rate": 4.3,
+      "isFavorite": false,
+      "name": "Nike Air Max 270 React ENG",
+      "price": {
+        "normal": "$299",
+        "special": "$534"
+      }
+    },
+    {
+      "id": "8",
+      "image": {
+        "thumbnail": "lib/asset/image/home/promotionDummy.png",
+        "gallery": [
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png"
+        ]
+      },
+      "category": "Man Shoes",
+      "description": "The Nike Air Max 270 React ENG combines a full-length React foam midsole with a 270 Max Air unit for unrivaled comfort and a striking visual experience.",
+      "rate": 4.3,
+      "isFavorite": false,
+      "name": "Nike Air Max 270 React ENG",
+      "price": {
+        "normal": "$299",
+        "special": "$534"
+      }
+    },
+    {
+      "id": "9",
+      "image": {
+        "thumbnail": "lib/asset/image/home/promotionDummy.png",
+        "gallery": [
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png"
+        ]
+      },
+      "category": "Man Shoes",
+      "description": "The Nike Air Max 270 React ENG combines a full-length React foam midsole with a 270 Max Air unit for unrivaled comfort and a striking visual experience.",
+      "rate": 4.3,
+      "isFavorite": false,
+      "name": "Nike Air Max 270 React ENG",
+      "price": {
+        "normal": "$299",
+        "special": "$534"
+      }
+    },
+    {
+      "id": "10",
+      "image": {
+        "thumbnail": "lib/asset/image/home/promotionDummy.png",
+        "gallery": [
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png"
+        ]
+      },
+      "category": "Man Shoes",
+      "description": "The Nike Air Max 270 React ENG combines a full-length React foam midsole with a 270 Max Air unit for unrivaled comfort and a striking visual experience.",
+      "rate": 4.3,
+      "isFavorite": false,
+      "name": "Nike Air Max 270 React ENG",
+      "price": {
+        "normal": "$299",
+        "special": "$534"
+      }
+    },
+    {
+      "id": "11",
+      "image": {
+        "thumbnail": "lib/asset/image/home/promotionDummy.png",
+        "gallery": [
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png",
+          "lib/asset/image/home/promotionDummy.png"
+        ]
+      },
+      "category": "Man Shoes",
+      "description": "The Nike Air Max 270 React ENG combines a full-length React foam midsole with a 270 Max Air unit for unrivaled comfort and a striking visual experience.",
+      "rate": 4.3,
+      "isFavorite": false,
+      "name": "Nike Air Max 270 React ENG",
+      "price": {
+        "normal": "$299",
+        "special": "$534"
+      }
+    }
+  ]
+}
