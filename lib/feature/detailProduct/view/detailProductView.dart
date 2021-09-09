@@ -1,3 +1,5 @@
+import 'package:aressa_commerce/feature/review/view/reviewPage.dart';
+import 'package:aressa_commerce/generated/l10n.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:aressa_commerce/util/view/indicatorView.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +18,13 @@ class _DetailProductViewState extends State<DetailProductView> {
     Future.delayed(Duration(milliseconds: 500), () {
       Navigator.of(context)
           .push(MaterialPageRoute(builder: (ctx) => DetailProductView()));
+    });
+  }
+
+  gotoProductReview() {
+    Future.delayed(Duration(milliseconds: 500), () {
+      Navigator.of(context)
+          .push(MaterialPageRoute(builder: (ctx) => ReviewPage()));
     });
   }
 
@@ -204,7 +213,7 @@ class _DetailProductViewState extends State<DetailProductView> {
           ),
           Container(
             margin: EdgeInsets.only(top: 8),
-            child: Text("Specification",
+            child: Text(S.of(context).specification,
                 style: TextStyle(
                     fontSize: 14,
                     color: ColorConfig.textColorBold1,
@@ -215,13 +224,13 @@ class _DetailProductViewState extends State<DetailProductView> {
             margin: EdgeInsets.only(top: 8),
             child: Row(
               children: [
-                Text("Category",
+                Text(S.of(context).category,
                     style: TextStyle(
                         fontSize: 12,
                         fontFamily: 'PoppinsRegular',
                         color: ColorConfig.textColorBold1,)),
                 Expanded(
-                  child: Text("Man Shoes",
+                  child: Text(S.of(context).Fashion,
                       textAlign: TextAlign.right,
                       style: TextStyle(
                           fontSize: 12,
@@ -258,11 +267,11 @@ class _DetailProductViewState extends State<DetailProductView> {
             Container(
               child: Row(
                 children: [
-                    Expanded(child: Text("Review Product", style: TextStyle(
+                    Expanded(child: Text(S.of(context).reviewProduct, style: TextStyle(
                         fontSize: 14,
                         color: ColorConfig.textColorBold1,
                       fontFamily: 'PoppinsBold',))),
-                    TextButton(onPressed: () => {print("see all")}, child: Text("Lihat semua"))
+                    TextButton(onPressed: () => {this.gotoProductReview()}, child: Text(S.of(context).seeMore))
                 ],
               ),
             ),
@@ -493,7 +502,7 @@ class _DetailProductViewState extends State<DetailProductView> {
                 color: ColorConfig.bluePrimary,
                 borderRadius: BorderRadius.circular(5)
             ),
-            child: Text("Add To Cart", style: TextStyle(
+            child: Text(S.of(context).addToCart, style: TextStyle(
               fontSize: 14,
               color: Colors.white,
               fontFamily: 'PoppinsBold',

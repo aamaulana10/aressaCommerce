@@ -1,3 +1,4 @@
+import 'package:aressa_commerce/generated/l10n.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +21,7 @@ class _OfferViewState extends State<OfferView> {
             Expanded(
               child: Container(
                 margin: EdgeInsets.only(left: 16, right: 16, top: 18),
-                child: Text("Offer", style: TextStyle(
+                child: Text(S.of(context).offer, style: TextStyle(
                           fontSize: 16,
                   color: Colors.black,
                   fontFamily: 'PoppinsBold',

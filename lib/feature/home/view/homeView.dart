@@ -3,6 +3,8 @@ import 'package:aressa_commerce/feature/detailProduct/view/detailProductView.dar
 import 'package:aressa_commerce/feature/favoritProduct/view/favoritProductView.dart';
 import 'package:aressa_commerce/feature/flashSale/view/flashSaleView.dart';
 import 'package:aressa_commerce/feature/megaSale/view/megaSaleView.dart';
+import 'package:aressa_commerce/feature/notification/view/notificationView.dart';
+import 'package:aressa_commerce/generated/l10n.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:aressa_commerce/util/view/indicatorView.dart';
 import 'package:flutter/cupertino.dart';
@@ -53,6 +55,13 @@ class _HomeViewState extends State<HomeView> {
     });
   }
 
+  gotoNotification() {
+    Future.delayed(Duration(milliseconds: 500), () {
+      Navigator.of(context)
+          .push(MaterialPageRoute(builder: (ctx) => NotificationView()));
+    });
+  }
+
   Widget header() {
     return Container(
       height: 80,
@@ -70,7 +79,7 @@ class _HomeViewState extends State<HomeView> {
                           borderRadius: BorderRadius.circular(8)),
                       child: TextFormField(
                         decoration: InputDecoration(
-                            labelText: "Search Product",
+                            labelText: S.of(context).searchProduct,
                             labelStyle:
                                 TextStyle(
                                     color: ColorConfig.textColor1,
@@ -105,7 +114,7 @@ class _HomeViewState extends State<HomeView> {
                     decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
                     child: InkWell(
                         borderRadius: BorderRadius.circular(20),
-                        onTap: () => {print("whishlist")},
+                        onTap: () => {this.gotoNotification()},
                         child: Padding(
                           padding: EdgeInsets.all(8),
                           child: Image(
@@ -309,7 +318,7 @@ class _HomeViewState extends State<HomeView> {
               child: Row(
                 children: [
                   Expanded(
-                      child: Text("Category",
+                      child: Text(S.of(context).category,
                           style: TextStyle(
                               color: ColorConfig.textColorBold1,
                               fontSize: 14,
@@ -353,7 +362,7 @@ class _HomeViewState extends State<HomeView> {
                       ),
                       Expanded(
                         child: Container(
-                          child: Text("Man Shirt",
+                          child: Text(S.of(context).Fashion,
                               style: TextStyle(
                                 fontSize: 10,
                                 fontFamily: 'PoppinsRegular'
@@ -391,7 +400,7 @@ class _HomeViewState extends State<HomeView> {
                             fontFamily: 'PoppinsBold',))),
                   FlatButton(
                       onPressed: () => {gotoFlashSale()},
-                      child: Text("See More",
+                      child: Text(S.of(context).seeMore,
                           style: TextStyle(
                               fontSize: 14,
                               fontFamily: 'PoppinsBold',
@@ -505,7 +514,7 @@ class _HomeViewState extends State<HomeView> {
                             fontFamily: 'PoppinsBold',))),
                   FlatButton(
                       onPressed: () => {gotoMegaSale()},
-                      child: Text("See More",
+                      child: Text(S.of(context).seeMore,
                           style: TextStyle(
                               fontSize: 14,
                               fontFamily: 'PoppinsBold',

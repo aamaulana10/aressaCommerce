@@ -1,3 +1,4 @@
+import 'package:aressa_commerce/generated/l10n.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

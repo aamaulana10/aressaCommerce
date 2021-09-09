@@ -5,6 +5,7 @@ import 'package:aressa_commerce/feature/account/view/profileView/inputEmailView.
 import 'package:aressa_commerce/feature/account/view/profileView/inputGenderView.dart';
 import 'package:aressa_commerce/feature/account/view/profileView/inputNameView.dart';
 import 'package:aressa_commerce/feature/account/view/profileView/inputPhoneNumberView.dart';
+import 'package:aressa_commerce/generated/l10n.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -59,7 +60,7 @@ class _ProfileViewState extends State<ProfileView> {
                       icon: Icon(Icons.chevron_left),
                       iconSize: 32,
                     ),
-                    Text("Category", style: TextStyle(
+                    Text(S.of(context).category, style: TextStyle(
                         fontSize: 16,
                       color: Colors.black,
                       fontFamily: 'PoppinsBold',
@@ -327,7 +328,7 @@ class _ProfileViewState extends State<ProfileView> {
                   ),
                   Container(
                     margin: EdgeInsets.only(left: 16),
-                    child: Text("Change Password",
+                    child: Text(S.of(context).changePassword,
                       style: TextStyle(
                           color: Colors.black,
                           fontSize: 12,

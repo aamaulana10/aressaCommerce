@@ -1,3 +1,4 @@
+import 'package:aressa_commerce/generated/l10n.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/material.dart';
 
@@ -28,7 +29,7 @@ class _AllCategoryViewState extends State<AllCategoryView> {
             children: [
               Image(image: AssetImage("lib/asset/image/home/shirt.png"), height: 24, width: 24),
               Padding(
-                  child: Text("Man Shirt", style: TextStyle(
+                  child: Text(S.of(context).Fashion, style: TextStyle(
                       fontFamily: 'PoppinsBold',
                     color: ColorConfig.textColorBold1
                   )),
@@ -63,7 +64,7 @@ class _AllCategoryViewState extends State<AllCategoryView> {
                               icon: Icon(Icons.chevron_left),
                             iconSize: 32,
                           ),
-                          Text("Category", style: TextStyle(
+                          Text(S.of(context).category, style: TextStyle(
                             fontSize: 16,
                             fontFamily: 'PoppinsBold',
                           )),

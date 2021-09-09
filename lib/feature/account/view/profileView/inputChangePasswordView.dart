@@ -1,3 +1,4 @@
+import 'package:aressa_commerce/generated/l10n.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -25,7 +26,7 @@ class _InputChangePasswordViewState extends State<InputChangePasswordView> {
                       icon: Icon(Icons.chevron_left),
                       iconSize: 32,
                     ),
-                    Text("Change Password",
+                    Text(S.of(context).changePassword,
                         style: TextStyle(
                         fontSize: 16,
                       color: Colors.black,

@@ -1,4 +1,5 @@
 import 'package:aressa_commerce/feature/category/view/allCategoryView.dart';
+import 'package:aressa_commerce/generated/l10n.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -63,7 +64,7 @@ class _SearchViewState extends State<SearchView> {
                 textInputAction: TextInputAction.search,
                 onFieldSubmitted: (e) => {showSearchResult(e)},
                 decoration: InputDecoration(
-                    labelText: "Search Product",
+                    labelText: S.of(context).searchProduct,
                     labelStyle: TextStyle(
                         color: ColorConfig.textColor1,
                         fontSize: 12,
@@ -188,7 +189,7 @@ class _SearchViewState extends State<SearchView> {
         children: [
           Padding(
             padding: const EdgeInsets.only(left: 16, right: 16),
-            child: Text("Man Fashion", textAlign: TextAlign.left, style: TextStyle(
+            child: Text(S.of(context).Fashion, textAlign: TextAlign.left, style: TextStyle(
                 color: ColorConfig.textColorBold1,
                 fontSize: 14,
                 fontFamily: 'PoppinsBold',),),
@@ -226,7 +227,7 @@ class _SearchViewState extends State<SearchView> {
                         ),
                         Expanded(
                           child: Container(
-                            child: Text("Man Shirt", style: TextStyle(
+                            child: Text(S.of(context).Fashion, style: TextStyle(
                               fontSize: 10,
                               fontFamily: 'PoppinsRegular'
                             )),
@@ -252,7 +253,7 @@ class _SearchViewState extends State<SearchView> {
         children: [
           Padding(
             padding: const EdgeInsets.only(left: 16, right: 16),
-            child: Text("Woman Fashion", textAlign: TextAlign.left, style: TextStyle(
+            child: Text(S.of(context).womenFahsion, textAlign: TextAlign.left, style: TextStyle(
                 color: ColorConfig.textColorBold1,
                 fontSize: 14,
               fontFamily: 'PoppinsBold',)),
@@ -290,7 +291,7 @@ class _SearchViewState extends State<SearchView> {
                       ),
                       Expanded(
                         child: Container(
-                          child: Text("Man Shirt", style: TextStyle(
+                          child: Text(S.of(context).Fashion, style: TextStyle(
                             fontSize: 10,
                             fontFamily: 'PoppinsRegular'
                           )),
