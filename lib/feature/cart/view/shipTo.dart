@@ -1,3 +1,4 @@
+import 'package:aressa_commerce/feature/account/view/paymentView/paymentView.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -8,6 +9,13 @@ class ShipTo extends StatefulWidget {
 }
 
 class _ShipToState extends State<ShipTo> {
+
+  gotoPayment() {
+    Future.delayed(Duration(milliseconds: 500), () {
+      Navigator.of(context)
+          .push(MaterialPageRoute(builder: (ctx) => PaymentView()));
+    });
+  }
 
   Widget appBar() {
     return Container(
@@ -213,7 +221,7 @@ class _ShipToState extends State<ShipTo> {
       child: Material(
         color: Colors.transparent,
         child: InkWell(
-          onTap: () => {},
+          onTap: () => {gotoPayment()},
           child: Container(
             margin: EdgeInsets.all(16),
             alignment: Alignment.center,

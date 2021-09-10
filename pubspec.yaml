@@ -55,6 +55,7 @@ flutter:
     - lib/asset/json/megaSale.json
     - lib/asset/json/recommended.json
     - lib/asset/json/category.json
+    - lib/asset/json/product.json
     - lib/asset/image/product/speed3.jpeg
     - lib/asset/image/product/speed3v1.jpeg
     - lib/asset/image/product/speed3v2.jpeg
@@ -95,6 +96,55 @@ flutter:
     - lib/asset/image/product/graphicMenTshirt2.jpg
     - lib/asset/image/product/graphicMenTshirt3.jpg
     - lib/asset/image/product/graphicMenTshirt4.jpg
+    - lib/asset/image/home/notFound.png
+    - lib/asset/image/product/menWorkWearJacket.jpg
+    - lib/asset/image/product/menWorkWearJacket2.jpg
+    - lib/asset/image/product/menWorkWearJacket3.jpg
+    - lib/asset/image/product/menWorkWearJacket4.jpg
+    - lib/asset/image/product/menWorkShoes.jpg
+    - lib/asset/image/product/menWorkShoes2.jpg
+    - lib/asset/image/product/menWorkShoes3.jpg
+    - lib/asset/image/product/menWorkShoes4.jpg
+    - lib/asset/image/product/mensUvJacket.jpg
+    - lib/asset/image/product/mensUvJacket2.jpg
+    - lib/asset/image/product/mensUvJacket3.jpg
+    - lib/asset/image/product/mensUvJacket4.jpg
+    - lib/asset/image/product/mensArmorCombat.jpg
+    - lib/asset/image/product/mensArmorCombat2.jpg
+    - lib/asset/image/product/mensArmorCombat3.jpg
+    - lib/asset/image/product/mensArmorCombat4.jpg
+    - lib/asset/image/product/mensSafetyJacket.jpg
+    - lib/asset/image/product/mensSafetyJacket2.jpg
+    - lib/asset/image/product/mensSafetyJacket3.jpg
+    - lib/asset/image/product/mensSafetyJacket4.jpg
+    - lib/asset/image/product/menCasualShirt.png
+    - lib/asset/image/product/menCasualShirt2.png
+    - lib/asset/image/product/menCasualShirt3.png
+    - lib/asset/image/product/menCasualShirt4.png
+    - lib/asset/image/product/koreanMenShirt.jpg
+    - lib/asset/image/product/koreanMenShirt2.jpg
+    - lib/asset/image/product/koreanMenShirt3.jpg
+    - lib/asset/image/product/koreanMenShirt4.jpg
+    - lib/asset/image/product/hawaiMenShirt.jpg
+    - lib/asset/image/product/hawaiMenShirt2.jpg
+    - lib/asset/image/product/hawaiMenShirt3.jpg
+    - lib/asset/image/product/hawaiMenShirt4.jpg
+    - lib/asset/image/product/businessCasualShirt.jpg
+    - lib/asset/image/product/businessCasualShirt2.jpg
+    - lib/asset/image/product/businessCasualShirt3.jpg
+    - lib/asset/image/product/businessCasualShirt4.jpg
+    - lib/asset/image/product/beachMenShirt.jpg
+    - lib/asset/image/product/beachMenShirt2.jpg
+    - lib/asset/image/product/beachMenShirt3.jpg
+    - lib/asset/image/product/beachMenShirt4.jpg
+    - lib/asset/image/product/casualMenPants.jpg
+    - lib/asset/image/product/casualMenPants2.jpg
+    - lib/asset/image/product/casualMenPants3.jpg
+    - lib/asset/image/product/casualMenPants4.jpg
+    - lib/asset/image/product/manJoggersPants.jpg
+    - lib/asset/image/product/manJoggersPants2.jpg
+    - lib/asset/image/product/manJoggersPants3.jpg
+    - lib/asset/image/product/manJoggersPants4.jpg
 
   fonts:
     - family: PoppinsBlack

@@ -15,31 +15,23 @@ class _CartViewState extends State<CartView> {
     Navigator.of(context).push(MaterialPageRoute(builder: (context) => ShipTo()));
   }
 
+  addAmount(int index) {
+
+  }
+
   Widget appBar() {
     return Container(
-        height: 60,
-        margin: EdgeInsets.only(top: 16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            Expanded(
-              child: Container(
-                margin: EdgeInsets.only(left: 16, right: 16, top: 18),
-                child: Text("Your Cart",
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.black,
-                      fontFamily: 'PoppinsBold',
-                    )),
-              ),
-            ),
-            Container(
-              height: 1,
-              color: Colors.grey,
-            )
-          ],
-        ));
+        width: MediaQuery.of(context).size.width,
+        height: 80,
+      alignment: Alignment.centerLeft,
+      margin: EdgeInsets.only(left: 16, right: 16),
+        child: Text("Your Cart",
+            style: TextStyle(
+              fontSize: 16,
+              color: Colors.black,
+              fontFamily: 'PoppinsBold',
+            )),
+    );
   }
 
   Widget content() {
@@ -74,34 +66,38 @@ class _CartViewState extends State<CartView> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Container(
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(left: 5),
-                                child: Text("Nike Air Zoom Pegasus 36 Miami",
-                                    maxLines: 2,
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 12,
-                                        fontFamily: 'PoppinsBold')),
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(left: 10, right: 8),
-                                child: Icon(
-                                  Icons.favorite,
-                                  size: 24,
-                                  color: Color(0xFFFA7182),
+                        Expanded(
+                          child: Container(
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Expanded(
+                                  child: Container(
+                                    margin: EdgeInsets.only(left: 5),
+                                    child: Text("Nike Air Zoom Pegasus 36 Miami",
+                                        maxLines: 2,
+                                        style: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 12,
+                                            fontFamily: 'PoppinsBold')),
+                                  ),
                                 ),
-                              ),
-                              Icon(
-                                Icons.delete_outline,
-                                size: 24,
-                                color: Colors.grey,
-                              )
-                            ],
+                                Container(
+                                  margin: EdgeInsets.only(left: 10, right: 8),
+                                  child: Icon(
+                                    Icons.favorite,
+                                    size: 24,
+                                    color: Color(0xFFFA7182),
+                                  ),
+                                ),
+                                Icon(
+                                  Icons.delete_outline,
+                                  size: 24,
+                                  color: Colors.grey,
+                                )
+                              ],
+                            ),
                           ),
                         ),
                         Container(
@@ -473,13 +469,17 @@ class _CartViewState extends State<CartView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              appBar(),
-              content()
-            ],
-          ),
+        padding: EdgeInsets.only(top: 32),
+        child: Column(
+          children: [
+            appBar(),
+            Expanded(
+              child: SingleChildScrollView(
+                child: content()
+                ),
+            ),
+
+          ],
         ),
       ),
     );

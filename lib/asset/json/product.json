@@ -199,6 +199,266 @@
         "normal": "$6.20",
         "special": "$4.20"
       }
+    },
+    {
+      "id": "11",
+      "image": {
+        "thumbnail": "lib/asset/image/product/menWorkWearJacket.jpg",
+        "gallery": [
+          "lib/asset/image/product/menWorkWearJacket2.jpg",
+          "lib/asset/image/product/menWorkWearJacket3.jpg",
+          "lib/asset/image/product/menWorkWearJacket4.jpg"
+        ]
+      },
+      "category": "Man Work Equipment",
+      "description": "Fashion Waterproof Equipment Men's Jacket Hooded Multiple Pockets Mens Work Wear Jacket",
+      "rate": 5.0,
+      "isFavorite": false,
+      "name": "Mens Work Wear Jacket",
+      "price": {
+        "normal": "$22.79",
+        "special": "$22.49"
+      }
+    },
+    {
+      "id": "12",
+      "image": {
+        "thumbnail": "lib/asset/image/product/menWorkShoes.jpg",
+        "gallery": [
+          "lib/asset/image/product/menWorkShoes2.jpg",
+          "lib/asset/image/product/menWorkShoes3.jpg",
+          "lib/asset/image/product/menWorkShoes4.jpg"
+        ]
+      },
+      "category": "Man Work Equipment",
+      "description": "New Style Men EN-Steel Toe Footwear Mens Boots Work Industrial Safety Shoes equipments",
+      "rate": 5.0,
+      "isFavorite": false,
+      "name": "Mens Boots Work",
+      "price": {
+        "normal": "$25.50",
+        "special": "$24.80"
+      }
+    },
+    {
+      "id": "13",
+      "image": {
+        "thumbnail": "lib/asset/image/product/mensUvJacket.jpg",
+        "gallery": [
+          "lib/asset/image/product/mensUvJacket2.jpg",
+          "lib/asset/image/product/mensUvJacket3.jpg",
+          "lib/asset/image/product/mensUvJacket4.jpg"
+        ]
+      },
+      "category": "Man Work Equipment",
+      "description": "Fan Equipped Clothing, UV Resistant Cooling Jacket for Men, USB powered Air Conditioned Coat for Summer High Temp Outdoor Work",
+      "rate": 5.0,
+      "isFavorite": false,
+      "name": "Air-Conditioned Jacket",
+      "price": {
+        "normal": "$23.50",
+        "special": "$20.90"
+      }
+    },
+    {
+      "id": "14",
+      "image": {
+        "thumbnail": "lib/asset/image/product/mensArmorCombat.jpg",
+        "gallery": [
+          "lib/asset/image/product/mensArmorCombat2.jpg",
+          "lib/asset/image/product/mensArmorCombat3.jpg",
+          "lib/asset/image/product/mensArmorCombat4.jpg"
+        ]
+      },
+      "category": "Man Work Equipment",
+      "description": "Wholesale special camouflage amphibious module combat vest field equipment green tactical vest",
+      "rate": 4.9,
+      "isFavorite": false,
+      "name": "Tactical vest",
+      "price": {
+        "normal": "$14.06",
+        "special": "$13.16"
+      }
+    },
+    {
+      "id": "15",
+      "image": {
+        "thumbnail": "lib/asset/image/product/mensSafetyJacket.jpg",
+        "gallery": [
+          "lib/asset/image/product/mensSafetyJacket2.jpg",
+          "lib/asset/image/product/mensSafetyJacket3.jpg",
+          "lib/asset/image/product/mensSafetyJacket4.jpg"
+        ]
+      },
+      "category": "Man Work Equipment",
+      "description": "2021 Men New Model Safety Men Clothing Autumn Work Clothes Cotton Reflective Work Jacket",
+      "rate": 4.9,
+      "isFavorite": false,
+      "name": "Working Jackets",
+      "price": {
+        "normal": "$17.50",
+        "special": "$16.00"
+      }
+    },
+    {
+      "id": "16",
+      "image": {
+        "thumbnail": "lib/asset/image/product/menCasualShirt.png",
+        "gallery": [
+          "lib/asset/image/product/menCasualShirt2.png",
+          "lib/asset/image/product/menCasualShirt3.png",
+          "lib/asset/image/product/menCasualShirt4.png"
+        ]
+      },
+      "category": "Man Shirt",
+      "description": "Hot Fashion Silk Shirts Casual Smooth Silk Shirt for Men | Top Quality 100% Pure Satin Silk Custom Logo Blank Satin Men Shirt",
+      "rate": 5.0,
+      "isFavorite": false,
+      "name": "Men Silk Dress Shirt",
+      "price": {
+        "normal": "$9.99",
+        "special": "$8.99"
+      }
+    },
+    {
+      "id": "17",
+      "image": {
+        "thumbnail": "lib/asset/image/product/koreanMenShirt.jpg",
+        "gallery": [
+          "lib/asset/image/product/koreanMenShirt2.jpg",
+          "lib/asset/image/product/koreanMenShirt3.jpg",
+          "lib/asset/image/product/koreanMenShirt4.jpg"
+        ]
+      },
+      "category": "Man Shirt",
+      "description": "Durable Using Stylish Korean Mens Short Sleeve T shirt For Daily",
+      "rate": 5.0,
+      "isFavorite": false,
+      "name": "Korean Mens Shirt",
+      "price": {
+        "normal": "$6.85",
+        "special": "$6.56"
+      }
+    },
+    {
+      "id": "18",
+      "image": {
+        "thumbnail": "lib/asset/image/product/hawaiMenShirt.jpg",
+        "gallery": [
+          "lib/asset/image/product/hawaiMenShirt2.jpg",
+          "lib/asset/image/product/hawaiMenShirt3.jpg",
+          "lib/asset/image/product/hawaiMenShirt4.jpg"
+        ]
+      },
+      "category": "Man Shirt",
+      "description": "Free Sample Wholesale Clothes Custom Short Sleeve Silk Satin Printed Men Hawaiian Colorful Shirt",
+      "rate": 5.2,
+      "isFavorite": false,
+      "name": "Hawaiian Colorful Shirt",
+      "price": {
+        "normal": "$7.90",
+        "special": "$7.50"
+      }
+    },
+    {
+      "id": "19",
+      "image": {
+        "thumbnail": "lib/asset/image/product/businessCasualShirt.jpg",
+        "gallery": [
+          "lib/asset/image/product/businessCasualShirt2.jpg",
+          "lib/asset/image/product/businessCasualShirt3.jpg",
+          "lib/asset/image/product/businessCasualShirt4.jpg"
+        ]
+      },
+      "category": "Man Shirt",
+      "description": "Men Shirt Slim Fit Long Sleeve Business Casual Printed Formal Dress Shirts",
+      "rate": 4.0,
+      "isFavorite": false,
+      "name": "Business Casual Shirt",
+      "price": {
+        "normal": "$6.19",
+        "special": "$5.83"
+      }
+    },
+    {
+      "id": "20",
+      "image": {
+        "thumbnail": "lib/asset/image/product/beachMenShirt.jpg",
+        "gallery": [
+          "lib/asset/image/product/beachMenShirt2.jpg",
+          "lib/asset/image/product/beachMenShirt3.jpg",
+          "lib/asset/image/product/beachMenShirt4.jpg"
+        ]
+      },
+      "category": "Man Shirt",
+      "description": "Oversized Top Casual Print Beach Summer Patchwork Mens Shirt, Short Sleeve Hawaiian Shirt Men",
+      "rate": 4.7,
+      "isFavorite": false,
+      "name": "Hawaiian Shirt Men",
+      "price": {
+        "normal": "$8.03",
+        "special": "$7.62"
+      }
+    },
+    {
+      "id": "21",
+      "image": {
+        "thumbnail": "lib/asset/image/product/casualMenPants.jpg",
+        "gallery": [
+          "lib/asset/image/product/casualMenPants2.jpg",
+          "lib/asset/image/product/casualMenPants3.jpg",
+          "lib/asset/image/product/casualMenPants4.jpg"
+        ]
+      },
+      "category": "Man Pants",
+      "description": "Masheng Casual Men Pants New Fashion Men Jogger Pants Fitness Gyms Pants For Runners Clothing Autumn Plus Size 5XL Sweatpants",
+      "rate": 4.3,
+      "isFavorite": false,
+      "name": "Men Jogger Pants",
+      "price": {
+        "normal": "$5.72",
+        "special": "$5.46"
+      }
+    },
+    {
+      "id": "22",
+      "image": {
+        "thumbnail": "lib/asset/image/product/manJoggersPants.jpg",
+        "gallery": [
+          "lib/asset/image/product/manJoggersPants2.jpg",
+          "lib/asset/image/product/manJoggersPants3.jpg",
+          "lib/asset/image/product/manJoggersPants4.jpg"
+        ]
+      },
+      "category": "Man Pants",
+      "description": "Running Gym Trousers Men Silk Breathable Workout Sports Sweatpants Drawstring Man Joggers Pants",
+      "rate": 5.0,
+      "isFavorite": false,
+      "name": "Men's jogging Pants",
+      "price": {
+        "normal": "$13.50",
+        "special": "$12.15"
+      }
+    },
+    {
+      "id": "22",
+      "image": {
+        "thumbnail": "lib/asset/image/product/manJoggersPants.jpg",
+        "gallery": [
+          "lib/asset/image/product/manJoggersPants2.jpg",
+          "lib/asset/image/product/manJoggersPants3.jpg",
+          "lib/asset/image/product/manJoggersPants4.jpg"
+        ]
+      },
+      "category": "Man Pants",
+      "description": "Running Gym Trousers Men Silk Breathable Workout Sports Sweatpants Drawstring Man Joggers Pants",
+      "rate": 5.0,
+      "isFavorite": false,
+      "name": "Men's jogging Pants",
+      "price": {
+        "normal": "$13.50",
+        "special": "$12.15"
+      }
     }
   ]
 }

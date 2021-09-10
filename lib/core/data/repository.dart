@@ -28,6 +28,13 @@ class Repository {
 
   }
 
+  Future<List<ProductData>> getAllProduct()  {
+
+    var localData = LocalDataSource();
+
+    return localData.getAllProduct();
+  }
+
   Future<List<CategoryData>> getCategories() {
 
     var localData = LocalDataSource();
