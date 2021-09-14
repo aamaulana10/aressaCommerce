@@ -1,3 +1,4 @@
+import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -10,9 +11,9 @@ class InputPhoneNumberView extends StatefulWidget {
 class _InputPhoneNumberViewState extends State<InputPhoneNumberView> {
 
   Widget appBar() {
+
     return Container(
-        height: 60,
-        margin: EdgeInsets.only(top: 16),
+        height: 80,
         child: Column(
           children: [
             Expanded(
@@ -25,18 +26,19 @@ class _InputPhoneNumberViewState extends State<InputPhoneNumberView> {
                       icon: Icon(Icons.chevron_left),
                       iconSize: 32,
                     ),
-                    Text("Phone Nummber", style: TextStyle(
+                    Expanded(
+                      child: Text("Phone Number", style: TextStyle(
                         fontSize: 16,
-                      color: Colors.black,
-                      fontFamily: 'PoppinsBold',
-                    )),
+                        fontFamily: 'PoppinsBold',
+                      )),
+                    ),
                   ],
                 ),
               ),
             ),
             Container(
               height: 1,
-              color: Colors.grey,
+              color: ColorConfig.borderColor,
             )
           ],
         )
@@ -118,13 +120,16 @@ class _InputPhoneNumberViewState extends State<InputPhoneNumberView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Column(
-              children: [
-                appBar(),
-                content(),
-                Expanded(child: saveButton()),
-              ],
-            ),
+        body: Container(
+          padding: EdgeInsets.only(top: 32),
+          child: Column(
+                children: [
+                  appBar(),
+                  content(),
+                  Expanded(child: saveButton()),
+                ],
+              ),
+        ),
         );
   }
 }

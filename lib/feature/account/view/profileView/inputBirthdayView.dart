@@ -1,3 +1,4 @@
+import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -37,9 +38,9 @@ class _InputBirthdayViewState extends State<InputBirthdayView> {
   }
 
   Widget appBar() {
+
     return Container(
-        height: 60,
-        margin: EdgeInsets.only(top: 16),
+        height: 80,
         child: Column(
           children: [
             Expanded(
@@ -52,18 +53,19 @@ class _InputBirthdayViewState extends State<InputBirthdayView> {
                       icon: Icon(Icons.chevron_left),
                       iconSize: 32,
                     ),
-                    Text("Birthday", style: TextStyle(
+                    Expanded(
+                      child: Text("Birthday", style: TextStyle(
                         fontSize: 16,
-                      color: Colors.black,
-                      fontFamily: 'PoppinsBold',
-                    )),
+                        fontFamily: 'PoppinsBold',
+                      )),
+                    ),
                   ],
                 ),
               ),
             ),
             Container(
               height: 1,
-              color: Colors.grey,
+              color: ColorConfig.borderColor,
             )
           ],
         )
@@ -104,6 +106,7 @@ class _InputBirthdayViewState extends State<InputBirthdayView> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
+          padding: EdgeInsets.only(top: 32),
           child: Column(
             children: [
               appBar(),

@@ -1,4 +1,5 @@
 import 'package:aressa_commerce/generated/l10n.dart';
+import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -11,9 +12,9 @@ class InputEmailView extends StatefulWidget {
 class _InputEmailViewState extends State<InputEmailView> {
 
   Widget appBar() {
+
     return Container(
-        height: 60,
-        margin: EdgeInsets.only(top: 16),
+        height: 80,
         child: Column(
           children: [
             Expanded(
@@ -26,18 +27,19 @@ class _InputEmailViewState extends State<InputEmailView> {
                       icon: Icon(Icons.chevron_left),
                       iconSize: 32,
                     ),
-                    Text("Email", style: TextStyle(
+                    Expanded(
+                      child: Text("Email", style: TextStyle(
                         fontSize: 16,
-                      fontFamily: 'PoppinsBold',
-                      color: Colors.black
-                    )),
+                        fontFamily: 'PoppinsBold',
+                      )),
+                    ),
                   ],
                 ),
               ),
             ),
             Container(
               height: 1,
-              color: Colors.grey,
+              color: ColorConfig.borderColor,
             )
           ],
         )
@@ -132,6 +134,7 @@ class _InputEmailViewState extends State<InputEmailView> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
+          padding: EdgeInsets.only(top: 32),
           child: Column(
               children: [
                 appBar(),

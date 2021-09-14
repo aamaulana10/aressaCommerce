@@ -1,4 +1,5 @@
 import 'package:aressa_commerce/feature/cart/view/shipTo.dart';
+import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/material.dart';
 
 class CartView extends StatefulWidget {
@@ -20,17 +21,28 @@ class _CartViewState extends State<CartView> {
   }
 
   Widget appBar() {
+
     return Container(
-        width: MediaQuery.of(context).size.width,
         height: 80,
-      alignment: Alignment.centerLeft,
-      margin: EdgeInsets.only(left: 16, right: 16),
-        child: Text("Your Cart",
-            style: TextStyle(
-              fontSize: 16,
-              color: Colors.black,
-              fontFamily: 'PoppinsBold',
-            )),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.only(right: 16, left: 16, top: 32),
+                child: Text("Your Cart",
+                    style: TextStyle(
+                        fontSize: 16,
+                        fontFamily: 'PoppinsBold',
+                      )),
+              ),
+            ),
+            Container(
+              height: 1,
+              color: ColorConfig.borderColor,
+            )
+          ],
+        )
     );
   }
 
@@ -170,9 +182,9 @@ class _CartViewState extends State<CartView> {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(top: 16),
             height: 104,
             padding: EdgeInsets.all(16),
+            margin: EdgeInsets.only(top: 16),
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
@@ -197,34 +209,38 @@ class _CartViewState extends State<CartView> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Container(
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(left: 5),
-                                child: Text("Nike Air Zoom Pegasus 36 Miami",
-                                    maxLines: 2,
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 12,
-                                        fontFamily: 'PoppinsBold')),
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(left: 10, right: 8),
-                                child: Icon(
-                                  Icons.favorite,
-                                  size: 24,
-                                  color: Color(0xFFFA7182),
+                        Expanded(
+                          child: Container(
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Expanded(
+                                  child: Container(
+                                    margin: EdgeInsets.only(left: 5),
+                                    child: Text("Nike Air Zoom Pegasus 36 Miami",
+                                        maxLines: 2,
+                                        style: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 12,
+                                            fontFamily: 'PoppinsBold')),
+                                  ),
                                 ),
-                              ),
-                              Icon(
-                                Icons.delete_outline,
-                                size: 24,
-                                color: Colors.grey,
-                              )
-                            ],
+                                Container(
+                                  margin: EdgeInsets.only(left: 10, right: 8),
+                                  child: Icon(
+                                    Icons.favorite,
+                                    size: 24,
+                                    color: Color(0xFFFA7182),
+                                  ),
+                                ),
+                                Icon(
+                                  Icons.delete_outline,
+                                  size: 24,
+                                  color: Colors.grey,
+                                )
+                              ],
+                            ),
                           ),
                         ),
                         Container(

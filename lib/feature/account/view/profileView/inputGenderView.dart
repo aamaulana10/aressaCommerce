@@ -1,3 +1,4 @@
+import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -12,9 +13,9 @@ class _InputGenderViewState extends State<InputGenderView> {
   String dropDownValue = "Male";
 
   Widget appBar() {
+
     return Container(
-        height: 60,
-        margin: EdgeInsets.only(top: 16),
+        height: 80,
         child: Column(
           children: [
             Expanded(
@@ -27,17 +28,19 @@ class _InputGenderViewState extends State<InputGenderView> {
                       icon: Icon(Icons.chevron_left),
                       iconSize: 32,
                     ),
-                    Text("Gender", style: TextStyle(
+                    Expanded(
+                      child: Text("Gender", style: TextStyle(
                         fontSize: 16,
-                      fontFamily: 'PoppinsBold',
-                    )),
+                        fontFamily: 'PoppinsBold',
+                      )),
+                    ),
                   ],
                 ),
               ),
             ),
             Container(
               height: 1,
-              color: Colors.grey,
+              color: ColorConfig.borderColor,
             )
           ],
         )
@@ -122,6 +125,7 @@ class _InputGenderViewState extends State<InputGenderView> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
+          padding: EdgeInsets.only(top: 32),
           child: Column(
             children: [
               appBar(),

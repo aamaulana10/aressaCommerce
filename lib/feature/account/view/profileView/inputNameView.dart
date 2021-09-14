@@ -1,5 +1,6 @@
 import 'package:aressa_commerce/feature/account/model/userAccountModel.dart';
 import 'package:aressa_commerce/feature/account/view/profileView/profileView.dart';
+import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -54,9 +55,9 @@ class _InputNameViewState extends State<InputNameView> {
   }
 
   Widget appBar() {
+
     return Container(
-        height: 60,
-        margin: EdgeInsets.only(top: 16),
+        height: 80,
         child: Column(
           children: [
             Expanded(
@@ -69,18 +70,19 @@ class _InputNameViewState extends State<InputNameView> {
                       icon: Icon(Icons.chevron_left),
                       iconSize: 32,
                     ),
-                    Text("Name", style: TextStyle(
+                    Expanded(
+                      child: Text("Name", style: TextStyle(
                         fontSize: 16,
-                      color: Colors.black,
-                      fontFamily: 'PoppinsBold',
-                    )),
+                        fontFamily: 'PoppinsBold',
+                      )),
+                    ),
                   ],
                 ),
               ),
             ),
             Container(
               height: 1,
-              color: Colors.grey,
+              color: ColorConfig.borderColor,
             )
           ],
         )
@@ -200,6 +202,7 @@ class _InputNameViewState extends State<InputNameView> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
+          padding: EdgeInsets.only(top: 32),
           child: Column(
               children: [
                 appBar(),

@@ -6,6 +6,7 @@ import 'package:aressa_commerce/feature/account/view/profileView/inputGenderView
 import 'package:aressa_commerce/feature/account/view/profileView/inputNameView.dart';
 import 'package:aressa_commerce/feature/account/view/profileView/inputPhoneNumberView.dart';
 import 'package:aressa_commerce/generated/l10n.dart';
+import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -45,9 +46,9 @@ class _ProfileViewState extends State<ProfileView> {
   }
 
   Widget appBar() {
+
     return Container(
-        height: 60,
-        margin: EdgeInsets.only(top: 16),
+        height: 80,
         child: Column(
           children: [
             Expanded(
@@ -60,18 +61,19 @@ class _ProfileViewState extends State<ProfileView> {
                       icon: Icon(Icons.chevron_left),
                       iconSize: 32,
                     ),
-                    Text(S.of(context).category, style: TextStyle(
+                    Expanded(
+                      child: Text("Profile", style: TextStyle(
                         fontSize: 16,
-                      color: Colors.black,
-                      fontFamily: 'PoppinsBold',
-                    )),
+                        fontFamily: 'PoppinsBold',
+                      )),
+                    ),
                   ],
                 ),
               ),
             ),
             Container(
               height: 1,
-              color: Colors.grey,
+              color: ColorConfig.borderColor,
             )
           ],
         )
@@ -368,6 +370,7 @@ class _ProfileViewState extends State<ProfileView> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
+          padding: EdgeInsets.only(top: 32),
           child: SingleChildScrollView(
             child: Column(
               children: [

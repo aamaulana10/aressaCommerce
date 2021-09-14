@@ -1,5 +1,6 @@
 import 'package:aressa_commerce/feature/account/view/paymentView/paymentView.dart';
 import 'package:aressa_commerce/feature/mainTabbar.dart';
+import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -21,9 +22,9 @@ class _AddCardViewState extends State<AddCardView> {
   }
 
   Widget appBar() {
+
     return Container(
-        height: 60,
-        margin: EdgeInsets.only(top: 16),
+        height: 80,
         child: Column(
           children: [
             Expanded(
@@ -36,19 +37,20 @@ class _AddCardViewState extends State<AddCardView> {
                       icon: Icon(Icons.chevron_left),
                       iconSize: 32,
                     ),
-                    Text("Add Card", style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.black,
-                      fontFamily: 'PoppinsBold',
-                    )),
+                    Expanded(
+                      child: Text("Add Card", style: TextStyle(
+                        fontSize: 16,
+                        fontFamily: 'PoppinsBold',
+                      )),
+                    ),
                   ],
                 ),
               ),
             ),
             Container(
               height: 1,
-              color: Colors.grey,
-            ),
+              color: ColorConfig.borderColor,
+            )
           ],
         )
     );
@@ -347,6 +349,7 @@ class _AddCardViewState extends State<AddCardView> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
+          padding: EdgeInsets.only(top: 32),
           child: Column(
             children: [
               Expanded(

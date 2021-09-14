@@ -1,4 +1,5 @@
 import 'package:aressa_commerce/generated/l10n.dart';
+import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -11,27 +12,25 @@ class OfferView extends StatefulWidget {
 class _OfferViewState extends State<OfferView> {
 
   Widget appBar() {
+
     return Container(
-        height: 60,
-        margin: EdgeInsets.only(top: 16),
+        height: 80,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Expanded(
               child: Container(
-                margin: EdgeInsets.only(left: 16, right: 16, top: 18),
-                child: Text(S.of(context).offer, style: TextStyle(
-                          fontSize: 16,
-                  color: Colors.black,
-                  fontFamily: 'PoppinsBold',
-                      )),
+                padding: EdgeInsets.only(right: 16, left: 16, top: 32),
+                child: Text("Offer",
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontFamily: 'PoppinsBold',
+                    )),
               ),
-              ),
-
+            ),
             Container(
               height: 1,
-              color: Colors.grey,
+              color: ColorConfig.borderColor,
             )
           ],
         )
@@ -234,6 +233,7 @@ class _OfferViewState extends State<OfferView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        padding: EdgeInsets.only(top: 32),
         child: SingleChildScrollView(
           child: Column(
             children: [
