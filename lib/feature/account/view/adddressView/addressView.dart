@@ -1,3 +1,5 @@
+import 'package:aressa_commerce/feature/account/view/adddressView/addAddressView.dart';
+import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -9,10 +11,14 @@ class AddressView extends StatefulWidget {
 
 class _AddressViewState extends State<AddressView> {
 
+  void gotoAddAddress() {
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => AddAddressView()));
+  }
+
   Widget appBar() {
+
     return Container(
-        height: 60,
-        margin: EdgeInsets.only(top: 16),
+        height: 80,
         child: Column(
           children: [
             Expanded(
@@ -25,18 +31,19 @@ class _AddressViewState extends State<AddressView> {
                       icon: Icon(Icons.chevron_left),
                       iconSize: 32,
                     ),
-                    Text("Address", style: TextStyle(
+                    Expanded(
+                      child: Text("Address", style: TextStyle(
                         fontSize: 16,
-                      color: Colors.black,
-                      fontFamily: 'PoppinsBold',
-                    )),
+                        fontFamily: 'PoppinsBold',
+                      )),
+                    ),
                   ],
                 ),
               ),
             ),
             Container(
               height: 1,
-              color: Colors.grey,
+              color: ColorConfig.borderColor,
             )
           ],
         )
@@ -55,7 +62,7 @@ class _AddressViewState extends State<AddressView> {
                 borderRadius: BorderRadius.circular(5),
                 color: Colors.transparent,
                 border: Border.all(
-                  color: Colors.grey,
+                  color: ColorConfig.borderColor,
                 )),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -129,7 +136,7 @@ class _AddressViewState extends State<AddressView> {
                 borderRadius: BorderRadius.circular(5),
                 color: Colors.transparent,
                 border: Border.all(
-                  color: Colors.grey,
+                  color: ColorConfig.borderColor,
                 )),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -200,17 +207,50 @@ class _AddressViewState extends State<AddressView> {
     );
   }
 
+  Widget addAddressButton() {
+    return Container(
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: () => {this.gotoAddAddress()},
+          child: Container(
+            margin: EdgeInsets.all(16),
+            alignment: Alignment.center,
+            height: 57,
+            decoration: BoxDecoration(
+                color: Colors.lightBlue,
+                borderRadius: BorderRadius.circular(5)
+            ),
+            child: Text("Add Address", style: TextStyle(
+              fontSize: 14,
+              color: Colors.white,
+              fontFamily: 'PoppinsBold',
+            ),),
+          ),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                appBar(),
-                content()
-              ],
-            ),
+          padding: EdgeInsets.only(top: 32),
+          child: Column(
+            children: [
+              Expanded(
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      appBar(),
+                      content()
+                    ],
+                  ),
+                ),
+              ),
+              addAddressButton()
+            ],
           ),
         ));
   }

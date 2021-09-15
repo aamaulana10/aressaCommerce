@@ -86,34 +86,6 @@ class _InputGenderViewState extends State<InputGenderView> {
               }).toList(),
             ),
       )
-      // Container(
-      //   height: 48,
-      //   margin: EdgeInsets.only(top: 16),
-      //   padding: EdgeInsets.all(13),
-      //   decoration: BoxDecoration(
-      //     color: Colors.transparent,
-      //       borderRadius: BorderRadius.circular(8),
-      //       border: Border.all(
-      //         color: Colors.grey,
-      //       )
-      //   ),
-      //   child: Row(
-      //     crossAxisAlignment: CrossAxisAlignment.start,
-      //     children: [
-      //       Expanded(
-      //         child: Text("Male",
-      //         style: TextStyle(
-      //           color: Colors.grey,
-      //           fontSize: 14,
-      //           fontWeight: FontWeight.bold
-      //         )),
-      //       ),
-      //       Icon(Icons.keyboard_arrow_down,
-      //       color: Colors.grey,
-      //       )
-      //     ],
-      //   ),
-      // )
       ],
     ),
     );
