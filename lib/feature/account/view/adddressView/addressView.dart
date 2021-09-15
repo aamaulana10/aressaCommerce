@@ -43,6 +43,163 @@ class _AddressViewState extends State<AddressView> {
     );
   }
 
+  Widget content() {
+    return Container(
+      margin: EdgeInsets.only(left: 16, top: 16, right: 16),
+      child: Column(
+        children: [
+          Container(
+            height: 240,
+            padding: EdgeInsets.all(24),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(5),
+                color: Colors.transparent,
+                border: Border.all(
+                  color: Colors.grey,
+                )),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("PrisceKilla",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 14,
+                        fontFamily: 'PoppinsBold'
+                    )),
+                Container(
+                  margin: EdgeInsets.only(top: 16),
+                  child: Text("3711 Spring Hill Rd undefined Tallahassee, Nevada 52874 United States",
+                    maxLines: 3,
+                    style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 12,
+                        fontFamily: 'PoppinsRegular'
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 16),
+                  child: Text("+99 234567890",
+                    style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 12,
+                        fontFamily: 'PoppinsRegular'
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 16),
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 57,
+                        width: 77,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          color: Colors.lightBlue,
+                        ),
+                        child: Center(
+                          child: Text("Edit",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 14,
+                                fontFamily: 'PoppinsBold'
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(left: 24),
+                        child: Icon(Icons.delete_outline,
+                          size: 32,
+                          color: Colors.grey,
+                        ),
+                      )
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
+          Container(
+            height: 240,
+            margin: EdgeInsets.only(top: 16),
+            padding: EdgeInsets.all(24),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(5),
+                color: Colors.transparent,
+                border: Border.all(
+                  color: Colors.grey,
+                )),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("Ahmad Khaidir",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 14,
+                        fontFamily: 'PoppinsBold'
+                    )),
+                Container(
+                  margin: EdgeInsets.only(top: 16),
+                  child: Text("3711 Spring Hill Rd undefined Tallahassee, Nevada 52874 United States",
+                    maxLines: 3,
+                    style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 12,
+                        fontFamily: 'PoppinsRegular'
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 16),
+                  child: Text("+99 234567890",
+                    style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 12,
+                        fontFamily: 'PoppinsRegular'
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 16),
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 57,
+                        width: 77,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          color: Colors.lightBlue,
+                        ),
+                        child: Center(
+                          child: Text("Edit",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 14,
+                                fontFamily: 'PoppinsBold'
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(left: 24),
+                        child: Icon(Icons.delete_outline,
+                          size: 32,
+                          color: Colors.grey,
+                        ),
+                      )
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,7 +207,8 @@ class _AddressViewState extends State<AddressView> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                appBar()
+                appBar(),
+                content()
               ],
             ),
           ),
