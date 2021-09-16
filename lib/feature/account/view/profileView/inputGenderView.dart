@@ -50,18 +50,26 @@ class _InputGenderViewState extends State<InputGenderView> {
   Widget content() {
     return Container(
       margin: EdgeInsets.only(left: 16, right: 16, top: 16),
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text("Choose gender",
-        style: TextStyle(
-          color: Colors.black,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text("Choose gender",
+          style: TextStyle(
+            color: ColorConfig.colorBlack,
             fontFamily: 'PoppinsBold',
-          fontSize: 14
-        )),
-      Container(
-        margin: EdgeInsets.only(top: 16),
-        width: MediaQuery.of(context).size.width,
+            fontSize: 14
+          )),
+        Container(
+          margin: EdgeInsets.only(top: 16),
+          padding: EdgeInsets.all(8),
+          width: MediaQuery.of(context).size.width,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(5),
+              color: ColorConfig.colorTransparent,
+              border: Border.all(
+                color: ColorConfig.borderColor,
+              )
+          ),
           child: DropdownButton<String>(
               value: dropDownValue,
               icon: const Icon(Icons.keyboard_arrow_down),
@@ -70,7 +78,7 @@ class _InputGenderViewState extends State<InputGenderView> {
               style: const TextStyle(color: Colors.lightBlue),
               underline: Container(
                 height: 2,
-                color: Colors.lightBlue,
+                color: ColorConfig.bluePrimary,
               ),
               onChanged: (String newValue) {
                 setState(() {
@@ -86,34 +94,6 @@ class _InputGenderViewState extends State<InputGenderView> {
               }).toList(),
             ),
       )
-      // Container(
-      //   height: 48,
-      //   margin: EdgeInsets.only(top: 16),
-      //   padding: EdgeInsets.all(13),
-      //   decoration: BoxDecoration(
-      //     color: Colors.transparent,
-      //       borderRadius: BorderRadius.circular(8),
-      //       border: Border.all(
-      //         color: Colors.grey,
-      //       )
-      //   ),
-      //   child: Row(
-      //     crossAxisAlignment: CrossAxisAlignment.start,
-      //     children: [
-      //       Expanded(
-      //         child: Text("Male",
-      //         style: TextStyle(
-      //           color: Colors.grey,
-      //           fontSize: 14,
-      //           fontWeight: FontWeight.bold
-      //         )),
-      //       ),
-      //       Icon(Icons.keyboard_arrow_down,
-      //       color: Colors.grey,
-      //       )
-      //     ],
-      //   ),
-      // )
       ],
     ),
     );

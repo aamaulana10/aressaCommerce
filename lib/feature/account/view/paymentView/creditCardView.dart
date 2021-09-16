@@ -60,7 +60,7 @@ class _CreditCardViewState extends State<CreditCardView> {
             padding: EdgeInsets.all(16),
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
-              color: Color(0xFF40BFFF),
+              color: ColorConfig.bluePrimary,
               borderRadius: BorderRadius.circular(8)
             ),
             child: Column(
@@ -68,7 +68,7 @@ class _CreditCardViewState extends State<CreditCardView> {
               children: [
                 Text("Credit Card",
                 style: TextStyle(
-                  color: Colors.white,
+                  color: ColorConfig.colorWhite,
                   fontSize: 24,
                   fontFamily: 'PoppinsBold'
                 )),
@@ -78,7 +78,7 @@ class _CreditCardViewState extends State<CreditCardView> {
                     children: [
                       Text("6326 9124 8124 9875",
                           style: TextStyle(
-                              color: Colors.white,
+                              color: ColorConfig.colorWhite,
                               fontSize: 24,
                               fontFamily: 'PoppinsBold'
                           ))
@@ -95,7 +95,7 @@ class _CreditCardViewState extends State<CreditCardView> {
                           children: [
                             Text("CARD HOLDER",
                             style: TextStyle(
-                              color: Colors.white,
+                              color: ColorConfig.colorWhite,
                               fontSize: 10,
                               fontFamily: 'PoppinsRegular'
                             )),
@@ -103,7 +103,7 @@ class _CreditCardViewState extends State<CreditCardView> {
                               margin: EdgeInsets.only(top: 5),
                               child: Text("Laylifa Febrina",
                               style: TextStyle(
-                                color: Colors.white,
+                                color: ColorConfig.colorWhite,
                                 fontSize: 10,
                                 fontFamily: 'PoppinsBold'
                               ),
@@ -119,7 +119,7 @@ class _CreditCardViewState extends State<CreditCardView> {
                           children: [
                             Text("CARD SAVE",
                                 style: TextStyle(
-                                    color: Colors.white,
+                                    color: ColorConfig.colorWhite,
                                     fontSize: 10,
                                     fontFamily: 'PoppinsRegular'
                                 )),
@@ -127,7 +127,7 @@ class _CreditCardViewState extends State<CreditCardView> {
                               margin: EdgeInsets.only(top: 5),
                               child: Text("19/2042",
                                 style: TextStyle(
-                                    color: Colors.white,
+                                    color: ColorConfig.colorWhite,
                                     fontSize: 10,
                                     fontFamily: 'PoppinsBold'
                                 ),
@@ -148,7 +148,7 @@ class _CreditCardViewState extends State<CreditCardView> {
             padding: EdgeInsets.all(16),
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
-                color: Colors.deepPurple,
+                color: ColorConfig.purplePrimary,
                 borderRadius: BorderRadius.circular(8)
             ),
             child: Column(
@@ -156,7 +156,7 @@ class _CreditCardViewState extends State<CreditCardView> {
               children: [
                 Text("Credit Card",
                     style: TextStyle(
-                        color: Colors.white,
+                        color: ColorConfig.colorWhite,
                         fontSize: 24,
                         fontFamily: 'PoppinsBold'
                     )),
@@ -166,7 +166,7 @@ class _CreditCardViewState extends State<CreditCardView> {
                     children: [
                       Text("6326 9124 8124 9875",
                           style: TextStyle(
-                              color: Colors.white,
+                              color: ColorConfig.colorWhite,
                               fontSize: 24,
                               fontFamily: 'PoppinsBold'
                           ))
@@ -183,7 +183,7 @@ class _CreditCardViewState extends State<CreditCardView> {
                           children: [
                             Text("CARD HOLDER",
                                 style: TextStyle(
-                                    color: Colors.white,
+                                    color: ColorConfig.colorWhite,
                                     fontSize: 10,
                                     fontFamily: 'PoppinsRegular'
                                 )),
@@ -191,7 +191,7 @@ class _CreditCardViewState extends State<CreditCardView> {
                               margin: EdgeInsets.only(top: 5),
                               child: Text("Laylifa Febrina",
                                 style: TextStyle(
-                                    color: Colors.white,
+                                    color: ColorConfig.colorWhite,
                                     fontSize: 10,
                                     fontFamily: 'PoppinsBold'
                                 ),
@@ -207,7 +207,7 @@ class _CreditCardViewState extends State<CreditCardView> {
                           children: [
                             Text("CARD SAVE",
                                 style: TextStyle(
-                                    color: Colors.white,
+                                    color: ColorConfig.colorWhite,
                                     fontSize: 10,
                                     fontFamily: 'PoppinsRegular'
                                 )),
@@ -215,7 +215,7 @@ class _CreditCardViewState extends State<CreditCardView> {
                               margin: EdgeInsets.only(top: 5),
                               child: Text("19/2042",
                                 style: TextStyle(
-                                    color: Colors.white,
+                                    color: ColorConfig.colorWhite,
                                     fontSize: 10,
                                     fontFamily: 'PoppinsBold'
                                 ),
@@ -249,13 +249,13 @@ class _CreditCardViewState extends State<CreditCardView> {
                   child: Container(
                     height: 57,
                     decoration: BoxDecoration(
-                        color: Colors.lightBlue,
+                        color: ColorConfig.bluePrimary,
                         borderRadius: BorderRadius.circular(8)
                     ),
                     child: Center(
                       child: Text("Add Card",
                         style: TextStyle(
-                          color: Colors.white,
+                          color: ColorConfig.colorWhite,
                           fontSize: 14,
                           fontFamily: 'PoppinsBold',
                         ),

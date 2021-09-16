@@ -61,14 +61,14 @@ class _PaymentViewState extends State<PaymentView> {
               child: Row(
                 children: [
                   Icon(Icons.payment,
-                    color: Colors.lightBlue,
+                    color: ColorConfig.bluePrimary,
                     size: 24,
                   ),
                   Container(
                     margin: EdgeInsets.only(left: 8),
                     child: Text("Credit Card Or Debit",
                       style: TextStyle(
-                        color: Colors.black,
+                        color: ColorConfig.colorBlack,
                         fontSize: 12,
                         fontFamily: 'PoppinsBold',
                       ),

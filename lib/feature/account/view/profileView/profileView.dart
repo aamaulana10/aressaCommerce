@@ -112,7 +112,7 @@ class _ProfileViewState extends State<ProfileView> {
                             children: [
                               Text("Aressa",
                               style: TextStyle(
-                                color: Colors.black,
+                                color: ColorConfig.colorBlack,
                                 fontSize: 14,
                                 fontFamily: 'PoppinsBold',
                               ),
@@ -121,7 +121,7 @@ class _ProfileViewState extends State<ProfileView> {
                                 margin: EdgeInsets.only(left: 8),
                                 child: Text("Labs",
                                   style: TextStyle(
-                                      color: Colors.black,
+                                      color: ColorConfig.colorBlack,
                                       fontSize: 14,
                                     fontFamily: 'PoppinsBold',
                                   ),
@@ -134,7 +134,7 @@ class _ProfileViewState extends State<ProfileView> {
                       Container(
                         child: Text("@aressaLabs",
                           style: TextStyle(
-                            color: Colors.grey,
+                            color: ColorConfig.colorGrey,
                             fontSize: 12,
                             fontFamily: 'PoppinsRegular'
                           ),
@@ -153,14 +153,14 @@ class _ProfileViewState extends State<ProfileView> {
               child: Row(
                 children: [
                   Icon(Icons.male,
-                    color: Colors.lightBlue,
+                    color: ColorConfig.bluePrimary,
                     size: 24,
                   ),
                   Container(
                     margin: EdgeInsets.only(left: 16),
                     child: Text("Gender",
                       style: TextStyle(
-                          color: Colors.black,
+                          color: ColorConfig.colorBlack,
                           fontSize: 12,
                         fontFamily: 'PoppinsBold',
                       ),
@@ -172,14 +172,14 @@ class _ProfileViewState extends State<ProfileView> {
                       children: [
                         Text("Male",
                         style: TextStyle(
-                          color: Colors.grey,
+                          color: ColorConfig.colorGrey,
                           fontSize: 12,
                           fontFamily: 'PoppinsRegular'
                         )),
                         IconButton(
                             onPressed: () => {this.gotoInputgender()},
                             icon: Icon(Icons.navigate_next,
-                            color: Colors.grey,
+                            color: ColorConfig.colorGrey,
                               size: 24,
                             ))
                       ],
@@ -196,14 +196,14 @@ class _ProfileViewState extends State<ProfileView> {
               child: Row(
                 children: [
                   Icon(Icons.calendar_today_rounded,
-                    color: Colors.lightBlue,
+                    color: ColorConfig.bluePrimary,
                     size: 24,
                   ),
                   Container(
                     margin: EdgeInsets.only(left: 16),
                     child: Text("Birthday",
                       style: TextStyle(
-                          color: Colors.black,
+                          color: ColorConfig.colorBlack,
                           fontSize: 12,
                         fontFamily: 'PoppinsBold',
                       ),
@@ -215,14 +215,14 @@ class _ProfileViewState extends State<ProfileView> {
                       children: [
                         Text("12-12-2000",
                             style: TextStyle(
-                                color: Colors.grey,
+                                color: ColorConfig.colorGrey,
                                 fontSize: 12,
                               fontFamily: 'PoppinsRegular'
                             )),
                         IconButton(
                             onPressed: () => {gotoInputBirthdayView()},
                             icon: Icon(Icons.navigate_next,
-                              color: Colors.grey,
+                              color: ColorConfig.colorGrey,
                               size: 24,
                             ))
                       ],
@@ -239,14 +239,14 @@ class _ProfileViewState extends State<ProfileView> {
               child: Row(
                 children: [
                   Icon(Icons.email_outlined,
-                    color: Colors.lightBlue,
+                    color: ColorConfig.bluePrimary,
                     size: 24,
                   ),
                   Container(
                     margin: EdgeInsets.only(left: 16),
                     child: Text("Email",
                       style: TextStyle(
-                          color: Colors.black,
+                          color: ColorConfig.colorBlack,
                           fontSize: 12,
                         fontFamily: 'PoppinsBold',
                       ),
@@ -258,14 +258,14 @@ class _ProfileViewState extends State<ProfileView> {
                       children: [
                         Text("aressaLabs@gmail.com",
                             style: TextStyle(
-                                color: Colors.grey,
+                                color: ColorConfig.colorGrey,
                                 fontSize: 12,
                               fontFamily: 'PoppinsRegular'
                             )),
                         IconButton(
                             onPressed: () => {this.gotoInputEmailView()},
                             icon: Icon(Icons.navigate_next,
-                              color: Colors.grey,
+                              color: ColorConfig.colorGrey,
                               size: 24,
                             ))
                       ],
@@ -282,14 +282,14 @@ class _ProfileViewState extends State<ProfileView> {
               child: Row(
                 children: [
                   Icon(Icons.phone_android_sharp,
-                    color: Colors.lightBlue,
+                    color: ColorConfig.bluePrimary,
                     size: 24,
                   ),
                   Container(
                     margin: EdgeInsets.only(left: 16),
                     child: Text("Phone Number",
                       style: TextStyle(
-                          color: Colors.black,
+                          color: ColorConfig.colorBlack,
                           fontSize: 12,
                         fontFamily: 'PoppinsBold',
                       ),
@@ -301,14 +301,14 @@ class _ProfileViewState extends State<ProfileView> {
                       children: [
                         Text("(307) 555-0133",
                             style: TextStyle(
-                                color: Colors.grey,
+                                color: ColorConfig.colorGrey,
                                 fontSize: 12,
                               fontFamily: 'PoppinsRegular'
                             )),
                         IconButton(
                             onPressed: () => {this.gotoInputPhoneNumber()},
                             icon: Icon(Icons.navigate_next,
-                              color: Colors.grey,
+                              color: ColorConfig.colorGrey,
                               size: 24,
                             ))
                       ],
@@ -325,14 +325,14 @@ class _ProfileViewState extends State<ProfileView> {
               child: Row(
                 children: [
                   Icon(Icons.lock,
-                    color: Colors.lightBlue,
+                    color: ColorConfig.bluePrimary,
                     size: 24,
                   ),
                   Container(
                     margin: EdgeInsets.only(left: 16),
                     child: Text(S.of(context).changePassword,
                       style: TextStyle(
-                          color: Colors.black,
+                          color: ColorConfig.colorBlack,
                           fontSize: 12,
                         fontFamily: 'PoppinsBold',
                       ),
@@ -344,14 +344,14 @@ class _ProfileViewState extends State<ProfileView> {
                       children: [
                         Text("**********",
                             style: TextStyle(
-                                color: Colors.grey,
+                                color: ColorConfig.colorGrey,
                                 fontSize: 12,
                               fontFamily: 'PoppinsRegular'
                             )),
                         IconButton(
                             onPressed: () => {this.gotoChangePasswordView()},
                             icon: Icon(Icons.navigate_next,
-                              color: Colors.grey,
+                              color: ColorConfig.colorGrey,
                               size: 24,
                             ))
                       ],

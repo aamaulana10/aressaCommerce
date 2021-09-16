@@ -48,7 +48,7 @@ class _OfferViewState extends State<OfferView> {
             margin: EdgeInsets.only(top: 16),
             padding: EdgeInsets.only(left: 16, right: 16),
             decoration: BoxDecoration(
-              color: Colors.lightBlue,
+              color: ColorConfig.bluePrimary,
               borderRadius: BorderRadius.circular(8)
             ),
             child: Row(
@@ -57,7 +57,7 @@ class _OfferViewState extends State<OfferView> {
                 Text("Use “MEGSL” Cupon For Get 90%off",
                     maxLines: 2,
                       style: TextStyle(
-                        color: Colors.white,
+                        color: ColorConfig.colorWhite,
                         fontSize: 16,
                         fontFamily: 'PoppinsBold',
                       ),
@@ -89,7 +89,7 @@ class _OfferViewState extends State<OfferView> {
                           Text("Super Flash Sale 50% Off",
                           maxLines: 2,
                           style: TextStyle(
-                            color: Colors.white,
+                            color: ColorConfig.colorWhite,
                             fontSize: 24,
                             fontFamily: 'PoppinsBold',
                           ),
@@ -102,13 +102,13 @@ class _OfferViewState extends State<OfferView> {
                                   height: 41,
                                   width: 42,
                                   decoration: BoxDecoration(
-                                    color: Colors.white,
+                                    color: ColorConfig.colorWhite,
                                     borderRadius: BorderRadius.circular(8)
                                   ),
                                   child: Center(
                                     child: Text("08",
                                     style: TextStyle(
-                                      color: Colors.black,
+                                      color: ColorConfig.colorBlack,
                                       fontSize: 16,
                                       fontFamily: 'PoppinsBold',
                                     ),
@@ -119,7 +119,7 @@ class _OfferViewState extends State<OfferView> {
                                   margin: EdgeInsets.only(left: 8, right: 8),
                                   child: Text(":",
                                   style: TextStyle(
-                                    color: Colors.white,
+                                    color: ColorConfig.colorWhite,
                                     fontFamily: 'PoppinsBold',
                                     fontSize: 14,
                                   ),
@@ -129,13 +129,13 @@ class _OfferViewState extends State<OfferView> {
                                   height: 41,
                                   width: 42,
                                   decoration: BoxDecoration(
-                                      color: Colors.white,
+                                      color: ColorConfig.colorWhite,
                                       borderRadius: BorderRadius.circular(8)
                                   ),
                                   child: Center(
                                     child: Text("34",
                                       style: TextStyle(
-                                          color: Colors.black,
+                                          color: ColorConfig.colorBlack,
                                           fontSize: 16,
                                         fontFamily: 'PoppinsBold',
                                       ),
@@ -146,7 +146,7 @@ class _OfferViewState extends State<OfferView> {
                                   margin: EdgeInsets.only(left: 8, right: 8),
                                   child: Text(":",
                                     style: TextStyle(
-                                      color: Colors.white,
+                                      color: ColorConfig.colorWhite,
                                       fontFamily: 'PoppinsBold',
                                       fontSize: 14,
                                     ),
@@ -156,13 +156,13 @@ class _OfferViewState extends State<OfferView> {
                                   height: 41,
                                   width: 42,
                                   decoration: BoxDecoration(
-                                      color: Colors.white,
+                                      color: ColorConfig.colorWhite,
                                       borderRadius: BorderRadius.circular(8)
                                   ),
                                   child: Center(
                                     child: Text("52",
                                       style: TextStyle(
-                                          color: Colors.black,
+                                          color: ColorConfig.colorBlack,
                                           fontSize: 16,
                                         fontFamily: 'PoppinsBold',
                                       ),
@@ -203,7 +203,7 @@ class _OfferViewState extends State<OfferView> {
                           Text("90% Off Super Mega Sale",
                             maxLines: 2,
                             style: TextStyle(
-                                color: Colors.white,
+                                color: ColorConfig.colorWhite,
                                 fontSize: 24,
                               fontFamily: 'PoppinsBold',
                             ),
@@ -212,7 +212,7 @@ class _OfferViewState extends State<OfferView> {
                             margin: EdgeInsets.only(top: 32),
                             child: Text("Special birthday Lafyuu",
                             style: TextStyle(
-                              color: Colors.white,
+                              color: ColorConfig.colorWhite,
                               fontSize: 12,
                               fontFamily: 'PoppinsRegular'
                             ),

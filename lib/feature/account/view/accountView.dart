@@ -65,14 +65,14 @@ class _AccountViewState extends State<AccountView> {
                 child: Row(
                   children: [
                     Icon(Icons.person_outline,
-                      color: Colors.lightBlue,
+                      color: ColorConfig.bluePrimary,
                     size: 26,
                     ),
                     Container(
                       margin: EdgeInsets.only(left: 16),
                       child: Text("Profile",
                       style: TextStyle(
-                        color: Colors.black,
+                        color: ColorConfig.colorBlack,
                         fontSize: 14,
                         fontFamily: 'PoppinsBold',
                       ),
@@ -91,14 +91,14 @@ class _AccountViewState extends State<AccountView> {
                 child: Row(
                   children: [
                     Icon(Icons.inbox_rounded,
-                      color: Colors.lightBlue,
+                      color: ColorConfig.bluePrimary,
                       size: 26,
                     ),
                     Container(
                       margin: EdgeInsets.only(left: 16),
                       child: Text("Order",
                         style: TextStyle(
-                            color: Colors.black,
+                            color: ColorConfig.colorBlack,
                             fontSize: 14,
                           fontFamily: 'PoppinsBold',
                         ),
@@ -117,14 +117,14 @@ class _AccountViewState extends State<AccountView> {
                 child: Row(
                   children: [
                     Icon(Icons.location_on,
-                      color: Colors.lightBlue,
+                      color: ColorConfig.bluePrimary,
                       size: 26,
                     ),
                     Container(
                       margin: EdgeInsets.only(left: 16),
                       child: Text("Address",
                         style: TextStyle(
-                            color: Colors.black,
+                            color: ColorConfig.colorBlack,
                             fontSize: 14,
                           fontFamily: 'PoppinsBold',
                         ),
@@ -143,14 +143,14 @@ class _AccountViewState extends State<AccountView> {
                 child: Row(
                   children: [
                     Icon(Icons.payment,
-                      color: Colors.lightBlue,
+                      color: ColorConfig.bluePrimary,
                       size: 26,
                     ),
                     Container(
                       margin: EdgeInsets.only(left: 16),
                       child: Text("Payment",
                         style: TextStyle(
-                            color: Colors.black,
+                            color: ColorConfig.colorBlack,
                             fontSize: 14,
                           fontFamily: 'PoppinsBold',
                         ),

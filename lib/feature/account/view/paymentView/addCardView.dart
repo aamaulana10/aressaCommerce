@@ -67,7 +67,7 @@ class _AddCardViewState extends State<AddCardView> {
             padding: EdgeInsets.all(16),
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
-                color: Color(0xFF40BFFF),
+                color: ColorConfig.bluePrimary,
                 borderRadius: BorderRadius.circular(8)
             ),
             child: Column(
@@ -75,7 +75,7 @@ class _AddCardViewState extends State<AddCardView> {
               children: [
                 Text("Credit Card",
                     style: TextStyle(
-                        color: Colors.white,
+                        color: ColorConfig.colorWhite,
                         fontSize: 24,
                         fontFamily: 'PoppinsBold'
                     )),
@@ -85,7 +85,7 @@ class _AddCardViewState extends State<AddCardView> {
                     children: [
                       Text(cardNumber,
                           style: TextStyle(
-                              color: Colors.white,
+                              color: ColorConfig.colorWhite,
                               fontSize: 24,
                               fontFamily: 'PoppinsBold'
                           ))
@@ -102,7 +102,7 @@ class _AddCardViewState extends State<AddCardView> {
                           children: [
                             Text("CARD HOLDER",
                                 style: TextStyle(
-                                    color: Colors.white,
+                                    color: ColorConfig.colorWhite,
                                     fontSize: 10,
                                     fontFamily: 'PoppinsRegular'
                                 )),
@@ -110,7 +110,7 @@ class _AddCardViewState extends State<AddCardView> {
                               margin: EdgeInsets.only(top: 5),
                               child: Text(cardHolder,
                                 style: TextStyle(
-                                    color: Colors.white,
+                                    color: ColorConfig.colorWhite,
                                     fontSize: 10,
                                     fontFamily: 'PoppinsBold'
                                 ),
@@ -126,7 +126,7 @@ class _AddCardViewState extends State<AddCardView> {
                           children: [
                             Text("CARD SAVE",
                                 style: TextStyle(
-                                    color: Colors.white,
+                                    color: ColorConfig.colorWhite,
                                     fontSize: 10,
                                     fontFamily: 'PoppinsRegular'
                                 )),
@@ -134,7 +134,7 @@ class _AddCardViewState extends State<AddCardView> {
                               margin: EdgeInsets.only(top: 5),
                               child: Text(expDate,
                                 style: TextStyle(
-                                    color: Colors.white,
+                                    color: ColorConfig.colorWhite,
                                     fontSize: 10,
                                     fontFamily: 'PoppinsBold'
                                 ),
@@ -153,7 +153,7 @@ class _AddCardViewState extends State<AddCardView> {
             margin: EdgeInsets.only(top: 16),
             child: Text("Card Number",
             style: TextStyle(
-              color: Colors.black,
+              color: ColorConfig.colorBlack,
               fontSize: 14,
               fontFamily: 'PoppinsBold'
             )),
@@ -164,9 +164,9 @@ class _AddCardViewState extends State<AddCardView> {
             margin: EdgeInsets.only(top: 16),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                color: Colors.transparent,
+                color: ColorConfig.colorTransparent,
                 border: Border.all(
-                  color: Colors.grey,
+                  color: ColorConfig.borderColor,
                 )
             ),
             child: TextFormField(
@@ -179,7 +179,7 @@ class _AddCardViewState extends State<AddCardView> {
                   labelText: "Input Card Number",
                   labelStyle: TextStyle(
                       fontSize: 14,
-                      color: Colors.grey,
+                      color: ColorConfig.colorGrey,
                       fontFamily: 'Poppinsregular'
                   ),
                   border: InputBorder.none),
@@ -196,7 +196,7 @@ class _AddCardViewState extends State<AddCardView> {
                       Container(
                         child: Text("Expiration Date",
                             style: TextStyle(
-                                color: Colors.black,
+                                color: ColorConfig.colorBlack,
                                 fontSize: 14,
                                 fontFamily: 'PoppinsBold'
                             )),
@@ -208,9 +208,9 @@ class _AddCardViewState extends State<AddCardView> {
                         margin: EdgeInsets.only(top: 16),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(5),
-                            color: Colors.transparent,
+                            color: ColorConfig.colorTransparent,
                             border: Border.all(
-                              color: Colors.grey,
+                              color: ColorConfig.borderColor,
                             )
                         ),
                         child: TextFormField(
@@ -223,7 +223,7 @@ class _AddCardViewState extends State<AddCardView> {
                               labelText: "Input Expiration Date",
                               labelStyle: TextStyle(
                                   fontSize: 14,
-                                  color: Colors.grey,
+                                  color: ColorConfig.colorGrey,
                                   fontFamily: 'Poppinsregular'
                               ),
                               border: InputBorder.none),
@@ -240,7 +240,7 @@ class _AddCardViewState extends State<AddCardView> {
                       Container(
                         child: Text("Security Code",
                             style: TextStyle(
-                                color: Colors.black,
+                                color: ColorConfig.colorBlack,
                                 fontSize: 14,
                                 fontFamily: 'PoppinsBold'
                             )),
@@ -252,9 +252,9 @@ class _AddCardViewState extends State<AddCardView> {
                         margin: EdgeInsets.only(top: 16),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(5),
-                            color: Colors.transparent,
+                            color: ColorConfig.colorTransparent,
                             border: Border.all(
-                              color: Colors.grey,
+                              color: ColorConfig.borderColor,
                             )
                         ),
                         child: TextFormField(
@@ -267,7 +267,7 @@ class _AddCardViewState extends State<AddCardView> {
                               labelText: "Input Code",
                               labelStyle: TextStyle(
                                   fontSize: 14,
-                                  color: Colors.grey,
+                                  color: ColorConfig.colorGrey,
                                   fontFamily: 'Poppinsregular'
                               ),
                               border: InputBorder.none),
@@ -283,7 +283,7 @@ class _AddCardViewState extends State<AddCardView> {
             margin: EdgeInsets.only(top: 16),
             child: Text("Card Holder",
                 style: TextStyle(
-                    color: Colors.black,
+                    color: ColorConfig.colorBlack,
                     fontSize: 14,
                     fontFamily: 'PoppinsBold'
                 )),
@@ -294,9 +294,9 @@ class _AddCardViewState extends State<AddCardView> {
             margin: EdgeInsets.only(top: 16),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                color: Colors.transparent,
+                color: ColorConfig.colorTransparent,
                 border: Border.all(
-                  color: Colors.grey,
+                  color: ColorConfig.borderColor,
                 )
             ),
             child: TextFormField(
@@ -309,7 +309,7 @@ class _AddCardViewState extends State<AddCardView> {
                   labelText: "Input Card Holder",
                   labelStyle: TextStyle(
                       fontSize: 14,
-                      color: Colors.grey,
+                      color: ColorConfig.colorGrey,
                       fontFamily: 'Poppinsregular'
                   ),
                   border: InputBorder.none),
@@ -323,7 +323,7 @@ class _AddCardViewState extends State<AddCardView> {
   Widget saveButton() {
     return Container(
       child: Material(
-        color: Colors.transparent,
+        color: ColorConfig.colorTransparent,
         child: InkWell(
           onTap: () => {this.gotoHome()},
           child: Container(
@@ -331,12 +331,12 @@ class _AddCardViewState extends State<AddCardView> {
             alignment: Alignment.center,
             height: 57,
             decoration: BoxDecoration(
-                color: Colors.lightBlue,
+                color: ColorConfig.bluePrimary,
                 borderRadius: BorderRadius.circular(5)
             ),
             child: Text("Save", style: TextStyle(
               fontSize: 14,
-              color: Colors.white,
+              color: ColorConfig.colorWhite,
               fontFamily: 'PoppinsBold',
             ),),
           ),

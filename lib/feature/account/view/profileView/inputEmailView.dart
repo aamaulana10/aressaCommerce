@@ -54,7 +54,7 @@ class _InputEmailViewState extends State<InputEmailView> {
         children: [
           Text("Change Email",
           style: TextStyle(
-            color: Colors.black,
+            color: ColorConfig.colorBlack,
             fontSize: 14,
             fontFamily: 'PoppinsBold',
           )),
@@ -63,9 +63,9 @@ class _InputEmailViewState extends State<InputEmailView> {
             margin: EdgeInsets.only(top: 16),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(5),
-              color: Colors.transparent,
+              color: ColorConfig.colorTransparent,
                 border: Border.all(
-                  color: Colors.grey,
+                  color: ColorConfig.borderColor,
                 )
               ),
             child: TextFormField(
@@ -74,7 +74,7 @@ class _InputEmailViewState extends State<InputEmailView> {
                   labelText: "@gmail.com",
                   labelStyle: TextStyle(
                       fontSize: 14,
-                      color: Colors.grey,
+                      color: ColorConfig.colorGrey,
                     fontFamily: 'Poppinsregular'
                   ),
                   border: InputBorder.none),
@@ -86,7 +86,7 @@ class _InputEmailViewState extends State<InputEmailView> {
                 onPressed: () => {},
                 child: Text("We Will Send verification to your New Email",
                 style: TextStyle(
-                  color: Colors.lightBlue,
+                  color: ColorConfig.bluePrimary,
                   fontSize: 12,
                   fontFamily: 'PoppinsRegular'
                 ),
@@ -111,13 +111,13 @@ class _InputEmailViewState extends State<InputEmailView> {
                 child: Container(
                   height: 57,
                   decoration: BoxDecoration(
-                    color: Colors.lightBlue,
+                    color: ColorConfig.bluePrimary,
                     borderRadius: BorderRadius.circular(8)
                   ),
                   child: Center(
                     child: Text("Save",
                     style: TextStyle(
-                      color: Colors.white,
+                      color: ColorConfig.colorWhite,
                       fontSize: 14,
                       fontFamily: 'PoppinsBold',
                     ),

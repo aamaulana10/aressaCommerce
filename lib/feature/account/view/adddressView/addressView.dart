@@ -1,3 +1,5 @@
+import 'package:aressa_commerce/feature/account/view/adddressView/addAddressView.dart';
+import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -9,10 +11,14 @@ class AddressView extends StatefulWidget {
 
 class _AddressViewState extends State<AddressView> {
 
+  void gotoAddAddress() {
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => AddAddressView()));
+  }
+
   Widget appBar() {
+
     return Container(
-        height: 60,
-        margin: EdgeInsets.only(top: 16),
+        height: 80,
         child: Column(
           children: [
             Expanded(
@@ -25,18 +31,19 @@ class _AddressViewState extends State<AddressView> {
                       icon: Icon(Icons.chevron_left),
                       iconSize: 32,
                     ),
-                    Text("Address", style: TextStyle(
+                    Expanded(
+                      child: Text("Address", style: TextStyle(
                         fontSize: 16,
-                      color: Colors.black,
-                      fontFamily: 'PoppinsBold',
-                    )),
+                        fontFamily: 'PoppinsBold',
+                      )),
+                    ),
                   ],
                 ),
               ),
             ),
             Container(
               height: 1,
-              color: Colors.grey,
+              color: ColorConfig.borderColor,
             )
           ],
         )
@@ -53,16 +60,16 @@ class _AddressViewState extends State<AddressView> {
             padding: EdgeInsets.all(24),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                color: Colors.transparent,
+                color: ColorConfig.colorTransparent,
                 border: Border.all(
-                  color: Colors.grey,
+                  color: ColorConfig.borderColor,
                 )),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text("PrisceKilla",
                     style: TextStyle(
-                        color: Colors.black,
+                        color: ColorConfig.colorBlack,
                         fontSize: 14,
                         fontFamily: 'PoppinsBold'
                     )),
@@ -71,7 +78,7 @@ class _AddressViewState extends State<AddressView> {
                   child: Text("3711 Spring Hill Rd undefined Tallahassee, Nevada 52874 United States",
                     maxLines: 3,
                     style: TextStyle(
-                        color: Colors.grey,
+                        color: ColorConfig.colorGrey,
                         fontSize: 12,
                         fontFamily: 'PoppinsRegular'
                     ),
@@ -81,7 +88,7 @@ class _AddressViewState extends State<AddressView> {
                   margin: EdgeInsets.only(top: 16),
                   child: Text("+99 234567890",
                     style: TextStyle(
-                        color: Colors.grey,
+                        color: ColorConfig.colorGrey,
                         fontSize: 12,
                         fontFamily: 'PoppinsRegular'
                     ),
@@ -96,12 +103,12 @@ class _AddressViewState extends State<AddressView> {
                         width: 77,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
-                          color: Colors.lightBlue,
+                          color: ColorConfig.bluePrimary,
                         ),
                         child: Center(
                           child: Text("Edit",
                             style: TextStyle(
-                                color: Colors.white,
+                                color: ColorConfig.colorWhite,
                                 fontSize: 14,
                                 fontFamily: 'PoppinsBold'
                             ),
@@ -112,7 +119,7 @@ class _AddressViewState extends State<AddressView> {
                         margin: EdgeInsets.only(left: 24),
                         child: Icon(Icons.delete_outline,
                           size: 32,
-                          color: Colors.grey,
+                          color: ColorConfig.colorGrey,
                         ),
                       )
                     ],
@@ -127,16 +134,16 @@ class _AddressViewState extends State<AddressView> {
             padding: EdgeInsets.all(24),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                color: Colors.transparent,
+                color: ColorConfig.colorTransparent,
                 border: Border.all(
-                  color: Colors.grey,
+                  color: ColorConfig.borderColor,
                 )),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text("Ahmad Khaidir",
                     style: TextStyle(
-                        color: Colors.black,
+                        color: ColorConfig.colorBlack,
                         fontSize: 14,
                         fontFamily: 'PoppinsBold'
                     )),
@@ -145,7 +152,7 @@ class _AddressViewState extends State<AddressView> {
                   child: Text("3711 Spring Hill Rd undefined Tallahassee, Nevada 52874 United States",
                     maxLines: 3,
                     style: TextStyle(
-                        color: Colors.grey,
+                        color: ColorConfig.colorGrey,
                         fontSize: 12,
                         fontFamily: 'PoppinsRegular'
                     ),
@@ -155,7 +162,7 @@ class _AddressViewState extends State<AddressView> {
                   margin: EdgeInsets.only(top: 16),
                   child: Text("+99 234567890",
                     style: TextStyle(
-                        color: Colors.grey,
+                        color: ColorConfig.colorGrey,
                         fontSize: 12,
                         fontFamily: 'PoppinsRegular'
                     ),
@@ -170,12 +177,12 @@ class _AddressViewState extends State<AddressView> {
                         width: 77,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
-                          color: Colors.lightBlue,
+                          color: ColorConfig.bluePrimary,
                         ),
                         child: Center(
                           child: Text("Edit",
                             style: TextStyle(
-                                color: Colors.white,
+                                color: ColorConfig.colorWhite,
                                 fontSize: 14,
                                 fontFamily: 'PoppinsBold'
                             ),
@@ -186,7 +193,7 @@ class _AddressViewState extends State<AddressView> {
                         margin: EdgeInsets.only(left: 24),
                         child: Icon(Icons.delete_outline,
                           size: 32,
-                          color: Colors.grey,
+                          color: ColorConfig.colorGrey,
                         ),
                       )
                     ],
@@ -200,17 +207,50 @@ class _AddressViewState extends State<AddressView> {
     );
   }
 
+  Widget addAddressButton() {
+    return Container(
+      child: Material(
+        color: ColorConfig.colorTransparent,
+        child: InkWell(
+          onTap: () => {this.gotoAddAddress()},
+          child: Container(
+            margin: EdgeInsets.all(16),
+            alignment: Alignment.center,
+            height: 57,
+            decoration: BoxDecoration(
+                color: ColorConfig.bluePrimary,
+                borderRadius: BorderRadius.circular(5)
+            ),
+            child: Text("Add Address", style: TextStyle(
+              fontSize: 14,
+              color: ColorConfig.colorWhite,
+              fontFamily: 'PoppinsBold',
+            ),),
+          ),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                appBar(),
-                content()
-              ],
-            ),
+          padding: EdgeInsets.only(top: 32),
+          child: Column(
+            children: [
+              Expanded(
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      appBar(),
+                      content()
+                    ],
+                  ),
+                ),
+              ),
+              addAddressButton()
+            ],
           ),
         ));
   }

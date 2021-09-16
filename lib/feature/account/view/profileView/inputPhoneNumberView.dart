@@ -53,18 +53,19 @@ class _InputPhoneNumberViewState extends State<InputPhoneNumberView> {
         children: [
           Text("Phone Number",
               style: TextStyle(
-                  color: Colors.black,
+                  color: ColorConfig.colorBlack,
                   fontSize: 14,
                 fontFamily: 'PoppinsBold',
               )),
           Container(
             height: 50,
             margin: EdgeInsets.only(top: 16),
+            padding: EdgeInsets.all(8),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                color: Colors.transparent,
+                color: ColorConfig.colorTransparent,
                 border: Border.all(
-                  color: Colors.grey,
+                  color: ColorConfig.borderColor,
                 )
             ),
             child: TextFormField(
@@ -74,7 +75,7 @@ class _InputPhoneNumberViewState extends State<InputPhoneNumberView> {
                   labelStyle: TextStyle(
                     fontSize: 14,
                     fontFamily: 'PoppinsRegular',
-                    color: Colors.grey,
+                    color: ColorConfig.colorGrey,
                   ),
                   border: InputBorder.none),
             ),
@@ -98,13 +99,13 @@ class _InputPhoneNumberViewState extends State<InputPhoneNumberView> {
                   child: Container(
                     height: 57,
                     decoration: BoxDecoration(
-                        color: Colors.lightBlue,
+                        color: ColorConfig.bluePrimary,
                         borderRadius: BorderRadius.circular(8)
                     ),
                     child: Center(
                       child: Text("Save",
                         style: TextStyle(
-                            color: Colors.white,
+                            color: ColorConfig.colorWhite,
                             fontSize: 14,
                           fontFamily: 'PoppinsBold',
                         ),

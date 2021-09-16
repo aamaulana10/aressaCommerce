@@ -54,7 +54,7 @@ class _InputChangePasswordViewState extends State<InputChangePasswordView> {
         children: [
           Text("Old Password",
               style: TextStyle(
-                  color: Colors.black,
+                  color: ColorConfig.colorBlack,
                   fontSize: 14,
                 fontFamily: 'PoppinsBold',
               )),
@@ -63,9 +63,9 @@ class _InputChangePasswordViewState extends State<InputChangePasswordView> {
             margin: EdgeInsets.only(top: 16),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                color: Colors.transparent,
+                color: ColorConfig.colorTransparent,
                 border: Border.all(
-                  color: Colors.grey,
+                  color: ColorConfig.borderColor,
                 )
             ),
             child: TextFormField(
@@ -74,7 +74,7 @@ class _InputChangePasswordViewState extends State<InputChangePasswordView> {
                   labelText: "Old Password",
                   labelStyle: TextStyle(
                     fontSize: 14,
-                    color: Colors.grey,
+                    color: ColorConfig.colorGrey,
                     fontFamily: 'PoppinsRegular'
                   ),
                   border: InputBorder.none),
@@ -84,7 +84,7 @@ class _InputChangePasswordViewState extends State<InputChangePasswordView> {
             margin: EdgeInsets.only(top: 16),
             child: Text("New Password",
                 style: TextStyle(
-                    color: Colors.black,
+                    color: ColorConfig.colorBlack,
                     fontSize: 14,
                   fontFamily: 'PoppinsBold',
                 )),
@@ -94,9 +94,9 @@ class _InputChangePasswordViewState extends State<InputChangePasswordView> {
             margin: EdgeInsets.only(top: 16),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                color: Colors.transparent,
+                color: ColorConfig.colorTransparent,
                 border: Border.all(
-                  color: Colors.grey,
+                  color: ColorConfig.borderColor,
                 )
             ),
             child: TextFormField(
@@ -105,7 +105,7 @@ class _InputChangePasswordViewState extends State<InputChangePasswordView> {
                   labelText: "New Password",
                   labelStyle: TextStyle(
                     fontSize: 14,
-                    color: Colors.grey,
+                    color: ColorConfig.colorGrey,
                     fontFamily: 'PoppinsRegular'
                   ),
                   border: InputBorder.none),
@@ -115,7 +115,7 @@ class _InputChangePasswordViewState extends State<InputChangePasswordView> {
             margin: EdgeInsets.only(top: 16),
             child: Text("New Password Again",
                 style: TextStyle(
-                    color: Colors.black,
+                    color: ColorConfig.colorBlack,
                     fontSize: 14,
                   fontFamily: 'PoppinsBold',
                 )),
@@ -125,9 +125,9 @@ class _InputChangePasswordViewState extends State<InputChangePasswordView> {
             margin: EdgeInsets.only(top: 16),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                color: Colors.transparent,
+                color: ColorConfig.colorTransparent,
                 border: Border.all(
-                  color: Colors.grey,
+                  color: ColorConfig.borderColor,
                 )
             ),
             child: TextFormField(
@@ -136,7 +136,7 @@ class _InputChangePasswordViewState extends State<InputChangePasswordView> {
                   labelText: "New Password Again",
                   labelStyle: TextStyle(
                     fontSize: 14,
-                    color: Colors.grey,
+                    color: ColorConfig.colorGrey,
                     fontFamily: 'PoppinsRegular'
                   ),
                   border: InputBorder.none),
@@ -161,13 +161,13 @@ class _InputChangePasswordViewState extends State<InputChangePasswordView> {
                   child: Container(
                     height: 57,
                     decoration: BoxDecoration(
-                        color: Colors.lightBlue,
+                        color: ColorConfig.bluePrimary,
                         borderRadius: BorderRadius.circular(8)
                     ),
                     child: Center(
                       child: Text("Save",
                         style: TextStyle(
-                            color: Colors.white,
+                            color: ColorConfig.colorWhite,
                             fontSize: 14,
                           fontFamily: 'PoppinsBold',
                         ),
