@@ -97,18 +97,19 @@ class _InputNameViewState extends State<InputNameView> {
         children: [
           Text("First Name",
           style: TextStyle(
-            color: Colors.black,
+            color: ColorConfig.colorBlack,
             fontSize: 14,
             fontFamily: 'PoppinsBold',
           )),
           Container(
             height: 48,
             margin: EdgeInsets.only(top: 16),
+            padding: EdgeInsets.all(8),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(5),
-              color: Colors.transparent,
+              color: ColorConfig.colorTransparent,
               border: Border.all(
-                  color: Colors.grey,
+                  color: ColorConfig.borderColor,
               )),
             child: TextFormField(
               onChanged: (e) {
@@ -121,7 +122,7 @@ class _InputNameViewState extends State<InputNameView> {
                   labelStyle: TextStyle(
                       fontSize: 14,
                       fontFamily: 'PoppinsRegular',
-                      color: Colors.grey,
+                      color: ColorConfig.colorGrey,
                   ),
                   border: InputBorder.none),
             ),
@@ -130,7 +131,7 @@ class _InputNameViewState extends State<InputNameView> {
             margin: EdgeInsets.only(top: 16),
             child: Text("Last Name",
                 style: TextStyle(
-                    color: Colors.black,
+                    color: ColorConfig.colorBlack,
                     fontSize: 14,
                     fontFamily: 'PoppinsBold',
                 )),
@@ -138,11 +139,12 @@ class _InputNameViewState extends State<InputNameView> {
           Container(
             height: 48,
             margin: EdgeInsets.only(top: 16),
+            padding: EdgeInsets.all(8),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                color: Colors.transparent,
+                color: ColorConfig.colorTransparent,
                 border: Border.all(
-                  color: Colors.grey,
+                  color: ColorConfig.borderColor,
                 )),
             child: TextFormField(
               onChanged: (e) {
@@ -155,7 +157,7 @@ class _InputNameViewState extends State<InputNameView> {
                   labelStyle: TextStyle(
                     fontSize: 14,
                     fontFamily: 'PoppinsRegular',
-                    color: Colors.grey,
+                    color: ColorConfig.colorGrey,
                   ),
                   border: InputBorder.none),
             ),
@@ -179,13 +181,13 @@ class _InputNameViewState extends State<InputNameView> {
                   child: Container(
                     height: 57,
                     decoration: BoxDecoration(
-                        color: Colors.lightBlue,
+                        color: ColorConfig.bluePrimary,
                         borderRadius: BorderRadius.circular(8)
                     ),
                     child: Center(
                       child: Text("Save",
                         style: TextStyle(
-                            color: Colors.white,
+                            color: ColorConfig.colorWhite,
                             fontSize: 14,
                           fontFamily: 'PoppinsBold',
                         ),

@@ -55,7 +55,7 @@ class _AddAddressViewState extends State<AddAddressView> {
         children: [
           Text("Country or region",
             style: TextStyle(
-              color: Colors.black,
+              color: ColorConfig.colorBlack,
               fontSize: 14,
               fontFamily: 'PoppinsBold'
             )),
@@ -65,7 +65,7 @@ class _AddAddressViewState extends State<AddAddressView> {
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                color: Colors.transparent,
+                color: ColorConfig.colorTransparent,
                 border: Border.all(
                   color: ColorConfig.borderColor,
                 )
@@ -78,7 +78,7 @@ class _AddAddressViewState extends State<AddAddressView> {
               style: const TextStyle(color: Colors.lightBlue),
               underline: Container(
                 height: 2,
-                color: Colors.grey,
+                color: ColorConfig.colorGrey,
               ),
               onChanged: (String newValue) {
                 setState(() {
@@ -98,7 +98,7 @@ class _AddAddressViewState extends State<AddAddressView> {
             margin: EdgeInsets.only(top: 16),
             child: Text("First Name",
                 style: TextStyle(
-                  color: Colors.black,
+                  color: ColorConfig.colorBlack,
                   fontSize: 14,
                   fontFamily: 'PoppinsBold',
                 )),
@@ -109,7 +109,7 @@ class _AddAddressViewState extends State<AddAddressView> {
             padding: EdgeInsets.all(8),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                color: Colors.transparent,
+                color: ColorConfig.colorTransparent,
                 border: Border.all(
                   color: ColorConfig.borderColor,
                 )
@@ -118,7 +118,7 @@ class _AddAddressViewState extends State<AddAddressView> {
               decoration: InputDecoration(
                   labelStyle: TextStyle(
                       fontSize: 14,
-                      color: Colors.grey,
+                      color: ColorConfig.colorGrey,
                       fontFamily: 'PoppinsRegular'
                   ),
                   border: InputBorder.none),
@@ -128,7 +128,7 @@ class _AddAddressViewState extends State<AddAddressView> {
             margin: EdgeInsets.only(top: 16),
             child: Text("Last Name",
                 style: TextStyle(
-                  color: Colors.black,
+                  color: ColorConfig.colorBlack,
                   fontSize: 14,
                   fontFamily: 'PoppinsBold',
                 )),
@@ -139,7 +139,7 @@ class _AddAddressViewState extends State<AddAddressView> {
             padding: EdgeInsets.all(8),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                color: Colors.transparent,
+                color: ColorConfig.colorTransparent,
                 border: Border.all(
                   color: ColorConfig.borderColor,
                 )
@@ -148,7 +148,7 @@ class _AddAddressViewState extends State<AddAddressView> {
               decoration: InputDecoration(
                   labelStyle: TextStyle(
                       fontSize: 14,
-                      color: Colors.grey,
+                      color: ColorConfig.colorGrey,
                       fontFamily: 'PoppinsRegular'
                   ),
                   border: InputBorder.none),
@@ -158,7 +158,7 @@ class _AddAddressViewState extends State<AddAddressView> {
             margin: EdgeInsets.only(top: 16),
             child: Text("Street Address",
                 style: TextStyle(
-                  color: Colors.black,
+                  color: ColorConfig.colorBlack,
                   fontSize: 14,
                   fontFamily: 'PoppinsBold',
                 )),
@@ -169,7 +169,7 @@ class _AddAddressViewState extends State<AddAddressView> {
             padding: EdgeInsets.all(8),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                color: Colors.transparent,
+                color: ColorConfig.colorTransparent,
                 border: Border.all(
                   color: ColorConfig.borderColor,
                 )
@@ -178,7 +178,7 @@ class _AddAddressViewState extends State<AddAddressView> {
               decoration: InputDecoration(
                   labelStyle: TextStyle(
                       fontSize: 14,
-                      color: Colors.grey,
+                      color: ColorConfig.colorGrey,
                       fontFamily: 'PoppinsRegular'
                   ),
                   border: InputBorder.none),
@@ -188,7 +188,7 @@ class _AddAddressViewState extends State<AddAddressView> {
             margin: EdgeInsets.only(top: 16),
             child: Text("Street Address 2 (Optional)",
                 style: TextStyle(
-                  color: Colors.black,
+                  color: ColorConfig.colorBlack,
                   fontSize: 14,
                   fontFamily: 'PoppinsBold',
                 )),
@@ -199,7 +199,7 @@ class _AddAddressViewState extends State<AddAddressView> {
             padding: EdgeInsets.all(8),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                color: Colors.transparent,
+                color: ColorConfig.colorTransparent,
                 border: Border.all(
                   color: ColorConfig.borderColor,
                 )
@@ -208,7 +208,7 @@ class _AddAddressViewState extends State<AddAddressView> {
               decoration: InputDecoration(
                   labelStyle: TextStyle(
                       fontSize: 14,
-                      color: Colors.grey,
+                      color: ColorConfig.colorGrey,
                       fontFamily: 'PoppinsRegular'
                   ),
                   border: InputBorder.none),
@@ -218,7 +218,7 @@ class _AddAddressViewState extends State<AddAddressView> {
             margin: EdgeInsets.only(top: 16),
             child: Text("City",
                 style: TextStyle(
-                  color: Colors.black,
+                  color: ColorConfig.colorBlack,
                   fontSize: 14,
                   fontFamily: 'PoppinsBold',
                 )),
@@ -229,7 +229,7 @@ class _AddAddressViewState extends State<AddAddressView> {
             padding: EdgeInsets.all(8),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                color: Colors.transparent,
+                color: ColorConfig.colorTransparent,
                 border: Border.all(
                   color: ColorConfig.borderColor,
                 )
@@ -238,7 +238,7 @@ class _AddAddressViewState extends State<AddAddressView> {
               decoration: InputDecoration(
                   labelStyle: TextStyle(
                       fontSize: 14,
-                      color: Colors.grey,
+                      color: ColorConfig.colorGrey,
                       fontFamily: 'PoppinsRegular'
                   ),
                   border: InputBorder.none),
@@ -248,7 +248,7 @@ class _AddAddressViewState extends State<AddAddressView> {
             margin: EdgeInsets.only(top: 16),
             child: Text("State/Province/Region",
                 style: TextStyle(
-                  color: Colors.black,
+                  color: ColorConfig.colorBlack,
                   fontSize: 14,
                   fontFamily: 'PoppinsBold',
                 )),
@@ -259,7 +259,7 @@ class _AddAddressViewState extends State<AddAddressView> {
             padding: EdgeInsets.all(8),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                color: Colors.transparent,
+                color: ColorConfig.colorTransparent,
                 border: Border.all(
                   color: ColorConfig.borderColor,
                 )
@@ -268,7 +268,7 @@ class _AddAddressViewState extends State<AddAddressView> {
               decoration: InputDecoration(
                   labelStyle: TextStyle(
                       fontSize: 14,
-                      color: Colors.grey,
+                      color: ColorConfig.colorGrey,
                       fontFamily: 'PoppinsRegular'
                   ),
                   border: InputBorder.none),
@@ -278,7 +278,7 @@ class _AddAddressViewState extends State<AddAddressView> {
             margin: EdgeInsets.only(top: 16),
             child: Text("Zip Code",
                 style: TextStyle(
-                  color: Colors.black,
+                  color: ColorConfig.colorBlack,
                   fontSize: 14,
                   fontFamily: 'PoppinsBold',
                 )),
@@ -289,7 +289,7 @@ class _AddAddressViewState extends State<AddAddressView> {
             padding: EdgeInsets.all(8),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                color: Colors.transparent,
+                color: ColorConfig.colorTransparent,
                 border: Border.all(
                   color: ColorConfig.borderColor,
                 )
@@ -298,7 +298,7 @@ class _AddAddressViewState extends State<AddAddressView> {
               decoration: InputDecoration(
                   labelStyle: TextStyle(
                       fontSize: 14,
-                      color: Colors.grey,
+                      color: ColorConfig.colorGrey,
                       fontFamily: 'PoppinsRegular'
                   ),
                   border: InputBorder.none),
@@ -308,7 +308,7 @@ class _AddAddressViewState extends State<AddAddressView> {
             margin: EdgeInsets.only(top: 16),
             child: Text("Phone Number",
                 style: TextStyle(
-                  color: Colors.black,
+                  color: ColorConfig.colorBlack,
                   fontSize: 14,
                   fontFamily: 'PoppinsBold',
                 )),
@@ -319,7 +319,7 @@ class _AddAddressViewState extends State<AddAddressView> {
             padding: EdgeInsets.all(8),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                color: Colors.transparent,
+                color: ColorConfig.colorTransparent,
                 border: Border.all(
                   color: ColorConfig.borderColor,
                 )
@@ -328,7 +328,7 @@ class _AddAddressViewState extends State<AddAddressView> {
               decoration: InputDecoration(
                   labelStyle: TextStyle(
                       fontSize: 14,
-                      color: Colors.grey,
+                      color: ColorConfig.colorGrey,
                       fontFamily: 'PoppinsRegular'
                   ),
                   border: InputBorder.none),
@@ -347,13 +347,13 @@ class _AddAddressViewState extends State<AddAddressView> {
                   child: Container(
                     height: 57,
                     decoration: BoxDecoration(
-                        color: Colors.lightBlue,
+                        color: ColorConfig.bluePrimary,
                         borderRadius: BorderRadius.circular(8)
                     ),
                     child: Center(
                       child: Text("Add Address",
                         style: TextStyle(
-                          color: Colors.white,
+                          color: ColorConfig.colorWhite,
                           fontSize: 14,
                           fontFamily: 'PoppinsBold',
                         ),

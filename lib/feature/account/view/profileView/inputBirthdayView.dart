@@ -80,22 +80,33 @@ class _InputBirthdayViewState extends State<InputBirthdayView> {
         children: [
           Text("Your Birthday",
           style: TextStyle(
-            color: Colors.black,
+            color: ColorConfig.colorBlack,
             fontFamily: 'PoppinsBold',
             fontSize: 14,
           )),
-          TextFormField(
-            onTap: () => {this.showBirthDateBottomSheet()},
-            controller: birthDateEditingController,
-            decoration: InputDecoration(
-                prefixIcon: Icon(Icons.calendar_today_rounded),
-                labelText: "Your Birthday",
-                labelStyle: TextStyle(
-                  fontSize: 14,
-                  color: Colors.grey,
-                  fontFamily: 'PoppinsRegular'
-                ),
-                border: InputBorder.none),
+          Container(
+            height: 50,
+            margin: EdgeInsets.only(top: 16),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(5),
+                color: ColorConfig.colorTransparent,
+                border: Border.all(
+                  color: ColorConfig.borderColor,
+                )
+            ),
+            child: TextFormField(
+              onTap: () => {this.showBirthDateBottomSheet()},
+              controller: birthDateEditingController,
+              decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.calendar_today_rounded),
+                  labelText: "Your Birthday",
+                  labelStyle: TextStyle(
+                    fontSize: 14,
+                    color: ColorConfig.colorGrey,
+                    fontFamily: 'PoppinsRegular'
+                  ),
+                  border: InputBorder.none),
+            ),
           ),
         ],
       ),

@@ -57,9 +57,9 @@ class _CartViewState extends State<CartView> {
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                color: Colors.transparent,
+                color: ColorConfig.colorTransparent,
                 border: Border.all(
-                  color: Colors.grey,
+                  color: ColorConfig.borderColor,
                 )),
             child: Row(
               children: [
@@ -90,7 +90,7 @@ class _CartViewState extends State<CartView> {
                                     child: Text("Nike Air Zoom Pegasus 36 Miami",
                                         maxLines: 2,
                                         style: TextStyle(
-                                            color: Colors.black,
+                                            color: ColorConfig.colorBlack,
                                             fontSize: 12,
                                             fontFamily: 'PoppinsBold')),
                                   ),
@@ -106,7 +106,7 @@ class _CartViewState extends State<CartView> {
                                 Icon(
                                   Icons.delete_outline,
                                   size: 24,
-                                  color: Colors.grey,
+                                  color: ColorConfig.colorGrey,
                                 )
                               ],
                             ),
@@ -119,7 +119,7 @@ class _CartViewState extends State<CartView> {
                               Expanded(
                                 child: Text("299,49",
                                     style: TextStyle(
-                                        color: Colors.lightBlue,
+                                        color: ColorConfig.bluePrimary,
                                         fontSize: 12,
                                         fontFamily: 'PoppinsBold')),
                               ),
@@ -127,9 +127,9 @@ class _CartViewState extends State<CartView> {
                                   height: 24,
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(5),
-                                      color: Colors.transparent,
+                                      color: ColorConfig.colorTransparent,
                                       border: Border.all(
-                                        color: Colors.grey,
+                                        color: ColorConfig.colorGrey,
                                       )),
                                   child: Row(
                                     children: [
@@ -188,9 +188,9 @@ class _CartViewState extends State<CartView> {
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                color: Colors.transparent,
+                color: ColorConfig.colorTransparent,
                 border: Border.all(
-                  color: Colors.grey,
+                  color: ColorConfig.borderColor,
                 )),
             child: Row(
               children: [
@@ -221,7 +221,7 @@ class _CartViewState extends State<CartView> {
                                     child: Text("Nike Air Zoom Pegasus 36 Miami",
                                         maxLines: 2,
                                         style: TextStyle(
-                                            color: Colors.black,
+                                            color: ColorConfig.colorBlack,
                                             fontSize: 12,
                                             fontFamily: 'PoppinsBold')),
                                   ),
@@ -237,7 +237,7 @@ class _CartViewState extends State<CartView> {
                                 Icon(
                                   Icons.delete_outline,
                                   size: 24,
-                                  color: Colors.grey,
+                                  color: ColorConfig.colorGrey,
                                 )
                               ],
                             ),
@@ -250,7 +250,7 @@ class _CartViewState extends State<CartView> {
                               Expanded(
                                 child: Text("299,49",
                                     style: TextStyle(
-                                        color: Colors.lightBlue,
+                                        color: ColorConfig.bluePrimary,
                                         fontSize: 12,
                                         fontFamily: 'PoppinsBold')),
                               ),
@@ -258,9 +258,9 @@ class _CartViewState extends State<CartView> {
                                   height: 24,
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(5),
-                                      color: Colors.transparent,
+                                      color: ColorConfig.colorTransparent,
                                       border: Border.all(
-                                        color: Colors.grey,
+                                        color: ColorConfig.colorGrey,
                                       )),
                                   child: Row(
                                     children: [
@@ -317,9 +317,9 @@ class _CartViewState extends State<CartView> {
             margin: EdgeInsets.only(top: 32),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                color: Colors.transparent,
+                color: ColorConfig.colorTransparent,
                 border: Border.all(
-                  color: Colors.grey,
+                  color: ColorConfig.borderColor,
                 )),
             child: Row(
               children: [
@@ -331,7 +331,7 @@ class _CartViewState extends State<CartView> {
                           labelText: "Enter Cupon Code",
                           labelStyle: TextStyle(
                               fontSize: 14,
-                              color: Colors.grey,
+                              color: ColorConfig.colorGrey,
                               fontFamily: 'Poppinsregular'),
                           border: InputBorder.none),
                     ),
@@ -341,12 +341,12 @@ class _CartViewState extends State<CartView> {
                   onTap: () => {},
                   child: Container(
                     width: 87,
-                    color: Colors.lightBlue,
+                    color: ColorConfig.bluePrimary,
                     child: Center(
                       child: Text(
                         "Apply",
                         style: TextStyle(
-                            color: Colors.white,
+                            color: ColorConfig.colorWhite,
                             fontFamily: 'PoppinsBold',
                             fontSize: 12),
                       ),
@@ -362,9 +362,9 @@ class _CartViewState extends State<CartView> {
             padding: EdgeInsets.all(16),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                color: Colors.transparent,
+                color: ColorConfig.colorTransparent,
                 border: Border.all(
-                  color: Colors.grey,
+                  color: ColorConfig.borderColor,
                 )),
             child: Column(
               children: [
@@ -377,14 +377,14 @@ class _CartViewState extends State<CartView> {
                           children: [
                             Text("Items(3)",
                                 style: TextStyle(
-                                    color: Colors.grey,
+                                    color: ColorConfig.colorGrey,
                                     fontSize: 12,
                                     fontFamily: 'PoppinsRegular')),
                             Container(
                               margin: EdgeInsets.only(top: 12),
                               child: Text("Shipping",
                                   style: TextStyle(
-                                      color: Colors.grey,
+                                      color: ColorConfig.colorGrey,
                                       fontSize: 12,
                                       fontFamily: 'PoppinsRegular')),
                             ),
@@ -392,7 +392,7 @@ class _CartViewState extends State<CartView> {
                               margin: EdgeInsets.only(top: 12),
                               child: Text("Import Charge",
                                   style: TextStyle(
-                                      color: Colors.grey,
+                                      color: ColorConfig.colorGrey,
                                       fontSize: 12,
                                       fontFamily: 'PoppinsRegular')),
                             ),
@@ -406,14 +406,14 @@ class _CartViewState extends State<CartView> {
                         children: [
                           Text("598.86",
                               style: TextStyle(
-                                  color: Colors.black,
+                                  color: ColorConfig.colorBlack,
                                   fontSize: 12,
                                   fontFamily: 'PoppinsRegular')),
                           Container(
                             margin: EdgeInsets.only(top: 12),
                             child: Text("40.00",
                                 style: TextStyle(
-                                    color: Colors.black,
+                                    color: ColorConfig.colorBlack,
                                     fontSize: 12,
                                     fontFamily: 'PoppinsRegular')),
                           ),
@@ -421,7 +421,7 @@ class _CartViewState extends State<CartView> {
                             margin: EdgeInsets.only(top: 12),
                             child: Text("128.00",
                                 style: TextStyle(
-                                    color: Colors.black,
+                                    color: ColorConfig.colorBlack,
                                     fontSize: 12,
                                     fontFamily: 'PoppinsRegular')),
                           ),
@@ -433,7 +433,7 @@ class _CartViewState extends State<CartView> {
                 Container(
                   margin: EdgeInsets.only(top: 12),
                   height: 1,
-                  color: Colors.grey,
+                  color: ColorConfig.colorGrey,
                 ),
                 Container(
                   margin: EdgeInsets.only(top: 12),
@@ -442,13 +442,13 @@ class _CartViewState extends State<CartView> {
                       Expanded(
                         child: Text("Total price",
                             style: TextStyle(
-                                color: Colors.black,
+                                color: ColorConfig.colorBlack,
                                 fontSize: 12,
                                 fontFamily: 'PoppinsBold')),
                       ),
                       Text("766.86",
                           style: TextStyle(
-                              color: Colors.lightBlue,
+                              color: ColorConfig.bluePrimary,
                               fontSize: 12,
                               fontFamily: 'PoppinsBold')),
                     ],
@@ -463,13 +463,13 @@ class _CartViewState extends State<CartView> {
               margin: EdgeInsets.only(top: 16, bottom: 16),
               height: 57,
               decoration: BoxDecoration(
-                  color: Colors.lightBlue,
+                  color: ColorConfig.bluePrimary,
                   borderRadius: BorderRadius.circular(5)
               ),
               child: Center(
                 child: Text("Check Out",
                     style: TextStyle(
-                        color: Colors.white,
+                        color: ColorConfig.colorWhite,
                         fontSize: 14,
                         fontFamily: 'POppinsBold'
                     )),

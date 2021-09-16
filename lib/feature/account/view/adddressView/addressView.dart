@@ -60,7 +60,7 @@ class _AddressViewState extends State<AddressView> {
             padding: EdgeInsets.all(24),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                color: Colors.transparent,
+                color: ColorConfig.colorTransparent,
                 border: Border.all(
                   color: ColorConfig.borderColor,
                 )),
@@ -69,7 +69,7 @@ class _AddressViewState extends State<AddressView> {
               children: [
                 Text("PrisceKilla",
                     style: TextStyle(
-                        color: Colors.black,
+                        color: ColorConfig.colorBlack,
                         fontSize: 14,
                         fontFamily: 'PoppinsBold'
                     )),
@@ -78,7 +78,7 @@ class _AddressViewState extends State<AddressView> {
                   child: Text("3711 Spring Hill Rd undefined Tallahassee, Nevada 52874 United States",
                     maxLines: 3,
                     style: TextStyle(
-                        color: Colors.grey,
+                        color: ColorConfig.colorGrey,
                         fontSize: 12,
                         fontFamily: 'PoppinsRegular'
                     ),
@@ -88,7 +88,7 @@ class _AddressViewState extends State<AddressView> {
                   margin: EdgeInsets.only(top: 16),
                   child: Text("+99 234567890",
                     style: TextStyle(
-                        color: Colors.grey,
+                        color: ColorConfig.colorGrey,
                         fontSize: 12,
                         fontFamily: 'PoppinsRegular'
                     ),
@@ -103,12 +103,12 @@ class _AddressViewState extends State<AddressView> {
                         width: 77,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
-                          color: Colors.lightBlue,
+                          color: ColorConfig.bluePrimary,
                         ),
                         child: Center(
                           child: Text("Edit",
                             style: TextStyle(
-                                color: Colors.white,
+                                color: ColorConfig.colorWhite,
                                 fontSize: 14,
                                 fontFamily: 'PoppinsBold'
                             ),
@@ -119,7 +119,7 @@ class _AddressViewState extends State<AddressView> {
                         margin: EdgeInsets.only(left: 24),
                         child: Icon(Icons.delete_outline,
                           size: 32,
-                          color: Colors.grey,
+                          color: ColorConfig.colorGrey,
                         ),
                       )
                     ],
@@ -134,7 +134,7 @@ class _AddressViewState extends State<AddressView> {
             padding: EdgeInsets.all(24),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                color: Colors.transparent,
+                color: ColorConfig.colorTransparent,
                 border: Border.all(
                   color: ColorConfig.borderColor,
                 )),
@@ -143,7 +143,7 @@ class _AddressViewState extends State<AddressView> {
               children: [
                 Text("Ahmad Khaidir",
                     style: TextStyle(
-                        color: Colors.black,
+                        color: ColorConfig.colorBlack,
                         fontSize: 14,
                         fontFamily: 'PoppinsBold'
                     )),
@@ -152,7 +152,7 @@ class _AddressViewState extends State<AddressView> {
                   child: Text("3711 Spring Hill Rd undefined Tallahassee, Nevada 52874 United States",
                     maxLines: 3,
                     style: TextStyle(
-                        color: Colors.grey,
+                        color: ColorConfig.colorGrey,
                         fontSize: 12,
                         fontFamily: 'PoppinsRegular'
                     ),
@@ -162,7 +162,7 @@ class _AddressViewState extends State<AddressView> {
                   margin: EdgeInsets.only(top: 16),
                   child: Text("+99 234567890",
                     style: TextStyle(
-                        color: Colors.grey,
+                        color: ColorConfig.colorGrey,
                         fontSize: 12,
                         fontFamily: 'PoppinsRegular'
                     ),
@@ -177,12 +177,12 @@ class _AddressViewState extends State<AddressView> {
                         width: 77,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
-                          color: Colors.lightBlue,
+                          color: ColorConfig.bluePrimary,
                         ),
                         child: Center(
                           child: Text("Edit",
                             style: TextStyle(
-                                color: Colors.white,
+                                color: ColorConfig.colorWhite,
                                 fontSize: 14,
                                 fontFamily: 'PoppinsBold'
                             ),
@@ -193,7 +193,7 @@ class _AddressViewState extends State<AddressView> {
                         margin: EdgeInsets.only(left: 24),
                         child: Icon(Icons.delete_outline,
                           size: 32,
-                          color: Colors.grey,
+                          color: ColorConfig.colorGrey,
                         ),
                       )
                     ],
@@ -210,7 +210,7 @@ class _AddressViewState extends State<AddressView> {
   Widget addAddressButton() {
     return Container(
       child: Material(
-        color: Colors.transparent,
+        color: ColorConfig.colorTransparent,
         child: InkWell(
           onTap: () => {this.gotoAddAddress()},
           child: Container(
@@ -218,12 +218,12 @@ class _AddressViewState extends State<AddressView> {
             alignment: Alignment.center,
             height: 57,
             decoration: BoxDecoration(
-                color: Colors.lightBlue,
+                color: ColorConfig.bluePrimary,
                 borderRadius: BorderRadius.circular(5)
             ),
             child: Text("Add Address", style: TextStyle(
               fontSize: 14,
-              color: Colors.white,
+              color: ColorConfig.colorWhite,
               fontFamily: 'PoppinsBold',
             ),),
           ),
