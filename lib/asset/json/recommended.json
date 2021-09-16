@@ -1,91 +1,83 @@
 {
   "data": [
     {
-      "id": "8",
+      "id": "43",
       "image": {
-        "thumbnail": "lib/asset/image/home/promotionDummy.png",
+        "thumbnail": "lib/asset/image/product/leggingsCustomPrintedWomen.jpg",
         "gallery": [
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png"
+          "lib/asset/image/product/leggingsCustomPrintedWomen2.jpg",
+          "lib/asset/image/product/leggingsCustomPrintedWomen3.jpg",
+          "lib/asset/image/product/leggingsCustomPrintedWomen4.jpg"
         ]
       },
-      "category": "Man Shoes",
-      "description": "The Nike Air Max 270 React ENG combines a full-length React foam midsole with a 270 Max Air unit for unrivaled comfort and a striking visual experience.",
+      "category": "Women Pants",
+      "description": "Wholesale leggings custom printed women fashion pants and trousers",
       "rate": 4.3,
       "isFavorite": false,
-      "name": "Nike Air Max 270 React ENG",
+      "name": "Wholesale leggings custom",
       "price": {
-        "normal": "$299",
-        "special": "$534"
+        "normal": "$6.01",
+        "special": "$5.85"
       }
     },
     {
-      "id": "9",
+      "id": "51",
       "image": {
-        "thumbnail": "lib/asset/image/home/promotionDummy.png",
+        "thumbnail": "lib/asset/image/product/customSummerPopular.jpg",
         "gallery": [
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png"
+          "lib/asset/image/product/customSummerPopular2.jpg",
+          "lib/asset/image/product/customSummerPopular3.jpg",
+          "lib/asset/image/product/customSummerPopular4.jpg"
         ]
       },
-      "category": "Man Shoes",
-      "description": "The Nike Air Max 270 React ENG combines a full-length React foam midsole with a 270 Max Air unit for unrivaled comfort and a striking visual experience.",
-      "rate": 4.3,
+      "category": "Woman T-Shirt",
+      "description": "Custom summer popular oversize casual styles sports fashionable women's plain t shirts tops 2021 100% cotton with high quality",
+      "rate": 5.0,
       "isFavorite": false,
-      "name": "Nike Air Max 270 React ENG",
+      "name": "vintage washed t shirts",
       "price": {
-        "normal": "$299",
-        "special": "$534"
+        "normal": "$8.50",
+        "special": "$7.50"
       }
     },
     {
-      "id": "10",
+      "id": "52",
       "image": {
-        "thumbnail": "lib/asset/image/home/promotionDummy.png",
+        "thumbnail": "lib/asset/image/product/cropTopsTshirtWomen.jpg",
         "gallery": [
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png"
+          "lib/asset/image/product/cropTopsTshirtWomen2.jpg",
+          "lib/asset/image/product/cropTopsTshirtWomen3.jpg",
+          "lib/asset/image/product/cropTopsTshirtWomen4.jpg"
         ]
       },
-      "category": "Man Shoes",
-      "description": "The Nike Air Max 270 React ENG combines a full-length React foam midsole with a 270 Max Air unit for unrivaled comfort and a striking visual experience.",
-      "rate": 4.3,
+      "category": "Woman T-Shirt",
+      "description": "Womens tshirt plain crop tops fashion women tshirts polyester round neck crop tops t-shirt women",
+      "rate": 5.0,
       "isFavorite": false,
-      "name": "Nike Air Max 270 React ENG",
+      "name": "Womens tshirt plain crop tops fashion",
       "price": {
-        "normal": "$299",
-        "special": "$534"
+        "normal": "$2.50",
+        "special": "$2.30"
       }
     },
     {
-      "id": "11",
+      "id": "54",
       "image": {
-        "thumbnail": "lib/asset/image/home/promotionDummy.png",
+        "thumbnail": "lib/asset/image/product/warmSlimFemaleShirt.png",
         "gallery": [
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png"
+          "lib/asset/image/product/warmSlimFemaleShirt2.jpg",
+          "lib/asset/image/product/warmSlimFemaleShirt3.jpg",
+          "lib/asset/image/product/warmSlimFemaleShirt4.jpg"
         ]
       },
-      "category": "Man Shoes",
-      "description": "The Nike Air Max 270 React ENG combines a full-length React foam midsole with a 270 Max Air unit for unrivaled comfort and a striking visual experience.",
-      "rate": 4.3,
+      "category": "Woman T-Shirt",
+      "description": "Autumn High collar shirt long-sleeve t-shirt solid color women's warm Slim female shirt plus size",
+      "rate": 5.0,
       "isFavorite": false,
-      "name": "Nike Air Max 270 React ENG",
+      "name": "Print Custom T-Shirts",
       "price": {
-        "normal": "$299",
-        "special": "$534"
+        "normal": "$9.00",
+        "special": "$8.00"
       }
     }
   ]

@@ -1,3 +1,4 @@
+import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/material.dart';
 
 class IndicatorView extends StatelessWidget {
@@ -18,7 +19,7 @@ class IndicatorView extends StatelessWidget {
         // border: Border.all(color: Colors.blue),
           color: positionIndex == currentIndex
               ? color
-              : Colors.grey.withOpacity(0.3),
+              : ColorConfig.borderColor,
           shape: BoxShape.circle),
     );
   }

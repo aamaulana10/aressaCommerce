@@ -31,14 +31,14 @@
     {
       "id": "5",
       "image": "lib/asset/image/home/manPants.png",
-      "thumbnail" : "lib/asset/image/home/manShirtNew.png",
+      "thumbnail" : "lib/asset/image/home/manPantsNew.png",
       "name": "Man Pants",
       "category": "Man"
     },
     {
       "id": "6",
       "image": "lib/asset/image/home/manUnderwear.png",
-      "thumbnail" : "lib/asset/image/home/manShirtNew.png",
+      "thumbnail" : "lib/asset/image/home/manUnderwareNew.png",
       "name": "Man Underwear",
       "category": "Man"
     },
@@ -52,21 +52,21 @@
     {
       "id": "8",
       "image": "lib/asset/image/home/womanTshirt.png",
-      "thumbnail" : "lib/asset/image/home/manShirtNew.png",
+      "thumbnail" : "lib/asset/image/home/womanTshirtNew.png",
       "name": "Woman T-Shirt",
       "category": "Woman"
     },
     {
       "id": "9",
       "image": "lib/asset/image/home/womanPants.png",
-      "thumbnail" : "lib/asset/image/home/manShirtNew.png",
+      "thumbnail" : "lib/asset/image/home/womanPantsNew.png",
       "name": "Woman Pants",
       "category": "Woman"
     },
     {
       "id": "10",
       "image": "lib/asset/image/home/skirt.png",
-      "thumbnail" : "lib/asset/image/home/manShirtNew.png",
+      "thumbnail" : "lib/asset/image/home/skirtNew.png",
       "name": "Skirt",
       "category": "Woman"
     },
@@ -82,13 +82,6 @@
       "image": "lib/asset/image/home/womanShoes.png",
       "thumbnail" : "lib/asset/image/home/womanShoesNew.png",
       "name": "High Heels",
-      "category": "Woman"
-    },
-    {
-      "id": "13",
-      "image": "lib/asset/image/home/bikini.png",
-      "thumbnail" : "lib/asset/image/home/manShirtNew.png",
-      "name": "Bikini",
       "category": "Woman"
     }
   ]

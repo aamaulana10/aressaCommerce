@@ -28,27 +28,34 @@ flutter:
 
   assets:
     - lib/asset/image/promotionDummy.png
+    - lib/asset/image/home/indonesianFlag.png
+    - lib/asset/image/home/britishFlag.png
+    - lib/asset/image/home/TurkeyFlag.png
     - lib/asset/image/home/love.png
     - lib/asset/image/home/bikini.png
     - lib/asset/image/home/dress.png
+    - lib/asset/image/home/DressNew.png
     - lib/asset/image/home/manBag.png
+    - lib/asset/image/home/manWorkEqNew.png
     - lib/asset/image/home/manPants.png
+    - lib/asset/image/home/manPantsNew.png
     - lib/asset/image/home/manShoes.png
+    - lib/asset/image/home/manShoesNew.png
     - lib/asset/image/home/manUnderwear.png
+    - lib/asset/image/home/manUnderwareNew.png
     - lib/asset/image/home/notification.png
+    - lib/asset/image/home/manShirtNew.png
     - lib/asset/image/home/shirt.png
     - lib/asset/image/home/skirt.png
+    - lib/asset/image/home/skirtNew.png
     - lib/asset/image/home/tshirt.png
     - lib/asset/image/home/womanBag.png
-    - lib/asset/image/home/womanPants.png
-    - lib/asset/image/home/womanShoes.png
-    - lib/asset/image/home/womanTshirt.png
-    - lib/asset/image/home/DressNew.png
-    - lib/asset/image/home/manShirtNew.png
-    - lib/asset/image/home/manShoesNew.png
-    - lib/asset/image/home/manWorkEqNew.png
     - lib/asset/image/home/womanBagNew.png
+    - lib/asset/image/home/womanPants.png
+    - lib/asset/image/home/womanPantsNew.png
+    - lib/asset/image/home/womanShoes.png
     - lib/asset/image/home/womanShoesNew.png
+    - lib/asset/image/home/womanTshirt.png
     - lib/asset/image/home/PromotionImage2.png
     - lib/asset/image/home/more.png
     - lib/asset/image/home/Search.png
@@ -67,9 +74,9 @@ flutter:
     - lib/asset/image/product/speed3v2.jpeg
     - lib/asset/image/product/speed3v3.jpeg
     - lib/asset/image/product/nikeBasketballShoes.jpg
-    - lib/asset/image/product/nikeBasketBallShoes2.jpg
-    - lib/asset/image/product/nikeBasketBallShoes3.jpg
-    - lib/asset/image/product/nikeBasketBallShoes4.jpg
+    - lib/asset/image/product/nikeBasketballShoes2.jpg
+    - lib/asset/image/product/nikeBasketballShoes3.jpg
+    - lib/asset/image/product/nikeBasketballShoes4.jpg
     - lib/asset/image/product/menCasualShoes.jpg
     - lib/asset/image/product/menCasualShoes2.jpg
     - lib/asset/image/product/menCasualShoes3.jpg

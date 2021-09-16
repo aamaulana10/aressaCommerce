@@ -1,245 +1,103 @@
 {
   "data": [
     {
-      "id": "1",
+      "id": "22",
       "image": {
-        "thumbnail": "lib/asset/image/home/promotionDummy.png",
+        "thumbnail": "lib/asset/image/product/manJoggersPants.jpg",
         "gallery": [
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png"
+          "lib/asset/image/product/manJoggersPants2.jpg",
+          "lib/asset/image/product/manJoggersPants3.jpg",
+          "lib/asset/image/product/manJoggersPants4.jpg"
         ]
       },
-      "category": "Man Shoes",
-      "description": "The Nike Air Max 270 React ENG combines a full-length React foam midsole with a 270 Max Air unit for unrivaled comfort and a striking visual experience.",
-      "rate": 4.3,
+      "category": "Man Pants",
+      "description": "Running Gym Trousers Men Silk Breathable Workout Sports Sweatpants Drawstring Man Joggers Pants",
+      "rate": 5.0,
       "isFavorite": false,
-      "name": "Nike Air Max 270 React ENG",
+      "name": "Men's jogging Pants",
       "price": {
-        "normal": "$299",
-        "special": "$534"
+        "normal": "$13.50",
+        "special": "$12.15"
       }
     },
     {
-      "id": "2",
+      "id": "42",
       "image": {
-        "thumbnail": "lib/asset/image/home/promotionDummy.png",
+        "thumbnail": "lib/asset/image/product/springCasualCustomWomen.jpg",
         "gallery": [
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png"
+          "lib/asset/image/product/springCasualCustomWomen2.jpg",
+          "lib/asset/image/product/springCasualCustomWomen3.jpg",
+          "lib/asset/image/product/springCasualCustomWomen4.jpg"
         ]
       },
-      "category": "Man Shoes",
-      "description": "The Nike Air Max 270 React ENG combines a full-length React foam midsole with a 270 Max Air unit for unrivaled comfort and a striking visual experience.",
+      "category": "Women Pants",
+      "description": "2021 Spring Casual custom Women Cotton Patch Pockets Zip Front high waist Loose Wide Leg Cropped Pant",
       "rate": 4.3,
       "isFavorite": false,
-      "name": "Nike Air Max 270 React ENG",
+      "name": "2021 Spring Casual custom Women",
       "price": {
-        "normal": "$299",
-        "special": "$534"
+        "normal": "$21.30",
+        "special": "$20.50"
       }
     },
     {
-      "id": "3",
+      "id": "36",
       "image": {
-        "thumbnail": "lib/asset/image/home/promotionDummy.png",
+        "thumbnail": "lib/asset/image/product/dressWomanWithSlit.jpg",
         "gallery": [
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png"
+          "lib/asset/image/product/dressWomanWithSlit2.jpg",
+          "lib/asset/image/product/dressWomanWithSlit3.jpg",
+          "lib/asset/image/product/dressWomanWithSlit4.jpg"
         ]
       },
-      "category": "Man Shoes",
-      "description": "The Nike Air Max 270 React ENG combines a full-length React foam midsole with a 270 Max Air unit for unrivaled comfort and a striking visual experience.",
-      "rate": 4.3,
+      "category": "Dress",
+      "description": "Sleeveless Black Crystallized Corset High Slit Satin Gown One Shoulder Maxi Dress Woman With Slit",
+      "rate": 4.8,
       "isFavorite": false,
-      "name": "Nike Air Max 270 React ENG",
+      "name": "bandage dress split lace dress",
       "price": {
-        "normal": "$299",
-        "special": "$534"
+        "normal": "$22.00",
+        "special": "$21.50"
       }
     },
     {
-      "id": "4",
+      "id": "37",
       "image": {
-        "thumbnail": "lib/asset/image/home/promotionDummy.png",
+        "thumbnail": "lib/asset/image/product/casualDress.jpg",
         "gallery": [
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png"
+          "lib/asset/image/product/casualDress2.jpg",
+          "lib/asset/image/product/casualDress3.jpg",
+          "lib/asset/image/product/casualDress4.jpg"
         ]
       },
-      "category": "Man Shoes",
-      "description": "The Nike Air Max 270 React ENG combines a full-length React foam midsole with a 270 Max Air unit for unrivaled comfort and a striking visual experience.",
-      "rate": 4.3,
+      "category": "Dress",
+      "description": "Elegant Casual Dress New arrivals Fall 2021 Women Clothes Dresses Dress Party Sexy Plus Size Woman's Clothing",
+      "rate": 4.8,
       "isFavorite": false,
-      "name": "Nike Air Max 270 React ENG",
+      "name": "Women Clothes Dresses Dress Party Sexy Plus Size Woman's Clothing",
       "price": {
-        "normal": "$299",
-        "special": "$534"
+        "normal": "$20.65",
+        "special": "$19.25"
       }
     },
     {
-      "id": "5",
+      "id": "38",
       "image": {
-        "thumbnail": "lib/asset/image/home/promotionDummy.png",
+        "thumbnail": "lib/asset/image/product/elegantWomenDress.jpg",
         "gallery": [
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png"
+          "lib/asset/image/product/elegantWomenDress2.jpg",
+          "lib/asset/image/product/elegantWomenDress3.jpg",
+          "lib/asset/image/product/elegantWomenDress4.jpg"
         ]
       },
-      "category": "Man Shoes",
-      "description": "The Nike Air Max 270 React ENG combines a full-length React foam midsole with a 270 Max Air unit for unrivaled comfort and a striking visual experience.",
-      "rate": 4.3,
+      "category": "Dress",
+      "description": "SHEIN Supplier Bulk Free Sample Fall girl's clothing Tie Neck Ruched Vestidos elegant women short western Shein casual Dresses",
+      "rate": 4.7,
       "isFavorite": false,
-      "name": "Nike Air Max 270 React ENG",
+      "name": "Women Comfortable Dress",
       "price": {
-        "normal": "$299",
-        "special": "$534"
-      }
-    },
-    {
-      "id": "6",
-      "image": {
-        "thumbnail": "lib/asset/image/home/promotionDummy.png",
-        "gallery": [
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png"
-        ]
-      },
-      "category": "Man Shoes",
-      "description": "The Nike Air Max 270 React ENG combines a full-length React foam midsole with a 270 Max Air unit for unrivaled comfort and a striking visual experience.",
-      "rate": 4.3,
-      "isFavorite": false,
-      "name": "Nike Air Max 270 React ENG",
-      "price": {
-        "normal": "$299",
-        "special": "$534"
-      }
-    },
-    {
-      "id": "7",
-      "image": {
-        "thumbnail": "lib/asset/image/home/promotionDummy.png",
-        "gallery": [
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png"
-        ]
-      },
-      "category": "Man Shoes",
-      "description": "The Nike Air Max 270 React ENG combines a full-length React foam midsole with a 270 Max Air unit for unrivaled comfort and a striking visual experience.",
-      "rate": 4.3,
-      "isFavorite": false,
-      "name": "Nike Air Max 270 React ENG",
-      "price": {
-        "normal": "$299",
-        "special": "$534"
-      }
-    },
-    {
-      "id": "8",
-      "image": {
-        "thumbnail": "lib/asset/image/home/promotionDummy.png",
-        "gallery": [
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png"
-        ]
-      },
-      "category": "Man Shoes",
-      "description": "The Nike Air Max 270 React ENG combines a full-length React foam midsole with a 270 Max Air unit for unrivaled comfort and a striking visual experience.",
-      "rate": 4.3,
-      "isFavorite": false,
-      "name": "Nike Air Max 270 React ENG",
-      "price": {
-        "normal": "$299",
-        "special": "$534"
-      }
-    },
-    {
-      "id": "9",
-      "image": {
-        "thumbnail": "lib/asset/image/home/promotionDummy.png",
-        "gallery": [
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png"
-        ]
-      },
-      "category": "Man Shoes",
-      "description": "The Nike Air Max 270 React ENG combines a full-length React foam midsole with a 270 Max Air unit for unrivaled comfort and a striking visual experience.",
-      "rate": 4.3,
-      "isFavorite": false,
-      "name": "Nike Air Max 270 React ENG",
-      "price": {
-        "normal": "$299",
-        "special": "$534"
-      }
-    },
-    {
-      "id": "10",
-      "image": {
-        "thumbnail": "lib/asset/image/home/promotionDummy.png",
-        "gallery": [
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png"
-        ]
-      },
-      "category": "Man Shoes",
-      "description": "The Nike Air Max 270 React ENG combines a full-length React foam midsole with a 270 Max Air unit for unrivaled comfort and a striking visual experience.",
-      "rate": 4.3,
-      "isFavorite": false,
-      "name": "Nike Air Max 270 React ENG",
-      "price": {
-        "normal": "$299",
-        "special": "$534"
-      }
-    },
-    {
-      "id": "11",
-      "image": {
-        "thumbnail": "lib/asset/image/home/promotionDummy.png",
-        "gallery": [
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png",
-          "lib/asset/image/home/promotionDummy.png"
-        ]
-      },
-      "category": "Man Shoes",
-      "description": "The Nike Air Max 270 React ENG combines a full-length React foam midsole with a 270 Max Air unit for unrivaled comfort and a striking visual experience.",
-      "rate": 4.3,
-      "isFavorite": false,
-      "name": "Nike Air Max 270 React ENG",
-      "price": {
-        "normal": "$299",
-        "special": "$534"
+        "normal": "$8.98",
+        "special": "$8.68"
       }
     }
   ]

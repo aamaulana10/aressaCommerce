@@ -8,6 +8,7 @@ import 'package:aressa_commerce/feature/flashSale/view/flashSaleView.dart';
 import 'package:aressa_commerce/feature/megaSale/view/megaSaleView.dart';
 import 'package:aressa_commerce/feature/notification/view/notificationView.dart';
 import 'package:aressa_commerce/generated/l10n.dart';
+import 'package:aressa_commerce/main.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:aressa_commerce/util/view/indicatorView.dart';
 import 'package:flutter/cupertino.dart';
@@ -22,6 +23,9 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
+  PageController _pageController;
+  var currentIndex = 0;
+
   gotoAllCategory() {
     Future.delayed(Duration(milliseconds: 500), () {
       Navigator.of(context)
@@ -29,13 +33,162 @@ class _HomeViewState extends State<HomeView> {
     });
   }
 
-  gotoDetailProduct(ProductData productData) {
+  selectLanguage(String language) {
+
+    if(language == "Indonesia") {
+
+      Locale newLocale = Locale('id', 'ID');
+
+      MyApp.setLocale(context, newLocale);
+
+    } else if(language == "Turkey"){
+
+      Locale newLocale = Locale('tr', 'TR');
+
+      MyApp.setLocale(context, newLocale);
+
+    } else {
+
+      Locale newLocale = Locale('en', 'US');
+
+      MyApp.setLocale(context, newLocale);
+    }
 
     Future.delayed(Duration(milliseconds: 500), () {
-      Navigator.of(context)
-          .push(MaterialPageRoute(builder: (ctx) => DetailProductView(
-        productData: productData,
-      )));
+      
+      Navigator.of(context).pop();
+    });
+    
+  }
+
+  showLanguagePopup() {
+    showDialog(
+        context: context,
+        builder: (builder) => Dialog(
+              insetPadding: EdgeInsets.all(8),
+              child: Container(
+                padding: EdgeInsets.all(16),
+                height: 320,
+                child: Column(
+                  children: [
+                    Container(
+                      height: 70,
+                      child: Row(
+                        children: [
+                          Expanded(
+                              child: Text(
+                            "Select a language",
+                            style: TextStyle(
+                              color: ColorConfig.colorBlack,
+                              fontSize: 16,
+                              fontFamily: 'PoppinsBold',
+                            ),
+                          )),
+                          IconButton(
+                              onPressed: () => {Navigator.of(context).pop()},
+                              icon: Icon(Icons.close, color: Color(0xFF979797),))
+                        ],
+                      ),
+                    ),
+                    Container(
+                      height: 70,
+                      margin: EdgeInsets.only(left: 8, right: 8),
+                      child: InkWell(
+                        onTap: () => {selectLanguage("Indonesia")},
+                        child: Container(
+                          child: Row(
+                            children: [
+                              Image(
+                                  height: 28,
+                                  width: 34,
+                                  image: AssetImage(
+                                      "lib/asset/image/home/indonesianFlag.png")),
+                              Container(
+                                margin: EdgeInsets.only(left: 16),
+                                child: Text(
+                                  "Indonesia",
+                                  style: TextStyle(
+                                    color: ColorConfig.colorBlack,
+                                    fontSize: 14,
+                                    fontFamily: 'PoppinsRegular',
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      height: 70,
+                      margin: EdgeInsets.only(left: 8, right: 8),
+                      child: InkWell(
+                        onTap: () => {selectLanguage("Turkey")},
+                        child: Container(
+                          child: Row(
+                            children: [
+                              Image(
+                                  height: 28,
+                                  width: 34,
+                                  image: AssetImage(
+                                      "lib/asset/image/home/TurkeyFlag.png")),
+                              Container(
+                                margin: EdgeInsets.only(left: 16),
+                                child: Text(
+                                  "Turkey",
+                                  style: TextStyle(
+                                    color: ColorConfig.colorBlack,
+                                    fontSize: 14,
+                                    fontFamily: 'PoppinsRegular',
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      height: 70,
+                      margin: EdgeInsets.only(left: 8, right: 8),
+                      child: InkWell(
+                        onTap: () => {selectLanguage("English")},
+                        child: Container(
+                          child: Row(
+                            children: [
+                              Image(
+                                  height: 28,
+                                  width: 34,
+                                  image: AssetImage(
+                                      "lib/asset/image/home/britishFlag.png")),
+                              Container(
+                                margin: EdgeInsets.only(left: 16),
+                                child: Text(
+                                  "English",
+                                  style: TextStyle(
+                                    color: ColorConfig.colorBlack,
+                                    fontSize: 14,
+                                    fontFamily: 'PoppinsRegular',
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ));
+  }
+
+  gotoDetailProduct(ProductData productData) {
+    Future.delayed(Duration(milliseconds: 500), () {
+      Navigator.of(context).push(MaterialPageRoute(
+          builder: (ctx) => DetailProductView(
+                productData: productData,
+              )));
     });
   }
 
@@ -67,6 +220,18 @@ class _HomeViewState extends State<HomeView> {
     });
   }
 
+  onBannerChange(e) {
+    setState(() {
+      currentIndex = e;
+    });
+  }
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
+  }
+
   Widget header() {
     return Container(
       height: 70,
@@ -74,77 +239,81 @@ class _HomeViewState extends State<HomeView> {
       child: Column(
         children: [
           Container(
-              height: 50,
-              margin: EdgeInsets.only(left: 16, right: 16),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: Container(
-                      decoration: BoxDecoration(
-                          border: Border.all(
-                              color: ColorConfig.borderColor, width: 1),
-                          borderRadius: BorderRadius.circular(8)),
-                      child: TextFormField(
-                        decoration: InputDecoration(
-                            labelText: S.of(context).searchProduct,
-                            labelStyle: TextStyle(
-                                color: ColorConfig.textColor1,
-                                fontSize: 12,
-                                fontFamily: 'PoppinsRegular'),
-                            prefixIcon: Icon(
-                              Icons.search,
-                              color: ColorConfig.bluePrimary,
-                            ),
-                            border: InputBorder.none),
-                      ),
+            height: 50,
+            margin: EdgeInsets.only(left: 16, right: 16),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+                        border: Border.all(
+                            color: ColorConfig.borderColor, width: 1),
+                        borderRadius: BorderRadius.circular(8)),
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                          labelText: S.of(context).searchProduct,
+                          labelStyle: TextStyle(
+                              color: ColorConfig.textColor1,
+                              fontSize: 12,
+                              fontFamily: 'PoppinsRegular'),
+                          prefixIcon: Icon(
+                            Icons.search,
+                            color: ColorConfig.bluePrimary,
+                          ),
+                          border: InputBorder.none),
                     ),
                   ),
-                  Container(
-                    height: 40,
-                    decoration:
-                        BoxDecoration(borderRadius: BorderRadius.circular(20)),
-                    margin: EdgeInsets.only(left: 8),
-                    child: InkWell(
-                        borderRadius: BorderRadius.circular(20),
-                        onTap: () => {this.gotoNotification()},
-                        child: Padding(
-                          padding: EdgeInsets.all(10),
-                          child: Image(
-                            image: AssetImage(
-                                "lib/asset/image/home/notification.png"),
-                          ),
-                        )),
-                  ),
-                  Container(
-                    height: 40,
-                    decoration:
-                        BoxDecoration(borderRadius: BorderRadius.circular(20)),
-                    child: InkWell(
-                        borderRadius: BorderRadius.circular(20),
-                        onTap: () => {print("more")},
-                        child: Padding(
+                ),
+                Container(
+                  height: 40,
+                  decoration:
+                      BoxDecoration(borderRadius: BorderRadius.circular(20)),
+                  margin: EdgeInsets.only(left: 8),
+                  child: InkWell(
+                      borderRadius: BorderRadius.circular(20),
+                      onTap: () => {this.gotoNotification()},
+                      child: Padding(
+                        padding: EdgeInsets.all(10),
+                        child: Image(
+                          image: AssetImage(
+                              "lib/asset/image/home/notification.png"),
+                        ),
+                      )),
+                ),
+                Container(
+                  height: 40,
+                  decoration:
+                      BoxDecoration(borderRadius: BorderRadius.circular(20)),
+                  child: InkWell(
+                      borderRadius: BorderRadius.circular(20),
+                      onTap: () => {showLanguagePopup()},
+                      child: Padding(
                           padding: EdgeInsets.all(8),
                           child: Row(
                             children: [
-                              Text("ID", style: TextStyle(
-                                  color: ColorConfig.textColor1,
-                                  fontSize: 12,
-                                  fontFamily: 'PoppinsBold')),
-                              Icon(Icons.arrow_drop_down, color: ColorConfig.textColor1,)
+                              Text("ID",
+                                  style: TextStyle(
+                                      color: ColorConfig.textColor1,
+                                      fontSize: 12,
+                                      fontFamily: 'PoppinsBold')),
+                              Icon(
+                                Icons.arrow_drop_down,
+                                color: ColorConfig.textColor1,
+                              )
                             ],
-                          )
-                        )),
-                  ),
-                ],
-              ),
+                          ))),
+                ),
+              ],
+            ),
           ),
           Expanded(
             child: Container(
               decoration: BoxDecoration(
-                border: Border(
-                  bottom: BorderSide(width: 1, color: ColorConfig.borderColor,)
-                )
-              ),
+                  border: Border(
+                      bottom: BorderSide(
+                width: 1,
+                color: ColorConfig.borderColor,
+              ))),
             ),
           )
         ],
@@ -163,6 +332,8 @@ class _HomeViewState extends State<HomeView> {
           Expanded(
             child: PageView.builder(
               itemCount: 3,
+              controller: _pageController,
+              onPageChanged: (e) => {onBannerChange(e)},
               itemBuilder: (ctx, idx) {
                 return Container(
                   margin: EdgeInsets.only(left: 16, right: 16),
@@ -297,16 +468,16 @@ class _HomeViewState extends State<HomeView> {
             height: 40,
             margin: EdgeInsets.only(left: 32, right: 32),
             child: ListView.builder(
-              itemCount: 6,
+              itemCount: 3,
               scrollDirection: Axis.horizontal,
               shrinkWrap: true,
               itemBuilder: (ctx, idx) {
                 return IndicatorView(
-                  currentIndex: 1,
-                  positionIndex: 1,
+                  currentIndex: currentIndex,
+                  positionIndex: idx,
                   color: ColorConfig.bluePrimary,
-                  width: 5,
-                  height: 5,
+                  width: 8,
+                  height: 8,
                 );
               },
             ),
@@ -326,25 +497,25 @@ class _HomeViewState extends State<HomeView> {
             child: Column(
               children: [
                 Container(
-                    margin: EdgeInsets.only(left: 20, right: 4),
-                    child: Row(
-                      children: [
-                        Expanded(
-                            child: Text(S.of(context).category,
-                                style: TextStyle(
-                                  color: ColorConfig.textColorBold1,
+                  margin: EdgeInsets.only(left: 20, right: 4),
+                  child: Row(
+                    children: [
+                      Expanded(
+                          child: Text(S.of(context).category,
+                              style: TextStyle(
+                                color: ColorConfig.textColorBold1,
+                                fontSize: 14,
+                                fontFamily: 'PoppinsBold',
+                              ))),
+                      FlatButton(
+                          onPressed: () => {gotoAllCategory()},
+                          child: Text(S.of(context).seeMore,
+                              style: TextStyle(
                                   fontSize: 14,
                                   fontFamily: 'PoppinsBold',
-                                ))),
-                        FlatButton(
-                            onPressed: () => {gotoAllCategory()},
-                            child: Text("More Category",
-                                style: TextStyle(
-                                    fontSize: 14,
-                                    fontFamily: 'PoppinsBold',
-                                    color: ColorConfig.bluePrimary)))
-                      ],
-                    ),
+                                  color: ColorConfig.bluePrimary)))
+                    ],
+                  ),
                 ),
                 Expanded(
                   child: Container(
@@ -356,7 +527,6 @@ class _HomeViewState extends State<HomeView> {
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 3, childAspectRatio: 1.2),
                       itemBuilder: (ctx, idx) {
-
                         var data = snapshoot.data[idx];
 
                         return Container(
@@ -365,22 +535,22 @@ class _HomeViewState extends State<HomeView> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               Container(
-                                  child: Image(image: AssetImage(data.thumbnail),
-                                    fit: BoxFit.fill,
-                                  ),
-                                  height: 60,
-
+                                child: Image(
+                                  image: AssetImage(data.thumbnail),
+                                  fit: BoxFit.fill,
+                                ),
+                                height: 60,
                               ),
                               Container(
-                                  child: Text(data.name,
-                                      style: TextStyle(
-                                          fontSize: 10,
-                                          fontFamily: 'PoppinsRegular'),
+                                child: Text(
+                                  data.name,
+                                  style: TextStyle(
+                                      fontSize: 10,
+                                      fontFamily: 'PoppinsRegular'),
                                   textAlign: TextAlign.center,
-                                    maxLines: 2,
-                                  ),
-                                  padding: EdgeInsets.only(top: 10),
-
+                                  maxLines: 2,
+                                ),
+                                padding: EdgeInsets.only(top: 10),
                               )
                             ],
                           ),
@@ -421,7 +591,8 @@ class _HomeViewState extends State<HomeView> {
                                 style: TextStyle(
                                   color: ColorConfig.textColorBold1,
                                   fontSize: 14,
-                                  fontFamily: 'PoppinsBold',))),
+                                  fontFamily: 'PoppinsBold',
+                                ))),
                         FlatButton(
                             onPressed: () => {gotoFlashSale()},
                             child: Text(S.of(context).seeMore,
@@ -440,15 +611,14 @@ class _HomeViewState extends State<HomeView> {
                     itemCount: 4,
                     padding: EdgeInsets.only(left: 8, right: 8),
                     itemBuilder: (ctx, idx) {
-
                       var data = snapshoot.data[idx];
 
                       return Container(
                         width: 140,
                         margin: EdgeInsets.all(8),
                         decoration: BoxDecoration(
-                            border:
-                            Border.all(color: ColorConfig.borderColor, width: 1),
+                            border: Border.all(
+                                color: ColorConfig.borderColor, width: 1),
                             borderRadius: BorderRadius.circular(8)),
                         child: Material(
                           color: Colors.transparent,
@@ -458,34 +628,39 @@ class _HomeViewState extends State<HomeView> {
                               padding: EdgeInsets.all(8),
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Container(
                                     height: 110,
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(5),
                                       child: Image(
-                                        image: AssetImage(
-                                            data.image.thumbnail),
+                                        image: AssetImage(data.image.thumbnail),
                                         fit: BoxFit.fill,
                                       ),
                                     ),
                                   ),
-                                  Container(
-                                    child: Text(data.name,
-                                        maxLines: 2,
-                                        style: TextStyle(
-                                          fontSize: 12,
-                                          color: ColorConfig.textColorBold1,
-                                          fontFamily: 'PoppinsBold',)),
-                                    padding: EdgeInsets.only(top: 10),
+                                  Expanded(
+                                    child: Container(
+                                      child: Text(data.name,
+                                          maxLines: 2,
+                                          style: TextStyle(
+                                            fontSize: 12,
+                                            color: ColorConfig.textColorBold1,
+                                            fontFamily: 'PoppinsBold',
+                                          )),
+                                      padding: EdgeInsets.only(top: 10),
+                                    ),
                                   ),
                                   Container(
+                                    alignment: Alignment.centerLeft,
                                     child: Text(data.price.special,
+                                        textAlign: TextAlign.left,
                                         style: TextStyle(
                                           fontSize: 12,
                                           color: ColorConfig.bluePrimary,
-                                          fontFamily: 'PoppinsBold',)),
+                                          fontFamily: 'PoppinsBold',
+                                        )),
                                     padding: EdgeInsets.only(top: 10),
                                   ),
                                   Container(
@@ -494,8 +669,10 @@ class _HomeViewState extends State<HomeView> {
                                         Text(data.price.normal,
                                             style: TextStyle(
                                                 fontSize: 10,
+                                                color: ColorConfig.textColor1,
                                                 fontFamily: 'PoppinsRegular',
-                                                decoration: TextDecoration.lineThrough)),
+                                                decoration: TextDecoration
+                                                    .lineThrough)),
                                         Padding(
                                           padding: EdgeInsets.only(left: 8),
                                           child: Text("24% off",
@@ -535,13 +712,13 @@ class _HomeViewState extends State<HomeView> {
       builder: (context, AsyncSnapshot<List<ProductData>> snapshoot) {
         if (snapshoot.hasData) {
           return Container(
-            height: 260,
+            height: 280,
             margin: EdgeInsets.only(top: 16),
             child: Column(
               children: [
                 Expanded(
                   child: Container(
-                    margin: EdgeInsets.only(left: 20, right: 4),
+                    margin: EdgeInsets.only(left: 20, right: 4, bottom: 16),
                     child: Row(
                       children: [
                         Expanded(
@@ -549,7 +726,8 @@ class _HomeViewState extends State<HomeView> {
                                 style: TextStyle(
                                   color: ColorConfig.textColorBold1,
                                   fontSize: 14,
-                                  fontFamily: 'PoppinsBold',))),
+                                  fontFamily: 'PoppinsBold',
+                                ))),
                         FlatButton(
                             onPressed: () => {gotoFlashSale()},
                             child: Text(S.of(context).seeMore,
@@ -565,18 +743,17 @@ class _HomeViewState extends State<HomeView> {
                   height: 245,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
-                    itemCount: 10,
+                    itemCount: snapshoot.data.length,
                     padding: EdgeInsets.only(left: 8, right: 8),
                     itemBuilder: (ctx, idx) {
-
                       var data = snapshoot.data[idx];
 
                       return Container(
                         width: 140,
                         margin: EdgeInsets.all(8),
                         decoration: BoxDecoration(
-                            border:
-                            Border.all(color: ColorConfig.borderColor, width: 1),
+                            border: Border.all(
+                                color: ColorConfig.borderColor, width: 1),
                             borderRadius: BorderRadius.circular(8)),
                         child: Material(
                           color: Colors.transparent,
@@ -586,34 +763,39 @@ class _HomeViewState extends State<HomeView> {
                               padding: EdgeInsets.all(8),
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Container(
                                     height: 110,
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(5),
                                       child: Image(
-                                        image: AssetImage(
-                                            data.image.thumbnail),
+                                        image: AssetImage(data.image.thumbnail),
                                         fit: BoxFit.fill,
                                       ),
                                     ),
                                   ),
-                                  Container(
-                                    child: Text(data.name,
-                                        maxLines: 2,
-                                        style: TextStyle(
-                                          fontSize: 12,
-                                          color: ColorConfig.textColorBold1,
-                                          fontFamily: 'PoppinsBold',)),
-                                    padding: EdgeInsets.only(top: 10),
+                                  Expanded(
+                                    child: Container(
+                                      child: Text(data.name,
+                                          maxLines: 2,
+                                          style: TextStyle(
+                                            fontSize: 12,
+                                            color: ColorConfig.textColorBold1,
+                                            fontFamily: 'PoppinsBold',
+                                          )),
+                                      padding: EdgeInsets.only(top: 10),
+                                    ),
                                   ),
                                   Container(
+                                    alignment: Alignment.centerLeft,
                                     child: Text(data.price.special,
+                                        textAlign: TextAlign.left,
                                         style: TextStyle(
                                           fontSize: 12,
                                           color: ColorConfig.bluePrimary,
-                                          fontFamily: 'PoppinsBold',)),
+                                          fontFamily: 'PoppinsBold',
+                                        )),
                                     padding: EdgeInsets.only(top: 10),
                                   ),
                                   Container(
@@ -622,8 +804,10 @@ class _HomeViewState extends State<HomeView> {
                                         Text(data.price.normal,
                                             style: TextStyle(
                                                 fontSize: 10,
+                                                color: ColorConfig.textColor1,
                                                 fontFamily: 'PoppinsRegular',
-                                                decoration: TextDecoration.lineThrough)),
+                                                decoration: TextDecoration
+                                                    .lineThrough)),
                                         Padding(
                                           padding: EdgeInsets.only(left: 8),
                                           child: Text("24% off",
@@ -730,101 +914,135 @@ class _HomeViewState extends State<HomeView> {
       builder: (context, AsyncSnapshot<List<ProductData>> snapshoot) {
         if (snapshoot.hasData) {
           return Container(
-            child: GridView.builder(
-                shrinkWrap: true,
-                primary: false,
-                physics: new NeverScrollableScrollPhysics(),
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2, childAspectRatio: 0.65),
-                itemCount: snapshoot.data.length,
-                itemBuilder: (item, index) {
-                  var data = snapshoot.data[index];
+            child: Column(
+              children: [
+                Container(
+                  margin:
+                      EdgeInsets.only(left: 20, right: 4, bottom: 0, top: 8),
+                  child: Row(
+                    children: [
+                      Expanded(
+                          child: Text("Special For You",
+                              style: TextStyle(
+                                color: ColorConfig.textColorBold1,
+                                fontSize: 14,
+                                fontFamily: 'PoppinsBold',
+                              ))),
+                      FlatButton(
+                          onPressed: () => {gotoFlashSale()},
+                          child: Text(S.of(context).seeMore,
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'PoppinsBold',
+                                  color: ColorConfig.bluePrimary)))
+                    ],
+                  ),
+                ),
+                GridView.builder(
+                    shrinkWrap: true,
+                    primary: false,
+                    padding: EdgeInsets.only(top: 0),
+                    physics: new NeverScrollableScrollPhysics(),
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2, childAspectRatio: 0.65),
+                    itemCount: snapshoot.data.length,
+                    itemBuilder: (item, index) {
+                      var data = snapshoot.data[index];
 
-                  return Container(
-                    height: 405,
-                    margin: EdgeInsets.all(8),
-                    decoration: BoxDecoration(
-                        border: Border.all(color: ColorConfig.borderColor, width: 1),
-                        borderRadius: BorderRadius.circular(8)),
-                    child: Material(
-                      color: Colors.transparent,
-                      child: InkWell(
-                        onTap: () => {gotoDetailProduct(data)},
-                        child: Container(
-                          padding: EdgeInsets.all(8),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Expanded(
-                                child: Container(
-                                  child: ClipRRect(
-                                    borderRadius: BorderRadius.circular(5),
-                                    child: Image(
-                                      image: AssetImage(data.image.thumbnail),
-                                      fit: BoxFit.fill,
+                      return Container(
+                        height: 405,
+                        margin: EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                            border: Border.all(
+                                color: ColorConfig.borderColor, width: 1),
+                            borderRadius: BorderRadius.circular(8)),
+                        child: Material(
+                          color: Colors.transparent,
+                          child: InkWell(
+                            onTap: () => {gotoDetailProduct(data)},
+                            child: Container(
+                              padding: EdgeInsets.all(8),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Expanded(
+                                    child: Container(
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(5),
+                                        child: Image(
+                                          image:
+                                              AssetImage(data.image.thumbnail),
+                                        ),
+                                      ),
                                     ),
                                   ),
-                                ),
-                              ),
-                              Container(
-                                child: Text(data.name,
-                                    maxLines: 2,
-                                    style: TextStyle(
-                                      fontSize: 12,
-                                      color: ColorConfig.textColorBold1,
-                                      fontFamily: 'PoppinsBold',)),
-                                padding: EdgeInsets.only(top: 10),
-                              ),
-                              Container(
-                                child: RatingBarIndicator(
-                                  rating: data.rate,
-                                  itemBuilder: (context, index) => Icon(
-                                    Icons.star,
-                                    color: Colors.amber,
-                                  ),
-                                  itemCount: 5,
-                                  itemSize: 24.0,
-                                  unratedColor: ColorConfig.borderColor,
-                                ),
-                                padding: EdgeInsets.only(top: 10),
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(top: 8),
-                                child: Text(data.price.special,
-                                    style: TextStyle(
-                                      fontSize: 12,
-                                      color: ColorConfig.bluePrimary,
-                                      fontFamily: 'PoppinsBold',)),
-                                padding: EdgeInsets.only(top: 10),
-                              ),
-                              Container(
-                                child: Row(
-                                  children: [
-                                    Text(data.price.normal,
+                                  Container(
+                                    alignment: Alignment.centerLeft,
+                                    child: Text(data.name,
+                                        maxLines: 2,
                                         style: TextStyle(
-                                            fontSize: 10,
-                                            fontFamily: 'Poppinsregular',
-                                            decoration: TextDecoration.lineThrough)),
-                                    Padding(
-                                      padding: EdgeInsets.only(left: 8),
-                                      child: Text("24% off",
-                                          style: TextStyle(
-                                              fontSize: 10,
-                                              fontFamily: 'PoppinsBold',
-                                              color: Color(0XFFFB7181))),
+                                          fontSize: 12,
+                                          color: ColorConfig.textColorBold1,
+                                          fontFamily: 'PoppinsBold',
+                                        )),
+                                    padding: EdgeInsets.only(top: 10),
+                                  ),
+                                  Container(
+                                    alignment: Alignment.centerLeft,
+                                    child: RatingBarIndicator(
+                                      rating: data.rate,
+                                      itemBuilder: (context, index) => Icon(
+                                        Icons.star,
+                                        color: Colors.amber,
+                                      ),
+                                      itemCount: 5,
+                                      itemSize: 24.0,
+                                      unratedColor: ColorConfig.borderColor,
                                     ),
-                                  ],
-                                ),
-                                padding: EdgeInsets.only(top: 10),
+                                    padding: EdgeInsets.only(top: 10),
+                                  ),
+                                  Container(
+                                    alignment: Alignment.centerLeft,
+                                    margin: EdgeInsets.only(top: 8),
+                                    child: Text(data.price.special,
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          color: ColorConfig.bluePrimary,
+                                          fontFamily: 'PoppinsBold',
+                                        )),
+                                    padding: EdgeInsets.only(top: 10),
+                                  ),
+                                  Container(
+                                    child: Row(
+                                      children: [
+                                        Text(data.price.normal,
+                                            style: TextStyle(
+                                                fontSize: 10,
+                                                fontFamily: 'Poppinsregular',
+                                                decoration: TextDecoration
+                                                    .lineThrough)),
+                                        Padding(
+                                          padding: EdgeInsets.only(left: 8),
+                                          child: Text("24% off",
+                                              style: TextStyle(
+                                                  fontSize: 10,
+                                                  fontFamily: 'PoppinsBold',
+                                                  color: Color(0XFFFB7181))),
+                                        ),
+                                      ],
+                                    ),
+                                    padding: EdgeInsets.only(top: 10),
+                                  ),
+                                ],
                               ),
-                            ],
+                            ),
                           ),
                         ),
-                      ),
-                    ),
-                  );
-                }),
+                      );
+                    }),
+              ],
+            ),
           );
         } else if (snapshoot.hasError) {
           return Text(snapshoot.error.toString());
@@ -851,7 +1069,7 @@ class _HomeViewState extends State<HomeView> {
                     categoryWidget(),
                     flashSaleWidget(),
                     megaSaleWidget(),
-                    recommendedProductWidget(),
+                    // recommendedProductWidget(),
                     productGridWidget()
                   ],
                 ),

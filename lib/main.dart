@@ -70,7 +70,8 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginView(),
+      home: MainTabbar(),
+      locale: _locale,
       localizationsDelegates: [
         S.delegate,
         GlobalMaterialLocalizations.delegate,
