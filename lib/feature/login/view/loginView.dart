@@ -1,8 +1,10 @@
 import 'package:aressa_commerce/feature/login/view/registerView.dart';
 import 'package:aressa_commerce/feature/mainTabbar.dart';
 import 'package:aressa_commerce/generated/l10n.dart';
+import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class LoginView extends StatefulWidget {
   @override
@@ -12,7 +14,12 @@ class LoginView extends StatefulWidget {
 class _LoginViewState extends State<LoginView> {
 
   void gotoMainTabbar() {
-    Navigator.of(context).push(MaterialPageRoute(builder: (context) => MainTabbar()));
+
+    Future.delayed(Duration(milliseconds: 500)).then((value){
+
+      Navigator.of(context).push(MaterialPageRoute(builder: (context) => MainTabbar()));
+    });
+
   }
 
   void gotoRegisterView() {
@@ -22,13 +29,19 @@ class _LoginViewState extends State<LoginView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        toolbarHeight: 0,
+        backwardsCompatibility: false,
+        systemOverlayStyle: SystemUiOverlayStyle(
+            statusBarColor: ColorConfig.bluePrimary,
+          statusBarIconBrightness: Brightness.light
+        ),
+        elevation: 0,
+      ),
         body: Container(
+          padding: EdgeInsets.only(left: 16, right: 16, top: 16),
       child: SingleChildScrollView(
-        child: Container(
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
-          margin: EdgeInsets.only(left: 16, right: 16),
-          child: Column(
+        child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -40,20 +53,20 @@ class _LoginViewState extends State<LoginView> {
               Container(
                 margin: EdgeInsets.only(top: 16),
                 child: Text(
-                  "Welcome to lafyuu",
+                  "Welcome to Flying",
                   style: TextStyle(
-                      color: Colors.black,
+                      color: ColorConfig.textColorBold1,
                       fontSize: 16,
-                      fontFamily: "poppinsBold"),
+                      fontFamily: "PoppinsBold"),
                 ),
               ),
               Container(
                   margin: EdgeInsets.only(top: 10),
                   child: Text("Sign in to continue",
                       style: TextStyle(
-                          color: Colors.black,
+                          color: ColorConfig.textColor1,
                           fontSize: 12,
-                          fontFamily: "poppinsRegular"))),
+                          fontFamily: "PoppinsRegular"))),
               Container(
                 height: 50,
                 margin: EdgeInsets.only(top: 16),
@@ -61,16 +74,19 @@ class _LoginViewState extends State<LoginView> {
                     borderRadius: BorderRadius.circular(5),
                     color: Colors.transparent,
                     border: Border.all(
-                      color: Colors.grey,
+                      color: ColorConfig.borderColor,
                     )),
                 child: TextFormField(
+                  style: TextStyle(
+                      fontSize: 12,
+                      color: ColorConfig.textColor1,
+                      fontFamily: 'PoppinsBold'),
                   decoration: InputDecoration(
                       prefixIcon: Icon(Icons.email_outlined),
                       labelText: S.of(context).yourEmail,
                       labelStyle: TextStyle(
-                          fontSize: 14,
-                          color: Colors.grey,
-                          fontFamily: 'Poppinsregular'),
+                          color: ColorConfig.textColor1,
+                          fontFamily: 'PoppinsRegular'),
                       border: InputBorder.none),
                 ),
               ),
@@ -81,41 +97,48 @@ class _LoginViewState extends State<LoginView> {
                     borderRadius: BorderRadius.circular(5),
                     color: Colors.transparent,
                     border: Border.all(
-                      color: Colors.grey,
+                      color: ColorConfig.borderColor,
                     )),
                 child: TextFormField(
+                  obscureText: true,
+                  style: TextStyle(
+                      fontSize: 12,
+                      color: ColorConfig.textColor1,
+                      fontFamily: 'PoppinsBold'),
                   decoration: InputDecoration(
                       prefixIcon: Icon(Icons.lock),
                       labelText: "Your password",
                       labelStyle: TextStyle(
-                          fontSize: 14,
-                          color: Colors.grey,
-                          fontFamily: 'Poppinsregular'),
+                          color: ColorConfig.textColor1,
+                          fontFamily: 'PoppinsRegular'),
                       border: InputBorder.none),
                 ),
               ),
               Container(
+                margin: EdgeInsets.only(top: 16),
                 child: Material(
                   color: Colors.transparent,
-                  child: InkWell(
-                    onTap: () => {this.gotoMainTabbar()},
-                    child: Container(
-                      margin: EdgeInsets.only(top: 16),
-                      alignment: Alignment.center,
-                      height: 57,
-                      decoration: BoxDecoration(
-                          color: Color(0xFF41BFFF),
-                          borderRadius: BorderRadius.circular(5)),
-                      child: Text(
-                        "Sign in",
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.white,
-                          fontFamily: 'PoppinsBold',
+                  shadowColor: ColorConfig.bluePrimary,
+                  elevation: 8,
+                  child: Container(
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                            color: ColorConfig.bluePrimary,
+                            borderRadius: BorderRadius.circular(5)),
+                        child: FlatButton(
+                          height: 57,
+                          minWidth: MediaQuery.of(context).size.width,
+                          onPressed: ()=> {gotoMainTabbar()},
+                          child: Text(
+                            "Sign in",
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.white,
+                              fontFamily: 'PoppinsBold',
+                            ),
+                          ),
                         ),
                       ),
-                    ),
-                  ),
                 ),
               ),
               Container(
@@ -127,16 +150,15 @@ class _LoginViewState extends State<LoginView> {
                     Expanded(
                       child: Container(
                         height: .5,
-                        color: Colors.grey,
+                        color: ColorConfig.borderColor,
                       ),
                     ),
                     Container(
-                        width: 32,
                         alignment: Alignment.center,
                         margin: EdgeInsets.only(left: 8, right: 8),
                         child: Text(S.of(context).or,
                         style: TextStyle(
-                          color: Color(0xFF8F98B1),
+                          color: ColorConfig.textColor1,
                           fontSize: 14,
                           fontFamily: 'PoppinsBold'
                         ),
@@ -145,7 +167,7 @@ class _LoginViewState extends State<LoginView> {
                     Expanded(
                       child: Container(
                         height: .5,
-                        color: Colors.grey,
+                        color: ColorConfig.borderColor,
                       ),
                     )
                   ],
@@ -159,7 +181,7 @@ class _LoginViewState extends State<LoginView> {
                     borderRadius: BorderRadius.circular(5),
                     color: Colors.transparent,
                     border: Border.all(
-                      color: Colors.grey,
+                      color: ColorConfig.borderColor
                     )),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -173,7 +195,7 @@ class _LoginViewState extends State<LoginView> {
                       child: Text("Login With Google",
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: Color(0xFF8F98B1),
+                        color: ColorConfig.textColor1,
                         fontSize: 14,
                         fontFamily: 'PoppinsBold'
                       ),
@@ -190,7 +212,7 @@ class _LoginViewState extends State<LoginView> {
                     borderRadius: BorderRadius.circular(5),
                     color: Colors.transparent,
                     border: Border.all(
-                      color: Colors.grey,
+                      color: ColorConfig.borderColor
                     )),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -201,10 +223,10 @@ class _LoginViewState extends State<LoginView> {
                       width: 24,
                     ),
                     Expanded(
-                      child: Text("Login With Google",
+                      child: Text("Login With Facebook",
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                            color: Color(0xFF8F98B1),
+                            color: ColorConfig.textColor1,
                             fontSize: 14,
                             fontFamily: 'PoppinsBold'
                         ),
@@ -218,7 +240,7 @@ class _LoginViewState extends State<LoginView> {
                   onPressed: () => {},
                   child: Text("Forgot Password?",
                   style: TextStyle(
-                    color: Colors.lightBlue,
+                      color: ColorConfig.bluePrimary,
                     fontSize: 12,
                     fontFamily: 'PoppinsBold'
                   ),
@@ -232,7 +254,7 @@ class _LoginViewState extends State<LoginView> {
                   children: [
                     Text("Don't have a account? ",
                     style: TextStyle(
-                      color: Colors.grey,
+                      color: ColorConfig.textColor1,
                       fontSize: 12,
                       fontFamily: 'PoppinsRegular'
                     )),
@@ -240,7 +262,7 @@ class _LoginViewState extends State<LoginView> {
                       onPressed: () => {this.gotoRegisterView()},
                         child: Text("Register",
                         style: TextStyle(
-                          color: Colors.lightBlue,
+                            color: ColorConfig.bluePrimary,
                           fontSize: 12,
                           fontFamily: 'PoppinsBold'
                         ),
@@ -253,6 +275,6 @@ class _LoginViewState extends State<LoginView> {
           ),
         ),
       ),
-    ));
+    );
   }
 }

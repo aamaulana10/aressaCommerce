@@ -3,78 +3,91 @@
     {
       "id": "1",
       "image": "lib/asset/image/home/shirt.png",
+      "thumbnail" : "lib/asset/image/home/manShirtNew.png",
       "name": "Man Shirt",
       "category": "Man"
     },
     {
       "id": "2",
       "image": "lib/asset/image/home/manBag.png",
+      "thumbnail" : "lib/asset/image/home/manWorkEqNew.png",
       "name": "Man Work Equipment",
       "category": "Man"
     },
     {
       "id": "3",
       "image": "lib/asset/image/home/tshirt.png",
+      "thumbnail" : "lib/asset/image/home/manShirtNew.png",
       "name": "Man T-Shirt",
       "category": "Man"
     },
     {
       "id": "4",
       "image": "lib/asset/image/home/manShoes.png",
+      "thumbnail" : "lib/asset/image/home/manShoesNew.png",
       "name": "Man Shoes",
       "category": "Man"
     },
     {
       "id": "5",
       "image": "lib/asset/image/home/manPants.png",
+      "thumbnail" : "lib/asset/image/home/manShirtNew.png",
       "name": "Man Pants",
       "category": "Man"
     },
     {
       "id": "6",
       "image": "lib/asset/image/home/manUnderwear.png",
+      "thumbnail" : "lib/asset/image/home/manShirtNew.png",
       "name": "Man Underwear",
       "category": "Man"
     },
     {
       "id": "7",
       "image": "lib/asset/image/home/dress.png",
+      "thumbnail" : "lib/asset/image/home/DressNew.png",
       "name": "Dress",
       "category": "Woman"
     },
     {
       "id": "8",
       "image": "lib/asset/image/home/womanTshirt.png",
+      "thumbnail" : "lib/asset/image/home/manShirtNew.png",
       "name": "Woman T-Shirt",
       "category": "Woman"
     },
     {
       "id": "9",
       "image": "lib/asset/image/home/womanPants.png",
+      "thumbnail" : "lib/asset/image/home/manShirtNew.png",
       "name": "Woman Pants",
       "category": "Woman"
     },
     {
       "id": "10",
       "image": "lib/asset/image/home/skirt.png",
+      "thumbnail" : "lib/asset/image/home/manShirtNew.png",
       "name": "Skirt",
       "category": "Woman"
     },
     {
       "id": "11",
       "image": "lib/asset/image/home/womanBag.png",
+      "thumbnail" : "lib/asset/image/home/womanBagNew.png",
       "name": "Woman Bag",
       "category": "Woman"
     },
     {
       "id": "12",
       "image": "lib/asset/image/home/womanShoes.png",
+      "thumbnail" : "lib/asset/image/home/womanShoesNew.png",
       "name": "High Heels",
       "category": "Woman"
     },
     {
       "id": "13",
       "image": "lib/asset/image/home/bikini.png",
+      "thumbnail" : "lib/asset/image/home/manShirtNew.png",
       "name": "Bikini",
       "category": "Woman"
     }

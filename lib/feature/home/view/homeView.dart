@@ -69,11 +69,12 @@ class _HomeViewState extends State<HomeView> {
 
   Widget header() {
     return Container(
-      height: 80,
+      height: 70,
+      margin: EdgeInsets.only(top: 16),
       child: Column(
         children: [
-          Expanded(
-            child: Container(
+          Container(
+              height: 50,
               margin: EdgeInsets.only(left: 16, right: 16),
               child: Row(
                 children: [
@@ -100,29 +101,14 @@ class _HomeViewState extends State<HomeView> {
                   ),
                   Container(
                     height: 40,
-                    width: 40,
                     decoration:
                         BoxDecoration(borderRadius: BorderRadius.circular(20)),
-                    child: InkWell(
-                        borderRadius: BorderRadius.circular(20),
-                        onTap: () => {gotoFavoriteProduct()},
-                        child: Padding(
-                          padding: EdgeInsets.all(8),
-                          child: Image(
-                            image: AssetImage("lib/asset/image/home/love.png"),
-                          ),
-                        )),
-                  ),
-                  Container(
-                    height: 40,
-                    width: 40,
-                    decoration:
-                        BoxDecoration(borderRadius: BorderRadius.circular(20)),
+                    margin: EdgeInsets.only(left: 8),
                     child: InkWell(
                         borderRadius: BorderRadius.circular(20),
                         onTap: () => {this.gotoNotification()},
                         child: Padding(
-                          padding: EdgeInsets.all(8),
+                          padding: EdgeInsets.all(10),
                           child: Image(
                             image: AssetImage(
                                 "lib/asset/image/home/notification.png"),
@@ -131,7 +117,6 @@ class _HomeViewState extends State<HomeView> {
                   ),
                   Container(
                     height: 40,
-                    width: 40,
                     decoration:
                         BoxDecoration(borderRadius: BorderRadius.circular(20)),
                     child: InkWell(
@@ -139,18 +124,28 @@ class _HomeViewState extends State<HomeView> {
                         onTap: () => {print("more")},
                         child: Padding(
                           padding: EdgeInsets.all(8),
-                          child: Image(
-                            image: AssetImage("lib/asset/image/home/more.png"),
-                          ),
+                          child: Row(
+                            children: [
+                              Text("ID", style: TextStyle(
+                                  color: ColorConfig.textColor1,
+                                  fontSize: 12,
+                                  fontFamily: 'PoppinsBold')),
+                              Icon(Icons.arrow_drop_down, color: ColorConfig.textColor1,)
+                            ],
+                          )
                         )),
                   ),
                 ],
               ),
-            ),
           ),
-          Container(
-            height: 1,
-            color: ColorConfig.borderColor,
+          Expanded(
+            child: Container(
+              decoration: BoxDecoration(
+                border: Border(
+                  bottom: BorderSide(width: 1, color: ColorConfig.borderColor,)
+                )
+              ),
+            ),
           )
         ],
       ),
@@ -327,11 +322,10 @@ class _HomeViewState extends State<HomeView> {
       builder: (context, AsyncSnapshot<List<CategoryData>> snapshoot) {
         if (snapshoot.hasData) {
           return Container(
-            height: 170,
+            height: 260,
             child: Column(
               children: [
-                Expanded(
-                  child: Container(
+                Container(
                     margin: EdgeInsets.only(left: 20, right: 4),
                     child: Row(
                       children: [
@@ -351,50 +345,48 @@ class _HomeViewState extends State<HomeView> {
                                     color: ColorConfig.bluePrimary)))
                       ],
                     ),
-                  ),
                 ),
-                Container(
-                  height: 140,
-                  child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: 8,
-                    padding: EdgeInsets.only(left: 8, right: 8),
-                    itemBuilder: (ctx, idx) {
+                Expanded(
+                  child: Container(
+                    child: GridView.builder(
+                      itemCount: 6,
+                      padding: EdgeInsets.only(left: 8, right: 8),
+                      primary: false,
+                      physics: new NeverScrollableScrollPhysics(),
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 3, childAspectRatio: 1.2),
+                      itemBuilder: (ctx, idx) {
 
-                      var data = snapshoot.data[idx];
+                        var data = snapshoot.data[idx];
 
-                      return Container(
-                        width: 70,
-                        margin: EdgeInsets.all(8),
-                        child: Column(
-                          children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                  border: Border.all(
-                                      color: ColorConfig.borderColor, width: 1),
-                                  shape: BoxShape.circle),
-                              height: 70,
-                              width: 70,
-                              child: Padding(
-                                child: Image(image: AssetImage(data.image)),
-                                padding: EdgeInsets.all(20),
+                        return Container(
+                          margin: EdgeInsets.only(left: 8, right: 8, bottom: 4),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Container(
+                                  child: Image(image: AssetImage(data.thumbnail),
+                                    fit: BoxFit.fill,
+                                  ),
+                                  height: 60,
+
                               ),
-                            ),
-                            Expanded(
-                              child: Container(
-                                child: Text(data.name,
-                                    style: TextStyle(
-                                        fontSize: 10,
-                                        fontFamily: 'PoppinsRegular'),
-                                textAlign: TextAlign.center
-                                ),
-                                padding: EdgeInsets.only(top: 10),
-                              ),
-                            )
-                          ],
-                        ),
-                      );
-                    },
+                              Container(
+                                  child: Text(data.name,
+                                      style: TextStyle(
+                                          fontSize: 10,
+                                          fontFamily: 'PoppinsRegular'),
+                                  textAlign: TextAlign.center,
+                                    maxLines: 2,
+                                  ),
+                                  padding: EdgeInsets.only(top: 10),
+
+                              )
+                            ],
+                          ),
+                        );
+                      },
+                    ),
                   ),
                 ),
               ],
@@ -415,13 +407,13 @@ class _HomeViewState extends State<HomeView> {
       builder: (context, AsyncSnapshot<List<ProductData>> snapshoot) {
         if (snapshoot.hasData) {
           return Container(
-            height: 260,
+            height: 280,
             margin: EdgeInsets.only(top: 16),
             child: Column(
               children: [
                 Expanded(
                   child: Container(
-                    margin: EdgeInsets.only(left: 20, right: 4),
+                    margin: EdgeInsets.only(left: 20, right: 4, bottom: 8),
                     child: Row(
                       children: [
                         Expanded(
@@ -445,7 +437,7 @@ class _HomeViewState extends State<HomeView> {
                   height: 245,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
-                    itemCount: 10,
+                    itemCount: 4,
                     padding: EdgeInsets.only(left: 8, right: 8),
                     itemBuilder: (ctx, idx) {
 

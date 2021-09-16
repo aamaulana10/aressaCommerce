@@ -24,6 +24,7 @@ class CategoryModel {
 class CategoryData {
   String id;
   String image;
+  String thumbnail;
   String name;
   String category;
 
@@ -32,6 +33,7 @@ class CategoryData {
   CategoryData.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     image = json['image'];
+    thumbnail = json['thumbnail'];
     name = json['name'];
     category = json['category'];
   }
@@ -40,6 +42,7 @@ class CategoryData {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['id'] = this.id;
     data['image'] = this.image;
+    data['thumbnail'] = this.thumbnail;
     data['name'] = this.name;
     data['category'] = this.category;
     return data;

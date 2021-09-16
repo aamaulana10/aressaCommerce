@@ -43,6 +43,12 @@ flutter:
     - lib/asset/image/home/womanPants.png
     - lib/asset/image/home/womanShoes.png
     - lib/asset/image/home/womanTshirt.png
+    - lib/asset/image/home/DressNew.png
+    - lib/asset/image/home/manShirtNew.png
+    - lib/asset/image/home/manShoesNew.png
+    - lib/asset/image/home/manWorkEqNew.png
+    - lib/asset/image/home/womanBagNew.png
+    - lib/asset/image/home/womanShoesNew.png
     - lib/asset/image/home/PromotionImage2.png
     - lib/asset/image/home/more.png
     - lib/asset/image/home/Search.png
