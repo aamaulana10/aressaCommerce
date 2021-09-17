@@ -50,5 +50,21 @@
   "Shipping": "Nakliye masrafları",
   "importCharges": "ithalat maliyeti",
   "totalPrice": "Toplam fiyat",
-  "checkout": "Kontrol"
+  "checkout": "Kontrol",
+  "phoneNumber" : "Telefon numarası",
+  "save" : "kaydetmek",
+  "newPassword" : "Yeni Şifre",
+  "oldPassword" : "eski şifre",
+  "newPasswordAgain" : "Yeni şifreyi onayla",
+  "birthday" : "Doğum günü",
+  "yourBirthday" : "Doğum günün",
+  "addCard" : "Kart ekle",
+  "creditCard" : "Kredi kartı",
+  "cardHolder" : "Kart sahibi",
+  "cardSave" : "Kartı Kaydet",
+  "cardNumber" : "Kart numarası",
+  "inputCardNumber" : "Kart Numarasını Girin",
+  "expirationDate" : "Son kullanma tarihi",
+  "sequrityCode" : "Güvenlik Kodu",
+  "inputCode" : "Kodu girin"
 }

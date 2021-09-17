@@ -5,6 +5,7 @@ import 'package:aressa_commerce/feature/offer/view/offerView.dart';
 import 'package:aressa_commerce/feature/search/view/searchView.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class MainTabbar extends StatefulWidget {
   const MainTabbar({Key key}) : super(key: key);

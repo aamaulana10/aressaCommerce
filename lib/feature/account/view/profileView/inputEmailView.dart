@@ -99,6 +99,7 @@ class _InputEmailViewState extends State<InputEmailView> {
 
   Widget addAddressButton() {
     return Container(
+      margin: EdgeInsets.only(top: 16),
       child: Material(
         color: Colors.transparent,
         shadowColor: ColorConfig.bluePrimary,
@@ -112,8 +113,8 @@ class _InputEmailViewState extends State<InputEmailView> {
             height: 57,
             minWidth: MediaQuery.of(context).size.width,
             onPressed: ()=> {},
-            child: Text(
-              "Add Address",
+              child: Text(
+              "Sign in",
               style: TextStyle(
                 fontSize: 14,
                 color: Colors.white,
@@ -130,7 +131,6 @@ class _InputEmailViewState extends State<InputEmailView> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-            padding: EdgeInsets.only(top: 32),
             child: Stack(
               children: [
                 Positioned(

@@ -50,5 +50,21 @@
   "Shipping": "Biaya Pengiriman",
   "importCharges": "Biaya Impor",
   "totalPrice": "Total Harga",
-  "checkout": "Periksa"
+  "checkout": "Periksa",
+  "phoneNumber" : "Nomor Telepon",
+  "save" : "Simpan",
+  "newPassword" : "Kata Sandi Baru",
+  "oldPassword" : "Kata Sandi Lama",
+  "newPasswordAgain" : "Konfirmasi Kata Sandi Baru",
+  "birthday" : "Hari Lahir",
+  "yourBirthday" : "Hari Lahir Kamu",
+  "addCard" : "Tambah Kartu",
+  "creditCard" : "Kartu Kredit",
+  "cardHolder" : "Pemegang Kartu",
+  "cardSave" : "Simpan Kartu",
+  "cardNumber" : "Nomor Kartu",
+  "inputCardNumber" : "Masukan Nomor Kartu",
+  "expirationDate" : "Tanggal Kedaluwarsa",
+  "sequrityCode" : "kode Keamanan",
+  "inputCode" : "Masukan Kode"
 }

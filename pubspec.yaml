@@ -49,6 +49,7 @@ flutter:
     - lib/asset/image/home/skirt.png
     - lib/asset/image/home/skirtNew.png
     - lib/asset/image/home/tshirt.png
+    - lib/asset/image/home/manTshirtNew.png
     - lib/asset/image/home/womanBag.png
     - lib/asset/image/home/womanBagNew.png
     - lib/asset/image/home/womanPants.png
@@ -56,6 +57,7 @@ flutter:
     - lib/asset/image/home/womanShoes.png
     - lib/asset/image/home/womanShoesNew.png
     - lib/asset/image/home/womanTshirt.png
+    - lib/asset/image/home/womanTshirtNew.png
     - lib/asset/image/home/PromotionImage2.png
     - lib/asset/image/home/more.png
     - lib/asset/image/home/Search.png
