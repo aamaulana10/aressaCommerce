@@ -99,34 +99,31 @@ class _InputEmailViewState extends State<InputEmailView> {
 
   Widget saveButton() {
     return Container(
-      margin: EdgeInsets.only(left: 16, right: 16),
-      child: Stack(
-        children: [
-          Positioned(
-            bottom: 16,
-              left: 16,
-              right: 16,
-              child: InkWell(
-                onTap: () => {},
-                child: Container(
-                  height: 57,
-                  decoration: BoxDecoration(
-                    color: ColorConfig.bluePrimary,
-                    borderRadius: BorderRadius.circular(8)
-                  ),
-                  child: Center(
-                    child: Text("Save",
-                    style: TextStyle(
-                      color: ColorConfig.colorWhite,
-                      fontSize: 14,
-                      fontFamily: 'PoppinsBold',
-                    ),
-                    ),
-                  ),
+      margin: EdgeInsets.only(top: 16),
+      child: Material(
+        color: Colors.transparent,
+        shadowColor: ColorConfig.bluePrimary,
+        elevation: 8,
+        child: Container(
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+              color: ColorConfig.bluePrimary,
+              borderRadius: BorderRadius.circular(5)),
+          child: FlatButton(
+            height: 57,
+            minWidth: MediaQuery.of(context).size.width,
+            onPressed: ()=> {print("save")},
+            child: Text(
+              "Sign in",
+              style: TextStyle(
+                fontSize: 14,
+                color: Colors.white,
+                fontFamily: 'PoppinsBold',
+              ),
+            ),
           ),
-              ))
-        ],
-      )
+        ),
+      ),
     );
   }
 
@@ -135,13 +132,28 @@ class _InputEmailViewState extends State<InputEmailView> {
     return Scaffold(
         body: Container(
           padding: EdgeInsets.only(top: 32),
-          child: Column(
-              children: [
-                appBar(),
-                content(),
-                Expanded(child: saveButton())
-              ],
-            ),
+          child: Stack(
+            children: [
+              Positioned(
+                top: 0,
+                right: 0,
+                left: 0,
+                bottom: 80,
+                child: Column(
+                  children: [
+                    appBar(),
+                    content()
+                  ],
+                ),
+              ),
+              Positioned(
+                bottom: 16,
+                left: 16,
+                right: 16,
+                child: saveButton(),
+              )
+            ],
+          )
         ));
   }
 }

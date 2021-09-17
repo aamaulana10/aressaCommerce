@@ -50,5 +50,21 @@
   "Shipping": "Shipping",
   "importCharges": "Import Charges",
   "totalPrice": "Total Price",
-  "checkout": "Checkout"
+  "checkout": "Checkout",
+  "phoneNumber" : "Phone Number",
+  "save" : "Save",
+  "newPassword" : "New Password",
+  "oldPassword" : "Old Password",
+  "newPasswordAgain" : "New Password Again",
+  "birthday" : "Birthday",
+  "yourBirthday" : "Your Birthday",
+  "addCard" : "Add Card",
+  "creditCard" : "Credit Card",
+  "cardHolder" : "Card Holder",
+  "cardSave" : "Card Save",
+  "cardNumber" : "Card Number",
+  "inputCardNumber" : "Input Card Number",
+  "expirationDate" : "Expiration Date",
+  "sequrityCode" : "Sequrity Code",
+  "inputCode" : "Input Code"
 }

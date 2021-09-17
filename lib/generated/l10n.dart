@@ -554,6 +554,166 @@ class S {
       args: [],
     );
   }
+
+  /// `Phone Number`
+  String get phoneNumber {
+    return Intl.message(
+      'Phone Number',
+      name: 'phoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save`
+  String get save {
+    return Intl.message(
+      'Save',
+      name: 'save',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New Password`
+  String get newPassword {
+    return Intl.message(
+      'New Password',
+      name: 'newPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Old Password`
+  String get oldPassword {
+    return Intl.message(
+      'Old Password',
+      name: 'oldPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New Password Again`
+  String get newPasswordAgain {
+    return Intl.message(
+      'New Password Again',
+      name: 'newPasswordAgain',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Birthday`
+  String get birthday {
+    return Intl.message(
+      'Birthday',
+      name: 'birthday',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your Birthday`
+  String get yourBirthday {
+    return Intl.message(
+      'Your Birthday',
+      name: 'yourBirthday',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add Card`
+  String get addCard {
+    return Intl.message(
+      'Add Card',
+      name: 'addCard',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Credit Card`
+  String get creditCard {
+    return Intl.message(
+      'Credit Card',
+      name: 'creditCard',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Card Holder`
+  String get cardHolder {
+    return Intl.message(
+      'Card Holder',
+      name: 'cardHolder',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Card Save`
+  String get cardSave {
+    return Intl.message(
+      'Card Save',
+      name: 'cardSave',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Card Number`
+  String get cardNumber {
+    return Intl.message(
+      'Card Number',
+      name: 'cardNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Input Card Number`
+  String get inputCardNumber {
+    return Intl.message(
+      'Input Card Number',
+      name: 'inputCardNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Expiration Date`
+  String get expirationDate {
+    return Intl.message(
+      'Expiration Date',
+      name: 'expirationDate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sequrity Code`
+  String get sequrityCode {
+    return Intl.message(
+      'Sequrity Code',
+      name: 'sequrityCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Input Code`
+  String get inputCode {
+    return Intl.message(
+      'Input Code',
+      name: 'inputCode',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

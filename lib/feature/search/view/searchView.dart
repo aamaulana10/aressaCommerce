@@ -4,6 +4,7 @@ import 'package:aressa_commerce/core/domain/model/productModel.dart';
 import 'package:aressa_commerce/feature/category/view/allCategoryView.dart';
 import 'package:aressa_commerce/feature/detailProduct/view/detailProductView.dart';
 import 'package:aressa_commerce/feature/mainTabbar.dart';
+import 'package:aressa_commerce/feature/search/view/searchResultView.dart';
 import 'package:aressa_commerce/generated/l10n.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/material.dart';
@@ -27,12 +28,10 @@ class _SearchViewState extends State<SearchView> {
       setState(() {
         isSearch = true;
         searchData = e;
-        isShowList = true;
       });
     } else {
       setState(() {
         isSearch = false;
-        isShowList = false;
       });
     }
   }
@@ -44,6 +43,10 @@ class _SearchViewState extends State<SearchView> {
         isShowList = true;
         searchData = e;
       });
+
+      Navigator.of(context).push(MaterialPageRoute(builder: (context) => SearchResultView(
+        searchData: searchData,
+      )));
     }
   }
 
@@ -351,206 +354,6 @@ class _SearchViewState extends State<SearchView> {
     );
   }
 
-  Widget productResultWidget() {
-    return StreamBuilder(
-      stream: Repository().getAllProduct().asStream(),
-      builder: (context, AsyncSnapshot<List<ProductData>> snapshoot) {
-        if (snapshoot.hasData) {
-          var filteredData = snapshoot.data
-              .where((element) =>
-                  element.name
-                      .toLowerCase()
-                      .contains(searchData.toLowerCase()) &&
-                  element.category == currentCategory)
-              .toList();
-
-          return Container(
-            margin: EdgeInsets.only(top: 8),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 16, right: 16),
-                  child: Row(
-                    children: [
-                      Expanded(
-                          child: Text(
-                        filteredData.length.toString(),
-                        textAlign: TextAlign.left,
-                        style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 12,
-                            fontFamily: 'PoppinsRegular'),
-                      )),
-                      FlatButton(
-                          onPressed: () => {gotoAllCategory()},
-                          child: Row(
-                            children: [
-                              Text(
-                                currentCategory,
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 12,
-                                    fontFamily: 'PoppinsBold'),
-                              ),
-                              Icon(Icons.arrow_drop_down)
-                            ],
-                          ))
-                    ],
-                  ),
-                ),
-                Expanded(
-                  child: filteredData.length == 0
-                      ? Container(
-                    width: MediaQuery.of(context).size.width,
-                    margin: EdgeInsets.only(left: 16, right: 16),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Image(
-                                height: 120,
-                                width: 120,
-                                image: AssetImage("lib/asset/image/home/notFound.png")
-                              ),
-                              Text("Product not found", style: TextStyle(
-                                color: ColorConfig.textColorBold1,
-                                fontFamily: "PoppinsBold",
-                                fontSize: 24
-                              )),
-                              Text("Thank you for shopping with us", style: TextStyle(
-                                  color: ColorConfig.textColor1,
-                                  fontFamily: "PoppinsRegular",
-                                  fontSize: 12
-                              )),
-                              
-                              Container(
-                                margin: EdgeInsets.only(top: 16),
-                                width: 300,
-                                decoration: BoxDecoration(
-                                  color: ColorConfig.bluePrimary,
-                                  borderRadius: BorderRadius.circular(5)
-                                ),
-                                child: FlatButton(
-                                    onPressed: () => {backToHome()},
-                                    child: Text("Back to Home", style: TextStyle(
-                                        color: Colors.white,
-                                        fontFamily: "PoppinsBold",
-                                        fontSize: 14
-                                    ))
-                                ),
-                              )
-                            ],
-                          ),
-                        )
-                      : GridView.builder(
-                          shrinkWrap: true,
-                          padding: EdgeInsets.all(0),
-                          gridDelegate:
-                              SliverGridDelegateWithFixedCrossAxisCount(
-                                  crossAxisCount: 2, childAspectRatio: 0.65),
-                          itemCount: filteredData.length,
-                          itemBuilder: (item, index) {
-                            var data = filteredData[index];
-
-                            return Container(
-                              height: 400,
-                              margin: EdgeInsets.all(8),
-                              padding: EdgeInsets.all(8),
-                              decoration: BoxDecoration(
-                                  border: Border.all(
-                                      color: ColorConfig.borderColor, width: 1),
-                                  borderRadius: BorderRadius.circular(8)),
-                              child: InkWell(
-                                onTap: () => {gotoDetailProduct(data)},
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Expanded(
-                                      child: Container(
-                                        child: ClipRRect(
-                                          borderRadius: BorderRadius.circular(5),
-                                          child: Image(
-                                            image:
-                                                AssetImage(data.image.thumbnail),
-                                            fit: BoxFit.fill,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Container(
-                                      child: Text(data.name,
-                                          maxLines: 2,
-                                          style: TextStyle(
-                                            fontSize: 12,
-                                            color: ColorConfig.textColorBold1,
-                                            fontFamily: 'PoppinsBold',
-                                          )),
-                                      padding: EdgeInsets.only(top: 10),
-                                    ),
-                                    Container(
-                                      child: RatingBarIndicator(
-                                        rating: data.rate,
-                                        itemBuilder: (context, index) => Icon(
-                                          Icons.star,
-                                          color: Colors.amber,
-                                        ),
-                                        itemCount: 5,
-                                        itemSize: 24.0,
-                                        unratedColor: ColorConfig.borderColor,
-                                      ),
-                                      padding: EdgeInsets.only(top: 10),
-                                    ),
-                                    Container(
-                                      margin: EdgeInsets.only(top: 8),
-                                      child: Text(data.price.special,
-                                          style: TextStyle(
-                                            fontSize: 12,
-                                            color: ColorConfig.bluePrimary,
-                                            fontFamily: 'PoppinsBold',
-                                          )),
-                                      padding: EdgeInsets.only(top: 10),
-                                    ),
-                                    Container(
-                                      child: Row(
-                                        children: [
-                                          Text(data.price.normal,
-                                              style: TextStyle(
-                                                  fontSize: 10,
-                                                  fontFamily: 'PoppinsRegular',
-                                                  decoration: TextDecoration
-                                                      .lineThrough)),
-                                          Padding(
-                                            padding: EdgeInsets.only(left: 8),
-                                            child: Text("24% off",
-                                                style: TextStyle(
-                                                    fontSize: 10,
-                                                    fontFamily: 'PoppinsBold',
-                                                    color: Color(0XFFFB7181))),
-                                          ),
-                                        ],
-                                      ),
-                                      padding: EdgeInsets.only(top: 10),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            );
-                          }),
-                ),
-              ],
-            ),
-          );
-        } else if (snapshoot.hasError) {
-          return Text(snapshoot.error.toString());
-        } else {
-          return Container();
-        }
-      },
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -559,13 +362,9 @@ class _SearchViewState extends State<SearchView> {
         child: Column(
           children: [
             header(),
-            isSearch == false
-                ? Expanded(
+            Expanded(
                     child: SingleChildScrollView(child: categoriesWidget()),
                   )
-                : isShowList
-                    ? Expanded(child: productResultWidget())
-                    : Container()
           ],
         ),
       ),

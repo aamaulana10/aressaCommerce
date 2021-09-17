@@ -17,7 +17,7 @@
     {
       "id": "3",
       "image": "lib/asset/image/home/tshirt.png",
-      "thumbnail" : "lib/asset/image/home/manShirtNew.png",
+      "thumbnail" : "lib/asset/image/home/manTshirtNew.png",
       "name": "Man T-Shirt",
       "category": "Man"
     },

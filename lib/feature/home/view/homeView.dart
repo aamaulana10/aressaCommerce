@@ -13,6 +13,7 @@ import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:aressa_commerce/util/view/indicatorView.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class HomeView extends StatefulWidget {
@@ -548,7 +549,7 @@ class _HomeViewState extends State<HomeView> {
                                       fontSize: 10,
                                       fontFamily: 'PoppinsRegular'),
                                   textAlign: TextAlign.center,
-                                  maxLines: 2,
+                                  maxLines: 1,
                                 ),
                                 padding: EdgeInsets.only(top: 10),
                               )
@@ -1056,8 +1057,16 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        toolbarHeight: 0,
+        backwardsCompatibility: false,
+        systemOverlayStyle: SystemUiOverlayStyle(
+            statusBarColor: ColorConfig.bluePrimary,
+            statusBarIconBrightness: Brightness.light
+        ),
+        elevation: 0,
+      ),
       body: Container(
-        padding: EdgeInsets.only(top: 32),
         child: Column(
           children: [
             header(),
