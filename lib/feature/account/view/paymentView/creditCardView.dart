@@ -235,36 +235,32 @@ class _CreditCardViewState extends State<CreditCardView> {
     );
   }
 
-  Widget addCardButton() {
+  Widget addAddressButton() {
     return Container(
-        margin: EdgeInsets.only(left: 16, right: 16),
-        child: Stack(
-          children: [
-            Positioned(
-                bottom: 16,
-                left: 16,
-                right: 16,
-                child: InkWell(
-                  onTap: () => {this.gotoAddCardView()},
-                  child: Container(
-                    height: 57,
-                    decoration: BoxDecoration(
-                        color: ColorConfig.bluePrimary,
-                        borderRadius: BorderRadius.circular(8)
-                    ),
-                    child: Center(
-                      child: Text("Add Card",
-                        style: TextStyle(
-                          color: ColorConfig.colorWhite,
-                          fontSize: 14,
-                          fontFamily: 'PoppinsBold',
-                        ),
-                      ),
-                    ),
-                  ),
-                ))
-          ],
-        )
+      child: Material(
+        color: Colors.transparent,
+        shadowColor: ColorConfig.bluePrimary,
+        elevation: 8,
+        child: Container(
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+              color: ColorConfig.bluePrimary,
+              borderRadius: BorderRadius.circular(5)),
+          child: FlatButton(
+            height: 57,
+            minWidth: MediaQuery.of(context).size.width,
+            onPressed: ()=> {this.gotoAddCardView()},
+            child: Text(
+              "Add Address",
+              style: TextStyle(
+                fontSize: 14,
+                color: Colors.white,
+                fontFamily: 'PoppinsBold',
+              ),
+            ),
+          ),
+        ),
+      ),
     );
   }
 
@@ -272,14 +268,29 @@ class _CreditCardViewState extends State<CreditCardView> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-          padding: EdgeInsets.only(top: 32),
-          child: Column(
+            padding: EdgeInsets.only(top: 32),
+            child: Stack(
               children: [
-                appBar(),
-                content(),
-                Expanded(child: addCardButton())
+                Positioned(
+                  top: 0,
+                  right: 0,
+                  left: 0,
+                  bottom: 80,
+                  child: Column(
+                    children: [
+                      appBar(),
+                      content()
+                    ],
+                  ),
+                ),
+                Positioned(
+                  bottom: 16,
+                  left: 16,
+                  right: 16,
+                  child: addAddressButton(),
+                )
               ],
-            ),
+            )
         ));
   }
 }

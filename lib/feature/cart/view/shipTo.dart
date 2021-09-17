@@ -1,4 +1,5 @@
 import 'package:aressa_commerce/feature/account/view/paymentView/paymentView.dart';
+import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -18,9 +19,9 @@ class _ShipToState extends State<ShipTo> {
   }
 
   Widget appBar() {
+
     return Container(
-        height: 60,
-        margin: EdgeInsets.only(top: 16),
+        height: 80,
         child: Column(
           children: [
             Expanded(
@@ -34,9 +35,8 @@ class _ShipToState extends State<ShipTo> {
                       iconSize: 32,
                     ),
                     Expanded(
-                      child: Text("Ship To", style: TextStyle(
+                      child: Text("Add Card", style: TextStyle(
                         fontSize: 16,
-                        color: Colors.black,
                         fontFamily: 'PoppinsBold',
                       )),
                     ),
@@ -44,7 +44,7 @@ class _ShipToState extends State<ShipTo> {
                       onPressed: () => {},
                       icon: Icon(Icons.add),
                       iconSize: 24,
-                      color: Colors.lightBlue,
+                      color: ColorConfig.bluePrimary,
                     ),
                   ],
                 ),
@@ -52,8 +52,8 @@ class _ShipToState extends State<ShipTo> {
             ),
             Container(
               height: 1,
-              color: Colors.grey,
-            ),
+              color: ColorConfig.borderColor,
+            )
           ],
         )
     );
@@ -69,16 +69,16 @@ class _ShipToState extends State<ShipTo> {
             padding: EdgeInsets.all(24),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                color: Colors.transparent,
+                color: ColorConfig.colorTransparent,
                 border: Border.all(
-                  color: Colors.grey,
+                  color: ColorConfig.borderColor,
                 )),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text("PrisceKilla",
                   style: TextStyle(
-                    color: Colors.black,
+                    color: ColorConfig.colorBlack,
                     fontSize: 14,
                     fontFamily: 'PoppinsBold'
                   )),
@@ -87,7 +87,7 @@ class _ShipToState extends State<ShipTo> {
                   child: Text("3711 Spring Hill Rd undefined Tallahassee, Nevada 52874 United States",
                   maxLines: 3,
                     style: TextStyle(
-                    color: Colors.grey,
+                    color: ColorConfig.colorGrey,
                     fontSize: 12,
                     fontFamily: 'PoppinsRegular'
                   ),
@@ -97,7 +97,7 @@ class _ShipToState extends State<ShipTo> {
                   margin: EdgeInsets.only(top: 16),
                   child: Text("+99 234567890",
                     style: TextStyle(
-                        color: Colors.grey,
+                        color: ColorConfig.colorGrey,
                         fontSize: 12,
                         fontFamily: 'PoppinsRegular'
                     ),
@@ -112,12 +112,12 @@ class _ShipToState extends State<ShipTo> {
                         width: 77,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(5),
-                            color: Colors.lightBlue,
+                            color: ColorConfig.bluePrimary,
                             ),
                         child: Center(
                           child: Text("Edit",
                           style: TextStyle(
-                            color: Colors.white,
+                            color: ColorConfig.colorWhite,
                             fontSize: 14,
                             fontFamily: 'PoppinsBold'
                           ),
@@ -128,7 +128,7 @@ class _ShipToState extends State<ShipTo> {
                         margin: EdgeInsets.only(left: 24),
                         child: Icon(Icons.delete_outline,
                         size: 32,
-                          color: Colors.grey,
+                          color: ColorConfig.colorGrey,
                         ),
                       )
                     ],
@@ -143,16 +143,16 @@ class _ShipToState extends State<ShipTo> {
             padding: EdgeInsets.all(24),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                color: Colors.transparent,
+                color: ColorConfig.colorTransparent,
                 border: Border.all(
-                  color: Colors.grey,
+                  color: ColorConfig.borderColor,
                 )),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text("Ahmad Khaidir",
                     style: TextStyle(
-                        color: Colors.black,
+                        color: ColorConfig.colorBlack,
                         fontSize: 14,
                         fontFamily: 'PoppinsBold'
                     )),
@@ -161,7 +161,7 @@ class _ShipToState extends State<ShipTo> {
                   child: Text("3711 Spring Hill Rd undefined Tallahassee, Nevada 52874 United States",
                     maxLines: 3,
                     style: TextStyle(
-                        color: Colors.grey,
+                        color: ColorConfig.colorGrey,
                         fontSize: 12,
                         fontFamily: 'PoppinsRegular'
                     ),
@@ -171,7 +171,7 @@ class _ShipToState extends State<ShipTo> {
                   margin: EdgeInsets.only(top: 16),
                   child: Text("+99 234567890",
                     style: TextStyle(
-                        color: Colors.grey,
+                        color: ColorConfig.colorGrey,
                         fontSize: 12,
                         fontFamily: 'PoppinsRegular'
                     ),
@@ -186,12 +186,12 @@ class _ShipToState extends State<ShipTo> {
                         width: 77,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
-                          color: Colors.lightBlue,
+                          color: ColorConfig.bluePrimary,
                         ),
                         child: Center(
                           child: Text("Edit",
                             style: TextStyle(
-                                color: Colors.white,
+                                color: ColorConfig.colorWhite,
                                 fontSize: 14,
                                 fontFamily: 'PoppinsBold'
                             ),
@@ -202,7 +202,7 @@ class _ShipToState extends State<ShipTo> {
                         margin: EdgeInsets.only(left: 24),
                         child: Icon(Icons.delete_outline,
                           size: 32,
-                          color: Colors.grey,
+                          color: ColorConfig.colorGrey,
                         ),
                       )
                     ],
@@ -216,25 +216,30 @@ class _ShipToState extends State<ShipTo> {
     );
   }
 
-  Widget saveButton() {
+  Widget addAddressButton() {
     return Container(
+      margin: EdgeInsets.all(16),
       child: Material(
-        color: Colors.transparent,
-        child: InkWell(
-          onTap: () => {gotoPayment()},
-          child: Container(
-            margin: EdgeInsets.all(16),
-            alignment: Alignment.center,
+        color: ColorConfig.colorTransparent,
+        shadowColor: ColorConfig.bluePrimary,
+        elevation: 8,
+        child: Container(
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+              color: ColorConfig.bluePrimary,
+              borderRadius: BorderRadius.circular(5)),
+          child: FlatButton(
             height: 57,
-            decoration: BoxDecoration(
-                color: Colors.lightBlue,
-                borderRadius: BorderRadius.circular(5)
+            minWidth: MediaQuery.of(context).size.width,
+            onPressed: ()=> {this.gotoPayment()},
+            child: Text(
+              "Add Address",
+              style: TextStyle(
+                fontSize: 14,
+                color: ColorConfig.colorWhite,
+                fontFamily: 'PoppinsBold',
+              ),
             ),
-            child: Text("Next", style: TextStyle(
-              fontSize: 14,
-              color: Colors.white,
-              fontFamily: 'PoppinsBold',
-            ),),
           ),
         ),
       ),
@@ -245,6 +250,7 @@ class _ShipToState extends State<ShipTo> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
+          padding: EdgeInsets.only(top: 32),
           child: Column(
             children: [
               Expanded(
@@ -257,7 +263,7 @@ class _ShipToState extends State<ShipTo> {
                   ),
                 ),
               ),
-              saveButton()
+              addAddressButton()
             ],
           ),
         ));

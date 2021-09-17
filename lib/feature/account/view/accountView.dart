@@ -1,4 +1,5 @@
 import 'package:aressa_commerce/feature/account/view/adddressView/addressView.dart';
+import 'package:aressa_commerce/feature/account/view/orderView/orderView.dart';
 import 'package:aressa_commerce/feature/account/view/paymentView/paymentView.dart';
 import 'package:aressa_commerce/feature/account/view/profileView/profileView.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
@@ -25,16 +26,20 @@ class _AccountViewState extends State<AccountView> {
     Navigator.of(context).push(MaterialPageRoute(builder: (context) => PaymentView()));
   }
 
+  void gotoOrderView() {
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => OrderView()));
+  }
+
   Widget appBar() {
 
     return Container(
-        height: 80,
+        height: 70,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
               child: Container(
-                padding: EdgeInsets.only(right: 16, left: 16, top: 32),
+                padding: EdgeInsets.only(right: 16, left: 16, top: 20),
                 child: Text("Account",
                     style: TextStyle(
                       fontSize: 16,
@@ -86,7 +91,7 @@ class _AccountViewState extends State<AccountView> {
           Container(
             height: 70,
             child: InkWell(
-              onTap: ()=> {print("order")},
+              onTap: ()=> {this.gotoOrderView()},
               child: Container(
                 child: Row(
                   children: [

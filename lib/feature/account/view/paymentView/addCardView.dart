@@ -232,48 +232,50 @@ class _AddCardViewState extends State<AddCardView> {
                     ],
                   ),
                 ),
-                Container(
-                  margin: EdgeInsets.only(left: 24),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        child: Text("Security Code",
-                            style: TextStyle(
-                                color: ColorConfig.colorBlack,
-                                fontSize: 14,
-                                fontFamily: 'PoppinsBold'
-                            )),
-                      ),
-                      Container(
-                        height: 48,
-                        width: 165,
-                        padding: EdgeInsets.only(left: 8),
-                        margin: EdgeInsets.only(top: 16),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5),
-                            color: ColorConfig.colorTransparent,
-                            border: Border.all(
-                              color: ColorConfig.borderColor,
-                            )
-                        ),
-                        child: TextFormField(
-                          onChanged: (e) {
-                            setState(() {
-                              securityCode = e;
-                            });
-                          },
-                          decoration: InputDecoration(
-                              labelText: "Input Code",
-                              labelStyle: TextStyle(
+                Expanded(
+                  child: Container(
+                    margin: EdgeInsets.only(left: 24),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          child: Text("Security Code",
+                              style: TextStyle(
+                                  color: ColorConfig.colorBlack,
                                   fontSize: 14,
-                                  color: ColorConfig.colorGrey,
-                                  fontFamily: 'Poppinsregular'
-                              ),
-                              border: InputBorder.none),
+                                  fontFamily: 'PoppinsBold'
+                              )),
                         ),
-                      ),
-                    ],
+                        Container(
+                          height: 48,
+                          width: 165,
+                          padding: EdgeInsets.only(left: 8),
+                          margin: EdgeInsets.only(top: 16),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              color: ColorConfig.colorTransparent,
+                              border: Border.all(
+                                color: ColorConfig.borderColor,
+                              )
+                          ),
+                          child: TextFormField(
+                            onChanged: (e) {
+                              setState(() {
+                                securityCode = e;
+                              });
+                            },
+                            decoration: InputDecoration(
+                                labelText: "Input Code",
+                                labelStyle: TextStyle(
+                                    fontSize: 14,
+                                    color: ColorConfig.colorGrey,
+                                    fontFamily: 'Poppinsregular'
+                                ),
+                                border: InputBorder.none),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
@@ -320,25 +322,30 @@ class _AddCardViewState extends State<AddCardView> {
     );
   }
 
-  Widget saveButton() {
+  Widget addAddressButton() {
     return Container(
+      margin: EdgeInsets.all(16),
       child: Material(
-        color: ColorConfig.colorTransparent,
-        child: InkWell(
-          onTap: () => {this.gotoHome()},
-          child: Container(
-            margin: EdgeInsets.all(16),
-            alignment: Alignment.center,
+        color: Colors.transparent,
+        shadowColor: ColorConfig.bluePrimary,
+        elevation: 8,
+        child: Container(
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+              color: ColorConfig.bluePrimary,
+              borderRadius: BorderRadius.circular(5)),
+          child: FlatButton(
             height: 57,
-            decoration: BoxDecoration(
-                color: ColorConfig.bluePrimary,
-                borderRadius: BorderRadius.circular(5)
+            minWidth: MediaQuery.of(context).size.width,
+            onPressed: ()=> {this.gotoHome()},
+            child: Text(
+              "Add Address",
+              style: TextStyle(
+                fontSize: 14,
+                color: Colors.white,
+                fontFamily: 'PoppinsBold',
+              ),
             ),
-            child: Text("Save", style: TextStyle(
-              fontSize: 14,
-              color: ColorConfig.colorWhite,
-              fontFamily: 'PoppinsBold',
-            ),),
           ),
         ),
       ),
@@ -362,7 +369,7 @@ class _AddCardViewState extends State<AddCardView> {
                   ),
                 ),
               ),
-              saveButton()
+              addAddressButton()
             ],
           ),
         ));

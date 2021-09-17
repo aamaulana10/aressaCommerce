@@ -40,19 +40,19 @@ class _LoginViewState extends State<LoginView> {
       ),
         body: Container(
           padding: EdgeInsets.only(left: 16, right: 16, top: 16),
-      child: SingleChildScrollView(
-        child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image(
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image(
                 image: AssetImage("lib/asset/image/home/logo.png"),
                 height: 72,
                 width: 72,
               ),
-              Container(
-                margin: EdgeInsets.only(top: 16),
-                child: Text(
+                Container(
+                  margin: EdgeInsets.only(top: 16),
+                  child: Text(
                   "Welcome to Flying",
                   style: TextStyle(
                       color: ColorConfig.textColorBold1,

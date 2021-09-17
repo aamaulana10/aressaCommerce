@@ -14,13 +14,13 @@ class _OfferViewState extends State<OfferView> {
   Widget appBar() {
 
     return Container(
-        height: 80,
+        height: 70,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
               child: Container(
-                padding: EdgeInsets.only(right: 16, left: 16, top: 32),
+                padding: EdgeInsets.only(right: 16, left: 16, top: 20),
                 child: Text("Offer",
                     style: TextStyle(
                       fontSize: 16,

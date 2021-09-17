@@ -1,3 +1,5 @@
+import 'package:aressa_commerce/feature/home/view/homeView.dart';
+import 'package:aressa_commerce/feature/mainTabbar.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +13,10 @@ class AddAddressView extends StatefulWidget {
 class _AddAddressViewState extends State<AddAddressView> {
 
   String dropDownValue = "Indonesia";
+
+  void gotoMainTabbar() {
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => MainTabbar()));
+  }
 
   Widget appBar() {
 
@@ -339,28 +345,34 @@ class _AddAddressViewState extends State<AddAddressView> {
     );
   }
 
-  Widget saveButton() {
+  Widget addAddressButton() {
     return Container(
-        margin: EdgeInsets.all(16),
-        child: InkWell(
-                  onTap: () => {},
-                  child: Container(
-                    height: 57,
-                    decoration: BoxDecoration(
-                        color: ColorConfig.bluePrimary,
-                        borderRadius: BorderRadius.circular(8)
-                    ),
-                    child: Center(
-                      child: Text("Add Address",
-                        style: TextStyle(
-                          color: ColorConfig.colorWhite,
-                          fontSize: 14,
-                          fontFamily: 'PoppinsBold',
-                        ),
-                      ),
-                    ),
-                  ),
-                ));
+      margin: EdgeInsets.all(16),
+      child: Material(
+        color: Colors.transparent,
+        shadowColor: ColorConfig.bluePrimary,
+        elevation: 8,
+        child: Container(
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+              color: ColorConfig.bluePrimary,
+              borderRadius: BorderRadius.circular(5)),
+          child: FlatButton(
+            height: 57,
+            minWidth: MediaQuery.of(context).size.width,
+            onPressed: ()=> {this.gotoMainTabbar()},
+            child: Text(
+              "Add Address",
+              style: TextStyle(
+                fontSize: 14,
+                color: Colors.white,
+                fontFamily: 'PoppinsBold',
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
   }
 
   @override
@@ -373,7 +385,7 @@ class _AddAddressViewState extends State<AddAddressView> {
               children: [
                 appBar(),
                 content(),
-                saveButton()
+                addAddressButton()
               ],
             ),
           ),

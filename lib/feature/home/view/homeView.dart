@@ -548,7 +548,7 @@ class _HomeViewState extends State<HomeView> {
                                       fontSize: 10,
                                       fontFamily: 'PoppinsRegular'),
                                   textAlign: TextAlign.center,
-                                  maxLines: 2,
+                                  maxLines: 1,
                                 ),
                                 padding: EdgeInsets.only(top: 10),
                               )

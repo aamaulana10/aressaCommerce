@@ -23,13 +23,13 @@ class _CartViewState extends State<CartView> {
   Widget appBar() {
 
     return Container(
-        height: 80,
+        height: 70,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
               child: Container(
-                padding: EdgeInsets.only(right: 16, left: 16, top: 32),
+                padding: EdgeInsets.only(right: 16, left: 16, top: 20),
                 child: Text("Your Cart",
                     style: TextStyle(
                         fontSize: 16,
@@ -457,25 +457,33 @@ class _CartViewState extends State<CartView> {
               ],
             ),
           ),
-          InkWell(
-            onTap: () => {this.gotoShipTo()},
-            child: Container(
-              margin: EdgeInsets.only(top: 16, bottom: 16),
-              height: 57,
-              decoration: BoxDecoration(
-                  color: ColorConfig.bluePrimary,
-                  borderRadius: BorderRadius.circular(5)
-              ),
-              child: Center(
-                child: Text("Check Out",
+          Container(
+            margin: EdgeInsets.only(top: 16,bottom: 16),
+            child: Material(
+              color: Colors.transparent,
+              shadowColor: ColorConfig.bluePrimary,
+              elevation: 8,
+              child: Container(
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                    color: ColorConfig.bluePrimary,
+                    borderRadius: BorderRadius.circular(5)),
+                child: FlatButton(
+                  height: 57,
+                  minWidth: MediaQuery.of(context).size.width,
+                  onPressed: ()=> {this.gotoShipTo()},
+                  child: Text(
+                    "Sign in",
                     style: TextStyle(
-                        color: ColorConfig.colorWhite,
-                        fontSize: 14,
-                        fontFamily: 'POppinsBold'
-                    )),
+                      fontSize: 14,
+                      color: Colors.white,
+                      fontFamily: 'PoppinsBold',
+                    ),
+                  ),
+                ),
               ),
             ),
-          )
+          ),
         ],
       ),
     );

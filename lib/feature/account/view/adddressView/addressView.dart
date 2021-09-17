@@ -209,23 +209,28 @@ class _AddressViewState extends State<AddressView> {
 
   Widget addAddressButton() {
     return Container(
+      margin: EdgeInsets.all(16),
       child: Material(
-        color: ColorConfig.colorTransparent,
-        child: InkWell(
-          onTap: () => {this.gotoAddAddress()},
-          child: Container(
-            margin: EdgeInsets.all(16),
-            alignment: Alignment.center,
+        color: Colors.transparent,
+        shadowColor: ColorConfig.bluePrimary,
+        elevation: 8,
+        child: Container(
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+              color: ColorConfig.bluePrimary,
+              borderRadius: BorderRadius.circular(5)),
+          child: FlatButton(
             height: 57,
-            decoration: BoxDecoration(
-                color: ColorConfig.bluePrimary,
-                borderRadius: BorderRadius.circular(5)
+            minWidth: MediaQuery.of(context).size.width,
+            onPressed: ()=> {this.gotoAddAddress()},
+            child: Text(
+              "Add Address",
+              style: TextStyle(
+                fontSize: 14,
+                color: Colors.white,
+                fontFamily: 'PoppinsBold',
+              ),
             ),
-            child: Text("Add Address", style: TextStyle(
-              fontSize: 14,
-              color: ColorConfig.colorWhite,
-              fontFamily: 'PoppinsBold',
-            ),),
           ),
         ),
       ),

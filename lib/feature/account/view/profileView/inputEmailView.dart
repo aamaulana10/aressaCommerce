@@ -97,36 +97,32 @@ class _InputEmailViewState extends State<InputEmailView> {
     );
   }
 
-  Widget saveButton() {
+  Widget addAddressButton() {
     return Container(
-      margin: EdgeInsets.only(left: 16, right: 16),
-      child: Stack(
-        children: [
-          Positioned(
-            bottom: 16,
-              left: 16,
-              right: 16,
-              child: InkWell(
-                onTap: () => {},
-                child: Container(
-                  height: 57,
-                  decoration: BoxDecoration(
-                    color: ColorConfig.bluePrimary,
-                    borderRadius: BorderRadius.circular(8)
-                  ),
-                  child: Center(
-                    child: Text("Save",
-                    style: TextStyle(
-                      color: ColorConfig.colorWhite,
-                      fontSize: 14,
-                      fontFamily: 'PoppinsBold',
-                    ),
-                    ),
-                  ),
+      child: Material(
+        color: Colors.transparent,
+        shadowColor: ColorConfig.bluePrimary,
+        elevation: 8,
+        child: Container(
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+              color: ColorConfig.bluePrimary,
+              borderRadius: BorderRadius.circular(5)),
+          child: FlatButton(
+            height: 57,
+            minWidth: MediaQuery.of(context).size.width,
+            onPressed: ()=> {},
+            child: Text(
+              "Add Address",
+              style: TextStyle(
+                fontSize: 14,
+                color: Colors.white,
+                fontFamily: 'PoppinsBold',
+              ),
+            ),
           ),
-              ))
-        ],
-      )
+        ),
+      ),
     );
   }
 
@@ -134,14 +130,29 @@ class _InputEmailViewState extends State<InputEmailView> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-          padding: EdgeInsets.only(top: 32),
-          child: Column(
+            padding: EdgeInsets.only(top: 32),
+            child: Stack(
               children: [
-                appBar(),
-                content(),
-                Expanded(child: saveButton())
+                Positioned(
+                  top: 0,
+                  right: 0,
+                  left: 0,
+                  bottom: 80,
+                  child: Column(
+                    children: [
+                      appBar(),
+                      content()
+                    ],
+                  ),
+                ),
+                Positioned(
+                  bottom: 16,
+                  left: 16,
+                  right: 16,
+                  child: addAddressButton(),
+                )
               ],
-            ),
+            )
         ));
   }
 }
