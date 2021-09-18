@@ -1,129 +1,81 @@
 {
   "data": [
     {
-      "id": "1",
+      "id": "101",
       "image": {
-        "thumbnail": "lib/asset/image/product/nikeBasketballShoes.jpg",
+        "thumbnail": "lib/asset/image/product/batikAksa1.jpeg",
         "gallery": [
-          "lib/asset/image/product/nikeBasketballShoes.jpg",
-          "lib/asset/image/product/nikeBasketballShoes2.jpg",
-          "lib/asset/image/product/nikeBasketballShoes3.jpg",
-          "lib/asset/image/product/nikeBasketballShoes4.jpg"
+          "lib/asset/image/product/batikAksa2.jpeg",
+          "lib/asset/image/product/batikAksa3.jpeg"
         ]
       },
-      "category": "Man Shoes",
-      "description": "Zapatillas Tenis Sepatu Sports Shoes Citrus 25th Anniversary Women Men's Fashion Sneakers 11 Retro Basketball Shoes",
-      "rate": 5.0,
-      "isFavorite": false,
-      "name": "Men's fashion sneakers 11 Retro Basketball Shoes jordan",
-      "price": {
-        "normal": "$65",
-        "special": "$60"
-      }
-    },
-    {
-      "id": "6",
-      "image": {
-        "thumbnail": "lib/asset/image/product/fashionTshirtMensWhite.jpg",
-        "gallery": [
-          "lib/asset/image/product/fashionTshirtMensWhite.jpg",
-          "lib/asset/image/product/fashionTshirtMensWhite2.jpg",
-          "lib/asset/image/product/fashionTshirtMensWhite3.jpg",
-          "lib/asset/image/product/fashionTshirtMensWhite4.jpg"
-        ]
-      },
-      "category": "Man T-Shirt",
-      "description": "3/4 Sleeve Fashion t-Shirt Mens White Blank Tee Shirt Men Long Oversized t Shirt",
-      "rate": 5.0,
-      "isFavorite": false,
-      "name": "Xuanyang T-Shirt",
-      "price": {
-        "normal": "$4.50",
-        "special": "$4.20"
-      }
-    },
-    {
-      "id": "11",
-      "image": {
-        "thumbnail": "lib/asset/image/product/menWorkWearJacket.jpg",
-        "gallery": [
-          "lib/asset/image/product/menWorkWearJacket.jpg",
-          "lib/asset/image/product/menWorkWearJacket2.jpg",
-          "lib/asset/image/product/menWorkWearJacket3.jpg",
-          "lib/asset/image/product/menWorkWearJacket4.jpg"
-        ]
-      },
-      "category": "Man Work Equipment",
-      "description": "Fashion Waterproof Equipment Men's Jacket Hooded Multiple Pockets Mens Work Wear Jacket",
-      "rate": 5.0,
-      "isFavorite": false,
-      "name": "Mens Work Wear Jacket",
-      "price": {
-        "normal": "$22.79",
-        "special": "$22.49"
-      }
-    },
-    {
-      "id": "13",
-      "image": {
-        "thumbnail": "lib/asset/image/product/mensUvJacket.jpg",
-        "gallery": [
-          "lib/asset/image/product/mensUvJacket.jpg",
-          "lib/asset/image/product/mensUvJacket2.jpg",
-          "lib/asset/image/product/mensUvJacket3.jpg",
-          "lib/asset/image/product/mensUvJacket4.jpg"
-        ]
-      },
-      "category": "Man Work Equipment",
-      "description": "Fan Equipped Clothing, UV Resistant Cooling Jacket for Men, USB powered Air Conditioned Coat for Summer High Temp Outdoor Work",
-      "rate": 5.0,
-      "isFavorite": false,
-      "name": "Air-Conditioned Jacket",
-      "price": {
-        "normal": "$23.50",
-        "special": "$20.90"
-      }
-    },
-    {
-      "id": "16",
-      "image": {
-        "thumbnail": "lib/asset/image/product/menCasualShirt.png",
-        "gallery": [
-          "lib/asset/image/product/menCasualShirt.png",
-          "lib/asset/image/product/menCasualShirt2.png",
-          "lib/asset/image/product/menCasualShirt3.png",
-          "lib/asset/image/product/menCasualShirt4.png"
-        ]
-      },
-      "category": "Man Shirt",
-      "description": "Hot Fashion Silk Shirts Casual Smooth Silk Shirt for Men | Top Quality 100% Pure Satin Silk Custom Logo Blank Satin Men Shirt",
-      "rate": 5.0,
-      "isFavorite": false,
-      "name": "Men Silk Dress Shirt",
-      "price": {
-        "normal": "$9.99",
-        "special": "$8.99"
-      }
-    },
-    {
-      "id": "21",
-      "image": {
-        "thumbnail": "lib/asset/image/product/casualMenPants.jpg",
-        "gallery": [
-          "lib/asset/image/product/casualMenPants.jpg",
-          "lib/asset/image/product/casualMenPants2.jpg",
-          "lib/asset/image/product/casualMenPants3.jpg",
-          "lib/asset/image/product/casualMenPants4.jpg"
-        ]
-      },
-      "category": "Man Pants",
-      "description": "Masheng Casual Men Pants New Fashion Men Jogger Pants Fitness Gyms Pants For Runners Clothing Autumn Plus Size 5XL Sweatpants",
+      "category": "Batik",
+      "description": "ASSON JESSY KEMEJA PANJANG AKSA BATIK",
       "rate": 4.3,
       "isFavorite": false,
-      "name": "Men Jogger Pants",
+      "name": "Aksa Batik",
       "price": {
-        "normal": "$5.72",
-        "special": "$5.46"
+        "normal": "181 TL",
+        "special": "150 TL"
+      }
+    },
+    {
+      "id": "109",
+      "image": {
+        "thumbnail": "lib/asset/image/product/novellaBlack1.jpeg",
+        "gallery": [
+          "lib/asset/image/product/novellaBlack1.jpeg",
+          "lib/asset/image/product/novellaBlack2.jpeg"
+        ]
+      },
+      "category": "Alat şalat",
+      "description": "Mukena Satin Premium by THE NOVELLA SCARF",
+      "rate": 4.2,
+      "isFavorite": false,
+      "name": "NOVELLA MUKENA - SAVANNAS BLACK",
+      "price": {
+        "normal": "320 TL",
+        "special": "290 TL"
+      }
+    },
+    {
+      "id": "131",
+      "image": {
+        "thumbnail": "lib/asset/image/product/sandalKayu1.jpg",
+        "gallery": [
+          "lib/asset/image/product/sandalKayu1.jpg",
+          "lib/asset/image/product/sandalKayu2.jpg",
+          "lib/asset/image/product/sandalKayu3.jpg"
+        ]
+      },
+      "category": "Sandaletler ve Syakkabılar",
+      "description": "Sağlık tedavisi için tasarlanmış sandaletler, sağlığını korumak isteyenler için öneriler.",
+      "rate": 5.0,
+      "isFavorite": false,
+      "name": "Ahşap Akupunktur Yansıma Terlik, Terapötik Refleksoloji Sandalet, Sandalet",
+      "price": {
+        "normal": "10.30 TL",
+        "special": "9.70 TL"
+      }
+    },
+    {
+      "id": "138",
+      "image": {
+        "thumbnail": "lib/asset/image/product/furnishKayu7.jpg",
+        "gallery": [
+          "lib/asset/image/product/furnishKayu7.jpg",
+          "lib/asset/image/product/furnishKayu8.jpg",
+          "lib/asset/image/product/furnishKayu9.jpg"
+        ]
+      },
+      "category": "Ahşap Mobilya",
+      "description": "Ahşap malzemeden yapılmış, doğal ve çevre koruma. Arkadaşlar veya ildren için hediye olarak iyi oice. Yatak odası, oturma odası, çalışma odası, ofis vb. için uygundur. El yapımı ürün, iyi işçilik. Özellikler: Malzeme: Ahşap Renk: mavi beyaz Boyut: Yaklaşık SH x 21cm, MH x 28cm, LH x 34cm Paket İçeriği: 1 ADET x Yelkenli Tekne Model Not: 1. Işık ve ekran farkı nedeniyle, öğenin rengi biraz olabilir resimlerden farklı. 2. Lütfen manuel ölçümden dolayı 0,5-2 cm'lik farklılıklara izin verin. #Yelken #Tekne #Model #Denizcilik #Dekor #Ahşap #Kabuk #Yatak Odası #ildren #Mobilya #Hediye #Ev #Mini",
+      "rate": 4.9,
+      "isFavorite": false,
+      "name": "Çocuklar Mobilya Hediye Mini Deniz Dekor Kabuk Oyuncaklar Ahşap",
+      "price": {
+        "normal": "190.70 TL",
+        "special": "188.19 TL"
       }
     }
   ]

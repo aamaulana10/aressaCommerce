@@ -2,6 +2,7 @@ import 'package:aressa_commerce/feature/account/view/accountView.dart';
 import 'package:aressa_commerce/feature/cart/view/cartView.dart';
 import 'package:aressa_commerce/feature/home/view/homeView.dart';
 import 'package:aressa_commerce/feature/offer/view/offerView.dart';
+import 'package:aressa_commerce/feature/search/view/searchResultView.dart';
 import 'package:aressa_commerce/feature/search/view/searchView.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +19,7 @@ class _MainTabbarState extends State<MainTabbar> {
 
   var screen = [
     HomeView(),
-    SearchView(),
+    SearchResultView(),
     CartView(),
     AccountView()
   ];

@@ -282,6 +282,7 @@ class _HomeViewState extends State<HomeView> {
                 Expanded(
                   child: Container(
                     decoration: BoxDecoration(
+                      color: Colors.white,
                         border: Border.all(
                             color: ColorConfig.borderColor, width: 1),
                         borderRadius: BorderRadius.circular(8)),
@@ -313,10 +314,7 @@ class _HomeViewState extends State<HomeView> {
                       onTap: () => {this.gotoNotification()},
                       child: Padding(
                         padding: EdgeInsets.all(10),
-                        child: Image(
-                          image: AssetImage(
-                              "lib/asset/image/home/notification.png"),
-                        ),
+                        child: Icon(Icons.notifications, color: Colors.white, size: 20,)
                       )),
                 ),
                 CustomShowcaseWidget(
@@ -335,12 +333,12 @@ class _HomeViewState extends State<HomeView> {
                               children: [
                                 Text("ID",
                                     style: TextStyle(
-                                        color: ColorConfig.textColor1,
+                                        color: Colors.white,
                                         fontSize: 12,
                                         fontFamily: 'PoppinsBold')),
                                 Icon(
                                   Icons.arrow_drop_down,
-                                  color: ColorConfig.textColor1,
+                                  color: Colors.white,
                                 )
                               ],
                             ))),
@@ -355,7 +353,7 @@ class _HomeViewState extends State<HomeView> {
                   border: Border(
                       bottom: BorderSide(
                 width: 1,
-                color: ColorConfig.borderColor,
+                color: Colors.transparent,
               ))),
             ),
           )
@@ -367,7 +365,7 @@ class _HomeViewState extends State<HomeView> {
   Widget promoBanner() {
     return Container(
       height: 250,
-      margin: EdgeInsets.only(top: 16),
+      margin: EdgeInsets.only(top: 0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -635,6 +633,7 @@ class _HomeViewState extends State<HomeView> {
                                   ),
                                   Expanded(
                                     child: Container(
+                                      alignment: Alignment.centerLeft,
                                       child: Text(data.name,
                                           maxLines: 2,
                                           style: TextStyle(
@@ -770,6 +769,7 @@ class _HomeViewState extends State<HomeView> {
                                   ),
                                   Expanded(
                                     child: Container(
+                                      alignment: Alignment.centerLeft,
                                       child: Text(data.name,
                                           maxLines: 2,
                                           style: TextStyle(
@@ -1067,14 +1067,33 @@ class _HomeViewState extends State<HomeView> {
         elevation: 0,
       ),
       body: Container(
-        child: Column(
-          children: [
-            header(),
-            Expanded(
-              child: SingleChildScrollView(
+        child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    promoBanner(),
+                    Container(
+                      height: 350,
+                      child: Stack(
+                        children: [
+                          Positioned.fill(
+                            child: Image(
+                              image: AssetImage("lib/asset/image/home/headerBg.png"),
+                              fit: BoxFit.fill,
+                            ),
+                          ),
+                          Positioned(
+                              top: 0,
+                              left: 0,
+                              right: 0,
+                              child: header()
+                          ),
+                          Positioned(
+                              top: 90,
+                              left: 0,
+                              right: 0,
+                              child: promoBanner()),
+                        ],
+                      ),
+                    ),
                     categoryWidget(),
                     flashSaleWidget(),
                     megaSaleWidget(),
@@ -1082,9 +1101,6 @@ class _HomeViewState extends State<HomeView> {
                     productGridWidget()
                   ],
                 ),
-              ),
-            ),
-          ],
         ),
       ),
     );

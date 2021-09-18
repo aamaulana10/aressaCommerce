@@ -1,108 +1,81 @@
 {
   "data": [
     {
-      "id": "22",
+      "id": "106",
       "image": {
-        "thumbnail": "lib/asset/image/product/manJoggersPants.jpg",
+        "thumbnail": "lib/asset/image/product/sistaMukena1.jpeg",
         "gallery": [
-          "lib/asset/image/product/manJoggersPants.jpg",
-          "lib/asset/image/product/manJoggersPants2.jpg",
-          "lib/asset/image/product/manJoggersPants3.jpg",
-          "lib/asset/image/product/manJoggersPants4.jpg"
+          "lib/asset/image/product/sistaMukena1.jpeg",
+          "lib/asset/image/product/sistaMukena2.jpeg",
+          "lib/asset/image/product/sistaMukena3.jpeg"
         ]
       },
-      "category": "Man Pants",
-      "description": "Running Gym Trousers Men Silk Breathable Workout Sports Sweatpants Drawstring Man Joggers Pants",
-      "rate": 5.0,
+      "category": "Alat şalat",
+      "description": "Mukena Sam Dusty Pink Silk",
+      "rate": 4.2,
       "isFavorite": false,
-      "name": "Men's jogging Pants",
+      "name": "D'Sista Mukena",
       "price": {
-        "normal": "$13.50",
-        "special": "$12.15"
+        "normal": "300 TL",
+        "special": "260 TL"
       }
     },
     {
-      "id": "42",
+      "id": "104",
       "image": {
-        "thumbnail": "lib/asset/image/product/springCasualCustomWomen.jpg",
+        "thumbnail": "lib/asset/image/product/taraBatik1.jpeg",
         "gallery": [
-          "lib/asset/image/product/springCasualCustomWomen.jpg",
-          "lib/asset/image/product/springCasualCustomWomen2.jpg",
-          "lib/asset/image/product/springCasualCustomWomen3.jpg",
-          "lib/asset/image/product/springCasualCustomWomen4.jpg"
+          "lib/asset/image/product/taraBatik1.jpeg",
+          "lib/asset/image/product/taraBatik2.jpeg",
+          "lib/asset/image/product/taraBatik3.jpeg"
         ]
       },
-      "category": "Women Pants",
-      "description": "2021 Spring Casual custom Women Cotton Patch Pockets Zip Front high waist Loose Wide Leg Cropped Pant",
-      "rate": 4.3,
+      "category": "Batik",
+      "description": "Batik Rianti Best Collection",
+      "rate": 4.2,
       "isFavorite": false,
-      "name": "2021 Spring Casual custom Women",
+      "name": "Rianti Batik",
       "price": {
-        "normal": "$21.30",
-        "special": "$20.50"
+        "normal": "230 TL",
+        "special": "190 TL"
       }
     },
     {
-      "id": "36",
+      "id": "107",
       "image": {
-        "thumbnail": "lib/asset/image/product/dressWomanWithSlit.jpg",
+        "thumbnail": "lib/asset/image/product/novellaMukena1.jpeg",
         "gallery": [
-          "lib/asset/image/product/dressWomanWithSlit.jpg",
-          "lib/asset/image/product/dressWomanWithSlit2.jpg",
-          "lib/asset/image/product/dressWomanWithSlit3.jpg",
-          "lib/asset/image/product/dressWomanWithSlit4.jpg"
+          "lib/asset/image/product/novellaMukena1.jpeg",
+          "lib/asset/image/product/novellaMukena2.jpeg"
         ]
       },
-      "category": "Dress",
-      "description": "Sleeveless Black Crystallized Corset High Slit Satin Gown One Shoulder Maxi Dress Woman With Slit",
-      "rate": 4.8,
+      "category": "Alat şalat",
+      "description": "NOVELLA MUKENA - ATTIZA MAROON",
+      "rate": 4.2,
       "isFavorite": false,
-      "name": "bandage dress split lace dress",
+      "name": "Novella Mukena Scarves",
       "price": {
-        "normal": "$22.00",
-        "special": "$21.50"
+        "normal": "300 TL",
+        "special": "260 TL"
       }
     },
     {
-      "id": "37",
+      "id": "108",
       "image": {
-        "thumbnail": "lib/asset/image/product/casualDress.jpg",
+        "thumbnail": "lib/asset/image/product/janaharaMukena.jpeg",
         "gallery": [
-          "lib/asset/image/product/casualDress.jpg",
-          "lib/asset/image/product/casualDress2.jpg",
-          "lib/asset/image/product/casualDress3.jpg",
-          "lib/asset/image/product/casualDress4.jpg"
+          "lib/asset/image/product/janaharaMukena.jpeg",
+          "lib/asset/image/product/janaharaMukena2.jpeg"
         ]
       },
-      "category": "Dress",
-      "description": "Elegant Casual Dress New arrivals Fall 2021 Women Clothes Dresses Dress Party Sexy Plus Size Woman's Clothing",
-      "rate": 4.8,
+      "category": "Alat şalat",
+      "description": "Prayer Set Mukena 2 in 1 Janahara Plisket List Renda - Moonlit Ocean",
+      "rate": 4.2,
       "isFavorite": false,
-      "name": "Women Clothes Dresses Dress Party Sexy Plus Size Woman's Clothing",
+      "name": "Janahara Mukena",
       "price": {
-        "normal": "$20.65",
-        "special": "$19.25"
-      }
-    },
-    {
-      "id": "38",
-      "image": {
-        "thumbnail": "lib/asset/image/product/elegantWomenDress.jpg",
-        "gallery": [
-          "lib/asset/image/product/elegantWomenDress.jpg",
-          "lib/asset/image/product/elegantWomenDress2.jpg",
-          "lib/asset/image/product/elegantWomenDress3.jpg",
-          "lib/asset/image/product/elegantWomenDress4.jpg"
-        ]
-      },
-      "category": "Dress",
-      "description": "SHEIN Supplier Bulk Free Sample Fall girl's clothing Tie Neck Ruched Vestidos elegant women short western Shein casual Dresses",
-      "rate": 4.7,
-      "isFavorite": false,
-      "name": "Women Comfortable Dress",
-      "price": {
-        "normal": "$8.98",
-        "special": "$8.68"
+        "normal": "300 TL",
+        "special": "260 TL"
       }
     }
   ]

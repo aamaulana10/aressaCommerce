@@ -104,6 +104,11 @@ class _SearchResultViewState extends State<SearchResultView> {
       setState(() {
         currentCategory = widget.category;
       });
+    } else {
+
+      setState(() {
+        currentCategory = "All";
+      });
     }
 
   }
@@ -169,19 +174,15 @@ class _SearchResultViewState extends State<SearchResultView> {
                         }
                         else if(currentCategory == "All") {
 
-                          data = snapshoot.data
-                              .where((element) =>
-                          element.name
-                              .toLowerCase()
-                              .contains(searchData.toLowerCase()))
-                              .toList();
+                          data = snapshoot.data;
+
                         } else {
 
                           data = snapshoot.data
                               .where((element) =>
                               element.name
                                   .toLowerCase()
-                                  .contains(searchData.toLowerCase()) && element.category == currentCategory )
+                                  .contains(searchData.toLowerCase()))
                               .toList();
                         }
 

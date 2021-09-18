@@ -151,7 +151,7 @@ class _DetailProductViewState extends State<DetailProductView> {
                       ClipRRect(
                         child: Image(
                           image: AssetImage(image),
-                          fit: BoxFit.cover,
+                          fit: BoxFit.contain,
                         ),
                       ),
                       Positioned.fill(

@@ -1,83 +1,81 @@
 {
   "data": [
     {
-      "id": "43",
+      "id": "105",
       "image": {
-        "thumbnail": "lib/asset/image/product/leggingsCustomPrintedWomen.jpg",
+        "thumbnail": "lib/asset/image/product/batikFirst1.jpeg",
         "gallery": [
-          "lib/asset/image/product/leggingsCustomPrintedWomen2.jpg",
-          "lib/asset/image/product/leggingsCustomPrintedWomen3.jpg",
-          "lib/asset/image/product/leggingsCustomPrintedWomen4.jpg"
+          "lib/asset/image/product/batikFirst1.jpeg",
+          "lib/asset/image/product/batikFirst2.jpeg"
         ]
       },
-      "category": "Women Pants",
-      "description": "Wholesale leggings custom printed women fashion pants and trousers",
-      "rate": 4.3,
+      "category": "Batik",
+      "description": "D.Classic Cloq 50's Velvet CAP+Lining",
+      "rate": 4.2,
       "isFavorite": false,
-      "name": "Wholesale leggings custom",
+      "name": "Batik First",
       "price": {
-        "normal": "$6.01",
-        "special": "$5.85"
+        "normal": "270 TL",
+        "special": "250 TL"
       }
     },
     {
-      "id": "51",
+      "id": "104",
       "image": {
-        "thumbnail": "lib/asset/image/product/customSummerPopular.jpg",
+        "thumbnail": "lib/asset/image/product/taraBatik1.jpeg",
         "gallery": [
-          "lib/asset/image/product/customSummerPopular2.jpg",
-          "lib/asset/image/product/customSummerPopular3.jpg",
-          "lib/asset/image/product/customSummerPopular4.jpg"
+          "lib/asset/image/product/taraBatik1.jpeg",
+          "lib/asset/image/product/taraBatik2.jpeg",
+          "lib/asset/image/product/taraBatik3.jpeg"
         ]
       },
-      "category": "Woman T-Shirt",
-      "description": "Custom summer popular oversize casual styles sports fashionable women's plain t shirts tops 2021 100% cotton with high quality",
-      "rate": 5.0,
+      "category": "Batik",
+      "description": "Batik Rianti Best Collection",
+      "rate": 4.2,
       "isFavorite": false,
-      "name": "vintage washed t shirts",
+      "name": "Rianti Batik",
       "price": {
-        "normal": "$8.50",
-        "special": "$7.50"
+        "normal": "230 TL",
+        "special": "190 TL"
       }
     },
     {
-      "id": "52",
+      "id": "106",
       "image": {
-        "thumbnail": "lib/asset/image/product/cropTopsTshirtWomen.jpg",
+        "thumbnail": "lib/asset/image/product/sistaMukena1.jpeg",
         "gallery": [
-          "lib/asset/image/product/cropTopsTshirtWomen2.jpg",
-          "lib/asset/image/product/cropTopsTshirtWomen3.jpg",
-          "lib/asset/image/product/cropTopsTshirtWomen4.jpg"
+          "lib/asset/image/product/sistaMukena1.jpeg",
+          "lib/asset/image/product/sistaMukena2.jpeg",
+          "lib/asset/image/product/sistaMukena3.jpeg"
         ]
       },
-      "category": "Woman T-Shirt",
-      "description": "Womens tshirt plain crop tops fashion women tshirts polyester round neck crop tops t-shirt women",
-      "rate": 5.0,
+      "category": "Alat şalat",
+      "description": "Mukena Sam Dusty Pink Silk",
+      "rate": 4.2,
       "isFavorite": false,
-      "name": "Womens tshirt plain crop tops fashion",
+      "name": "D'Sista Mukena",
       "price": {
-        "normal": "$2.50",
-        "special": "$2.30"
+        "normal": "300 TL",
+        "special": "260 TL"
       }
     },
     {
-      "id": "54",
+      "id": "108",
       "image": {
-        "thumbnail": "lib/asset/image/product/warmSlimFemaleShirt.png",
+        "thumbnail": "lib/asset/image/product/janaharaMukena.jpeg",
         "gallery": [
-          "lib/asset/image/product/warmSlimFemaleShirt2.jpg",
-          "lib/asset/image/product/warmSlimFemaleShirt3.jpg",
-          "lib/asset/image/product/warmSlimFemaleShirt4.jpg"
+          "lib/asset/image/product/janaharaMukena.jpeg",
+          "lib/asset/image/product/janaharaMukena2.jpeg"
         ]
       },
-      "category": "Woman T-Shirt",
-      "description": "Autumn High collar shirt long-sleeve t-shirt solid color women's warm Slim female shirt plus size",
-      "rate": 5.0,
+      "category": "Alat şalat",
+      "description": "Prayer Set Mukena 2 in 1 Janahara Plisket List Renda - Moonlit Ocean",
+      "rate": 4.2,
       "isFavorite": false,
-      "name": "Print Custom T-Shirts",
+      "name": "Janahara Mukena",
       "price": {
-        "normal": "$9.00",
-        "special": "$8.00"
+        "normal": "300 TL",
+        "special": "260 TL"
       }
     }
   ]

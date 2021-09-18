@@ -2,87 +2,45 @@
   "data": [
     {
       "id": "1",
-      "image": "lib/asset/image/home/shirt.png",
-      "thumbnail" : "lib/asset/image/home/manShirtNew.png",
-      "name": "Man Shirt",
+      "image": "lib/asset/image/category/batik.png",
+      "thumbnail" : "lib/asset/image/category/batik.png",
+      "name": "Batik",
       "category": "Man"
     },
     {
       "id": "2",
-      "image": "lib/asset/image/home/manBag.png",
-      "thumbnail" : "lib/asset/image/home/manWorkEqNew.png",
-      "name": "Man Work Equipment",
+      "image": "lib/asset/image/category/alatShalat.png",
+      "thumbnail" : "lib/asset/image/category/alatShalat.png",
+      "name": "Dua araçları",
       "category": "Man"
     },
     {
       "id": "3",
-      "image": "lib/asset/image/home/tshirt.png",
-      "thumbnail" : "lib/asset/image/home/manTshirtNew.png",
-      "name": "Man T-Shirt",
+      "image": "lib/asset/image/category/bahanMakanan.png",
+      "thumbnail" : "lib/asset/image/category/bahanMakanan.png",
+      "name": "Gıda malzemesi",
       "category": "Man"
     },
     {
       "id": "4",
-      "image": "lib/asset/image/home/manShoes.png",
-      "thumbnail" : "lib/asset/image/home/manShoesNew.png",
-      "name": "Man Shoes",
+      "image": "lib/asset/image/category/bajuTradisional.png",
+      "thumbnail" : "lib/asset/image/category/bajuTradisional.png",
+      "name": "DresGeleneksel kıyafets",
       "category": "Man"
     },
     {
       "id": "5",
-      "image": "lib/asset/image/home/manPants.png",
-      "thumbnail" : "lib/asset/image/home/manPantsNew.png",
-      "name": "Man Pants",
+      "image": "lib/asset/image/category/furnish.png",
+      "thumbnail" : "lib/asset/image/category/furnish.png",
+      "name": "Ahşap Mobilya",
       "category": "Man"
     },
     {
       "id": "6",
-      "image": "lib/asset/image/home/manUnderwear.png",
-      "thumbnail" : "lib/asset/image/home/manUnderwareNew.png",
-      "name": "Man Underwear",
+      "image": "lib/asset/image/category/sendalSepatu.png",
+      "thumbnail" : "lib/asset/image/category/sendalSepatu.png",
+      "name": "Sandalet ve Ayakkabı",
       "category": "Man"
-    },
-    {
-      "id": "7",
-      "image": "lib/asset/image/home/dress.png",
-      "thumbnail" : "lib/asset/image/home/DressNew.png",
-      "name": "Dress",
-      "category": "Woman"
-    },
-    {
-      "id": "8",
-      "image": "lib/asset/image/home/womanTshirt.png",
-      "thumbnail" : "lib/asset/image/home/womanTshirtNew.png",
-      "name": "Woman T-Shirt",
-      "category": "Woman"
-    },
-    {
-      "id": "9",
-      "image": "lib/asset/image/home/womanPants.png",
-      "thumbnail" : "lib/asset/image/home/womanPantsNew.png",
-      "name": "Women Pants",
-      "category": "Woman"
-    },
-    {
-      "id": "10",
-      "image": "lib/asset/image/home/skirt.png",
-      "thumbnail" : "lib/asset/image/home/skirtNew.png",
-      "name": "Skirt",
-      "category": "Woman"
-    },
-    {
-      "id": "11",
-      "image": "lib/asset/image/home/womanBag.png",
-      "thumbnail" : "lib/asset/image/home/womanBagNew.png",
-      "name": "Woman Bag",
-      "category": "Woman"
-    },
-    {
-      "id": "12",
-      "image": "lib/asset/image/home/womanShoes.png",
-      "thumbnail" : "lib/asset/image/home/womanShoesNew.png",
-      "name": "High Heels",
-      "category": "Woman"
     }
   ]
 }
