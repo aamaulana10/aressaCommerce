@@ -117,6 +117,49 @@ flutter:
     - lib/asset/image/product/furnishKayu13.jpg
     - lib/asset/image/product/furnishKayu14.jpg
     - lib/asset/image/product/furnishKayu15.jpg
+    - lib/asset/image/home/james.png
+    - lib/asset/image/home/laura.png
+    - lib/asset/image/home/jhonson.png
+    - lib/asset/image/home/griffin.png
+    - lib/asset/image/home/sepatuKuning01.png
+    - lib/asset/image/home/sepatuKuning02.png
+    - lib/asset/image/home/sepatuKuning03.png
+    - lib/asset/image/product/bajuGaruda.jpg
+    - lib/asset/image/product/bajuGaruda2.jpg
+    - lib/asset/image/product/bajuGaruda3.jpg
+    - lib/asset/image/product/bajuGaruda4.jpg
+    - lib/asset/image/product/batikMerah.jpeg
+    - lib/asset/image/product/batikMerah2.jpeg
+    - lib/asset/image/product/batikMerah3.jpeg
+    - lib/asset/image/product/batikMerah4.jpeg
+    - lib/asset/image/product/bajuSongketHitam.jpeg
+    - lib/asset/image/product/bajuSongketHitam2.jpeg
+    - lib/asset/image/product/bajuSongketHitam3.jpeg
+    - lib/asset/image/product/bajuSongketHitam4.jpeg
+    - lib/asset/image/product/bajuSongketPutih.jpeg
+    - lib/asset/image/product/bajuSongketPutih2.jpeg
+    - lib/asset/image/product/bajuSongketPutih3.jpeg
+    - lib/asset/image/product/bajuSongketPutih4.jpeg
+    - lib/asset/image/product/bajuSongketCoklat.jpeg
+    - lib/asset/image/product/bajuSongketCoklat2.jpeg
+    - lib/asset/image/product/bajuSongketCoklat3.jpeg
+    - lib/asset/image/product/bajuSongketCoklat4.jpeg
+    - lib/asset/image/product/roycoAyam.jpg
+    - lib/asset/image/product/roycoAyam2.jpeg
+    - lib/asset/image/product/saparillaindo.jpg
+    - lib/asset/image/product/saparillaindo2.jpg
+    - lib/asset/image/product/saparillaindo3.jpg
+    - lib/asset/image/product/saparillaindo4.jpg
+    - lib/asset/image/product/kecapPanda.jpg
+    - lib/asset/image/product/kecapPanda2.jpg
+    - lib/asset/image/product/kecapPanda3.jpg
+    - lib/asset/image/product/kecapPanda4.jpg
+    - lib/asset/image/product/kunyit.jpg
+    - lib/asset/image/product/kunyit2.jpg
+    - lib/asset/image/product/kunyit3.jpg
+    - lib/asset/image/product/bijiKopi.jpg
+    - lib/asset/image/product/bijiKopi2.jpg
+    - lib/asset/image/product/bijiKopi3.jpg
   fonts:
     - family: PoppinsBlack
       fonts:

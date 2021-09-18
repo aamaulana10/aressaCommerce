@@ -2,12 +2,11 @@ import 'package:aressa_commerce/core/data/repository.dart';
 import 'package:aressa_commerce/core/domain/model/productModel.dart';
 import 'package:aressa_commerce/feature/category/view/allCategoryView.dart';
 import 'package:aressa_commerce/feature/detailProduct/view/detailProductView.dart';
+import 'package:aressa_commerce/feature/mainTabbar.dart';
 import 'package:aressa_commerce/generated/l10n.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-
-import '../../mainTabbar.dart';
 
 class SearchResultView extends StatefulWidget {
 
@@ -97,6 +96,11 @@ class _SearchResultViewState extends State<SearchResultView> {
       setState(() {
         searchData = widget.searchData;
       });
+    } else {
+
+      setState(() {
+        searchData = "";
+      });
     }
 
     if(widget.category != null) {
@@ -165,25 +169,31 @@ class _SearchResultViewState extends State<SearchResultView> {
 
                         var data = snapshoot.data;
 
-                        if(widget.category != null) {
+                      if(searchCtrl.text != ""){
+
+                        print("ke sini ga yaa");
+
+                        data = snapshoot.data
+                            .where((element) =>
+                            element.name
+                                .toLowerCase()
+                                .contains(searchData.toLowerCase()))
+                            .toList();
+                      }
+
+                        else if(widget.category != null) {
 
                           data = snapshoot.data
                               .where((element) =>
                               element.category == widget.category)
                               .toList();
                         }
-                        else if(currentCategory == "All") {
+                        else {
+
+                          print(" apa kesiniiii");
 
                           data = snapshoot.data;
 
-                        } else {
-
-                          data = snapshoot.data
-                              .where((element) =>
-                              element.name
-                                  .toLowerCase()
-                                  .contains(searchData.toLowerCase()))
-                              .toList();
                         }
 
                         return Container(
