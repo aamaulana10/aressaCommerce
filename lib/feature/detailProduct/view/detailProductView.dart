@@ -334,23 +334,19 @@ class _DetailProductViewState extends State<DetailProductView> {
                 ),
                 Container(
                     padding: EdgeInsets.only(left: 8, right: 4),
-                    child: Text("4.5",
-                        style: TextStyle(
-                          fontSize: 10,
-                          color: ColorConfig.textColor1,
-                          fontFamily: 'PoppinsBold',
-                        ))),
-                Text(
-                  "(5 Reviews)",
-                  style: TextStyle(
-                    fontSize: 10,
-                    fontFamily: 'PoppinsRegular',
-                    color: ColorConfig.textColor1,
-                  ),
-                )
-              ],
+                      child: Text("4.5", style: TextStyle(
+                       fontSize: 10,
+                       color: ColorConfig.textColor1,
+                        fontFamily: 'PoppinsBold',
+                      ))),
+                  Text("5 " + S.of(context).review, style: TextStyle(
+                      fontSize: 10,
+                      fontFamily: 'PoppinsRegular',
+                      color: ColorConfig.textColor1,
+                  ),)
+                ],
+              ),
             ),
-          ),
           Container(
             margin: EdgeInsets.only(top: 16),
             child: Row(

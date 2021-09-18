@@ -1,5 +1,6 @@
 import 'package:aressa_commerce/feature/home/view/homeView.dart';
 import 'package:aressa_commerce/feature/mainTabbar.dart';
+import 'package:aressa_commerce/generated/l10n.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -35,7 +36,7 @@ class _AddAddressViewState extends State<AddAddressView> {
                       iconSize: 32,
                     ),
                     Expanded(
-                      child: Text("Add Address", style: TextStyle(
+                      child: Text(S.of(context).addAddress, style: TextStyle(
                         fontSize: 16,
                         fontFamily: 'PoppinsBold',
                       )),
@@ -59,7 +60,7 @@ class _AddAddressViewState extends State<AddAddressView> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Country or region",
+          Text(S.of(context).countryOrRegion,
             style: TextStyle(
               color: ColorConfig.colorBlack,
               fontSize: 14,
@@ -102,7 +103,7 @@ class _AddAddressViewState extends State<AddAddressView> {
           ),
           Container(
             margin: EdgeInsets.only(top: 16),
-            child: Text("First Name",
+            child: Text(S.of(context).firstName,
                 style: TextStyle(
                   color: ColorConfig.colorBlack,
                   fontSize: 14,
@@ -132,7 +133,7 @@ class _AddAddressViewState extends State<AddAddressView> {
           ),
           Container(
             margin: EdgeInsets.only(top: 16),
-            child: Text("Last Name",
+            child: Text(S.of(context).lastName,
                 style: TextStyle(
                   color: ColorConfig.colorBlack,
                   fontSize: 14,
@@ -162,7 +163,7 @@ class _AddAddressViewState extends State<AddAddressView> {
           ),
           Container(
             margin: EdgeInsets.only(top: 16),
-            child: Text("Street Address",
+            child: Text(S.of(context).streetAddress,
                 style: TextStyle(
                   color: ColorConfig.colorBlack,
                   fontSize: 14,
@@ -192,7 +193,7 @@ class _AddAddressViewState extends State<AddAddressView> {
           ),
           Container(
             margin: EdgeInsets.only(top: 16),
-            child: Text("Street Address 2 (Optional)",
+            child: Text(S.of(context).streetAddressOptional,
                 style: TextStyle(
                   color: ColorConfig.colorBlack,
                   fontSize: 14,
@@ -222,7 +223,7 @@ class _AddAddressViewState extends State<AddAddressView> {
           ),
           Container(
             margin: EdgeInsets.only(top: 16),
-            child: Text("City",
+            child: Text(S.of(context).city,
                 style: TextStyle(
                   color: ColorConfig.colorBlack,
                   fontSize: 14,
@@ -252,7 +253,7 @@ class _AddAddressViewState extends State<AddAddressView> {
           ),
           Container(
             margin: EdgeInsets.only(top: 16),
-            child: Text("State/Province/Region",
+            child: Text(S.of(context).stateProvinceRegion,
                 style: TextStyle(
                   color: ColorConfig.colorBlack,
                   fontSize: 14,
@@ -282,7 +283,7 @@ class _AddAddressViewState extends State<AddAddressView> {
           ),
           Container(
             margin: EdgeInsets.only(top: 16),
-            child: Text("Zip Code",
+            child: Text(S.of(context).zipCode,
                 style: TextStyle(
                   color: ColorConfig.colorBlack,
                   fontSize: 14,
@@ -312,7 +313,7 @@ class _AddAddressViewState extends State<AddAddressView> {
           ),
           Container(
             margin: EdgeInsets.only(top: 16),
-            child: Text("Phone Number",
+            child: Text(S.of(context).phoneNumber,
                 style: TextStyle(
                   color: ColorConfig.colorBlack,
                   fontSize: 14,
@@ -362,7 +363,7 @@ class _AddAddressViewState extends State<AddAddressView> {
             minWidth: MediaQuery.of(context).size.width,
             onPressed: ()=> {this.gotoMainTabbar()},
             child: Text(
-              "Add Address",
+              S.of(context).addAddress,
               style: TextStyle(
                 fontSize: 14,
                 color: Colors.white,

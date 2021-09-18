@@ -1,3 +1,4 @@
+import 'package:aressa_commerce/generated/l10n.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +28,7 @@ class _NotificationViewState extends State<NotificationView> {
                       iconSize: 32,
                     ),
                     Expanded(
-                      child: Text("Change Password", style: TextStyle(
+                      child: Text(S.of(context).notification, style: TextStyle(
                         fontSize: 16,
                         fontFamily: 'PoppinsBold',
                       )),

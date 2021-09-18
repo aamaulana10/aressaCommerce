@@ -2,6 +2,7 @@ import 'package:aressa_commerce/feature/account/view/adddressView/addressView.da
 import 'package:aressa_commerce/feature/account/view/orderView/orderView.dart';
 import 'package:aressa_commerce/feature/account/view/paymentView/paymentView.dart';
 import 'package:aressa_commerce/feature/account/view/profileView/profileView.dart';
+import 'package:aressa_commerce/generated/l10n.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -40,7 +41,7 @@ class _AccountViewState extends State<AccountView> {
             Expanded(
               child: Container(
                 padding: EdgeInsets.only(right: 16, left: 16, top: 20),
-                child: Text("Account",
+                child: Text(S.of(context).account,
                     style: TextStyle(
                       fontSize: 16,
                       fontFamily: 'PoppinsBold',
@@ -76,7 +77,7 @@ class _AccountViewState extends State<AccountView> {
                     ),
                     Container(
                       margin: EdgeInsets.only(left: 16),
-                      child: Text("Profile",
+                      child: Text(S.of(context).profile,
                       style: TextStyle(
                         color: ColorConfig.colorBlack,
                         fontSize: 14,
@@ -102,7 +103,7 @@ class _AccountViewState extends State<AccountView> {
                     ),
                     Container(
                       margin: EdgeInsets.only(left: 16),
-                      child: Text("Order",
+                      child: Text(S.of(context).order,
                         style: TextStyle(
                             color: ColorConfig.colorBlack,
                             fontSize: 14,
@@ -128,7 +129,7 @@ class _AccountViewState extends State<AccountView> {
                     ),
                     Container(
                       margin: EdgeInsets.only(left: 16),
-                      child: Text("Address",
+                      child: Text(S.of(context).address,
                         style: TextStyle(
                             color: ColorConfig.colorBlack,
                             fontSize: 14,
@@ -154,7 +155,7 @@ class _AccountViewState extends State<AccountView> {
                     ),
                     Container(
                       margin: EdgeInsets.only(left: 16),
-                      child: Text("Payment",
+                      child: Text(S.of(context).payment,
                         style: TextStyle(
                             color: ColorConfig.colorBlack,
                             fontSize: 14,

@@ -1,3 +1,4 @@
+import 'package:aressa_commerce/generated/l10n.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +28,7 @@ class _OrderViewState extends State<OrderView> {
                       iconSize: 32,
                     ),
                     Expanded(
-                      child: Text("Order", style: TextStyle(
+                      child: Text(S.of(context).order, style: TextStyle(
                         fontSize: 16,
                         fontFamily: 'PoppinsBold',
                       )),
@@ -71,7 +72,7 @@ class _OrderViewState extends State<OrderView> {
                 )),
                 Container(
                   margin: EdgeInsets.only(top: 12),
-                  child: Text("Order at Lafyuu : August 1, 2017",
+                  child: Text( S.of(context).orderAt +"August 1, 2017",
                   style: TextStyle(
                     color: ColorConfig.colorGrey,
                     fontSize: 12,
@@ -92,7 +93,7 @@ class _OrderViewState extends State<OrderView> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("Order Status",
+                              Text(S.of(context).orderStatus,
                               style: TextStyle(
                                 color: ColorConfig.colorGrey,
                                 fontSize: 12,
@@ -100,7 +101,7 @@ class _OrderViewState extends State<OrderView> {
                               )),
                               Container(
                                 margin: EdgeInsets.only(top: 12),
-                                child: Text("Items",
+                                child: Text(S.of(context).items,
                                 style: TextStyle(
                                   color: ColorConfig.colorGrey,
                                   fontSize: 12,
@@ -109,7 +110,7 @@ class _OrderViewState extends State<OrderView> {
                               ),
                               Container(
                                 margin: EdgeInsets.only(top: 12),
-                                child: Text("Price",
+                                child: Text(S.of(context).totalPrice,
                                 style: TextStyle(
                                   color: ColorConfig.colorGrey,
                                   fontSize: 12,
@@ -124,7 +125,7 @@ class _OrderViewState extends State<OrderView> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            Text("Shipping",
+                            Text(S.of(context).Shipping,
                                 style: TextStyle(
                                     color: ColorConfig.colorBlack,
                                     fontSize: 12,
@@ -132,7 +133,7 @@ class _OrderViewState extends State<OrderView> {
                                 )),
                             Container(
                               margin: EdgeInsets.only(top: 12),
-                              child: Text("2 Items Purchased",
+                              child: Text("2 " + S.of(context).itemsPurchased,
                                   style: TextStyle(
                                       color: ColorConfig.colorBlack,
                                       fontSize: 12,
@@ -179,7 +180,7 @@ class _OrderViewState extends State<OrderView> {
                     )),
                 Container(
                   margin: EdgeInsets.only(top: 12),
-                  child: Text("Order at Lafyuu : August 1, 2017",
+                  child: Text( S.of(context).orderAt +"August 1, 2017",
                       style: TextStyle(
                           color: ColorConfig.colorGrey,
                           fontSize: 12,
@@ -200,7 +201,7 @@ class _OrderViewState extends State<OrderView> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("Order Status",
+                              Text(S.of(context).orderStatus,
                                   style: TextStyle(
                                       color: ColorConfig.colorGrey,
                                       fontSize: 12,
@@ -208,7 +209,7 @@ class _OrderViewState extends State<OrderView> {
                                   )),
                               Container(
                                 margin: EdgeInsets.only(top: 12),
-                                child: Text("Items",
+                                child: Text(S.of(context).items,
                                     style: TextStyle(
                                         color: ColorConfig.colorGrey,
                                         fontSize: 12,
@@ -217,7 +218,7 @@ class _OrderViewState extends State<OrderView> {
                               ),
                               Container(
                                 margin: EdgeInsets.only(top: 12),
-                                child: Text("Price",
+                                child: Text(S.of(context).totalPrice,
                                     style: TextStyle(
                                         color: ColorConfig.colorGrey,
                                         fontSize: 12,
@@ -232,7 +233,7 @@ class _OrderViewState extends State<OrderView> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            Text("Shipping",
+                            Text(S.of(context).Shipping,
                                 style: TextStyle(
                                     color: ColorConfig.colorBlack,
                                     fontSize: 12,
@@ -240,7 +241,7 @@ class _OrderViewState extends State<OrderView> {
                                 )),
                             Container(
                               margin: EdgeInsets.only(top: 12),
-                              child: Text("2 Items Purchased",
+                              child: Text("2 " + S.of(context).itemsPurchased,
                                   style: TextStyle(
                                       color: ColorConfig.colorBlack,
                                       fontSize: 12,

@@ -31,7 +31,7 @@ class _CartViewState extends State<CartView> {
             Expanded(
               child: Container(
                 padding: EdgeInsets.only(right: 16, left: 16, top: 20),
-                child: Text("Your Cart",
+                child: Text(S.of(context).yourCart,
                     style: TextStyle(
                         fontSize: 16,
                         fontFamily: 'PoppinsBold',
@@ -329,7 +329,7 @@ class _CartViewState extends State<CartView> {
                     padding: EdgeInsets.all(16),
                     child: TextFormField(
                       decoration: InputDecoration(
-                          labelText: "Enter Cupon Code",
+                          labelText: S.of(context).enterCouponCode,
                           labelStyle: TextStyle(
                               fontSize: 14,
                               color: ColorConfig.colorGrey,
@@ -345,7 +345,7 @@ class _CartViewState extends State<CartView> {
                     color: ColorConfig.bluePrimary,
                     child: Center(
                       child: Text(
-                        "Apply",
+                        S.of(context).apply,
                         style: TextStyle(
                             color: ColorConfig.colorWhite,
                             fontFamily: 'PoppinsBold',
@@ -376,14 +376,14 @@ class _CartViewState extends State<CartView> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("Items(3)",
+                            Text(S.of(context).items,
                                 style: TextStyle(
                                     color: ColorConfig.colorGrey,
                                     fontSize: 12,
                                     fontFamily: 'PoppinsRegular')),
                             Container(
                               margin: EdgeInsets.only(top: 12),
-                              child: Text("Shipping",
+                              child: Text(S.of(context).Shipping,
                                   style: TextStyle(
                                       color: ColorConfig.colorGrey,
                                       fontSize: 12,
@@ -391,7 +391,7 @@ class _CartViewState extends State<CartView> {
                             ),
                             Container(
                               margin: EdgeInsets.only(top: 12),
-                              child: Text("Import Charge",
+                              child: Text(S.of(context).importCharges,
                                   style: TextStyle(
                                       color: ColorConfig.colorGrey,
                                       fontSize: 12,
@@ -441,7 +441,7 @@ class _CartViewState extends State<CartView> {
                   child: Row(
                     children: [
                       Expanded(
-                        child: Text("Total price",
+                        child: Text(S.of(context).totalPrice,
                             style: TextStyle(
                                 color: ColorConfig.colorBlack,
                                 fontSize: 12,

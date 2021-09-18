@@ -1,4 +1,5 @@
 import 'package:aressa_commerce/feature/account/view/adddressView/addAddressView.dart';
+import 'package:aressa_commerce/generated/l10n.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -32,7 +33,7 @@ class _AddressViewState extends State<AddressView> {
                       iconSize: 32,
                     ),
                     Expanded(
-                      child: Text("Address", style: TextStyle(
+                      child: Text(S.of(context).address, style: TextStyle(
                         fontSize: 16,
                         fontFamily: 'PoppinsBold',
                       )),
@@ -106,7 +107,7 @@ class _AddressViewState extends State<AddressView> {
                           color: ColorConfig.bluePrimary,
                         ),
                         child: Center(
-                          child: Text("Edit",
+                          child: Text(S.of(context).edit,
                             style: TextStyle(
                                 color: ColorConfig.colorWhite,
                                 fontSize: 14,
@@ -180,7 +181,7 @@ class _AddressViewState extends State<AddressView> {
                           color: ColorConfig.bluePrimary,
                         ),
                         child: Center(
-                          child: Text("Edit",
+                          child: Text(S.of(context).edit,
                             style: TextStyle(
                                 color: ColorConfig.colorWhite,
                                 fontSize: 14,
@@ -224,7 +225,7 @@ class _AddressViewState extends State<AddressView> {
             minWidth: MediaQuery.of(context).size.width,
             onPressed: ()=> {this.gotoAddAddress()},
             child: Text(
-              "Add Address",
+              S.of(context).addAddress,
               style: TextStyle(
                 fontSize: 14,
                 color: Colors.white,

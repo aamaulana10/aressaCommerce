@@ -1,4 +1,5 @@
 import 'package:aressa_commerce/feature/account/view/paymentView/creditCardView.dart';
+import 'package:aressa_commerce/generated/l10n.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -32,7 +33,7 @@ class _PaymentViewState extends State<PaymentView> {
                       iconSize: 32,
                     ),
                     Expanded(
-                      child: Text("Payment", style: TextStyle(
+                      child: Text(S.of(context).payment, style: TextStyle(
                         fontSize: 16,
                         fontFamily: 'PoppinsBold',
                       )),
@@ -66,7 +67,7 @@ class _PaymentViewState extends State<PaymentView> {
                   ),
                   Container(
                     margin: EdgeInsets.only(left: 8),
-                    child: Text("Credit Card Or Debit",
+                    child: Text(S.of(context).creditCardAndDebit,
                       style: TextStyle(
                         color: ColorConfig.colorBlack,
                         fontSize: 12,

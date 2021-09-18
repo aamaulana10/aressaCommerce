@@ -41,7 +41,7 @@ class _RegisterViewState extends State<RegisterView> {
                   Container(
                     margin: EdgeInsets.only(top: 16),
                     child: Text(
-                      "Let's Get Started",
+                      S.of(context).letsGetStarted,
                       style: TextStyle(
                           color: Colors.black,
                           fontSize: 16,
@@ -50,7 +50,7 @@ class _RegisterViewState extends State<RegisterView> {
                   ),
                   Container(
                       margin: EdgeInsets.only(top: 10),
-                      child: Text("Create an new accout",
+                      child: Text(S.of(context).createNewAccount,
                           style: TextStyle(
                               color: Colors.black,
                               fontSize: 12,
@@ -67,7 +67,7 @@ class _RegisterViewState extends State<RegisterView> {
                     child: TextFormField(
                       decoration: InputDecoration(
                           prefixIcon: Icon(Icons.person_outline),
-                          labelText: "Full Name",
+                          labelText: S.of(context).fullName,
                           labelStyle: TextStyle(
                               fontSize: 14,
                               color: Colors.grey,
@@ -127,7 +127,7 @@ class _RegisterViewState extends State<RegisterView> {
                     child: TextFormField(
                       decoration: InputDecoration(
                           prefixIcon: Icon(Icons.lock),
-                          labelText: "Password Again",
+                          labelText: S.of(context).confirmPasswaord,
                           labelStyle: TextStyle(
                               fontSize: 14,
                               color: Colors.grey,
@@ -148,7 +148,7 @@ class _RegisterViewState extends State<RegisterView> {
                               color: Color(0xFF41BFFF),
                               borderRadius: BorderRadius.circular(5)),
                           child: Text(
-                            "Sign Up",
+                            S.of(context).signUp,
                             style: TextStyle(
                               fontSize: 14,
                               color: Colors.white,
@@ -164,7 +164,7 @@ class _RegisterViewState extends State<RegisterView> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Text("have a account? ",
+                        Text(S.of(context).haveAccount,
                             style: TextStyle(
                                 color: Colors.grey,
                                 fontSize: 12,
@@ -172,7 +172,7 @@ class _RegisterViewState extends State<RegisterView> {
                             )),
                         TextButton(
                           onPressed: ()=> {this.gotoLoginView()},
-                          child: Text("Sign Up",
+                          child: Text(S.of(context).signIn,
                             style: TextStyle(
                                 color: Colors.lightBlue,
                                 fontSize: 12,
