@@ -311,7 +311,7 @@ class _DetailProductViewState extends State<DetailProductView> {
                        color: ColorConfig.textColor1,
                         fontFamily: 'PoppinsBold',
                       ))),
-                  Text("(5 Reviews)", style: TextStyle(
+                  Text("5 " + S.of(context).review, style: TextStyle(
                       fontSize: 10,
                       fontFamily: 'PoppinsRegular',
                       color: ColorConfig.textColor1,

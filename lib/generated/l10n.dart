@@ -35,10 +35,10 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Welcome to`
+  /// `Welcome to Flying`
   String get welcomeTo {
     return Intl.message(
-      'Welcome to',
+      'Welcome to Flying',
       name: 'welcomeTo',
       desc: '',
       args: [],
@@ -135,10 +135,10 @@ class S {
     );
   }
 
-  /// `Don’t have a account`
+  /// `Don’t have a account? `
   String get dontHaveAccount {
     return Intl.message(
-      'Don’t have a account',
+      'Don’t have a account? ',
       name: 'dontHaveAccount',
       desc: '',
       args: [],
@@ -205,10 +205,10 @@ class S {
     );
   }
 
-  /// `Have a account`
+  /// `Have a account? `
   String get haveAccount {
     return Intl.message(
-      'Have a account',
+      'Have a account? ',
       name: 'haveAccount',
       desc: '',
       args: [],
@@ -305,10 +305,10 @@ class S {
     );
   }
 
-  /// `Review`
+  /// `Review)`
   String get review {
     return Intl.message(
-      'Review',
+      'Review)',
       name: 'review',
       desc: '',
       args: [],
@@ -710,6 +710,326 @@ class S {
     return Intl.message(
       'Input Code',
       name: 'inputCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Input Card Holder`
+  String get inputCardHolder {
+    return Intl.message(
+      'Input Card Holder',
+      name: 'inputCardHolder',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Flash Sale`
+  String get flashSale {
+    return Intl.message(
+      'Flash Sale',
+      name: 'flashSale',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mega Sale`
+  String get megaSale {
+    return Intl.message(
+      'Mega Sale',
+      name: 'megaSale',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `More Category`
+  String get moreCategory {
+    return Intl.message(
+      'More Category',
+      name: 'moreCategory',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email`
+  String get email {
+    return Intl.message(
+      'Email',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your Password`
+  String get yourPassword {
+    return Intl.message(
+      'Your Password',
+      name: 'yourPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select a Language`
+  String get selectLanguage {
+    return Intl.message(
+      'Select a Language',
+      name: 'selectLanguage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Recommended`
+  String get recommended {
+    return Intl.message(
+      'Recommended',
+      name: 'recommended',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Special For You`
+  String get specialForYou {
+    return Intl.message(
+      'Special For You',
+      name: 'specialForYou',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Country Or Region`
+  String get countryOrRegion {
+    return Intl.message(
+      'Country Or Region',
+      name: 'countryOrRegion',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `First Name`
+  String get firstName {
+    return Intl.message(
+      'First Name',
+      name: 'firstName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Last Name`
+  String get lastName {
+    return Intl.message(
+      'Last Name',
+      name: 'lastName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Street Address`
+  String get streetAddress {
+    return Intl.message(
+      'Street Address',
+      name: 'streetAddress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Street Address 2 (Optional)`
+  String get streetAddressOptional {
+    return Intl.message(
+      'Street Address 2 (Optional)',
+      name: 'streetAddressOptional',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `City`
+  String get city {
+    return Intl.message(
+      'City',
+      name: 'city',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `State/Province/Region`
+  String get stateProvinceRegion {
+    return Intl.message(
+      'State/Province/Region',
+      name: 'stateProvinceRegion',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Zip Code`
+  String get zipCode {
+    return Intl.message(
+      'Zip Code',
+      name: 'zipCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add Address`
+  String get addAddress {
+    return Intl.message(
+      'Add Address',
+      name: 'addAddress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Address`
+  String get address {
+    return Intl.message(
+      'Address',
+      name: 'address',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit`
+  String get edit {
+    return Intl.message(
+      'Edit',
+      name: 'edit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Order`
+  String get order {
+    return Intl.message(
+      'Order',
+      name: 'order',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Order At Flying: `
+  String get orderAt {
+    return Intl.message(
+      'Order At Flying: ',
+      name: 'orderAt',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Order Status`
+  String get orderStatus {
+    return Intl.message(
+      'Order Status',
+      name: 'orderStatus',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Items Purchased`
+  String get itemsPurchased {
+    return Intl.message(
+      'Items Purchased',
+      name: 'itemsPurchased',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Credit Card And Debit`
+  String get creditCardAndDebit {
+    return Intl.message(
+      'Credit Card And Debit',
+      name: 'creditCardAndDebit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Account`
+  String get account {
+    return Intl.message(
+      'Account',
+      name: 'account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `profile`
+  String get profile {
+    return Intl.message(
+      'profile',
+      name: 'profile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payment`
+  String get payment {
+    return Intl.message(
+      'Payment',
+      name: 'payment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gender`
+  String get gender {
+    return Intl.message(
+      'Gender',
+      name: 'gender',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pria`
+  String get male {
+    return Intl.message(
+      'Pria',
+      name: 'male',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All Review`
+  String get allReview {
+    return Intl.message(
+      'All Review',
+      name: 'allReview',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Home`
+  String get home {
+    return Intl.message(
+      'Home',
+      name: 'home',
       desc: '',
       args: [],
     );

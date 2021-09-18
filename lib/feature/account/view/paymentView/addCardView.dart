@@ -1,5 +1,6 @@
 import 'package:aressa_commerce/feature/account/view/paymentView/paymentView.dart';
 import 'package:aressa_commerce/feature/mainTabbar.dart';
+import 'package:aressa_commerce/generated/l10n.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -38,7 +39,7 @@ class _AddCardViewState extends State<AddCardView> {
                       iconSize: 32,
                     ),
                     Expanded(
-                      child: Text("Add Card", style: TextStyle(
+                      child: Text(S.of(context).addCard, style: TextStyle(
                         fontSize: 16,
                         fontFamily: 'PoppinsBold',
                       )),
@@ -73,7 +74,7 @@ class _AddCardViewState extends State<AddCardView> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Credit Card",
+                Text(S.of(context).creditCard,
                     style: TextStyle(
                         color: ColorConfig.colorWhite,
                         fontSize: 24,
@@ -100,7 +101,7 @@ class _AddCardViewState extends State<AddCardView> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("CARD HOLDER",
+                            Text(S.of(context).cardHolder,
                                 style: TextStyle(
                                     color: ColorConfig.colorWhite,
                                     fontSize: 10,
@@ -124,7 +125,7 @@ class _AddCardViewState extends State<AddCardView> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("CARD SAVE",
+                            Text(S.of(context).cardSave,
                                 style: TextStyle(
                                     color: ColorConfig.colorWhite,
                                     fontSize: 10,
@@ -151,7 +152,7 @@ class _AddCardViewState extends State<AddCardView> {
           ),
           Container(
             margin: EdgeInsets.only(top: 16),
-            child: Text("Card Number",
+            child: Text(S.of(context).cardNumber,
             style: TextStyle(
               color: ColorConfig.colorBlack,
               fontSize: 14,
@@ -194,7 +195,7 @@ class _AddCardViewState extends State<AddCardView> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
-                        child: Text("Expiration Date",
+                        child: Text(S.of(context).expirationDate,
                             style: TextStyle(
                                 color: ColorConfig.colorBlack,
                                 fontSize: 14,
@@ -239,7 +240,7 @@ class _AddCardViewState extends State<AddCardView> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
-                          child: Text("Security Code",
+                          child: Text(S.of(context).sequrityCode,
                               style: TextStyle(
                                   color: ColorConfig.colorBlack,
                                   fontSize: 14,
@@ -283,7 +284,7 @@ class _AddCardViewState extends State<AddCardView> {
           ),
           Container(
             margin: EdgeInsets.only(top: 16),
-            child: Text("Card Holder",
+            child: Text(S.of(context).cardHolder,
                 style: TextStyle(
                     color: ColorConfig.colorBlack,
                     fontSize: 14,
@@ -339,7 +340,7 @@ class _AddCardViewState extends State<AddCardView> {
             minWidth: MediaQuery.of(context).size.width,
             onPressed: ()=> {this.gotoHome()},
             child: Text(
-              "Add Address",
+              S.of(context).addCard,
               style: TextStyle(
                 fontSize: 14,
                 color: Colors.white,

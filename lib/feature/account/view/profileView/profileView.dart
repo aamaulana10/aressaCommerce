@@ -62,7 +62,7 @@ class _ProfileViewState extends State<ProfileView> {
                       iconSize: 32,
                     ),
                     Expanded(
-                      child: Text("Profile", style: TextStyle(
+                      child: Text(S.of(context).profile, style: TextStyle(
                         fontSize: 16,
                         fontFamily: 'PoppinsBold',
                       )),
@@ -158,7 +158,7 @@ class _ProfileViewState extends State<ProfileView> {
                   ),
                   Container(
                     margin: EdgeInsets.only(left: 16),
-                    child: Text("Gender",
+                    child: Text(S.of(context).gender,
                       style: TextStyle(
                           color: ColorConfig.colorBlack,
                           fontSize: 12,
@@ -170,7 +170,7 @@ class _ProfileViewState extends State<ProfileView> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Text("Male",
+                        Text(S.of(context).male,
                         style: TextStyle(
                           color: ColorConfig.colorGrey,
                           fontSize: 12,
@@ -201,7 +201,7 @@ class _ProfileViewState extends State<ProfileView> {
                   ),
                   Container(
                     margin: EdgeInsets.only(left: 16),
-                    child: Text("Birthday",
+                    child: Text(S.of(context).birthday,
                       style: TextStyle(
                           color: ColorConfig.colorBlack,
                           fontSize: 12,
@@ -244,7 +244,7 @@ class _ProfileViewState extends State<ProfileView> {
                   ),
                   Container(
                     margin: EdgeInsets.only(left: 16),
-                    child: Text("Email",
+                    child: Text(S.of(context).email,
                       style: TextStyle(
                           color: ColorConfig.colorBlack,
                           fontSize: 12,
@@ -287,7 +287,7 @@ class _ProfileViewState extends State<ProfileView> {
                   ),
                   Container(
                     margin: EdgeInsets.only(left: 16),
-                    child: Text("Phone Number",
+                    child: Text(S.of(context).phoneNumber,
                       style: TextStyle(
                           color: ColorConfig.colorBlack,
                           fontSize: 12,

@@ -1,4 +1,5 @@
 import 'package:aressa_commerce/feature/account/view/paymentView/addCardView.dart';
+import 'package:aressa_commerce/generated/l10n.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -32,7 +33,7 @@ class _CreditCardViewState extends State<CreditCardView> {
                       iconSize: 32,
                     ),
                     Expanded(
-                      child: Text("Credit Card And Debit", style: TextStyle(
+                      child: Text(S.of(context).creditCardAndDebit, style: TextStyle(
                         fontSize: 16,
                         fontFamily: 'PoppinsBold',
                       )),
@@ -66,7 +67,7 @@ class _CreditCardViewState extends State<CreditCardView> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Credit Card",
+                Text(S.of(context).creditCard,
                 style: TextStyle(
                   color: ColorConfig.colorWhite,
                   fontSize: 24,
@@ -93,7 +94,7 @@ class _CreditCardViewState extends State<CreditCardView> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("CARD HOLDER",
+                            Text(S.of(context).cardHolder,
                             style: TextStyle(
                               color: ColorConfig.colorWhite,
                               fontSize: 10,
@@ -117,7 +118,7 @@ class _CreditCardViewState extends State<CreditCardView> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("CARD SAVE",
+                            Text(S.of(context).cardSave,
                                 style: TextStyle(
                                     color: ColorConfig.colorWhite,
                                     fontSize: 10,
@@ -154,7 +155,7 @@ class _CreditCardViewState extends State<CreditCardView> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Credit Card",
+                Text(S.of(context).creditCard,
                     style: TextStyle(
                         color: ColorConfig.colorWhite,
                         fontSize: 24,
@@ -181,7 +182,7 @@ class _CreditCardViewState extends State<CreditCardView> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("CARD HOLDER",
+                            Text(S.of(context).cardHolder,
                                 style: TextStyle(
                                     color: ColorConfig.colorWhite,
                                     fontSize: 10,
@@ -205,7 +206,7 @@ class _CreditCardViewState extends State<CreditCardView> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("CARD SAVE",
+                            Text(S.of(context).cardSave,
                                 style: TextStyle(
                                     color: ColorConfig.colorWhite,
                                     fontSize: 10,
@@ -251,7 +252,7 @@ class _CreditCardViewState extends State<CreditCardView> {
             minWidth: MediaQuery.of(context).size.width,
             onPressed: ()=> {this.gotoAddCardView()},
             child: Text(
-              "Add Address",
+              S.of(context).addCard,
               style: TextStyle(
                 fontSize: 14,
                 color: Colors.white,

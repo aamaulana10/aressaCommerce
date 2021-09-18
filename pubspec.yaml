@@ -332,6 +332,13 @@ flutter:
     - lib/asset/image/product/womenSandals2021NewHeels2.jpg
     - lib/asset/image/product/womenSandals2021NewHeels3.jpg
     - lib/asset/image/product/womenSandals2021NewHeels4.jpg
+    - lib/asset/image/home/james.png
+    - lib/asset/image/home/laura.png
+    - lib/asset/image/home/jhonson.png
+    - lib/asset/image/home/griffin.png
+    - lib/asset/image/home/sepatuKuning01.png
+    - lib/asset/image/home/sepatuKuning02.png
+    - lib/asset/image/home/sepatuKuning03.png
   fonts:
     - family: PoppinsBlack
       fonts:

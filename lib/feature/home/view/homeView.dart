@@ -77,8 +77,7 @@ class _HomeViewState extends State<HomeView> {
                       child: Row(
                         children: [
                           Expanded(
-                              child: Text(
-                            "Select a language",
+                              child: Text(S.of(context).selectLanguage,
                             style: TextStyle(
                               color: ColorConfig.colorBlack,
                               fontSize: 16,
@@ -588,7 +587,7 @@ class _HomeViewState extends State<HomeView> {
                     child: Row(
                       children: [
                         Expanded(
-                            child: Text("Flash Sale",
+                            child: Text(S.of(context).flashSale,
                                 style: TextStyle(
                                   color: ColorConfig.textColorBold1,
                                   fontSize: 14,
@@ -723,14 +722,14 @@ class _HomeViewState extends State<HomeView> {
                     child: Row(
                       children: [
                         Expanded(
-                            child: Text("Mega Sale",
+                            child: Text(S.of(context).megaSale,
                                 style: TextStyle(
                                   color: ColorConfig.textColorBold1,
                                   fontSize: 14,
                                   fontFamily: 'PoppinsBold',
                                 ))),
                         FlatButton(
-                            onPressed: () => {gotoFlashSale()},
+                            onPressed: () => {gotoMegaSale()},
                             child: Text(S.of(context).seeMore,
                                 style: TextStyle(
                                     fontSize: 14,
@@ -842,73 +841,6 @@ class _HomeViewState extends State<HomeView> {
     );
   }
 
-  Widget recommendedProductWidget() {
-    return Container(
-      height: 206,
-      width: MediaQuery.of(context).size.width,
-      margin: EdgeInsets.only(left: 16, right: 16, top: 8, bottom: 8),
-      child: Stack(
-        fit: StackFit.expand,
-        children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(5),
-            child: Image(
-              image: AssetImage("lib/asset/image/home/promotionDummy.png"),
-              fit: BoxFit.cover,
-            ),
-          ),
-          Positioned(
-              bottom: 60,
-              left: 24,
-              child: Container(
-                width: 209,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Recommended",
-                      maxLines: 2,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 24,
-                        fontFamily: 'PoppinsBold',
-                      ),
-                    ),
-                    Text(
-                      "Product",
-                      maxLines: 2,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 24,
-                        fontFamily: 'PoppinsBold',
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(top: 32),
-                      child: Text(
-                        "We recommend the best for you",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 12,
-                            fontFamily: 'PoppinsRegular'),
-                      ),
-                    )
-                  ],
-                ),
-              )),
-          Positioned.fill(
-            child: Material(
-              color: Colors.transparent,
-              child: InkWell(
-                onTap: () => {print("recommended")},
-              ),
-            ),
-          )
-        ],
-      ),
-    );
-  }
-
   Widget productGridWidget() {
     return StreamBuilder(
       stream: Repository().getRecommendedProduct().asStream(),
@@ -923,7 +855,7 @@ class _HomeViewState extends State<HomeView> {
                   child: Row(
                     children: [
                       Expanded(
-                          child: Text("Special For You",
+                          child: Text(S.of(context).specialForYou,
                               style: TextStyle(
                                 color: ColorConfig.textColorBold1,
                                 fontSize: 14,

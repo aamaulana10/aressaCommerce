@@ -1,4 +1,5 @@
 import 'package:aressa_commerce/feature/detailProduct/view/detailProductView.dart';
+import 'package:aressa_commerce/generated/l10n.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -36,7 +37,7 @@ class _FlashSaleViewState extends State<FlashSaleView> {
                       iconSize: 32,
                     ),
                     Expanded(
-                      child: Text("Super Flash Sale", style: TextStyle(
+                      child: Text(S.of(context).flashSale, style: TextStyle(
                           fontSize: 16,
                         fontFamily: 'PoppinsBold',
                       )),

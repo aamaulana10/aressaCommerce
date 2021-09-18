@@ -3,6 +3,7 @@ import 'package:aressa_commerce/feature/cart/view/cartView.dart';
 import 'package:aressa_commerce/feature/home/view/homeView.dart';
 import 'package:aressa_commerce/feature/offer/view/offerView.dart';
 import 'package:aressa_commerce/feature/search/view/searchView.dart';
+import 'package:aressa_commerce/generated/l10n.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -45,15 +46,15 @@ class _MainTabbarState extends State<MainTabbar> {
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: "Home"
+            label: S.of(context).home
           ),
           BottomNavigationBarItem(
               icon: Icon(Icons.search),
-              label: "Explore"
+              label: S.of(context).searchProduct
           ),
           BottomNavigationBarItem(
               icon: Icon(Icons.shopping_cart),
-              label: "Cart"
+              label: S.of(context).yourCart
           ),
           BottomNavigationBarItem(
               icon: Icon(Icons.airplane_ticket_outlined),
@@ -61,7 +62,7 @@ class _MainTabbarState extends State<MainTabbar> {
           ),
           BottomNavigationBarItem(
               icon: Icon(Icons.person),
-              label: "Account"
+              label: S.of(context).account
           )
         ],
       ),

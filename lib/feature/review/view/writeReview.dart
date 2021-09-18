@@ -1,3 +1,4 @@
+import 'package:aressa_commerce/generated/l10n.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +28,7 @@ class _WriteReviewState extends State<WriteReview> {
                       icon: Icon(Icons.chevron_left),
                       iconSize: 32,
                     ),
-                    Text("Write Review", style: TextStyle(
+                    Text(S.of(context).writeReview, style: TextStyle(
                       fontSize: 16,
                       color: Colors.black,
                       fontFamily: 'PoppinsBold',
@@ -86,7 +87,7 @@ class _WriteReviewState extends State<WriteReview> {
           ),
           Container(
             margin: EdgeInsets.only(top: 24),
-            child: Text("Write Your Review",
+            child: Text(S.of(context).writeYourReview,
             style: TextStyle(
               color: Colors.black,
               fontSize: 14,

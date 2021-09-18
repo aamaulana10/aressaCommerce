@@ -53,7 +53,7 @@ class _LoginViewState extends State<LoginView> {
                 Container(
                   margin: EdgeInsets.only(top: 16),
                   child: Text(
-                  "Welcome to Flying",
+                  S.of(context).welcomeTo,
                   style: TextStyle(
                       color: ColorConfig.textColorBold1,
                       fontSize: 16,
@@ -62,7 +62,7 @@ class _LoginViewState extends State<LoginView> {
               ),
               Container(
                   margin: EdgeInsets.only(top: 10),
-                  child: Text("Sign in to continue",
+                  child: Text(S.of(context).signInToContinue,
                       style: TextStyle(
                           color: ColorConfig.textColor1,
                           fontSize: 12,
@@ -107,7 +107,7 @@ class _LoginViewState extends State<LoginView> {
                       fontFamily: 'PoppinsBold'),
                   decoration: InputDecoration(
                       prefixIcon: Icon(Icons.lock),
-                      labelText: "Your password",
+                      labelText: S.of(context).yourPassword,
                       labelStyle: TextStyle(
                           color: ColorConfig.textColor1,
                           fontFamily: 'PoppinsRegular'),
@@ -131,7 +131,7 @@ class _LoginViewState extends State<LoginView> {
                           minWidth: MediaQuery.of(context).size.width,
                           onPressed: ()=> {gotoMainTabbar()},
                           child: Text(
-                            "Sign in",
+                            S.of(context).signIn,
                             style: TextStyle(
                               fontSize: 14,
                               color: Colors.white,
@@ -193,7 +193,7 @@ class _LoginViewState extends State<LoginView> {
                       width: 24,
                     ),
                     Expanded(
-                      child: Text("Login With Google",
+                      child: Text(S.of(context).loginWithGoogle,
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: ColorConfig.textColor1,
@@ -224,7 +224,7 @@ class _LoginViewState extends State<LoginView> {
                       width: 24,
                     ),
                     Expanded(
-                      child: Text("Login With Facebook",
+                      child: Text(S.of(context).loginWithFacebook,
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             color: ColorConfig.textColor1,
@@ -239,7 +239,7 @@ class _LoginViewState extends State<LoginView> {
               Container(
                 child: TextButton(
                   onPressed: () => {},
-                  child: Text("Forgot Password?",
+                  child: Text(S.of(context).forgotPassword,
                   style: TextStyle(
                       color: ColorConfig.bluePrimary,
                     fontSize: 12,
@@ -253,7 +253,7 @@ class _LoginViewState extends State<LoginView> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text("Don't have a account? ",
+                    Text(S.of(context).dontHaveAccount,
                     style: TextStyle(
                       color: ColorConfig.textColor1,
                       fontSize: 12,
@@ -261,7 +261,7 @@ class _LoginViewState extends State<LoginView> {
                     )),
                     TextButton(
                       onPressed: () => {this.gotoRegisterView()},
-                        child: Text("Register",
+                        child: Text(S.of(context).register,
                         style: TextStyle(
                             color: ColorConfig.bluePrimary,
                           fontSize: 12,
