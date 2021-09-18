@@ -251,7 +251,7 @@ class _CreditCardViewState extends State<CreditCardView> {
             minWidth: MediaQuery.of(context).size.width,
             onPressed: ()=> {this.gotoAddCardView()},
             child: Text(
-              "Add Address",
+              "Add Card",
               style: TextStyle(
                 fontSize: 14,
                 color: Colors.white,

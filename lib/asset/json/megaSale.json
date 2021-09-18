@@ -5,6 +5,7 @@
       "image": {
         "thumbnail": "lib/asset/image/product/manJoggersPants.jpg",
         "gallery": [
+          "lib/asset/image/product/manJoggersPants.jpg",
           "lib/asset/image/product/manJoggersPants2.jpg",
           "lib/asset/image/product/manJoggersPants3.jpg",
           "lib/asset/image/product/manJoggersPants4.jpg"
@@ -25,6 +26,7 @@
       "image": {
         "thumbnail": "lib/asset/image/product/springCasualCustomWomen.jpg",
         "gallery": [
+          "lib/asset/image/product/springCasualCustomWomen.jpg",
           "lib/asset/image/product/springCasualCustomWomen2.jpg",
           "lib/asset/image/product/springCasualCustomWomen3.jpg",
           "lib/asset/image/product/springCasualCustomWomen4.jpg"
@@ -45,6 +47,7 @@
       "image": {
         "thumbnail": "lib/asset/image/product/dressWomanWithSlit.jpg",
         "gallery": [
+          "lib/asset/image/product/dressWomanWithSlit.jpg",
           "lib/asset/image/product/dressWomanWithSlit2.jpg",
           "lib/asset/image/product/dressWomanWithSlit3.jpg",
           "lib/asset/image/product/dressWomanWithSlit4.jpg"
@@ -65,6 +68,7 @@
       "image": {
         "thumbnail": "lib/asset/image/product/casualDress.jpg",
         "gallery": [
+          "lib/asset/image/product/casualDress.jpg",
           "lib/asset/image/product/casualDress2.jpg",
           "lib/asset/image/product/casualDress3.jpg",
           "lib/asset/image/product/casualDress4.jpg"
@@ -85,6 +89,7 @@
       "image": {
         "thumbnail": "lib/asset/image/product/elegantWomenDress.jpg",
         "gallery": [
+          "lib/asset/image/product/elegantWomenDress.jpg",
           "lib/asset/image/product/elegantWomenDress2.jpg",
           "lib/asset/image/product/elegantWomenDress3.jpg",
           "lib/asset/image/product/elegantWomenDress4.jpg"

@@ -242,17 +242,18 @@ class _HomeViewState extends State<HomeView> {
         searchData = e;
       });
 
-      Navigator.of(context).push(MaterialPageRoute(builder: (context) => SearchResultView(
-        searchData: searchData,
-      )));
+      Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => SearchResultView(
+                searchData: searchData,
+              )));
     }
   }
 
   gotoSearchByCategory(String category) {
-
-    Navigator.of(context).push(MaterialPageRoute(builder: (context) => SearchResultView(
-      category: category,
-    )));
+    Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => SearchResultView(
+              category: category,
+            )));
   }
 
   onBannerChange(e) {
@@ -324,7 +325,7 @@ class _HomeViewState extends State<HomeView> {
                   child: Container(
                     height: 40,
                     decoration:
-                    BoxDecoration(borderRadius: BorderRadius.circular(20)),
+                        BoxDecoration(borderRadius: BorderRadius.circular(20)),
                     child: InkWell(
                         borderRadius: BorderRadius.circular(20),
                         onTap: () => {showLanguagePopup()},
@@ -372,140 +373,84 @@ class _HomeViewState extends State<HomeView> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Expanded(
-            child: PageView.builder(
-              itemCount: 3,
-              controller: _pageController,
-              onPageChanged: (e) => {onBannerChange(e)},
-              itemBuilder: (ctx, idx) {
-                return Container(
-                  margin: EdgeInsets.only(left: 16, right: 16),
-                  child: Stack(
-                    fit: StackFit.expand,
-                    children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(5),
-                        child: Image(
-                          image: AssetImage(
-                              "lib/asset/image/home/promotionDummy.png"),
-                          fit: BoxFit.cover,
+              child: PageView(
+            children: [
+              Container(
+                margin: EdgeInsets.only(left: 16, right: 16),
+                child: Stack(
+                  fit: StackFit.expand,
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(5),
+                      child: Image(
+                        image: AssetImage(
+                            "lib/asset/image/banner/bannerSuperPromo.png"),
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                    Positioned.fill(
+                      child: Material(
+                        color: Colors.transparent,
+                        child: InkWell(
+                          onTap: () => {gotoMegaSale()},
                         ),
                       ),
-                      Positioned(
-                          bottom: 32,
-                          left: 24,
-                          child: Container(
-                            width: 209,
-                            child: Column(
-                              children: [
-                                Text(
-                                  "Super Flash Sale 50% Off",
-                                  maxLines: 2,
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 24,
-                                      fontFamily: 'PoppinsBold'),
-                                ),
-                                Container(
-                                  margin: EdgeInsets.only(top: 30),
-                                  child: Row(
-                                    children: [
-                                      Container(
-                                        height: 41,
-                                        width: 42,
-                                        decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            borderRadius:
-                                                BorderRadius.circular(8)),
-                                        child: Center(
-                                          child: Text(
-                                            "08",
-                                            style: TextStyle(
-                                                color: Colors.black,
-                                                fontSize: 16,
-                                                fontFamily: 'PoppinsBold'),
-                                          ),
-                                        ),
-                                      ),
-                                      Container(
-                                        margin:
-                                            EdgeInsets.only(left: 8, right: 8),
-                                        child: Text(
-                                          ":",
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontFamily: 'PoppinsBold',
-                                            fontSize: 14,
-                                          ),
-                                        ),
-                                      ),
-                                      Container(
-                                        height: 41,
-                                        width: 42,
-                                        decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            borderRadius:
-                                                BorderRadius.circular(8)),
-                                        child: Center(
-                                          child: Text(
-                                            "34",
-                                            style: TextStyle(
-                                              color: Colors.black,
-                                              fontSize: 16,
-                                              fontFamily: 'PoppinsBold',
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      Container(
-                                        margin:
-                                            EdgeInsets.only(left: 8, right: 8),
-                                        child: Text(
-                                          ":",
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontFamily: 'PoppinsBold',
-                                            fontSize: 14,
-                                          ),
-                                        ),
-                                      ),
-                                      Container(
-                                        height: 41,
-                                        width: 42,
-                                        decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            borderRadius:
-                                                BorderRadius.circular(8)),
-                                        child: Center(
-                                          child: Text(
-                                            "52",
-                                            style: TextStyle(
-                                              color: Colors.black,
-                                              fontSize: 16,
-                                              fontFamily: 'PoppinsBold',
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                )
-                              ],
-                            ),
-                          )),
-                      Positioned.fill(
-                        child: Material(
-                          color: Colors.transparent,
-                          child: InkWell(
-                            onTap: () => {print("banner")},
-                          ),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(left: 16, right: 16),
+                child: Stack(
+                  fit: StackFit.expand,
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(5),
+                      child: Image(
+                        image: AssetImage(
+                            "lib/asset/image/banner/bannerFlashSale.png"),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Positioned.fill(
+                      child: Material(
+                        color: Colors.transparent,
+                        child: InkWell(
+                          onTap: () => {gotoFlashSale()},
                         ),
-                      )
-                    ],
-                  ),
-                );
-              },
-            ),
-          ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(left: 16, right: 16),
+                child: Stack(
+                  fit: StackFit.expand,
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(5),
+                      child: Image(
+                        image: AssetImage(
+                            "lib/asset/image/banner/bannerNewSeason.png"),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Positioned.fill(
+                      child: Material(
+                        color: Colors.transparent,
+                        child: InkWell(
+                          onTap: () => {gotoFlashSale()},
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              )
+            ],
+            controller: _pageController,
+            onPageChanged: (e) => {onBannerChange(e)},
+          )),
           Container(
             height: 40,
             margin: EdgeInsets.only(left: 32, right: 32),
@@ -777,7 +722,7 @@ class _HomeViewState extends State<HomeView> {
                                   fontFamily: 'PoppinsBold',
                                 ))),
                         FlatButton(
-                            onPressed: () => {gotoFlashSale()},
+                            onPressed: () => {gotoMegaSale()},
                             child: Text(S.of(context).seeMore,
                                 style: TextStyle(
                                     fontSize: 14,

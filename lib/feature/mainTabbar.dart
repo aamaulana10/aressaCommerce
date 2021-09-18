@@ -20,7 +20,6 @@ class _MainTabbarState extends State<MainTabbar> {
     HomeView(),
     SearchView(),
     CartView(),
-    OfferView(),
     AccountView()
   ];
 
@@ -41,11 +40,19 @@ class _MainTabbarState extends State<MainTabbar> {
         onTap: (e) => { onChangeTab(e) },
         currentIndex: currentIndex,
         selectedItemColor: ColorConfig.bluePrimary,
-        unselectedItemColor: Colors.grey,
+        unselectedItemColor: ColorConfig.textColor1,
+        showUnselectedLabels: true,
+        selectedLabelStyle: TextStyle(
+          fontFamily: "PoppinsBold",
+          fontSize: 10
+        ),unselectedLabelStyle: TextStyle(
+          fontFamily: "PoppinsRegular",
+          fontSize: 10
+        ),
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: "Home"
+            label: "Home",
           ),
           BottomNavigationBarItem(
               icon: Icon(Icons.search),
@@ -54,10 +61,6 @@ class _MainTabbarState extends State<MainTabbar> {
           BottomNavigationBarItem(
               icon: Icon(Icons.shopping_cart),
               label: "Cart"
-          ),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.airplane_ticket_outlined),
-              label: "Offer"
           ),
           BottomNavigationBarItem(
               icon: Icon(Icons.person),

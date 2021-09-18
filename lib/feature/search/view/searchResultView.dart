@@ -277,84 +277,90 @@ class _SearchResultViewState extends State<SearchResultView> {
                                       return Container(
                                         height: 400,
                                         margin: EdgeInsets.all(8),
-                                        padding: EdgeInsets.all(8),
                                         decoration: BoxDecoration(
-                                            border: Border.all(
-                                                color: ColorConfig.borderColor, width: 1),
+                                            border: Border.all(color: ColorConfig.borderColor, width: 1),
                                             borderRadius: BorderRadius.circular(8)),
-                                        child: InkWell(
-                                          onTap: () => {gotoDetailProduct(item)},
-                                          child: Column(
-                                            mainAxisAlignment: MainAxisAlignment.start,
-                                            crossAxisAlignment: CrossAxisAlignment.start,
-                                            children: [
-                                              Expanded(
-                                                child: Container(
-                                                  child: ClipRRect(
-                                                    borderRadius: BorderRadius.circular(5),
-                                                    child: Image(
-                                                      image:
-                                                      AssetImage(item.image.thumbnail),
-                                                      fit: BoxFit.fill,
+                                        child: Material(
+                                          color: Colors.transparent,
+                                          child: InkWell(
+                                            onTap: () => {gotoDetailProduct(item)},
+                                            child: Container(
+                                              padding: EdgeInsets.all(8),
+                                              child: Column(
+                                                mainAxisAlignment: MainAxisAlignment.start,
+                                                crossAxisAlignment: CrossAxisAlignment.center,
+                                                children: [
+                                                  Expanded(
+                                                    child: Container(
+                                                      child: ClipRRect(
+                                                        borderRadius: BorderRadius.circular(5),
+                                                        child: Image(
+                                                          image:
+                                                          AssetImage(item.image.thumbnail),
+                                                        ),
+                                                      ),
                                                     ),
                                                   ),
-                                                ),
-                                              ),
-                                              Container(
-                                                child: Text(item.name,
-                                                    maxLines: 2,
-                                                    style: TextStyle(
-                                                      fontSize: 12,
-                                                      color: ColorConfig.textColorBold1,
-                                                      fontFamily: 'PoppinsBold',
-                                                    )),
-                                                padding: EdgeInsets.only(top: 10),
-                                              ),
-                                              Container(
-                                                child: RatingBarIndicator(
-                                                  rating: item.rate,
-                                                  itemBuilder: (context, index) => Icon(
-                                                    Icons.star,
-                                                    color: Colors.amber,
-                                                  ),
-                                                  itemCount: 5,
-                                                  itemSize: 24.0,
-                                                  unratedColor: ColorConfig.borderColor,
-                                                ),
-                                                padding: EdgeInsets.only(top: 10),
-                                              ),
-                                              Container(
-                                                margin: EdgeInsets.only(top: 8),
-                                                child: Text(item.price.special,
-                                                    style: TextStyle(
-                                                      fontSize: 12,
-                                                      color: ColorConfig.bluePrimary,
-                                                      fontFamily: 'PoppinsBold',
-                                                    )),
-                                                padding: EdgeInsets.only(top: 10),
-                                              ),
-                                              Container(
-                                                child: Row(
-                                                  children: [
-                                                    Text(item.price.normal,
+                                                  Container(
+                                                    alignment: Alignment.centerLeft,
+                                                    child: Text(item.name,
+                                                        maxLines: 2,
                                                         style: TextStyle(
-                                                            fontSize: 10,
-                                                            fontFamily: 'PoppinsRegular',
-                                                            decoration: TextDecoration
-                                                                .lineThrough)),
-                                                    Padding(
-                                                      padding: EdgeInsets.only(left: 8),
-                                                      child: Text("24% off",
-                                                          style: TextStyle(
-                                                              fontSize: 10,
-                                                              fontFamily: 'PoppinsBold',
-                                                              color: Color(0XFFFB7181))),
+                                                          fontSize: 12,
+                                                          color: ColorConfig.textColorBold1,
+                                                          fontFamily: 'PoppinsBold',
+                                                        )),
+                                                    padding: EdgeInsets.only(top: 10),
+                                                  ),
+                                                  Container(
+                                                    alignment: Alignment.centerLeft,
+                                                    child: RatingBarIndicator(
+                                                      rating: item.rate,
+                                                      itemBuilder: (context, index) => Icon(
+                                                        Icons.star,
+                                                        color: Colors.amber,
+                                                      ),
+                                                      itemCount: 5,
+                                                      itemSize: 24.0,
+                                                      unratedColor: ColorConfig.borderColor,
                                                     ),
-                                                  ],
-                                                ),
-                                                padding: EdgeInsets.only(top: 10),
+                                                    padding: EdgeInsets.only(top: 10),
+                                                  ),
+                                                  Container(
+                                                    alignment: Alignment.centerLeft,
+                                                    margin: EdgeInsets.only(top: 8),
+                                                    child: Text(item.price.special,
+                                                        style: TextStyle(
+                                                          fontSize: 12,
+                                                          color: ColorConfig.bluePrimary,
+                                                          fontFamily: 'PoppinsBold',
+                                                        )),
+                                                    padding: EdgeInsets.only(top: 10),
+                                                  ),
+                                                  Container(
+                                                    child: Row(
+                                                      children: [
+                                                        Text(item.price.normal,
+                                                            style: TextStyle(
+                                                                fontSize: 10,
+                                                                fontFamily: 'Poppinsregular',
+                                                                decoration: TextDecoration
+                                                                    .lineThrough)),
+                                                        Padding(
+                                                          padding: EdgeInsets.only(left: 8),
+                                                          child: Text("24% off",
+                                                              style: TextStyle(
+                                                                  fontSize: 10,
+                                                                  fontFamily: 'PoppinsBold',
+                                                                  color: Color(0XFFFB7181))),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                    padding: EdgeInsets.only(top: 10),
+                                                  ),
+                                                ],
                                               ),
-                                            ],
+                                            ),
                                           ),
                                         ),
                                       );

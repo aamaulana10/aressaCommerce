@@ -5,6 +5,7 @@
       "image": {
         "thumbnail": "lib/asset/image/product/nikeBasketballShoes.jpg",
         "gallery": [
+          "lib/asset/image/product/nikeBasketballShoes.jpg",
           "lib/asset/image/product/nikeBasketballShoes2.jpg",
           "lib/asset/image/product/nikeBasketballShoes3.jpg",
           "lib/asset/image/product/nikeBasketballShoes4.jpg"
@@ -25,6 +26,7 @@
       "image": {
         "thumbnail": "lib/asset/image/product/fashionTshirtMensWhite.jpg",
         "gallery": [
+          "lib/asset/image/product/fashionTshirtMensWhite.jpg",
           "lib/asset/image/product/fashionTshirtMensWhite2.jpg",
           "lib/asset/image/product/fashionTshirtMensWhite3.jpg",
           "lib/asset/image/product/fashionTshirtMensWhite4.jpg"
@@ -45,6 +47,7 @@
       "image": {
         "thumbnail": "lib/asset/image/product/menWorkWearJacket.jpg",
         "gallery": [
+          "lib/asset/image/product/menWorkWearJacket.jpg",
           "lib/asset/image/product/menWorkWearJacket2.jpg",
           "lib/asset/image/product/menWorkWearJacket3.jpg",
           "lib/asset/image/product/menWorkWearJacket4.jpg"
@@ -65,6 +68,7 @@
       "image": {
         "thumbnail": "lib/asset/image/product/mensUvJacket.jpg",
         "gallery": [
+          "lib/asset/image/product/mensUvJacket.jpg",
           "lib/asset/image/product/mensUvJacket2.jpg",
           "lib/asset/image/product/mensUvJacket3.jpg",
           "lib/asset/image/product/mensUvJacket4.jpg"
@@ -85,6 +89,7 @@
       "image": {
         "thumbnail": "lib/asset/image/product/menCasualShirt.png",
         "gallery": [
+          "lib/asset/image/product/menCasualShirt.png",
           "lib/asset/image/product/menCasualShirt2.png",
           "lib/asset/image/product/menCasualShirt3.png",
           "lib/asset/image/product/menCasualShirt4.png"
@@ -105,6 +110,7 @@
       "image": {
         "thumbnail": "lib/asset/image/product/casualMenPants.jpg",
         "gallery": [
+          "lib/asset/image/product/casualMenPants.jpg",
           "lib/asset/image/product/casualMenPants2.jpg",
           "lib/asset/image/product/casualMenPants3.jpg",
           "lib/asset/image/product/casualMenPants4.jpg"

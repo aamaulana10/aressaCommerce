@@ -1,3 +1,5 @@
+import 'package:aressa_commerce/core/data/repository.dart';
+import 'package:aressa_commerce/core/domain/model/productModel.dart';
 import 'package:aressa_commerce/feature/detailProduct/view/detailProductView.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/material.dart';
@@ -12,10 +14,12 @@ class MegaSaleView extends StatefulWidget {
 
 class _MegaSaleViewState extends State<MegaSaleView> {
 
-  gotoDetailProduct() {
+  gotoDetailProduct(ProductData productData) {
     Future.delayed(Duration(milliseconds: 500), () {
       Navigator.of(context)
-          .push(MaterialPageRoute(builder: (ctx) => DetailProductView()));
+          .push(MaterialPageRoute(builder: (ctx) => DetailProductView(
+        productData: productData,
+      )));
     });
   }
 
@@ -37,7 +41,7 @@ class _MegaSaleViewState extends State<MegaSaleView> {
                     ),
                     Expanded(
                       child: Text("Mega Sale", style: TextStyle(
-                          fontSize: 16,
+                        fontSize: 16,
                         fontFamily: 'PoppinsBold',
                       )),
                     ),
@@ -84,111 +88,15 @@ class _MegaSaleViewState extends State<MegaSaleView> {
             borderRadius: BorderRadius.circular(5),
             child: Image(
               image: AssetImage(
-                  "lib/asset/image/home/promotionDummy.png"),
-              fit: BoxFit.cover,
+                  "lib/asset/image/banner/bannerSuperPromo.png"),
+              fit: BoxFit.fill,
             ),
           ),
-          Positioned(
-              bottom: 32,
-              left: 24,
-              child: Container(
-                width: 209,
-                child: Column(
-                  children: [
-                    Text("Super Flash Sale 50% Off",
-                      maxLines: 2,
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 24,
-                        fontFamily: 'PoppinsBold',
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(top: 30),
-                      child: Row(
-                        children: [
-                          Container(
-                            height: 41,
-                            width: 42,
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(8)
-                            ),
-                            child: Center(
-                              child: Text("08",
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 16,
-                                  fontFamily: 'PoppinsBold',
-                                ),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(left: 8, right: 8),
-                            child: Text(":",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontFamily: 'PoppinsBold',
-                                fontSize: 14,
-                              ),
-                            ),
-                          ),
-                          Container(
-                            height: 41,
-                            width: 42,
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(8)
-                            ),
-                            child: Center(
-                              child: Text("34",
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 16,
-                                  fontFamily: 'PoppinsBold',
-                                ),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(left: 8, right: 8),
-                            child: Text(":",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontFamily: 'PoppinsBold',
-                                fontSize: 14,
-                              ),
-                            ),
-                          ),
-                          Container(
-                            height: 41,
-                            width: 42,
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(8)
-                            ),
-                            child: Center(
-                              child: Text("52",
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 16,
-                                  fontFamily: 'PoppinsBold',
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              )),
           Positioned.fill(
             child: Material(
               color: Colors.transparent,
               child: InkWell(
-                onTap: () => {gotoDetailProduct()},
+                onTap: () => {print("banner")},
               ),
             ),
           )
@@ -199,99 +107,117 @@ class _MegaSaleViewState extends State<MegaSaleView> {
 
   Widget listProduct() {
 
-    return Container(
-      child: GridView.builder(
-          shrinkWrap: true,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2, childAspectRatio: 0.65),
-          itemCount: 20,
-          itemBuilder: (item, index) {
-            return Container(
-              height: 400,
-              margin: EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                  border: Border.all(color: ColorConfig.borderColor, width: 1),
-                  borderRadius: BorderRadius.circular(8)),
-              child: Material(
-                color: Colors.transparent,
-                child: InkWell(
-                  onTap: () => {gotoDetailProduct()},
-                  child: Container(
-                    padding: EdgeInsets.all(8),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Expanded(
-                          child: Container(
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(5),
-                              child: Image(
-                                image: AssetImage(
-                                    "lib/asset/image/home/promotionDummy.png"),
-                                fit: BoxFit.fill,
-                              ),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          child: Text("FS - Nike Air Max 270 React",
-                              maxLines: 2,
-                              style: TextStyle(
-                                  fontSize: 12,
-                                  color: ColorConfig.textColorBold1,
-                                fontFamily: 'PoppinsBold',)),
-                          padding: EdgeInsets.only(top: 10),
-                        ),
-                        Container(
-                          child: RatingBarIndicator(
-                            rating: 3,
-                            itemBuilder: (context, index) => Icon(
-                              Icons.star,
-                              color: Colors.amber,
-                            ),
-                            itemCount: 5,
-                            itemSize: 24.0,
-                            unratedColor: ColorConfig.borderColor,
-                          ),
-                          padding: EdgeInsets.only(top: 10),
-                        ),
-                        Container(
-                          margin: EdgeInsets.only(top: 8),
-                          child: Text("288,43",
-                              style: TextStyle(
-                                  fontSize: 12,
-                                  color: ColorConfig.bluePrimary,
-                                fontFamily: 'PoppinsBold',)),
-                          padding: EdgeInsets.only(top: 10),
-                        ),
-                        Container(
-                          child: Row(
+    return StreamBuilder(
+      stream: Repository().getMegaSaleProduct().asStream(),
+      builder: (context, AsyncSnapshot<List<ProductData>> snapshoot) {
+        if (snapshoot.hasData) {
+          return Container(
+            child: GridView.builder(
+                shrinkWrap: true,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2, childAspectRatio: 0.65),
+                itemCount: snapshoot.data.length,
+                itemBuilder: (item, index) {
+
+                  var data = snapshoot.data[index];
+                  return Container(
+                    height: 400,
+                    margin: EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                        border: Border.all(color: ColorConfig.borderColor, width: 1),
+                        borderRadius: BorderRadius.circular(8)),
+                    child: Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        onTap: () => {gotoDetailProduct(data)},
+                        child: Container(
+                          padding: EdgeInsets.all(8),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text("534,33",
-                                  style: TextStyle(
-                                      fontSize: 10,
-                                      fontFamily: 'PoppinsRegular',
-                                      decoration: TextDecoration.lineThrough)),
-                              Padding(
-                                padding: EdgeInsets.only(left: 8),
-                                child: Text("24% off",
+                              Expanded(
+                                child: Container(
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(5),
+                                    child: Image(
+                                      image:
+                                      AssetImage(data.image.thumbnail),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                alignment: Alignment.centerLeft,
+                                child: Text(data.name,
+                                    maxLines: 2,
                                     style: TextStyle(
-                                        fontSize: 10,
-                                        fontFamily: 'PoppinsBold',
-                                        color: Color(0XFFFB7181))),
+                                      fontSize: 12,
+                                      color: ColorConfig.textColorBold1,
+                                      fontFamily: 'PoppinsBold',
+                                    )),
+                                padding: EdgeInsets.only(top: 10),
+                              ),
+                              Container(
+                                alignment: Alignment.centerLeft,
+                                child: RatingBarIndicator(
+                                  rating: data.rate,
+                                  itemBuilder: (context, index) => Icon(
+                                    Icons.star,
+                                    color: Colors.amber,
+                                  ),
+                                  itemCount: 5,
+                                  itemSize: 24.0,
+                                  unratedColor: ColorConfig.borderColor,
+                                ),
+                                padding: EdgeInsets.only(top: 10),
+                              ),
+                              Container(
+                                alignment: Alignment.centerLeft,
+                                margin: EdgeInsets.only(top: 8),
+                                child: Text(data.price.special,
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      color: ColorConfig.bluePrimary,
+                                      fontFamily: 'PoppinsBold',
+                                    )),
+                                padding: EdgeInsets.only(top: 10),
+                              ),
+                              Container(
+                                child: Row(
+                                  children: [
+                                    Text(data.price.normal,
+                                        style: TextStyle(
+                                            fontSize: 10,
+                                            fontFamily: 'Poppinsregular',
+                                            decoration: TextDecoration
+                                                .lineThrough)),
+                                    Padding(
+                                      padding: EdgeInsets.only(left: 8),
+                                      child: Text("24% off",
+                                          style: TextStyle(
+                                              fontSize: 10,
+                                              fontFamily: 'PoppinsBold',
+                                              color: Color(0XFFFB7181))),
+                                    ),
+                                  ],
+                                ),
+                                padding: EdgeInsets.only(top: 10),
                               ),
                             ],
                           ),
-                          padding: EdgeInsets.only(top: 10),
                         ),
-                      ],
+                      ),
                     ),
-                  ),
-                ),
-              ),
-            );
-          }),
+                  );
+                }),
+          );
+        } else if (snapshoot.hasError) {
+          return Text(snapshoot.error.toString());
+        } else {
+          return Container();
+        }
+      },
     );
   }
 

@@ -1,4 +1,5 @@
 import 'package:aressa_commerce/feature/cart/view/shipTo.dart';
+import 'package:aressa_commerce/generated/l10n.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/material.dart';
 
@@ -473,7 +474,7 @@ class _CartViewState extends State<CartView> {
                   minWidth: MediaQuery.of(context).size.width,
                   onPressed: ()=> {this.gotoShipTo()},
                   child: Text(
-                    "Sign in",
+                    S.of(context).checkout,
                     style: TextStyle(
                       fontSize: 14,
                       color: Colors.white,
