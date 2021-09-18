@@ -19,7 +19,7 @@ class _AddCardViewState extends State<AddCardView> {
   String cardHolder = "";
 
   void gotoHome() {
-    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => MainTabbar()));
+    Navigator.of(context).pop();
   }
 
   Widget appBar() {

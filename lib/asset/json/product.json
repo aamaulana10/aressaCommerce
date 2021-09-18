@@ -5,6 +5,7 @@
       "image": {
         "thumbnail": "lib/asset/image/product/nikeBasketballShoes.jpg",
         "gallery": [
+          "lib/asset/image/product/nikeBasketballShoes.jpg",
           "lib/asset/image/product/nikeBasketballShoes2.jpg",
           "lib/asset/image/product/nikeBasketballShoes3.jpg",
           "lib/asset/image/product/nikeBasketballShoes4.jpg"
@@ -25,6 +26,7 @@
       "image": {
         "thumbnail": "lib/asset/image/product/menCasualShoes.jpg",
         "gallery": [
+          "lib/asset/image/product/menCasualShoes.jpg",
           "lib/asset/image/product/menCasualShoes2.jpg",
           "lib/asset/image/product/menCasualShoes3.jpg",
           "lib/asset/image/product/menCasualShoes4.jpg"
@@ -45,6 +47,7 @@
       "image": {
         "thumbnail": "lib/asset/image/product/speed3.jpeg",
         "gallery": [
+          "lib/asset/image/product/speed3.jpeg",
           "lib/asset/image/product/speed3v1.jpeg",
           "lib/asset/image/product/speed3v2.jpeg",
           "lib/asset/image/product/speed3v3.jpeg"
@@ -65,6 +68,7 @@
       "image": {
         "thumbnail": "lib/asset/image/product/europeanSportMenShoes.jpg",
         "gallery": [
+          "lib/asset/image/product/europeanSportMenShoes.jpg",
           "lib/asset/image/product/europeanSportMenShoes2.jpg",
           "lib/asset/image/product/europeanSportMenShoes3.jpg",
           "lib/asset/image/product/europeanSportMenShoes4.jpg"
@@ -85,6 +89,7 @@
       "image": {
         "thumbnail": "lib/asset/image/product/walkingSneaker.jpg",
         "gallery": [
+          "lib/asset/image/product/walkingSneaker.jpg",
           "lib/asset/image/product/walkingSneaker2.jpg",
           "lib/asset/image/product/walkingSneaker3.jpg",
           "lib/asset/image/product/walkingSneaker4.jpg"
@@ -105,6 +110,7 @@
       "image": {
         "thumbnail": "lib/asset/image/product/fashionTshirtMensWhite.jpg",
         "gallery": [
+          "lib/asset/image/product/fashionTshirtMensWhite.jpg",
           "lib/asset/image/product/fashionTshirtMensWhite2.jpg",
           "lib/asset/image/product/fashionTshirtMensWhite3.jpg",
           "lib/asset/image/product/fashionTshirtMensWhite4.jpg"
@@ -125,6 +131,7 @@
       "image": {
         "thumbnail": "lib/asset/image/product/summerMenTshirt.jpg",
         "gallery": [
+          "lib/asset/image/product/summerMenTshirt.jpg",
           "lib/asset/image/product/summerMenTshirt2.png",
           "lib/asset/image/product/summerMenTshirt3.png",
           "lib/asset/image/product/summerMenTshirt.jpg"
@@ -145,6 +152,7 @@
       "image": {
         "thumbnail": "lib/asset/image/product/eagleMenTshirt.jpg",
         "gallery": [
+          "lib/asset/image/product/eagleMenTshirt.jpg",
           "lib/asset/image/product/eagleMenTshirt2.jpg",
           "lib/asset/image/product/eagleMenTshirt3.jpg",
           "lib/asset/image/product/eagleMenTshirt4.jpg"
@@ -165,6 +173,7 @@
       "image": {
         "thumbnail": "lib/asset/image/product/parisMenTshirt.jpg",
         "gallery": [
+          "lib/asset/image/product/parisMenTshirt.jpg",
           "lib/asset/image/product/parisMenTshirt2.png",
           "lib/asset/image/product/parisMenTshirt3.png",
           "lib/asset/image/product/parisMenTshirt4.png"
@@ -185,6 +194,7 @@
       "image": {
         "thumbnail": "lib/asset/image/product/graphicMenTshirt.jpg",
         "gallery": [
+          "lib/asset/image/product/graphicMenTshirt.jpg",
           "lib/asset/image/product/graphicMenTshirt2.jpg",
           "lib/asset/image/product/graphicMenTshirt3.jpg",
           "lib/asset/image/product/graphicMenTshirt4.jpg"
@@ -205,6 +215,7 @@
       "image": {
         "thumbnail": "lib/asset/image/product/menWorkWearJacket.jpg",
         "gallery": [
+          "lib/asset/image/product/menWorkWearJacket.jpg",
           "lib/asset/image/product/menWorkWearJacket2.jpg",
           "lib/asset/image/product/menWorkWearJacket3.jpg",
           "lib/asset/image/product/menWorkWearJacket4.jpg"
@@ -225,6 +236,7 @@
       "image": {
         "thumbnail": "lib/asset/image/product/menWorkShoes.jpg",
         "gallery": [
+          "lib/asset/image/product/menWorkShoes.jpg",
           "lib/asset/image/product/menWorkShoes2.jpg",
           "lib/asset/image/product/menWorkShoes3.jpg",
           "lib/asset/image/product/menWorkShoes4.jpg"

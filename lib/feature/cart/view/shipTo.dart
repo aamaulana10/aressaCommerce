@@ -35,7 +35,7 @@ class _ShipToState extends State<ShipTo> {
                       iconSize: 32,
                     ),
                     Expanded(
-                      child: Text("Add Card", style: TextStyle(
+                      child: Text("Ship To", style: TextStyle(
                         fontSize: 16,
                         fontFamily: 'PoppinsBold',
                       )),
@@ -216,7 +216,7 @@ class _ShipToState extends State<ShipTo> {
     );
   }
 
-  Widget addAddressButton() {
+  Widget nextButton() {
     return Container(
       margin: EdgeInsets.all(16),
       child: Material(
@@ -233,7 +233,7 @@ class _ShipToState extends State<ShipTo> {
             minWidth: MediaQuery.of(context).size.width,
             onPressed: ()=> {this.gotoPayment()},
             child: Text(
-              "Add Address",
+              "Next",
               style: TextStyle(
                 fontSize: 14,
                 color: ColorConfig.colorWhite,
@@ -263,7 +263,7 @@ class _ShipToState extends State<ShipTo> {
                   ),
                 ),
               ),
-              addAddressButton()
+              nextButton()
             ],
           ),
         ));

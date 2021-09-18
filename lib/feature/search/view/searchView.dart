@@ -8,7 +8,6 @@ import 'package:aressa_commerce/feature/search/view/searchResultView.dart';
 import 'package:aressa_commerce/generated/l10n.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class SearchView extends StatefulWidget {
   const SearchView({Key key}) : super(key: key);
@@ -81,6 +80,13 @@ class _SearchViewState extends State<SearchView> {
         .push(MaterialPageRoute(builder: (ctx) => MainTabbar()));
   }
 
+  gotoSearchByCategory(String category) {
+
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => SearchResultView(
+      category: category,
+    )));
+  }
+
   Widget header() {
     return Container(
       height: 80,
@@ -109,90 +115,7 @@ class _SearchViewState extends State<SearchView> {
                     border: InputBorder.none),
               ),
             ),
-          ),
-          isSearch != true
-              ? Row(
-                  children: [
-                    Container(
-                      height: 40,
-                      width: 40,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20)),
-                      child: InkWell(
-                          borderRadius: BorderRadius.circular(20),
-                          onTap: () => {print("whishlist")},
-                          child: Padding(
-                            padding: EdgeInsets.all(8),
-                            child: Image(
-                              image:
-                                  AssetImage("lib/asset/image/home/love.png"),
-                            ),
-                          )),
-                    ),
-                    Container(
-                      height: 40,
-                      width: 40,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20)),
-                      child: InkWell(
-                          borderRadius: BorderRadius.circular(20),
-                          onTap: () => {print("whishlist")},
-                          child: Padding(
-                            padding: EdgeInsets.all(8),
-                            child: Image(
-                              image: AssetImage(
-                                  "lib/asset/image/home/notification.png"),
-                            ),
-                          )),
-                    ),
-                    Container(
-                      height: 40,
-                      width: 40,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20)),
-                      child: InkWell(
-                          borderRadius: BorderRadius.circular(20),
-                          onTap: () => {print("whishlist")},
-                          child: Padding(
-                            padding: EdgeInsets.all(8),
-                            child: Image(
-                              image:
-                                  AssetImage("lib/asset/image/home/more.png"),
-                            ),
-                          )),
-                    ),
-                  ],
-                )
-              : isShowList == true
-                  ? Row(
-                      children: [
-                        Container(
-                          height: 40,
-                          width: 40,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20)),
-                          child: InkWell(
-                              borderRadius: BorderRadius.circular(20),
-                              onTap: () => {print("whishlist")},
-                              child: Padding(
-                                  padding: EdgeInsets.all(8),
-                                  child: Icon(Icons.sort))),
-                        ),
-                        Container(
-                          height: 40,
-                          width: 40,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20)),
-                          child: InkWell(
-                              borderRadius: BorderRadius.circular(20),
-                              onTap: () => {print("whishlist")},
-                              child: Padding(
-                                  padding: EdgeInsets.all(8),
-                                  child: Icon(Icons.filter_alt_outlined))),
-                        ),
-                      ],
-                    )
-                  : Container()
+          )
         ],
       ),
     );
@@ -253,7 +176,7 @@ class _SearchViewState extends State<SearchView> {
                   width: 70,
                   margin: EdgeInsets.all(8),
                   child: InkWell(
-                    onTap: () => {setCategory(categoryData[index].name)},
+                    onTap: () => {gotoSearchByCategory(categoryData[index].name)},
                     child: Column(
                       children: [
                         Container(
@@ -319,7 +242,7 @@ class _SearchViewState extends State<SearchView> {
                   width: 70,
                   margin: EdgeInsets.all(8),
                   child: InkWell(
-                    onTap: () => {setCategory(categoryData[index].name)},
+                    onTap: () => {gotoSearchByCategory(categoryData[index].name)},
                     child: Column(
                       children: [
                         Container(

@@ -62,6 +62,7 @@ class _AccountViewState extends State<AccountView> {
       height: MediaQuery.of(context).size.height,
       margin: EdgeInsets.only(left: 16, right: 16),
       child: ListView(
+        padding: EdgeInsets.only(top: 0),
         children: [
           Container(
             height: 70,

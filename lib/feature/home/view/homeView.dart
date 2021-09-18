@@ -7,14 +7,17 @@ import 'package:aressa_commerce/feature/favoritProduct/view/favoritProductView.d
 import 'package:aressa_commerce/feature/flashSale/view/flashSaleView.dart';
 import 'package:aressa_commerce/feature/megaSale/view/megaSaleView.dart';
 import 'package:aressa_commerce/feature/notification/view/notificationView.dart';
+import 'package:aressa_commerce/feature/search/view/searchResultView.dart';
 import 'package:aressa_commerce/generated/l10n.dart';
 import 'package:aressa_commerce/main.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:aressa_commerce/util/view/indicatorView.dart';
+import 'package:aressa_commerce/util/view/showCaseView.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:showcaseview/showcaseview.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({Key key}) : super(key: key);
@@ -26,6 +29,9 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> {
   PageController _pageController;
   var currentIndex = 0;
+  final keyOne = GlobalKey();
+  bool isSearch = false;
+  var searchData = "";
 
   gotoAllCategory() {
     Future.delayed(Duration(milliseconds: 500), () {
@@ -35,31 +41,23 @@ class _HomeViewState extends State<HomeView> {
   }
 
   selectLanguage(String language) {
-
-    if(language == "Indonesia") {
-
+    if (language == "Indonesia") {
       Locale newLocale = Locale('id', 'ID');
 
       MyApp.setLocale(context, newLocale);
-
-    } else if(language == "Turkey"){
-
+    } else if (language == "Turkey") {
       Locale newLocale = Locale('tr', 'TR');
 
       MyApp.setLocale(context, newLocale);
-
     } else {
-
       Locale newLocale = Locale('en', 'US');
 
       MyApp.setLocale(context, newLocale);
     }
 
     Future.delayed(Duration(milliseconds: 500), () {
-      
       Navigator.of(context).pop();
     });
-    
   }
 
   showLanguagePopup() {
@@ -86,7 +84,10 @@ class _HomeViewState extends State<HomeView> {
                           )),
                           IconButton(
                               onPressed: () => {Navigator.of(context).pop()},
-                              icon: Icon(Icons.close, color: Color(0xFF979797),))
+                              icon: Icon(
+                                Icons.close,
+                                color: Color(0xFF979797),
+                              ))
                         ],
                       ),
                     ),
@@ -220,6 +221,40 @@ class _HomeViewState extends State<HomeView> {
     });
   }
 
+  void onSearch(String e) {
+    if (e.length != 0) {
+      setState(() {
+        isSearch = true;
+        searchData = e;
+      });
+    } else {
+      setState(() {
+        isSearch = false;
+      });
+    }
+  }
+
+  showSearchResult(String e) {
+    print("done " + e);
+    if (e.length != 0) {
+      setState(() {
+        searchData = e;
+      });
+
+      Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => SearchResultView(
+                searchData: searchData,
+              )));
+    }
+  }
+
+  gotoSearchByCategory(String category) {
+    Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => SearchResultView(
+              category: category,
+            )));
+  }
+
   onBannerChange(e) {
     setState(() {
       currentIndex = e;
@@ -250,6 +285,9 @@ class _HomeViewState extends State<HomeView> {
                             color: ColorConfig.borderColor, width: 1),
                         borderRadius: BorderRadius.circular(8)),
                     child: TextFormField(
+                      onChanged: (e) => {onSearch(e)},
+                      textInputAction: TextInputAction.search,
+                      onFieldSubmitted: (e) => {showSearchResult(e)},
                       decoration: InputDecoration(
                           labelText: S.of(context).searchProduct,
                           labelStyle: TextStyle(
@@ -280,28 +318,32 @@ class _HomeViewState extends State<HomeView> {
                         ),
                       )),
                 ),
-                Container(
-                  height: 40,
-                  decoration:
-                      BoxDecoration(borderRadius: BorderRadius.circular(20)),
-                  child: InkWell(
-                      borderRadius: BorderRadius.circular(20),
-                      onTap: () => {showLanguagePopup()},
-                      child: Padding(
-                          padding: EdgeInsets.all(8),
-                          child: Row(
-                            children: [
-                              Text("ID",
-                                  style: TextStyle(
-                                      color: ColorConfig.textColor1,
-                                      fontSize: 12,
-                                      fontFamily: 'PoppinsBold')),
-                              Icon(
-                                Icons.arrow_drop_down,
-                                color: ColorConfig.textColor1,
-                              )
-                            ],
-                          ))),
+                CustomShowcaseWidget(
+                  globalKey: keyOne,
+                  description: 'Change language here',
+                  child: Container(
+                    height: 40,
+                    decoration:
+                        BoxDecoration(borderRadius: BorderRadius.circular(20)),
+                    child: InkWell(
+                        borderRadius: BorderRadius.circular(20),
+                        onTap: () => {showLanguagePopup()},
+                        child: Padding(
+                            padding: EdgeInsets.all(8),
+                            child: Row(
+                              children: [
+                                Text("ID",
+                                    style: TextStyle(
+                                        color: ColorConfig.textColor1,
+                                        fontSize: 12,
+                                        fontFamily: 'PoppinsBold')),
+                                Icon(
+                                  Icons.arrow_drop_down,
+                                  color: ColorConfig.textColor1,
+                                )
+                              ],
+                            ))),
+                  ),
                 ),
               ],
             ),
@@ -330,140 +372,84 @@ class _HomeViewState extends State<HomeView> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Expanded(
-            child: PageView.builder(
-              itemCount: 3,
-              controller: _pageController,
-              onPageChanged: (e) => {onBannerChange(e)},
-              itemBuilder: (ctx, idx) {
-                return Container(
-                  margin: EdgeInsets.only(left: 16, right: 16),
-                  child: Stack(
-                    fit: StackFit.expand,
-                    children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(5),
-                        child: Image(
-                          image: AssetImage(
-                              "lib/asset/image/home/promotionDummy.png"),
-                          fit: BoxFit.cover,
+              child: PageView(
+            children: [
+              Container(
+                margin: EdgeInsets.only(left: 16, right: 16),
+                child: Stack(
+                  fit: StackFit.expand,
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(5),
+                      child: Image(
+                        image: AssetImage(
+                            "lib/asset/image/banner/bannerSuperPromo.png"),
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                    Positioned.fill(
+                      child: Material(
+                        color: Colors.transparent,
+                        child: InkWell(
+                          onTap: () => {gotoMegaSale()},
                         ),
                       ),
-                      Positioned(
-                          bottom: 32,
-                          left: 24,
-                          child: Container(
-                            width: 209,
-                            child: Column(
-                              children: [
-                                Text(
-                                  "Super Flash Sale 50% Off",
-                                  maxLines: 2,
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 24,
-                                      fontFamily: 'PoppinsBold'),
-                                ),
-                                Container(
-                                  margin: EdgeInsets.only(top: 30),
-                                  child: Row(
-                                    children: [
-                                      Container(
-                                        height: 41,
-                                        width: 42,
-                                        decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            borderRadius:
-                                                BorderRadius.circular(8)),
-                                        child: Center(
-                                          child: Text(
-                                            "08",
-                                            style: TextStyle(
-                                                color: Colors.black,
-                                                fontSize: 16,
-                                                fontFamily: 'PoppinsBold'),
-                                          ),
-                                        ),
-                                      ),
-                                      Container(
-                                        margin:
-                                            EdgeInsets.only(left: 8, right: 8),
-                                        child: Text(
-                                          ":",
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontFamily: 'PoppinsBold',
-                                            fontSize: 14,
-                                          ),
-                                        ),
-                                      ),
-                                      Container(
-                                        height: 41,
-                                        width: 42,
-                                        decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            borderRadius:
-                                                BorderRadius.circular(8)),
-                                        child: Center(
-                                          child: Text(
-                                            "34",
-                                            style: TextStyle(
-                                              color: Colors.black,
-                                              fontSize: 16,
-                                              fontFamily: 'PoppinsBold',
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      Container(
-                                        margin:
-                                            EdgeInsets.only(left: 8, right: 8),
-                                        child: Text(
-                                          ":",
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontFamily: 'PoppinsBold',
-                                            fontSize: 14,
-                                          ),
-                                        ),
-                                      ),
-                                      Container(
-                                        height: 41,
-                                        width: 42,
-                                        decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            borderRadius:
-                                                BorderRadius.circular(8)),
-                                        child: Center(
-                                          child: Text(
-                                            "52",
-                                            style: TextStyle(
-                                              color: Colors.black,
-                                              fontSize: 16,
-                                              fontFamily: 'PoppinsBold',
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                )
-                              ],
-                            ),
-                          )),
-                      Positioned.fill(
-                        child: Material(
-                          color: Colors.transparent,
-                          child: InkWell(
-                            onTap: () => {print("banner")},
-                          ),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(left: 16, right: 16),
+                child: Stack(
+                  fit: StackFit.expand,
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(5),
+                      child: Image(
+                        image: AssetImage(
+                            "lib/asset/image/banner/bannerFlashSale.png"),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Positioned.fill(
+                      child: Material(
+                        color: Colors.transparent,
+                        child: InkWell(
+                          onTap: () => {gotoFlashSale()},
                         ),
-                      )
-                    ],
-                  ),
-                );
-              },
-            ),
-          ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(left: 16, right: 16),
+                child: Stack(
+                  fit: StackFit.expand,
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(5),
+                      child: Image(
+                        image: AssetImage(
+                            "lib/asset/image/banner/bannerNewSeason.png"),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Positioned.fill(
+                      child: Material(
+                        color: Colors.transparent,
+                        child: InkWell(
+                          onTap: () => {gotoFlashSale()},
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              )
+            ],
+            controller: _pageController,
+            onPageChanged: (e) => {onBannerChange(e)},
+          )),
           Container(
             height: 40,
             margin: EdgeInsets.only(left: 32, right: 32),
@@ -531,28 +517,34 @@ class _HomeViewState extends State<HomeView> {
 
                         return Container(
                           margin: EdgeInsets.only(left: 8, right: 8, bottom: 4),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Container(
-                                child: Image(
-                                  image: AssetImage(data.thumbnail),
-                                  fit: BoxFit.fill,
-                                ),
-                                height: 60,
+                          child: Material(
+                            color: Colors.transparent,
+                            child: InkWell(
+                              onTap: () => {gotoSearchByCategory(data.name)},
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Container(
+                                    child: Image(
+                                      image: AssetImage(data.thumbnail),
+                                      fit: BoxFit.fill,
+                                    ),
+                                    height: 60,
+                                  ),
+                                  Container(
+                                    child: Text(
+                                      data.name,
+                                      style: TextStyle(
+                                          fontSize: 10,
+                                          fontFamily: 'PoppinsRegular'),
+                                      textAlign: TextAlign.center,
+                                      maxLines: 1,
+                                    ),
+                                    padding: EdgeInsets.only(top: 10),
+                                  )
+                                ],
                               ),
-                              Container(
-                                child: Text(
-                                  data.name,
-                                  style: TextStyle(
-                                      fontSize: 10,
-                                      fontFamily: 'PoppinsRegular'),
-                                  textAlign: TextAlign.center,
-                                  maxLines: 1,
-                                ),
-                                padding: EdgeInsets.only(top: 10),
-                              )
-                            ],
+                            ),
                           ),
                         );
                       },
@@ -987,6 +979,15 @@ class _HomeViewState extends State<HomeView> {
   }
 
   @override
+  void initState() {
+    super.initState();
+
+    WidgetsBinding.instance.addPostFrameCallback(
+      (_) => ShowCaseWidget.of(context).startShowCase([keyOne]),
+    );
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -994,8 +995,7 @@ class _HomeViewState extends State<HomeView> {
         backwardsCompatibility: false,
         systemOverlayStyle: SystemUiOverlayStyle(
             statusBarColor: ColorConfig.bluePrimary,
-            statusBarIconBrightness: Brightness.light
-        ),
+            statusBarIconBrightness: Brightness.light),
         elevation: 0,
       ),
       body: Container(

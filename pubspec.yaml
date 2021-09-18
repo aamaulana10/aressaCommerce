@@ -14,6 +14,8 @@ dependencies:
   flutter_rating_bar: ^4.0.0
   intl: ^0.17.0
   shared_preferences: ^2.0.7
+  showcaseview: ^1.1.1
+  another_flushbar: ^1.10.24
   flutter_localizations:
     sdk: flutter
 
@@ -27,6 +29,13 @@ flutter:
   uses-material-design: true
 
   assets:
+    - lib/asset/image/review/ava.png
+    - lib/asset/image/review/rp1.png
+    - lib/asset/image/review/rp2.png
+    - lib/asset/image/review/rp3.png
+    - lib/asset/image/banner/bannerFlashSale.png
+    - lib/asset/image/banner/bannerNewSeason.png
+    - lib/asset/image/banner/bannerSuperPromo.png
     - lib/asset/image/promotionDummy.png
     - lib/asset/image/home/indonesianFlag.png
     - lib/asset/image/home/britishFlag.png
