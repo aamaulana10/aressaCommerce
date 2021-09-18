@@ -57,7 +57,7 @@ class _DetailProductViewState extends State<DetailProductView> {
                       iconSize: 32,
                     ),
                     Expanded(
-                      child: Text(widget.productData.name, style: TextStyle(
+                      child: Text("Detail Product", style: TextStyle(
                           fontSize: 16,
                         fontFamily: 'PoppinsBold',
                       )),

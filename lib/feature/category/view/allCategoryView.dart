@@ -1,5 +1,6 @@
 import 'package:aressa_commerce/core/data/repository.dart';
 import 'package:aressa_commerce/core/domain/model/categoryModel.dart';
+import 'package:aressa_commerce/feature/search/view/searchResultView.dart';
 import 'package:aressa_commerce/generated/l10n.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:flutter/material.dart';
@@ -18,13 +19,9 @@ class _AllCategoryViewState extends State<AllCategoryView> {
 
   void goBackWithParams(String params) {
 
-    if(widget.isFromSearch == true) {
-
-      Navigator.of(context).pop(params);
-    } else {
-
-      Navigator.pop(context);
-    }
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => SearchResultView(
+      category: params,
+    )));
 
   }
 

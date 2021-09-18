@@ -7,14 +7,17 @@ import 'package:aressa_commerce/feature/favoritProduct/view/favoritProductView.d
 import 'package:aressa_commerce/feature/flashSale/view/flashSaleView.dart';
 import 'package:aressa_commerce/feature/megaSale/view/megaSaleView.dart';
 import 'package:aressa_commerce/feature/notification/view/notificationView.dart';
+import 'package:aressa_commerce/feature/search/view/searchResultView.dart';
 import 'package:aressa_commerce/generated/l10n.dart';
 import 'package:aressa_commerce/main.dart';
 import 'package:aressa_commerce/util/config/color/colorConfig.dart';
 import 'package:aressa_commerce/util/view/indicatorView.dart';
+import 'package:aressa_commerce/util/view/showCaseView.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:showcaseview/showcaseview.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({Key key}) : super(key: key);
@@ -26,6 +29,9 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> {
   PageController _pageController;
   var currentIndex = 0;
+  final keyOne = GlobalKey();
+  bool isSearch = false;
+  var searchData = "";
 
   gotoAllCategory() {
     Future.delayed(Duration(milliseconds: 500), () {
@@ -35,31 +41,23 @@ class _HomeViewState extends State<HomeView> {
   }
 
   selectLanguage(String language) {
-
-    if(language == "Indonesia") {
-
+    if (language == "Indonesia") {
       Locale newLocale = Locale('id', 'ID');
 
       MyApp.setLocale(context, newLocale);
-
-    } else if(language == "Turkey"){
-
+    } else if (language == "Turkey") {
       Locale newLocale = Locale('tr', 'TR');
 
       MyApp.setLocale(context, newLocale);
-
     } else {
-
       Locale newLocale = Locale('en', 'US');
 
       MyApp.setLocale(context, newLocale);
     }
 
     Future.delayed(Duration(milliseconds: 500), () {
-      
       Navigator.of(context).pop();
     });
-    
   }
 
   showLanguagePopup() {
@@ -87,7 +85,10 @@ class _HomeViewState extends State<HomeView> {
                           )),
                           IconButton(
                               onPressed: () => {Navigator.of(context).pop()},
-                              icon: Icon(Icons.close, color: Color(0xFF979797),))
+                              icon: Icon(
+                                Icons.close,
+                                color: Color(0xFF979797),
+                              ))
                         ],
                       ),
                     ),
@@ -221,6 +222,39 @@ class _HomeViewState extends State<HomeView> {
     });
   }
 
+  void onSearch(String e) {
+    if (e.length != 0) {
+      setState(() {
+        isSearch = true;
+        searchData = e;
+      });
+    } else {
+      setState(() {
+        isSearch = false;
+      });
+    }
+  }
+
+  showSearchResult(String e) {
+    print("done " + e);
+    if (e.length != 0) {
+      setState(() {
+        searchData = e;
+      });
+
+      Navigator.of(context).push(MaterialPageRoute(builder: (context) => SearchResultView(
+        searchData: searchData,
+      )));
+    }
+  }
+
+  gotoSearchByCategory(String category) {
+
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => SearchResultView(
+      category: category,
+    )));
+  }
+
   onBannerChange(e) {
     setState(() {
       currentIndex = e;
@@ -251,6 +285,9 @@ class _HomeViewState extends State<HomeView> {
                             color: ColorConfig.borderColor, width: 1),
                         borderRadius: BorderRadius.circular(8)),
                     child: TextFormField(
+                      onChanged: (e) => {onSearch(e)},
+                      textInputAction: TextInputAction.search,
+                      onFieldSubmitted: (e) => {showSearchResult(e)},
                       decoration: InputDecoration(
                           labelText: S.of(context).searchProduct,
                           labelStyle: TextStyle(
@@ -281,28 +318,32 @@ class _HomeViewState extends State<HomeView> {
                         ),
                       )),
                 ),
-                Container(
-                  height: 40,
-                  decoration:
-                      BoxDecoration(borderRadius: BorderRadius.circular(20)),
-                  child: InkWell(
-                      borderRadius: BorderRadius.circular(20),
-                      onTap: () => {showLanguagePopup()},
-                      child: Padding(
-                          padding: EdgeInsets.all(8),
-                          child: Row(
-                            children: [
-                              Text("ID",
-                                  style: TextStyle(
-                                      color: ColorConfig.textColor1,
-                                      fontSize: 12,
-                                      fontFamily: 'PoppinsBold')),
-                              Icon(
-                                Icons.arrow_drop_down,
-                                color: ColorConfig.textColor1,
-                              )
-                            ],
-                          ))),
+                CustomShowcaseWidget(
+                  globalKey: keyOne,
+                  description: 'Change language here',
+                  child: Container(
+                    height: 40,
+                    decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(20)),
+                    child: InkWell(
+                        borderRadius: BorderRadius.circular(20),
+                        onTap: () => {showLanguagePopup()},
+                        child: Padding(
+                            padding: EdgeInsets.all(8),
+                            child: Row(
+                              children: [
+                                Text("ID",
+                                    style: TextStyle(
+                                        color: ColorConfig.textColor1,
+                                        fontSize: 12,
+                                        fontFamily: 'PoppinsBold')),
+                                Icon(
+                                  Icons.arrow_drop_down,
+                                  color: ColorConfig.textColor1,
+                                )
+                              ],
+                            ))),
+                  ),
                 ),
               ],
             ),
@@ -532,28 +573,34 @@ class _HomeViewState extends State<HomeView> {
 
                         return Container(
                           margin: EdgeInsets.only(left: 8, right: 8, bottom: 4),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Container(
-                                child: Image(
-                                  image: AssetImage(data.thumbnail),
-                                  fit: BoxFit.fill,
-                                ),
-                                height: 60,
+                          child: Material(
+                            color: Colors.transparent,
+                            child: InkWell(
+                              onTap: () => {gotoSearchByCategory(data.name)},
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Container(
+                                    child: Image(
+                                      image: AssetImage(data.thumbnail),
+                                      fit: BoxFit.fill,
+                                    ),
+                                    height: 60,
+                                  ),
+                                  Container(
+                                    child: Text(
+                                      data.name,
+                                      style: TextStyle(
+                                          fontSize: 10,
+                                          fontFamily: 'PoppinsRegular'),
+                                      textAlign: TextAlign.center,
+                                      maxLines: 1,
+                                    ),
+                                    padding: EdgeInsets.only(top: 10),
+                                  )
+                                ],
                               ),
-                              Container(
-                                child: Text(
-                                  data.name,
-                                  style: TextStyle(
-                                      fontSize: 10,
-                                      fontFamily: 'PoppinsRegular'),
-                                  textAlign: TextAlign.center,
-                                  maxLines: 1,
-                                ),
-                                padding: EdgeInsets.only(top: 10),
-                              )
-                            ],
+                            ),
                           ),
                         );
                       },
@@ -1055,6 +1102,15 @@ class _HomeViewState extends State<HomeView> {
   }
 
   @override
+  void initState() {
+    super.initState();
+
+    WidgetsBinding.instance.addPostFrameCallback(
+      (_) => ShowCaseWidget.of(context).startShowCase([keyOne]),
+    );
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -1062,8 +1118,7 @@ class _HomeViewState extends State<HomeView> {
         backwardsCompatibility: false,
         systemOverlayStyle: SystemUiOverlayStyle(
             statusBarColor: ColorConfig.bluePrimary,
-            statusBarIconBrightness: Brightness.light
-        ),
+            statusBarIconBrightness: Brightness.light),
         elevation: 0,
       ),
       body: Container(

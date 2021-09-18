@@ -12,8 +12,9 @@ import '../../mainTabbar.dart';
 class SearchResultView extends StatefulWidget {
 
   String searchData;
+  String category;
 
-  SearchResultView({this.searchData});
+  SearchResultView({this.searchData, this.category});
 
   @override
   _SearchResultViewState createState() => _SearchResultViewState();
@@ -62,13 +63,11 @@ class _SearchResultViewState extends State<SearchResultView> {
     });
   }
 
-  gotoAllCategory() async{
-    var result = await Navigator.of(context)
+  gotoAllCategory() {
+
+    Navigator.of(context)
         .push(MaterialPageRoute(builder: (ctx) => AllCategoryView(isFromSearch: true)));
 
-    setState(() {
-      currentCategory = result.toString();
-    });
   }
 
   gotoDetailProduct(ProductData productData) {
@@ -97,6 +96,13 @@ class _SearchResultViewState extends State<SearchResultView> {
 
       setState(() {
         searchData = widget.searchData;
+      });
+    }
+
+    if(widget.category != null) {
+
+      setState(() {
+        currentCategory = widget.category;
       });
     }
 
@@ -131,90 +137,7 @@ class _SearchResultViewState extends State<SearchResultView> {
                     border: InputBorder.none),
               ),
             ),
-          ),
-          isSearch != true
-              ? Row(
-            children: [
-              Container(
-                height: 40,
-                width: 40,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20)),
-                child: InkWell(
-                    borderRadius: BorderRadius.circular(20),
-                    onTap: () => {print("whishlist")},
-                    child: Padding(
-                      padding: EdgeInsets.all(8),
-                      child: Image(
-                        image:
-                        AssetImage("lib/asset/image/home/love.png"),
-                      ),
-                    )),
-              ),
-              Container(
-                height: 40,
-                width: 40,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20)),
-                child: InkWell(
-                    borderRadius: BorderRadius.circular(20),
-                    onTap: () => {print("whishlist")},
-                    child: Padding(
-                      padding: EdgeInsets.all(8),
-                      child: Image(
-                        image: AssetImage(
-                            "lib/asset/image/home/notification.png"),
-                      ),
-                    )),
-              ),
-              Container(
-                height: 40,
-                width: 40,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20)),
-                child: InkWell(
-                    borderRadius: BorderRadius.circular(20),
-                    onTap: () => {print("whishlist")},
-                    child: Padding(
-                      padding: EdgeInsets.all(8),
-                      child: Image(
-                        image:
-                        AssetImage("lib/asset/image/home/more.png"),
-                      ),
-                    )),
-              ),
-            ],
           )
-              : isShowList == true
-              ? Row(
-            children: [
-              Container(
-                height: 40,
-                width: 40,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20)),
-                child: InkWell(
-                    borderRadius: BorderRadius.circular(20),
-                    onTap: () => {print("whishlist")},
-                    child: Padding(
-                        padding: EdgeInsets.all(8),
-                        child: Icon(Icons.sort))),
-              ),
-              Container(
-                height: 40,
-                width: 40,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20)),
-                child: InkWell(
-                    borderRadius: BorderRadius.circular(20),
-                    onTap: () => {print("whishlist")},
-                    child: Padding(
-                        padding: EdgeInsets.all(8),
-                        child: Icon(Icons.filter_alt_outlined))),
-              ),
-            ],
-          )
-              : Container()
         ],
       ),
     );
@@ -237,7 +160,14 @@ class _SearchResultViewState extends State<SearchResultView> {
 
                         var data = snapshoot.data;
 
-                        if(currentCategory == "All") {
+                        if(widget.category != null) {
+
+                          data = snapshoot.data
+                              .where((element) =>
+                              element.category == widget.category)
+                              .toList();
+                        }
+                        else if(currentCategory == "All") {
 
                           data = snapshoot.data
                               .where((element) =>
@@ -266,7 +196,7 @@ class _SearchResultViewState extends State<SearchResultView> {
                                   children: [
                                     Expanded(
                                         child: Text(
-                                          data.length.toString(),
+                                          data.length.toString() + " Result",
                                           textAlign: TextAlign.left,
                                           style: TextStyle(
                                               color: Colors.grey,
@@ -315,22 +245,22 @@ class _SearchResultViewState extends State<SearchResultView> {
                                           fontSize: 12
                                       )),
 
-                                      Container(
-                                        margin: EdgeInsets.only(top: 16),
-                                        width: 300,
-                                        decoration: BoxDecoration(
-                                            color: ColorConfig.bluePrimary,
-                                            borderRadius: BorderRadius.circular(5)
-                                        ),
-                                        child: FlatButton(
-                                            onPressed: () => {backToHome()},
-                                            child: Text("Back to Home", style: TextStyle(
-                                                color: Colors.white,
-                                                fontFamily: "PoppinsBold",
-                                                fontSize: 14
-                                            ))
-                                        ),
-                                      )
+                                      // Container(
+                                      //   margin: EdgeInsets.only(top: 16),
+                                      //   width: 300,
+                                      //   decoration: BoxDecoration(
+                                      //       color: ColorConfig.bluePrimary,
+                                      //       borderRadius: BorderRadius.circular(5)
+                                      //   ),
+                                      //   child: FlatButton(
+                                      //       onPressed: () => {backToHome()},
+                                      //       child: Text("Back to Home", style: TextStyle(
+                                      //           color: Colors.white,
+                                      //           fontFamily: "PoppinsBold",
+                                      //           fontSize: 14
+                                      //       ))
+                                      //   ),
+                                      // )
                                     ],
                                   ),
                                 )
