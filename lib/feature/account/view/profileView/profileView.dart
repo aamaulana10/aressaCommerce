@@ -96,7 +96,7 @@ class _ProfileViewState extends State<ProfileView> {
                   decoration: BoxDecoration(
                       shape: BoxShape.circle,
                     image: DecorationImage(
-                      image: AssetImage("lib/asset/image/home/promotionDummy.png"),
+                      image: AssetImage("lib/asset/image/home/james.png"),
                       fit: BoxFit.cover
                     )
                   ),

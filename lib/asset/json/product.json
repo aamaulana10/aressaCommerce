@@ -1,1315 +1,209 @@
 {
   "data": [
     {
-      "id": "1",
+      "id": "121",
       "image": {
-        "thumbnail": "lib/asset/image/product/nikeBasketballShoes.jpg",
+        "thumbnail": "lib/asset/image/product/bajuGaruda.jpg",
         "gallery": [
-          "lib/asset/image/product/nikeBasketballShoes.jpg",
-          "lib/asset/image/product/nikeBasketballShoes2.jpg",
-          "lib/asset/image/product/nikeBasketballShoes3.jpg",
-          "lib/asset/image/product/nikeBasketballShoes4.jpg"
+          "lib/asset/image/product/bajuGaruda.jpg",
+          "lib/asset/image/product/bajuGaruda2.jpg",
+          "lib/asset/image/product/bajuGaruda3.jpg",
+          "lib/asset/image/product/bajuGaruda4.jpg"
         ]
       },
-      "category": "Man Shoes",
-      "description": "Zapatillas Tenis Sepatu Sports Shoes Citrus 25th Anniversary Women Men's Fashion Sneakers 11 Retro Basketball Shoes",
-      "rate": 5.0,
-      "isFavorite": false,
-      "name": "Men's fashion sneakers 11 Retro Basketball Shoes jordan",
-      "price": {
-        "normal": "$65",
-        "special": "$60"
-      }
-    },
-    {
-      "id": "2",
-      "image": {
-        "thumbnail": "lib/asset/image/product/menCasualShoes.jpg",
-        "gallery": [
-          "lib/asset/image/product/menCasualShoes.jpg",
-          "lib/asset/image/product/menCasualShoes2.jpg",
-          "lib/asset/image/product/menCasualShoes3.jpg",
-          "lib/asset/image/product/menCasualShoes4.jpg"
-        ]
-      },
-      "category": "Man Shoes",
-      "description": "Stylish leather loafers mens shoes casual slip on men moccasins",
-      "rate": 4.3,
-      "isFavorite": false,
-      "name": "Stylish leather loafers mens shoes casual slip on men moccasins",
-      "price": {
-        "normal": "$31",
-        "special": "$30"
-      }
-    },
-    {
-      "id": "3",
-      "image": {
-        "thumbnail": "lib/asset/image/product/speed3.jpeg",
-        "gallery": [
-          "lib/asset/image/product/speed3.jpeg",
-          "lib/asset/image/product/speed3v1.jpeg",
-          "lib/asset/image/product/speed3v2.jpeg",
-          "lib/asset/image/product/speed3v3.jpeg"
-        ]
-      },
-      "category": "Man Shoes",
-      "description": "Men Sport Sneaker Manufacturers China,Original Sports Shoes Sneakers Men Running From China,Oem Sneakers For Shoes Sport Mens",
-      "rate": 4.0,
-      "isFavorite": false,
-      "name": "Men Sport Sneaker",
-      "price": {
-        "normal": "$24",
-        "special": "$22"
-      }
-    },
-    {
-      "id": "4",
-      "image": {
-        "thumbnail": "lib/asset/image/product/europeanSportMenShoes.jpg",
-        "gallery": [
-          "lib/asset/image/product/europeanSportMenShoes.jpg",
-          "lib/asset/image/product/europeanSportMenShoes2.jpg",
-          "lib/asset/image/product/europeanSportMenShoes3.jpg",
-          "lib/asset/image/product/europeanSportMenShoes4.jpg"
-        ]
-      },
-      "category": "Man Shoes",
-      "description": "2019 Fashion New Designs Men's Sport Shoes Fancy Mens Shoes,Excellent European knitted Mesh Sneakers",
-      "rate": 5.5,
-      "isFavorite": false,
-      "name": "Fashion Sneakers",
-      "price": {
-        "normal": "$16",
-        "special": "$14"
-      }
-    },
-    {
-      "id": "5",
-      "image": {
-        "thumbnail": "lib/asset/image/product/walkingSneaker.jpg",
-        "gallery": [
-          "lib/asset/image/product/walkingSneaker.jpg",
-          "lib/asset/image/product/walkingSneaker2.jpg",
-          "lib/asset/image/product/walkingSneaker3.jpg",
-          "lib/asset/image/product/walkingSneaker4.jpg"
-        ]
-      },
-      "category": "Man Shoes",
-      "description": "2020 New Men Casual Shoes Lace up Men Shoes Lightweight Comfortable Walking Sneakers",
-      "rate": 4.1,
-      "isFavorite": false,
-      "name": "2020 New Men Casual Shoes Lace up Men Shoes Lightweight Comfortable Walking Sneakers",
-      "price": {
-        "normal": "$7",
-        "special": "$6"
-      }
-    },
-    {
-      "id": "6",
-      "image": {
-        "thumbnail": "lib/asset/image/product/fashionTshirtMensWhite.jpg",
-        "gallery": [
-          "lib/asset/image/product/fashionTshirtMensWhite.jpg",
-          "lib/asset/image/product/fashionTshirtMensWhite2.jpg",
-          "lib/asset/image/product/fashionTshirtMensWhite3.jpg",
-          "lib/asset/image/product/fashionTshirtMensWhite4.jpg"
-        ]
-      },
-      "category": "Man T-Shirt",
-      "description": "3/4 Sleeve Fashion t-Shirt Mens White Blank Tee Shirt Men Long Oversized t Shirt",
-      "rate": 5.0,
-      "isFavorite": false,
-      "name": "Xuanyang T-Shirt",
-      "price": {
-        "normal": "$4.50",
-        "special": "$4.20"
-      }
-    },
-    {
-      "id": "7",
-      "image": {
-        "thumbnail": "lib/asset/image/product/summerMenTshirt.jpg",
-        "gallery": [
-          "lib/asset/image/product/summerMenTshirt.jpg",
-          "lib/asset/image/product/summerMenTshirt2.png",
-          "lib/asset/image/product/summerMenTshirt3.png",
-          "lib/asset/image/product/summerMenTshirt.jpg"
-        ]
-      },
-      "category": "Man T-Shirt",
-      "description": "Wholesale Men's Summer Tee Fashion Crew Neck Cheaper Heat Sensitive Color Changing tshirts",
-      "rate": 5.0,
-      "isFavorite": false,
-      "name": "Summer T-Shirt",
-      "price": {
-        "normal": "$8.65",
-        "special": "$7.80"
-      }
-    },
-    {
-      "id": "8",
-      "image": {
-        "thumbnail": "lib/asset/image/product/eagleMenTshirt.jpg",
-        "gallery": [
-          "lib/asset/image/product/eagleMenTshirt.jpg",
-          "lib/asset/image/product/eagleMenTshirt2.jpg",
-          "lib/asset/image/product/eagleMenTshirt3.jpg",
-          "lib/asset/image/product/eagleMenTshirt4.jpg"
-        ]
-      },
-      "category": "Man T-Shirt",
-      "description": "Manufactures t-shirts rhinestone transfer custom clothing for men rhinestone tshirts",
-      "rate": 5.2,
-      "isFavorite": false,
-      "name": "Costum Men T-Shirt",
-      "price": {
-        "normal": "$15.80",
-        "special": "$13.80"
-      }
-    },
-    {
-      "id": "9",
-      "image": {
-        "thumbnail": "lib/asset/image/product/parisMenTshirt.jpg",
-        "gallery": [
-          "lib/asset/image/product/parisMenTshirt.jpg",
-          "lib/asset/image/product/parisMenTshirt2.png",
-          "lib/asset/image/product/parisMenTshirt3.png",
-          "lib/asset/image/product/parisMenTshirt4.png"
-        ]
-      },
-      "category": "Man T-Shirt",
-      "description": "JET FUEL T shert Vetement Homme Custom Foam Printing T-Shirt Men Rhinestone Logo Print On Demand T Shirt",
-      "rate": 5.0,
-      "isFavorite": false,
-      "name": "Custom Foam Printing T-Shirt Men",
-      "price": {
-        "normal": "$5.95",
-        "special": "$5.75"
-      }
-    },
-    {
-      "id": "10",
-      "image": {
-        "thumbnail": "lib/asset/image/product/graphicMenTshirt.jpg",
-        "gallery": [
-          "lib/asset/image/product/graphicMenTshirt.jpg",
-          "lib/asset/image/product/graphicMenTshirt2.jpg",
-          "lib/asset/image/product/graphicMenTshirt3.jpg",
-          "lib/asset/image/product/graphicMenTshirt4.jpg"
-        ]
-      },
-      "category": "Man T-Shirt",
-      "description": "Custom t-shirt with print men graphic words tshirts printing designed high quality cotton polyester rayon tri blend",
-      "rate": 5.1,
-      "isFavorite": false,
-      "name": "Custom t-shirt with print men graphic",
-      "price": {
-        "normal": "$6.20",
-        "special": "$4.20"
-      }
-    },
-    {
-      "id": "11",
-      "image": {
-        "thumbnail": "lib/asset/image/product/menWorkWearJacket.jpg",
-        "gallery": [
-          "lib/asset/image/product/menWorkWearJacket.jpg",
-          "lib/asset/image/product/menWorkWearJacket2.jpg",
-          "lib/asset/image/product/menWorkWearJacket3.jpg",
-          "lib/asset/image/product/menWorkWearJacket4.jpg"
-        ]
-      },
-      "category": "Man Work Equipment",
-      "description": "Fashion Waterproof Equipment Men's Jacket Hooded Multiple Pockets Mens Work Wear Jacket",
-      "rate": 5.0,
-      "isFavorite": false,
-      "name": "Mens Work Wear Jacket",
-      "price": {
-        "normal": "$22.79",
-        "special": "$22.49"
-      }
-    },
-    {
-      "id": "12",
-      "image": {
-        "thumbnail": "lib/asset/image/product/menWorkShoes.jpg",
-        "gallery": [
-          "lib/asset/image/product/menWorkShoes.jpg",
-          "lib/asset/image/product/menWorkShoes2.jpg",
-          "lib/asset/image/product/menWorkShoes3.jpg",
-          "lib/asset/image/product/menWorkShoes4.jpg"
-        ]
-      },
-      "category": "Man Work Equipment",
-      "description": "New Style Men EN-Steel Toe Footwear Mens Boots Work Industrial Safety Shoes equipments",
-      "rate": 5.0,
-      "isFavorite": false,
-      "name": "Mens Boots Work",
-      "price": {
-        "normal": "$25.50",
-        "special": "$24.80"
-      }
-    },
-    {
-      "id": "13",
-      "image": {
-        "thumbnail": "lib/asset/image/product/mensUvJacket.jpg",
-        "gallery": [
-          "lib/asset/image/product/mensUvJacket2.jpg",
-          "lib/asset/image/product/mensUvJacket3.jpg",
-          "lib/asset/image/product/mensUvJacket4.jpg"
-        ]
-      },
-      "category": "Man Work Equipment",
-      "description": "Fan Equipped Clothing, UV Resistant Cooling Jacket for Men, USB powered Air Conditioned Coat for Summer High Temp Outdoor Work",
-      "rate": 5.0,
-      "isFavorite": false,
-      "name": "Air-Conditioned Jacket",
-      "price": {
-        "normal": "$23.50",
-        "special": "$20.90"
-      }
-    },
-    {
-      "id": "14",
-      "image": {
-        "thumbnail": "lib/asset/image/product/mensArmorCombat.jpg",
-        "gallery": [
-          "lib/asset/image/product/mensArmorCombat2.jpg",
-          "lib/asset/image/product/mensArmorCombat3.jpg",
-          "lib/asset/image/product/mensArmorCombat4.jpg"
-        ]
-      },
-      "category": "Man Work Equipment",
-      "description": "Wholesale special camouflage amphibious module combat vest field equipment green tactical vest",
-      "rate": 4.9,
-      "isFavorite": false,
-      "name": "Tactical vest",
-      "price": {
-        "normal": "$14.06",
-        "special": "$13.16"
-      }
-    },
-    {
-      "id": "15",
-      "image": {
-        "thumbnail": "lib/asset/image/product/mensSafetyJacket.jpg",
-        "gallery": [
-          "lib/asset/image/product/mensSafetyJacket2.jpg",
-          "lib/asset/image/product/mensSafetyJacket3.jpg",
-          "lib/asset/image/product/mensSafetyJacket4.jpg"
-        ]
-      },
-      "category": "Man Work Equipment",
-      "description": "2021 Men New Model Safety Men Clothing Autumn Work Clothes Cotton Reflective Work Jacket",
-      "rate": 4.9,
-      "isFavorite": false,
-      "name": "Working Jackets",
-      "price": {
-        "normal": "$17.50",
-        "special": "$16.00"
-      }
-    },
-    {
-      "id": "16",
-      "image": {
-        "thumbnail": "lib/asset/image/product/menCasualShirt.png",
-        "gallery": [
-          "lib/asset/image/product/menCasualShirt2.png",
-          "lib/asset/image/product/menCasualShirt3.png",
-          "lib/asset/image/product/menCasualShirt4.png"
-        ]
-      },
-      "category": "Man Shirt",
-      "description": "Hot Fashion Silk Shirts Casual Smooth Silk Shirt for Men | Top Quality 100% Pure Satin Silk Custom Logo Blank Satin Men Shirt",
-      "rate": 5.0,
-      "isFavorite": false,
-      "name": "Men Silk Dress Shirt",
-      "price": {
-        "normal": "$9.99",
-        "special": "$8.99"
-      }
-    },
-    {
-      "id": "17",
-      "image": {
-        "thumbnail": "lib/asset/image/product/koreanMenShirt.jpg",
-        "gallery": [
-          "lib/asset/image/product/koreanMenShirt2.jpg",
-          "lib/asset/image/product/koreanMenShirt3.jpg",
-          "lib/asset/image/product/koreanMenShirt4.jpg"
-        ]
-      },
-      "category": "Man Shirt",
-      "description": "Durable Using Stylish Korean Mens Short Sleeve T shirt For Daily",
-      "rate": 5.0,
-      "isFavorite": false,
-      "name": "Korean Mens Shirt",
-      "price": {
-        "normal": "$6.85",
-        "special": "$6.56"
-      }
-    },
-    {
-      "id": "18",
-      "image": {
-        "thumbnail": "lib/asset/image/product/hawaiMenShirt.jpg",
-        "gallery": [
-          "lib/asset/image/product/hawaiMenShirt2.jpg",
-          "lib/asset/image/product/hawaiMenShirt3.jpg",
-          "lib/asset/image/product/hawaiMenShirt4.jpg"
-        ]
-      },
-      "category": "Man Shirt",
-      "description": "Free Sample Wholesale Clothes Custom Short Sleeve Silk Satin Printed Men Hawaiian Colorful Shirt",
-      "rate": 5.2,
-      "isFavorite": false,
-      "name": "Hawaiian Colorful Shirt",
-      "price": {
-        "normal": "$7.90",
-        "special": "$7.50"
-      }
-    },
-    {
-      "id": "19",
-      "image": {
-        "thumbnail": "lib/asset/image/product/businessCasualShirt.jpg",
-        "gallery": [
-          "lib/asset/image/product/businessCasualShirt2.jpg",
-          "lib/asset/image/product/businessCasualShirt3.jpg",
-          "lib/asset/image/product/businessCasualShirt4.jpg"
-        ]
-      },
-      "category": "Man Shirt",
-      "description": "Men Shirt Slim Fit Long Sleeve Business Casual Printed Formal Dress Shirts",
-      "rate": 4.0,
-      "isFavorite": false,
-      "name": "Business Casual Shirt",
-      "price": {
-        "normal": "$6.19",
-        "special": "$5.83"
-      }
-    },
-    {
-      "id": "20",
-      "image": {
-        "thumbnail": "lib/asset/image/product/beachMenShirt.jpg",
-        "gallery": [
-          "lib/asset/image/product/beachMenShirt2.jpg",
-          "lib/asset/image/product/beachMenShirt3.jpg",
-          "lib/asset/image/product/beachMenShirt4.jpg"
-        ]
-      },
-      "category": "Man Shirt",
-      "description": "Oversized Top Casual Print Beach Summer Patchwork Mens Shirt, Short Sleeve Hawaiian Shirt Men",
-      "rate": 4.7,
-      "isFavorite": false,
-      "name": "Hawaiian Shirt Men",
-      "price": {
-        "normal": "$8.03",
-        "special": "$7.62"
-      }
-    },
-    {
-      "id": "21",
-      "image": {
-        "thumbnail": "lib/asset/image/product/casualMenPants.jpg",
-        "gallery": [
-          "lib/asset/image/product/casualMenPants2.jpg",
-          "lib/asset/image/product/casualMenPants3.jpg",
-          "lib/asset/image/product/casualMenPants4.jpg"
-        ]
-      },
-      "category": "Man Pants",
-      "description": "Masheng Casual Men Pants New Fashion Men Jogger Pants Fitness Gyms Pants For Runners Clothing Autumn Plus Size 5XL Sweatpants",
-      "rate": 4.3,
-      "isFavorite": false,
-      "name": "Men Jogger Pants",
-      "price": {
-        "normal": "$5.72",
-        "special": "$5.46"
-      }
-    },
-    {
-      "id": "22",
-      "image": {
-        "thumbnail": "lib/asset/image/product/manJoggersPants.jpg",
-        "gallery": [
-          "lib/asset/image/product/manJoggersPants2.jpg",
-          "lib/asset/image/product/manJoggersPants3.jpg",
-          "lib/asset/image/product/manJoggersPants4.jpg"
-        ]
-      },
-      "category": "Man Pants",
-      "description": "Running Gym Trousers Men Silk Breathable Workout Sports Sweatpants Drawstring Man Joggers Pants",
-      "rate": 5.0,
-      "isFavorite": false,
-      "name": "Men's jogging Pants",
-      "price": {
-        "normal": "$13.50",
-        "special": "$12.15"
-      }
-    },
-    {
-      "id": "23",
-      "image": {
-        "thumbnail": "lib/asset/image/product/nylonManPants.jpg",
-        "gallery": [
-          "lib/asset/image/product/nylonManPants2.jpg",
-          "lib/asset/image/product/nylonManPants3.jpg",
-          "lib/asset/image/product/nylonManPants4.jpg"
-        ]
-      },
-      "category": "Man Pants",
-      "description": "XJYD New Arrival Men Clothing Wind Pants Colorful Nylon Windbreaker Track Pants Men",
-      "rate": 5.0,
-      "isFavorite": false,
-      "name": "Nylon Windbreaker Track Pants Men",
-      "price": {
-        "normal": "$17.50",
-        "special": "$17.00"
-      }
-    },
-    {
-      "id": "24",
-      "image": {
-        "thumbnail": "lib/asset/image/product/cargoPantsForMen.jpg",
-        "gallery": [
-          "lib/asset/image/product/cargoPantsForMen2.jpg",
-          "lib/asset/image/product/cargoPantsForMen3.jpg",
-          "lib/asset/image/product/cargoPantsForMen4.jpg"
-        ]
-      },
-      "category": "Man Pants",
-      "description": "oem Custom Male Fashion Elastic Waist Nylon Cargo Pants For Men",
-      "rate": 5.0,
-      "isFavorite": false,
-      "name": "Jogger Pants Track Pants Trousers",
-      "price": {
-        "normal": "$13.00",
-        "special": "$12.00"
-      }
-    },
-    {
-      "id": "25",
-      "image": {
-        "thumbnail": "lib/asset/image/product/menStreetwear.png",
-        "gallery": [
-          "lib/asset/image/product/menStreetwear2.png",
-          "lib/asset/image/product/menStreetwear3.png",
-          "lib/asset/image/product/menStreetwear4.png"
-        ]
-      },
-      "category": "Man Pants",
-      "description": "Men streetwear Side Strips Ankle buttons custom design Track Pants men pants",
-      "rate": 5.0,
-      "isFavorite": false,
-      "name": "Men streetwear",
-      "price": {
-        "normal": "$15.99",
-        "special": "$13.90"
-      }
-    },
-    {
-      "id": "26",
-      "image": {
-        "thumbnail": "lib/asset/image/product/designerSwimsuitsBikini.jpg",
-        "gallery": [
-          "lib/asset/image/product/designerSwimsuitsBikini2.jpg",
-          "lib/asset/image/product/designerSwimsuitsBikini3.jpg",
-          "lib/asset/image/product/designerSwimsuitsBikini4.jpg"
-        ]
-      },
-      "category": "Bikini",
-      "description": "High Quality Designers Sexy Swimwear Letter Print Designer Swimsuits Bikini",
-      "rate": 5.0,
-      "isFavorite": false,
-      "name": "Sexy Swimwear",
-      "price": {
-        "normal": "$22.00",
-        "special": "$15.42"
-      }
-    },
-    {
-      "id": "27",
-      "image": {
-        "thumbnail": "lib/asset/image/product/customSexyBikiniSwimwear.jpg",
-        "gallery": [
-          "lib/asset/image/product/customSexyBikiniSwimwear2.png",
-          "lib/asset/image/product/customSexyBikiniSwimwear3.jpg",
-          "lib/asset/image/product/customSexyBikiniSwimwear4.png"
-        ]
-      },
-      "category": "Bikini",
-      "description": "2021 String Extreme Micro Triangle Thong Bikini Women Reversible Swimwear Manufacturer Private Label Custom Sexy Bikini Swimwear",
-      "rate": 5.0,
-      "isFavorite": false,
-      "name": "Custom Swimwear",
-      "price": {
-        "normal": "$11.60",
-        "special": "$9.50"
-      }
-    },
-    {
-      "id": "28",
-      "image": {
-        "thumbnail": "lib/asset/image/product/bikiniYoungGirlSwimwear.jpg",
-        "gallery": [
-          "lib/asset/image/product/bikiniYoungGirlSwimwear2.jpg",
-          "lib/asset/image/product/bikiniYoungGirlSwimwear3.jpg",
-          "lib/asset/image/product/bikiniYoungGirlSwimwear4.jpg"
-        ]
-      },
-      "category": "Bikini",
-      "description": "woman swimsuit extreme sexy beach girl mini micro bikini 18 teen xxx hot sexy bikini young girl swimwear bath suit bikini",
+      "category": "geleneksel kıyafet",
+      "description": "Endonezya kartalı resmi",
       "rate": 4.5,
       "isFavorite": false,
-      "name": "woman print breathable Bikini",
+      "name": "Kaos dağıtımı - Kaos endonezya serisi siyah",
       "price": {
-        "normal": "$6.13",
-        "special": "$5.68"
+        "normal": "85TL",
+        "special": "80TL"
       }
     },
     {
-      "id": "29",
+      "id": "122",
       "image": {
-        "thumbnail": "lib/asset/image/product/bikinisBlingSwimsuit.jpg",
+        "thumbnail": "lib/asset/image/product/batikMerah.jpeg",
         "gallery": [
-          "lib/asset/image/product/bikinisBlingSwimsuit2.jpg",
-          "lib/asset/image/product/bikinisBlingSwimsuit3.jpg",
-          "lib/asset/image/product/bikinisBlingSwimsuit4.jpg"
+          "lib/asset/image/product/batikMerah.jpeg",
+          "lib/asset/image/product/batikMerah2.jpeg",
+          "lib/asset/image/product/batikMerah3.jpeg",
+          "lib/asset/image/product/batikMerah4.jpeg"
         ]
       },
-      "category": "Bikini",
-      "description": "Crystal Diamond Jewelled Rhinestones Bikini halter push up swimwear wholesale sexy bikinis bling swimsuit",
+      "category": "geleneksel kıyafet",
+      "description": "Pamuklu Malzeme Batik Kap geleneksel çizgili el yapımı kombinasyonu, Önde benzersiz şal düğmeler, Kare yaka, Yeni pire modeli, A kesim kesim",
       "rate": 5.0,
       "isFavorite": false,
-      "name": "sexy bikinis bling swimsuit",
+      "name": "Madam Tavşan",
       "price": {
-        "normal": "$8.90",
-        "special": "$8.01"
+        "normal": "120TL",
+        "special": "116TL"
       }
     },
     {
-      "id": "30",
+      "id": "123",
       "image": {
-        "thumbnail": "lib/asset/image/product/customizedBikini.png",
+        "thumbnail": "lib/asset/image/product/bajuSongketHitam.jpeg",
         "gallery": [
-          "lib/asset/image/product/customizedBikini2.png",
-          "lib/asset/image/product/customizedBikini3.png",
-          "lib/asset/image/product/customizedBikini4.png"
+          "lib/asset/image/product/bajuSongketHitam.jpeg",
+          "lib/asset/image/product/bajuSongketHitam2.jpeg",
+          "lib/asset/image/product/bajuSongketHitam3.jpeg",
+          "lib/asset/image/product/bajuSongketHitam4.jpeg"
         ]
       },
-      "category": "Bikini",
-      "description": "2021 Custom Logo Color Bikinis Woman Swimwear Eco Friendly fabric provided customized Bikini",
+      "category": "geleneksel kıyafet",
+      "description": "Esnaf ve MKOBİ'leri güçlendirmek için Smesco Endonezya ile işbirliği. Batı'dan Doğu'ya geleneksel giyim ve tekstil tarihinin keşif aşamalarından geçen Play Endonezya'nın en son koleksiyonu. Endonezya oyunu, Endonezya halkı tarafından giyilen giysilerin ONAYLANMASI olan bir dizi giysi silueti yaratır.",
       "rate": 5.0,
       "isFavorite": false,
-      "name": "swimwear match bucket hat",
+      "name": "Endonezya oyun",
       "price": {
-        "normal": "$15.00",
-        "special": "$14.50"
+        "normal": "100TL",
+        "special": "80TL"
       }
     },
     {
-      "id": "31",
+      "id": "124",
       "image": {
-        "thumbnail": "lib/asset/image/product/womenMidlongSkirt.jpg",
+        "thumbnail": "lib/asset/image/product/bajuSongketPutih.jpeg",
         "gallery": [
-          "lib/asset/image/product/womenMidlongSkirt2.jpg",
-          "lib/asset/image/product/womenMidlongSkirt3.jpg",
-          "lib/asset/image/product/womenMidlongSkirt4.jpg"
+          "lib/asset/image/product/bajuSongketPutih.jpeg",
+          "lib/asset/image/product/bajuSongketPutih2.jpeg",
+          "lib/asset/image/product/bajuSongketPutih3.jpeg",
+          "lib/asset/image/product/bajuSongketPutih4.jpeg"
         ]
       },
-      "category": "Skirt",
-      "description": "High waist elastic band women's mid long skirt autumn and winter warm knitting straight tube buttock skirt side split skirt",
+      "category": "geleneksel kıyafet",
+      "description": "Esnaf ve MKOBİ'leri güçlendirmek için Smesco Endonezya ile işbirliği. Batı'dan Doğu'ya geleneksel giyim ve tekstil tarihinin keşif aşamalarından geçen Play Endonezya'nın en son koleksiyonu. Endonezya oyunu, Endonezya halkı tarafından giyilen giysilerin ONAYLANMASI olan bir dizi giysi silueti yaratır.",
       "rate": 5.0,
       "isFavorite": false,
-      "name": "women's mid long skirt",
+      "name": "Endonezya oyun",
       "price": {
-        "normal": "$6.26",
-        "special": "$5.79"
+        "normal": "100TL",
+        "special": "80TL"
       }
     },
     {
-      "id": "32",
+      "id": "125",
       "image": {
-        "thumbnail": "lib/asset/image/product/summerSkirt.jpg",
+        "thumbnail": "lib/asset/image/product/bajuSongketCoklat.jpeg",
         "gallery": [
-          "lib/asset/image/product/summerSkirt2.jpg",
-          "lib/asset/image/product/summerSkirt3.jpg",
-          "lib/asset/image/product/summerSkirt4.jpg"
+          "lib/asset/image/product/bajuSongketCoklat.jpeg",
+          "lib/asset/image/product/bajuSongketCoklat2.jpeg",
+          "lib/asset/image/product/bajuSongketCoklat3.jpeg",
+          "lib/asset/image/product/bajuSongketCoklat4.jpeg"
         ]
       },
-      "category": "Skirt",
-      "description": "2021 Women Fashion Summer High Waist Pleated Skirt Candy Colors Female Mini A-Line Stitching Button Bottom Girls Dance Skirts",
+      "category": "geleneksel kıyafet",
+      "description": "Esnaf ve MKOBİ'leri güçlendirmek için Smesco Endonezya ile işbirliği. Batı'dan Doğu'ya geleneksel giyim ve tekstil tarihinin keşif aşamalarından geçen Play Endonezya'nın en son koleksiyonu. Endonezya oyunu, Endonezya halkı tarafından giyilen giysilerin ONAYLANMASI olan bir dizi giysi silueti yaratır.",
       "rate": 5.0,
       "isFavorite": false,
-      "name": "Pleated Skirts",
+      "name": "Endonezya oyun",
       "price": {
-        "normal": "$4.80",
-        "special": "$4.50"
+        "normal": "100TL",
+        "special": "80TL"
       }
     },
     {
-      "id": "33",
+      "id": "126",
       "image": {
-        "thumbnail": "lib/asset/image/product/warpSkirt.jpg",
+        "thumbnail": "lib/asset/image/product/roycoAyam.jpg",
         "gallery": [
-          "lib/asset/image/product/warpSkirt2.jpg",
-          "lib/asset/image/product/warpSkirt3.jpg",
-          "lib/asset/image/product/warpSkirt4.jpg"
+          "lib/asset/image/product/roycoAyam.jpg",
+          "lib/asset/image/product/roycoAyam2.jpeg"
         ]
       },
-      "category": "Skirt",
-      "description": "Spot thousand bird checked strap skirt 2021 Autumn New High Waist Hip Wrap Skirt Plaid women's dress",
-      "rate": 5.1,
-      "isFavorite": false,
-      "name": "Susrender skirt",
-      "price": {
-        "normal": "$11.00",
-        "special": "$10.00"
-      }
-    },
-    {
-      "id": "34",
-      "image": {
-        "thumbnail": "lib/asset/image/product/midiSkirtPartyHoliday.jpg",
-        "gallery": [
-          "lib/asset/image/product/midiSkirtPartyHoliday2.jpg",
-          "lib/asset/image/product/midiSkirtPartyHoliday3.png",
-          "lib/asset/image/product/midiSkirtPartyHoliday4.png"
-        ]
-      },
-      "category": "Skirt",
-      "description": "Indie Folk Printed Summer Pleated Skirts Women 2021 High Waist European Floral High Stretch Midi Skirt Party Holiday Rok S-3XL",
-      "rate": 4.3,
-      "isFavorite": false,
-      "name": "Skirt Party Holiday",
-      "price": {
-        "normal": "$6.90",
-        "special": "$6.50"
-      }
-    },
-    {
-      "id": "35",
-      "image": {
-        "thumbnail": "lib/asset/image/product/longPalazzoPantSkirt.jpg",
-        "gallery": [
-          "lib/asset/image/product/longPalazzoPantSkirt2.jpg",
-          "lib/asset/image/product/longPalazzoPantSkirt3.jpg",
-          "lib/asset/image/product/longPalazzoPantSkirt4.jpg"
-        ]
-      },
-      "category": "Skirt",
-      "description": "Women's Chiffon Plain Ruffle Stylish Elegant Ladies Ruched Trendy Midi Wide Leg Tie-Waist Long Palazzo Pant Skirt",
-      "rate": 4.3,
-      "isFavorite": false,
-      "name": "Vintage Ruffles Asymmetrical Long Maxi Womens Skirts",
-      "price": {
-        "normal": "$10.90",
-        "special": "$10.65"
-      }
-    },
-    {
-      "id": "36",
-      "image": {
-        "thumbnail": "lib/asset/image/product/dressWomanWithSlit.jpg",
-        "gallery": [
-          "lib/asset/image/product/dressWomanWithSlit2.jpg",
-          "lib/asset/image/product/dressWomanWithSlit3.jpg",
-          "lib/asset/image/product/dressWomanWithSlit4.jpg"
-        ]
-      },
-      "category": "Dress",
-      "description": "Sleeveless Black Crystallized Corset High Slit Satin Gown One Shoulder Maxi Dress Woman With Slit",
-      "rate": 4.8,
-      "isFavorite": false,
-      "name": "bandage dress split lace dress",
-      "price": {
-        "normal": "$22.00",
-        "special": "$21.50"
-      }
-    },
-    {
-      "id": "37",
-      "image": {
-        "thumbnail": "lib/asset/image/product/casualDress.jpg",
-        "gallery": [
-          "lib/asset/image/product/casualDress2.jpg",
-          "lib/asset/image/product/casualDress3.jpg",
-          "lib/asset/image/product/casualDress4.jpg"
-        ]
-      },
-      "category": "Dress",
-      "description": "Elegant Casual Dress New arrivals Fall 2021 Women Clothes Dresses Dress Party Sexy Plus Size Woman's Clothing",
-      "rate": 4.8,
-      "isFavorite": false,
-      "name": "Women Clothes Dresses Dress Party Sexy Plus Size Woman's Clothing",
-      "price": {
-        "normal": "$20.65",
-        "special": "$19.25"
-      }
-    },
-    {
-      "id": "38",
-      "image": {
-        "thumbnail": "lib/asset/image/product/elegantWomenDress.jpg",
-        "gallery": [
-          "lib/asset/image/product/elegantWomenDress2.jpg",
-          "lib/asset/image/product/elegantWomenDress3.jpg",
-          "lib/asset/image/product/elegantWomenDress4.jpg"
-        ]
-      },
-      "category": "Dress",
-      "description": "SHEIN Supplier Bulk Free Sample Fall girl's clothing Tie Neck Ruched Vestidos elegant women short western Shein casual Dresses",
-      "rate": 4.7,
-      "isFavorite": false,
-      "name": "Women Comfortable Dress",
-      "price": {
-        "normal": "$8.98",
-        "special": "$8.68"
-      }
-    },
-    {
-      "id": "39",
-      "image": {
-        "thumbnail": "lib/asset/image/product/summerWomenSlim.jpg",
-        "gallery": [
-          "lib/asset/image/product/summerWomenSlim2.jpg",
-          "lib/asset/image/product/summerWomenSlim3.jpg",
-          "lib/asset/image/product/summerWomenSlim4.jpg"
-        ]
-      },
-      "category": "Dress",
-      "description": "2021 New Spaghetti Strap Sleeveless Mini Bodycon Dress Summer Women Slim Waist Drawstring Ruched Ruffles Party Dress",
-      "rate": 4.3,
-      "isFavorite": false,
-      "name": "Mini Bodycon Dress Summer Women",
-      "price": {
-        "normal": "$7.50",
-        "special": "$7.40"
-      }
-    },
-    {
-      "id": "40",
-      "image": {
-        "thumbnail": "lib/asset/image/product/longCasualDresses.jpg",
-        "gallery": [
-          "lib/asset/image/product/longCasualDresses2.jpg",
-          "lib/asset/image/product/longCasualDresses3.jpg",
-          "lib/asset/image/product/longCasualDresses4.jpg"
-        ]
-      },
-      "category": "Dress",
-      "description": "OEM Fashion Casual Long sleeve slim design women dress new 2021 chiffon floral print bohemian summer dresses wholesale",
+      "category": "gıda malzemesi",
+      "description": "Besleyici Tavuk aromalı gıda\nRoyco Chicken Broth Seasoning, vücuda iyi gelen İyot içerir.\nHer yemek için lezzetli et aroması\nRoyco Chicken Broth'u ev yemeklerinize ekleyin\nPişirirken kolayca çözülen aroma verici baharat.\nYemek pişirme tutkusunu herkese getirmek için zengin tada sahip yemek baharatı",
       "rate": 5.0,
       "isFavorite": false,
-      "name": "OEM Fashion Casual Long sleeve slim design women dress",
+      "name": "230g tatlandırmak için Royco tavuk suyu baharatı - gıda baharatı",
       "price": {
-        "normal": "$5.99",
-        "special": "$4.99"
+        "normal": "8TL",
+        "special": "5TL"
       }
     },
     {
-      "id": "41",
+      "id": "127",
       "image": {
-        "thumbnail": "lib/asset/image/product/joggerTrousersWomen.jpg",
+        "thumbnail": "lib/asset/image/product/saparillaindo.jpg",
         "gallery": [
-          "lib/asset/image/product/joggerTrousersWomen2.jpg",
-          "lib/asset/image/product/joggerTrousersWomen3.jpg",
-          "lib/asset/image/product/joggerTrousersWomen4.jpg"
+          "lib/asset/image/product/saparillaindo.jpg",
+          "lib/asset/image/product/saparillaindo2.jpg",
+          "lib/asset/image/product/saparillaindo3.jpg",
+          "lib/asset/image/product/saparillaindo4.jpg"
         ]
       },
-      "category": "Women Pants",
-      "description": "wholesale Plain Cotton Harem Plazzo Women Pants Streetwear Cargo Pants Loose Jogger Trousers Women 2020 Sweatpants",
+      "category": "gıda malzemesi",
+      "description": "ndo Saparella, Yogyakarta'dan Endonezya'ya özgü bir meşrubattır. Bu içecek 1960'larda oldukça popülerdi. Tatlı ve keskin tat, kendine özgü tatlı bir tada sahip karbonatlaşmadan gelir. Arkadaşlarınızla takılırken veya takılırken her yudumun tadını çıkarın.",
       "rate": 5.0,
       "isFavorite": false,
-      "name": "Women Casual Trouser",
+      "name": "EFSANE! INDO SAPARELLA 300ml Saparilla Sarsaparilla Tipik Yogyakarta",
       "price": {
-        "normal": "$8.28",
-        "special": "$7.92"
+        "normal": "16TL",
+        "special": "10TL"
       }
     },
     {
-      "id": "42",
+      "id": "128",
       "image": {
-        "thumbnail": "lib/asset/image/product/springCasualCustomWomen.jpg",
+        "thumbnail": "lib/asset/image/product/kecapPanda.jpg",
         "gallery": [
-          "lib/asset/image/product/springCasualCustomWomen2.jpg",
-          "lib/asset/image/product/springCasualCustomWomen3.jpg",
-          "lib/asset/image/product/springCasualCustomWomen4.jpg"
+          "lib/asset/image/product/kecapPanda.jpg",
+          "lib/asset/image/product/kecapPanda2.jpg",
+          "lib/asset/image/product/kecapPanda3.jpg",
+          "lib/asset/image/product/kecapPanda4.jpg"
         ]
       },
-      "category": "Women Pants",
-      "description": "2021 Spring Casual custom Women Cotton Patch Pockets Zip Front high waist Loose Wide Leg Cropped Pant",
-      "rate": 4.3,
-      "isFavorite": false,
-      "name": "2021 Spring Casual custom Women",
-      "price": {
-        "normal": "$21.30",
-        "special": "$20.50"
-      }
-    },
-    {
-      "id": "43",
-      "image": {
-        "thumbnail": "lib/asset/image/product/leggingsCustomPrintedWomen.jpg",
-        "gallery": [
-          "lib/asset/image/product/leggingsCustomPrintedWomen2.jpg",
-          "lib/asset/image/product/leggingsCustomPrintedWomen3.jpg",
-          "lib/asset/image/product/leggingsCustomPrintedWomen4.jpg"
-        ]
-      },
-      "category": "Women Pants",
-      "description": "Wholesale leggings custom printed women fashion pants and trousers",
-      "rate": 4.3,
-      "isFavorite": false,
-      "name": "Wholesale leggings custom",
-      "price": {
-        "normal": "$6.01",
-        "special": "$5.85"
-      }
-    },
-    {
-      "id": "44",
-      "image": {
-        "thumbnail": "lib/asset/image/product/longWomenDressPants.png",
-        "gallery": [
-          "lib/asset/image/product/longWomenDressPants2.jpg",
-          "lib/asset/image/product/longWomenDressPants3.jpg",
-          "lib/asset/image/product/longWomenDressPants4.jpg"
-        ]
-      },
-      "category": "Women Pants",
-      "description": "Long Women Dress Pants High Quality Ladies Wholesale Casual Women Pants",
+      "category": "gıda malzemesi",
+      "description": "LEE KUM KEE İSTİDYE SOSU PANDA (ÖZEL ÇİN YEMEKLERİ 510 GRAM İSTİDYE SOSU), üstün kaliteli tadı olan tipik bir Çin yemeği istiridye sosudur. Bu istiridye sosu, 125 yıldır nesilden nesile aktarılan orijinal tarifler olan kalite güvencesi malzemelerine sahiptir. Yumuşak dokulu bu sos, lezzetli yemeklerin yanı sıra lezzet katmak için çeşni olarak sos olarak kullanım için idealdir.",
       "rate": 5.0,
       "isFavorite": false,
-      "name": "Dress Pants",
+      "name": "LEE KUM KEE İSTİDYE SOSLU PANDA - İSTİDYE SOSLU ÖZEL ÇİN YEMEKLERİ 510 GRAM",
       "price": {
-        "normal": "$5.00",
-        "special": "$4.50"
+        "normal": "41TL",
+        "special": "35TL"
       }
     },
     {
-      "id": "45",
+      "id": "129",
       "image": {
-        "thumbnail": "lib/asset/image/product/camouflagePantsForWomen.jpg",
+        "thumbnail": "lib/asset/image/product/kunyit.jpg",
         "gallery": [
-          "lib/asset/image/product/camouflagePantsForWomen2.jpg",
-          "lib/asset/image/product/camouflagePantsForWomen3.jpg",
-          "lib/asset/image/product/camouflagePantsForWomen4.jpg"
+          "lib/asset/image/product/kunyit.jpg",
+          "lib/asset/image/product/kunyit2.jpg",
+          "lib/asset/image/product/kunyit3.jpg"
         ]
       },
-      "category": "Women Pants",
-      "description": "Fall Women Long Casual Pants High Waist Pants Women Outfit Designer Printing Workout Camouflage Pants for Women",
+      "category": "gıda malzemesi",
+      "description": "Zerdeçal, sindirim sorunlarına yardımcı olmasının yanı sıra, daha önce hayal bile edemediğiniz başka özelliklere de sahiptir. İltihabı azaltmaktan panzehire ve yılan zehirine",
       "rate": 5.0,
       "isFavorite": false,
-      "name": "Fall Women Long Casual Pants",
+      "name": "Kunyit Biang Fresh 500gr - Zerdeçal Biang Fresh ve New 500 gram",
       "price": {
-        "normal": "$9.64",
-        "special": "$9.50"
+        "normal": "16TL",
+        "special": "7TL"
       }
     },
     {
-      "id": "46",
+      "id": "130",
       "image": {
-        "thumbnail": "lib/asset/image/product/cottonBoxersPackSet.jpg",
+        "thumbnail": "lib/asset/image/product/bijiKopi.jpg",
         "gallery": [
-          "lib/asset/image/product/cottonBoxersPackSet2.jpg",
-          "lib/asset/image/product/cottonBoxersPackSet3.jpg",
-          "lib/asset/image/product/cottonBoxersPackSet4.jpg"
+          "lib/asset/image/product/bijiKopi.jpg",
+          "lib/asset/image/product/bijiKopi2.jpg",
+          "lib/asset/image/product/bijiKopi3.jpg"
         ]
       },
-      "category": "Man Underwear",
-      "description": "Packaging mens man underwear soft cotton boxers pack set",
+      "category": "gıda malzemesi",
+      "description": "Palmiye sütü (veya diğer tatlandırıcılar) içeren buzlu kahve menüsü, Hotel Coffee veya %100 Robusta Kahve İçecek Karışımları için ekonomik bir bütçe ile tavsiye edilir.",
       "rate": 5.0,
       "isFavorite": false,
-      "name": "Plain Men Brief Boxers",
+      "name": "Tam Robusta Kahve Çekirdekleri Ekonomik 1 KG Kahve Süt | 1KG - FASULYE",
       "price": {
-        "normal": "$2.18",
-        "special": "$0.99"
-      }
-    },
-    {
-      "id": "47",
-      "image": {
-        "thumbnail": "lib/asset/image/product/seamlessMenUnderwear.jpg",
-        "gallery": [
-          "lib/asset/image/product/seamlessMenUnderwear2.jpg",
-          "lib/asset/image/product/seamlessMenUnderwear3.jpg",
-          "lib/asset/image/product/seamlessMenUnderwear4.jpg"
-        ]
-      },
-      "category": "Man Underwear",
-      "description": "Wholesale custom size logo designers polyester print boxer briefs seamless men's underwear",
-      "rate": 5.0,
-      "isFavorite": false,
-      "name": "seamless men's underwear",
-      "price": {
-        "normal": "$0.75",
-        "special": "$0.67"
-      }
-    },
-    {
-      "id": "48",
-      "image": {
-        "thumbnail": "lib/asset/image/product/underwearSportComfortable.jpg",
-        "gallery": [
-          "lib/asset/image/product/underwearSportComfortable2.jpg",
-          "lib/asset/image/product/underwearSportComfortable3.jpg",
-          "lib/asset/image/product/underwearSportComfortable4.jpg"
-        ]
-      },
-      "category": "Man Underwear",
-      "description": "Plus Size 3Xl Men Boxers Mens Quick Dry Breathable Underwear Sport Comfortable Boxer Briefs For Men",
-      "rate": 4.7,
-      "isFavorite": false,
-      "name": "Short Boxer Brief Male Creative logo",
-      "price": {
-        "normal": "$4.49",
-        "special": "$3.01"
-      }
-    },
-    {
-      "id": "49",
-      "image": {
-        "thumbnail": "lib/asset/image/product/vendorUnderwear.jpg",
-        "gallery": [
-          "lib/asset/image/product/vendorUnderwear.jpg2",
-          "lib/asset/image/product/vendorUnderwear.jpg3",
-          "lib/asset/image/product/vendorUnderwear.jpg4"
-        ]
-      },
-      "category": "Man Underwear",
-      "description": "Canton Hint 2021 Custom OEM Wholesale Vendor Underwear Plus Size Boxers Briefs for Men Plus Size Breathable Shorts Corto Breve",
-      "rate": 5.0,
-      "isFavorite": false,
-      "name": "Vendor Underwear Plus Size Boxers Briefs for Men Plus Size Breathable Shorts Corto Breve",
-      "price": {
-        "normal": "$3.50",
-        "special": "$3.30"
-      }
-    },
-    {
-      "id": "50",
-      "image": {
-        "thumbnail": "lib/asset/image/product/longLegUnderwear.jpg",
-        "gallery": [
-          "lib/asset/image/product/longLegUnderwear2.jpg",
-          "lib/asset/image/product/longLegUnderwear3.jpg",
-          "lib/asset/image/product/longLegUnderwear4.jpg"
-        ]
-      },
-      "category": "Man Underwear",
-      "description": "Natural Feelings Boxer Briefs Mens Underwear Men Pack Soft Cotton Open Fly Long Leg Underwear A0006",
-      "rate": 4.5,
-      "isFavorite": false,
-      "name": "mans basic custom underwear sexy men underwear",
-      "price": {
-        "normal": "$1.62",
-        "special": "$1.53"
-      }
-    },
-    {
-      "id": "51",
-      "image": {
-        "thumbnail": "lib/asset/image/product/customSummerPopular.jpg",
-        "gallery": [
-          "lib/asset/image/product/customSummerPopular2.jpg",
-          "lib/asset/image/product/customSummerPopular3.jpg",
-          "lib/asset/image/product/customSummerPopular4.jpg"
-        ]
-      },
-      "category": "Woman T-Shirt",
-      "description": "Custom summer popular oversize casual styles sports fashionable women's plain t shirts tops 2021 100% cotton with high quality",
-      "rate": 5.0,
-      "isFavorite": false,
-      "name": "vintage washed t shirts",
-      "price": {
-        "normal": "$8.50",
-        "special": "$7.50"
-      }
-    },
-    {
-      "id": "52",
-      "image": {
-        "thumbnail": "lib/asset/image/product/cropTopsTshirtWomen.jpg",
-        "gallery": [
-          "lib/asset/image/product/cropTopsTshirtWomen2.jpg",
-          "lib/asset/image/product/cropTopsTshirtWomen3.jpg",
-          "lib/asset/image/product/cropTopsTshirtWomen4.jpg"
-        ]
-      },
-      "category": "Woman T-Shirt",
-      "description": "Womens tshirt plain crop tops fashion women tshirts polyester round neck crop tops t-shirt women",
-      "rate": 5.0,
-      "isFavorite": false,
-      "name": "Womens tshirt plain crop tops fashion",
-      "price": {
-        "normal": "$2.50",
-        "special": "$2.30"
-      }
-    },
-    {
-      "id": "53",
-      "image": {
-        "thumbnail": "lib/asset/image/product/oversizedTopsWomenTShirt.jpg",
-        "gallery": [
-          "lib/asset/image/product/oversizedTopsWomenTShirt2.jpg",
-          "lib/asset/image/product/oversizedTopsWomenTShirt3.jpg",
-          "lib/asset/image/product/oversizedTopsWomenTShirt4.jpg"
-        ]
-      },
-      "category": "Woman T-Shirt",
-      "description": "New Styles Manche Courte Tee Customized Casual Hot Sale Round Neck Printing Graphic All-Match Oversized Tops Women'S T-Shirt",
-      "rate": 4.9,
-      "isFavorite": false,
-      "name": "Custom crew neck printing graphic womens oversized tee",
-      "price": {
-        "normal": "$6.08",
-        "special": "$5.24"
-      }
-    },
-    {
-      "id": "54",
-      "image": {
-        "thumbnail": "lib/asset/image/product/warmSlimFemaleShirt.png",
-        "gallery": [
-          "lib/asset/image/product/warmSlimFemaleShirt2.jpg",
-          "lib/asset/image/product/warmSlimFemaleShirt3.jpg",
-          "lib/asset/image/product/warmSlimFemaleShirt4.jpg"
-        ]
-      },
-      "category": "Woman T-Shirt",
-      "description": "Autumn High collar shirt long-sleeve t-shirt solid color women's warm Slim female shirt plus size",
-      "rate": 5.0,
-      "isFavorite": false,
-      "name": "Print Custom T-Shirts",
-      "price": {
-        "normal": "$9.00",
-        "special": "$8.00"
-      }
-    },
-    {
-      "id": "55",
-      "image": {
-        "thumbnail": "lib/asset/image/product/whiteTshirtFemale.jpg",
-        "gallery": [
-          "lib/asset/image/product/whiteTshirtFemale2.jpg",
-          "lib/asset/image/product/whiteTshirtFemale3.jpg",
-          "lib/asset/image/product/whiteTshirtFemale4.jpg"
-        ]
-      },
-      "category": "Woman T-Shirt",
-      "description": "RTS Sleeveless Lip Print Top Loose Womens Tshirts ,Fashion White Tshirt Female Top",
-      "rate": 4.9,
-      "isFavorite": false,
-      "name": "RTS Sleeveless Lip Print Top Loose Womens Tshirts",
-      "price": {
-        "normal": "$6.30",
-        "special": "$6.20"
-      }
-    },
-    {
-      "id": "56",
-      "image": {
-        "thumbnail": "lib/asset/image/product/womenKawaiiPinkBackpack.jpg",
-        "gallery": [
-          "lib/asset/image/product/womenKawaiiPinkBackpack2.jpg",
-          "lib/asset/image/product/womenKawaiiPinkBackpack3.jpg",
-          "lib/asset/image/product/womenKawaiiPinkBackpack4.jpg"
-        ]
-      },
-      "category": "Woman Bag",
-      "description": "Women Kawaii Pink Backpack Junior High Cute School Bag Mini Teenager Travel Rucksack Ladies Bookbag Mochila Feminina Canvas",
-      "rate": 5.0,
-      "isFavorite": false,
-      "name": "Women Kawaii Pink Backpack Junior High School",
-      "price": {
-        "normal": "$6.89",
-        "special": "$6.03"
-      }
-    },
-    {
-      "id": "57",
-      "image": {
-        "thumbnail": "lib/asset/image/product/highCapacityWomenBackpacks.jpg",
-        "gallery": [
-          "lib/asset/image/product/highCapacityWomenBackpacks2.jpg",
-          "lib/asset/image/product/highCapacityWomenBackpacks3.jpg",
-          "lib/asset/image/product/highCapacityWomenBackpacks4.jpg"
-        ]
-      },
-      "category": "Woman Bag",
-      "description": "Custom Wholesale Fashion High Capacity Pu Female Portable Women Backpacks Backpack Bag",
-      "rate": 5.0,
-      "isFavorite": false,
-      "name": "Custom Wholesale Fashion High Capacity Pu Female Portable Women Backpacks",
-      "price": {
-        "normal": "$7.25",
-        "special": "$6.52"
-      }
-    },
-    {
-      "id": "58",
-      "image": {
-        "thumbnail": "lib/asset/image/product/womenHandBagsLuxury.jpg",
-        "gallery": [
-          "lib/asset/image/product/womenHandBagsLuxury2.jpg",
-          "lib/asset/image/product/womenHandBagsLuxury3.jpg",
-          "lib/asset/image/product/womenHandBagsLuxury4.jpg"
-        ]
-      },
-      "category": "Woman Bag",
-      "description": "SUSEN CHRISBELLA 2021 Wholesale Famous Brand PU Leather Women Hand Bags Luxury Designer Ladies Handbag Shoulder Bag",
-      "rate": 5.0,
-      "isFavorite": false,
-      "name": "Women Shoulder Bag",
-      "price": {
-        "normal": "$18.43",
-        "special": "$16.82"
-      }
-    },
-    {
-      "id": "59",
-      "image": {
-        "thumbnail": "lib/asset/image/product/classicWomenHandBags.jpg",
-        "gallery": [
-          "lib/asset/image/product/classicWomenHandBags2.jpg",
-          "lib/asset/image/product/classicWomenHandBags3.jpg",
-          "lib/asset/image/product/classicWomenHandBags4.jpg"
-        ]
-      },
-      "category": "Woman Bag",
-      "description": "Hot sell bags classic women handbags, large size woman chain bag",
-      "rate": 5.0,
-      "isFavorite": false,
-      "name": "bags classic women handbags",
-      "price": {
-        "normal": "$19.00",
-        "special": "$18.00"
-      }
-    },
-    {
-      "id": "60",
-      "image": {
-        "thumbnail": "lib/asset/image/product/handbagCasualShoulder.jpg",
-        "gallery": [
-          "lib/asset/image/product/handbagCasualShoulder2.jpg",
-          "lib/asset/image/product/handbagCasualShoulder3.jpg",
-          "lib/asset/image/product/handbagCasualShoulder4.jpg"
-        ]
-      },
-      "category": "Woman Bag",
-      "description": "Female Bag 2021 New Fashion Printed Leather Handbag Casual Shoulder Messenger Bag High Quality Women Leather Handbags Sac A Main",
-      "rate": 4.4,
-      "isFavorite": false,
-      "name": "High Quality Women Leather Handbags",
-      "price": {
-        "normal": "$35.00",
-        "special": "$34.00"
-      }
-    },
-    {
-      "id": "61",
-      "image": {
-        "thumbnail": "lib/asset/image/product/womenSummerSexyHighHeel.jpg",
-        "gallery": [
-          "lib/asset/image/product/womenSummerSexyHighHeel2.jpg",
-          "lib/asset/image/product/womenSummerSexyHighHeel3.jpg",
-          "lib/asset/image/product/womenSummerSexyHighHeel4.jpg"
-        ]
-      },
-      "category": "High Heels",
-      "description": "Women Summer Sexy High Heel Shoes Transparent Color Rivet High Heels Sandals",
-      "rate": 4.9,
-      "isFavorite": false,
-      "name": "high heel sandals",
-      "price": {
-        "normal": "$18.17",
-        "special": "$17.62"
-      }
-    },
-    {
-      "id": "62",
-      "image": {
-        "thumbnail": "lib/asset/image/product/sexyShoesLadiesHighHeels.jpg",
-        "gallery": [
-          "lib/asset/image/product/sexyShoesLadiesHighHeels2.jpg",
-          "lib/asset/image/product/sexyShoesLadiesHighHeels3.jpg",
-          "lib/asset/image/product/sexyShoesLadiesHighHeels4.jpg"
-        ]
-      },
-      "category": "High Heels",
-      "description": "High Quality Technology Manufacturing Sexy Shoes Ladies High Heels",
-      "rate": 5.0,
-      "isFavorite": false,
-      "name": "High Quality Technology Manufacturing High Heel",
-      "price": {
-        "normal": "$13.50",
-        "special": "$12.80"
-      }
-    },
-    {
-      "id": "63",
-      "image": {
-        "thumbnail": "lib/asset/image/product/buckleLadiesHighHeels.jpg",
-        "gallery": [
-          "lib/asset/image/product/buckleLadiesHighHeels2.jpg",
-          "lib/asset/image/product/buckleLadiesHighHeels3.jpg",
-          "lib/asset/image/product/buckleLadiesHighHeels4.jpg"
-        ]
-      },
-      "category": "High Heels",
-      "description": "8999-5 BIGTREE square buckle single shoe pointy square buckle ladies high heels",
-      "rate": 4.9,
-      "isFavorite": false,
-      "name": "buckle ladies high heels",
-      "price": {
-        "normal": "$10.40",
-        "special": "$9.20"
-      }
-    },
-    {
-      "id": "64",
-      "image": {
-        "thumbnail": "lib/asset/image/product/pumpShoesHighHeels.jpg",
-        "gallery": [
-          "lib/asset/image/product/pumpShoesHighHeels2.jpg",
-          "lib/asset/image/product/pumpShoesHighHeels3.jpg",
-          "lib/asset/image/product/pumpShoesHighHeels4.jpg"
-        ]
-      },
-      "category": "High Heels",
-      "description": "Hot Sale Women Manufacturer Luxury Pointed Toe Women's Pump Shoes High Heels For Ladies",
-      "rate": 5.0,
-      "isFavorite": false,
-      "name": "Women High Heel Shoes 2021",
-      "price": {
-        "normal": "$18.70",
-        "special": "$16.83"
-      }
-    },
-    {
-      "id": "65",
-      "image": {
-        "thumbnail": "lib/asset/image/product/womenSandals2021NewHeels.jpg",
-        "gallery": [
-          "lib/asset/image/product/womenSandals2021NewHeels2.jpg",
-          "lib/asset/image/product/womenSandals2021NewHeels3.jpg",
-          "lib/asset/image/product/womenSandals2021NewHeels4.jpg"
-        ]
-      },
-      "category": "High Heels",
-      "description": "Sandalias De Verano Diamond Rhinestone Designer Ladies High Heels for Women Sandals 2021 New Heels",
-      "rate": 5.0,
-      "isFavorite": false,
-      "name": "Ladies High Heels for Women Sandals 2021 New Heels",
-      "price": {
-        "normal": "$12.60",
-        "special": "$11.70"
+        "normal": "101TL",
+        "special": "80TL"
       }
     }
   ]
